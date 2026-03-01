@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2024"
 exclude = ["tests/"]
 description = "Convert Legal Documents Into Diffable Data Structures"
+repository = "https://github.com/Scronkfinkle/words-to-data"
 license = "MIT"
 
 [lib]
