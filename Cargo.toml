@@ -3,6 +3,8 @@ name = "words-to-data"
 version = "0.1.0"
 edition = "2024"
 exclude = ["tests/"]
+description = "Convert Legal Documents Into Diffable Data Structures"
+license = "MIT"
 
 [lib]
 name = "words_to_data"
