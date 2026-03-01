@@ -30,7 +30,7 @@ Or clone and build locally:
 ```bash
 git clone https://github.com/yourusername/words_to_data
 cd words_to_data
-cargo build --release
+cargo build --lib --release
 ```
 
 ## Getting Data
