@@ -1,7 +1,7 @@
 from words_to_data import TreeDiff, compute_diff, parse_uslm_xml, USLMElement
 
 def test_uslm_elements():
-    element = parse_uslm_xml("/home/jesse/code/rust/words_to_data/tests/test_data/usc/2025-07-30/usc26.xml", "2025-07-30")
+    element = parse_uslm_xml("tests/test_data/usc/2025-07-30/usc26.xml", "2025-07-30")
     s174a = element.find("uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a")
     assert isinstance(element,USLMElement)
     assert isinstance(s174a,USLMElement)
