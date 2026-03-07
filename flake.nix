@@ -16,8 +16,12 @@
         pkgs.pkg-config
         pkgs.glib
 
+        # Python bindings
+        pkgs.python314
+        pkgs.maturin
         # Needed to build packages
         pkgs.git
+
 
     ];
     devInputs = [

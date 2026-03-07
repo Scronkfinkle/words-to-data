@@ -19,3 +19,7 @@ src/main.rs
 # Claude Code Users
 CLAUDE.md
 .claude/
+
+# Python bindings
+*.so
+*.pyc
