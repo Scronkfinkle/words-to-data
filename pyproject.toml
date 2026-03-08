@@ -10,6 +10,11 @@ readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "MIT"}
 
+[project.urls]
+Homepage = "https://www.wordstodata.com/"
+Repository = "https://github.com/Scronkfinkle/words-to-data/"
+Issues = "https://github.com/Scronkfinkle/words-to-data/issues"
+
 [tool.maturin]
 python-source = "python"
 module-name = "words_to_data.words_to_data"
