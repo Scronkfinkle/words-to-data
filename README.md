@@ -145,7 +145,19 @@ fn main() -> Result<(), Box< dyn std::error::Error>> {
 
 **Python:**
 ```python
-# Bill amendment extraction - coming soon in Python bindings
+from words_to_data import parse_bill_amendments
+
+data = parse_bill_amendments("tests/test_data/bills/hr-119-21.xml")
+
+print(f"Bill {data.bill_id}: {len(data.amendments)} amendments found")
+
+for amendment in data.amendments:
+    print(f"\nAmendment at: {amendment.source_path}")
+    print(f"  USC sections modified: {len(amendment.target_paths)}")
+    print(f"  Actions: {amendment.action_types}")
+
+    for ref in amendment.target_paths:
+        print(f"    - {ref.display_text} ({ref.path})")
 ```
 
 ## Core Concepts

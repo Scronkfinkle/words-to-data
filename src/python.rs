@@ -271,6 +271,143 @@ impl TreeDiff {
     }
 }
 
+// ============================================================================
+// Bill parsing types
+// ============================================================================
+
+/// A reference to a USC section found in a bill
+#[pyclass]
+#[derive(Clone)]
+struct UscReference {
+    inner: crate::uslm::UscReference,
+}
+
+impl UscReference {
+    fn from(rust_ref: &crate::uslm::UscReference) -> Self {
+        UscReference {
+            inner: rust_ref.clone(),
+        }
+    }
+}
+
+#[pymethods]
+impl UscReference {
+    #[getter]
+    fn path(&self) -> String {
+        self.inner.path.clone()
+    }
+
+    #[getter]
+    fn display_text(&self) -> String {
+        self.inner.display_text.clone()
+    }
+
+    fn __repr__(&self) -> String {
+        format!(
+            "UscReference(path='{}', display_text='{}')",
+            self.inner.path, self.inner.display_text
+        )
+    }
+}
+
+/// An amendment found in a bill that modifies the US Code
+#[pyclass]
+#[derive(Clone)]
+struct BillAmendment {
+    inner: crate::uslm::BillAmendment,
+    target_paths: Vec<UscReference>,
+}
+
+impl BillAmendment {
+    fn from(rust_amendment: &crate::uslm::BillAmendment) -> Self {
+        let target_paths = rust_amendment
+            .target_paths
+            .iter()
+            .map(UscReference::from)
+            .collect();
+
+        BillAmendment {
+            inner: rust_amendment.clone(),
+            target_paths,
+        }
+    }
+}
+
+#[pymethods]
+impl BillAmendment {
+    #[getter]
+    fn action_types(&self) -> Vec<String> {
+        self.inner
+            .action_types
+            .iter()
+            .map(|action| format!("{:?}", action).to_lowercase())
+            .collect()
+    }
+
+    #[getter]
+    fn target_paths(&self) -> Vec<UscReference> {
+        self.target_paths.clone()
+    }
+
+    #[getter]
+    fn source_path(&self) -> String {
+        self.inner.source_path.clone()
+    }
+
+    fn __repr__(&self) -> String {
+        format!(
+            "BillAmendment(source_path='{}', target_paths={}, action_types={:?})",
+            self.inner.source_path,
+            self.target_paths.len(),
+            self.action_types()
+        )
+    }
+}
+
+/// Data extracted from a bill document
+#[pyclass]
+#[derive(Clone)]
+struct AmendmentData {
+    bill_id: String,
+    amendments: Vec<BillAmendment>,
+}
+
+impl AmendmentData {
+    fn from(rust_data: crate::uslm::bill_parser::AmendmentData) -> Self {
+        let amendments = rust_data
+            .amendments
+            .iter()
+            .map(BillAmendment::from)
+            .collect();
+
+        AmendmentData {
+            bill_id: rust_data.bill_id,
+            amendments,
+        }
+    }
+}
+
+#[pymethods]
+impl AmendmentData {
+    #[getter]
+    fn bill_id(&self) -> String {
+        self.bill_id.clone()
+    }
+
+    #[getter]
+    fn amendments(&self) -> Vec<BillAmendment> {
+        self.amendments.clone()
+    }
+
+    fn __repr__(&self) -> String {
+        format!(
+            "AmendmentData(bill_id='{}', amendments={})",
+            self.bill_id,
+            self.amendments.len()
+        )
+    }
+}
+
 fn parse_error_to_py(err: ParseError) -> PyErr {
     match err {
         ParseError::Xml(e) => PyValueError::new_err(format!("XML parsing error: {}", e)),
@@ -323,14 +460,35 @@ fn compute_diff(old_element: &USLMElement, new_element: &USLMElement) -> PyResul
     Ok(TreeDiff::from(&diff))
 }
 
+/// Parse a Public Law bill and extract amendments to the US Code
+///
+/// Args:
+///     path: Path to the Public Law XML file
+///
+/// Returns:
+///     AmendmentData containing the bill ID and all extracted amendments
+///
+/// Raises:
+///     ValueError: If the XML is invalid or not a Public Law document
+///     OSError: If the file cannot be read
+#[pyfunction]
+fn parse_bill_amendments(path: &str) -> PyResult<AmendmentData> {
+    let data = crate::uslm::bill_parser::parse_bill_amendments(path).map_err(parse_error_to_py)?;
+    Ok(AmendmentData::from(data))
+}
+
 /// Python module definition
 #[pymodule]
 fn words_to_data(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(parse_uslm_xml, m)?)?;
     m.add_function(wrap_pyfunction!(compute_diff, m)?)?;
+    m.add_function(wrap_pyfunction!(parse_bill_amendments, m)?)?;
     m.add_class::<USLMElement>()?;
     m.add_class::<TreeDiff>()?;
     m.add_class::<FieldChangeEvent>()?;
     m.add_class::<TextChange>()?;
+    m.add_class::<AmendmentData>()?;
+    m.add_class::<BillAmendment>()?;
+    m.add_class::<UscReference>()?;
     Ok(())
 }
