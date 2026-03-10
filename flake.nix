@@ -21,6 +21,7 @@
         pkgs.maturin
         # Needed to build packages
         pkgs.git
+        pkgs.git-lfs
 
 
     ];

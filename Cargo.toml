@@ -25,3 +25,6 @@ pythonize = { version = "0.28", features = ["arbitrary_precision"], optional = t
 
 [features]
 python = ["pyo3", "pythonize"]
+
+[dev-dependencies]
+rstest = "0.18"

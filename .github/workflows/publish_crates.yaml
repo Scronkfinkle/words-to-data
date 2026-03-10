@@ -32,6 +32,9 @@ jobs:
       - name: Build (Rust only)
         run: cargo build --lib --verbose
 
+      - name: Unzip test files
+        run: cd tests/test_data && tar xvf test_files.tar.xz
+
       - name: Run Rust tests
         run: cargo test --verbose
 
