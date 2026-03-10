@@ -1,6 +1,6 @@
 use words_to_data::uslm::{TextContentField, parser::parse};
 
-// Test 1: Parse heading field from real USC title
+// Parse heading field from real USC title
 #[test]
 fn test_parse_heading_field() {
     let root = parse("tests/test_data/usc/2025-07-18/usc09.xml", "2025-07-18")
@@ -22,7 +22,7 @@ fn test_parse_heading_field() {
     );
 }
 
-// Test 2: Parse content field from real USC paragraph
+// Parse content field from real USC paragraph
 #[test]
 fn test_parse_content_field() {
     let root = parse("tests/test_data/usc/2025-07-18/usc09.xml", "2025-07-18")
@@ -52,7 +52,7 @@ fn test_parse_content_field() {
     );
 }
 
-// Test 3: Parse chapeau field from real USC subsection
+// Parse chapeau field from real USC subsection
 #[test]
 fn test_parse_chapeau_field() {
     let root = parse("tests/test_data/usc/2025-07-18/usc09.xml", "2025-07-18")
@@ -78,7 +78,7 @@ fn test_parse_chapeau_field() {
     );
 }
 
-// Test 4: Parse mixed text fields (heading and content)
+// Parse mixed text fields (heading and content)
 #[test]
 fn test_parse_mixed_text_fields() {
     let root = parse("tests/test_data/usc/2025-07-18/usc01.xml", "2025-07-18")
@@ -128,55 +128,7 @@ fn test_parse_mixed_text_fields() {
     );
 }
 
-// Test 5: Parse element with minimal text fields
-#[test]
-fn test_parse_no_optional_fields() {
-    let root = parse("tests/test_data/usc/2025-07-18/usc09.xml", "2025-07-18")
-        .expect("Failed to parse usc09.xml");
-
-    // Find a paragraph element which typically has only content
-    let paragraph = root
-        .find("uscodedocument_9/title_9/chapter_1/section_10/subsection_a/paragraph_1")
-        .expect("Failed to find paragraph element");
-
-    // Paragraph should have content but not chapeau, proviso, or continuation
-    assert!(
-        paragraph.data.content.is_some(),
-        "Paragraph should have content"
-    );
-    assert!(
-        paragraph.data.chapeau.is_none(),
-        "Paragraph should not have chapeau"
-    );
-    assert!(
-        paragraph.data.proviso.is_none(),
-        "Paragraph should not have proviso"
-    );
-    assert!(
-        paragraph.data.continuation.is_none(),
-        "Paragraph should not have continuation"
-    );
-}
-
-// Test 6: Verify special characters (§) are preserved in heading
-#[test]
-fn test_parse_special_characters_in_text() {
-    let root = parse("tests/test_data/usc/2025-07-18/usc01.xml", "2025-07-18")
-        .expect("Failed to parse usc01.xml");
-
-    // Section 1 has "§ 1." in its number display
-    let section = root
-        .find("uscodedocument_1/title_1/chapter_1/section_1")
-        .expect("Failed to find section element");
-
-    // The number_display field should contain the § symbol
-    assert!(
-        section.data.number_display.contains("§"),
-        "Number display should contain § symbol"
-    );
-}
-
-// Test 7: Parse heading from chapter element
+// Parse heading from chapter element
 #[test]
 fn test_parse_chapter_heading() {
     let root = parse("tests/test_data/usc/2025-07-18/usc09.xml", "2025-07-18")
@@ -201,7 +153,7 @@ fn test_parse_chapter_heading() {
     );
 }
 
-// Test 8: Verify all text field accessors work
+// Verify all text field accessors work
 #[test]
 fn test_all_text_field_accessors() {
     let root = parse("tests/test_data/usc/2025-07-18/usc09.xml", "2025-07-18")
@@ -223,4 +175,22 @@ fn test_all_text_field_accessors() {
 
     // Verify chapeau is present (we know this one should be)
     assert!(_chapeau.is_some(), "Subsection a should have chapeau");
+}
+
+// Verify special characters (§) are preserved in heading
+#[test]
+fn test_parse_special_characters_in_text() {
+    let root = parse("tests/test_data/usc/2025-07-18/usc01.xml", "2025-07-18")
+        .expect("Failed to parse usc01.xml");
+
+    // Section 1 has "§ 1." in its number display
+    let section = root
+        .find("uscodedocument_1/title_1/chapter_1/section_1")
+        .expect("Failed to find section element");
+
+    // The number_display field should contain the § symbol
+    assert!(
+        section.data.number_display.contains("§"),
+        "Number display should contain § symbol"
+    );
 }

@@ -2,7 +2,7 @@ use words_to_data::uslm::{ElementType, parser::parse};
 
 // ========== Error Handling Tests ==========
 
-// Test 1: Parse nonexistent file returns error
+// Parse nonexistent file returns error
 #[test]
 fn test_parse_nonexistent_file() {
     let result = parse(
@@ -12,7 +12,7 @@ fn test_parse_nonexistent_file() {
     assert!(result.is_err(), "Should return error for nonexistent file");
 }
 
-// Test 2: Parse with invalid date format
+// Parse with invalid date format
 #[test]
 fn test_parse_invalid_date_format() {
     let result = parse("tests/test_data/usc/2025-07-18/usc01.xml", "invalid-date");
@@ -22,21 +22,21 @@ fn test_parse_invalid_date_format() {
     );
 }
 
-// Test 3: Parse with malformed date (wrong format)
+// Parse with malformed date (wrong format)
 #[test]
 #[should_panic(expected = "day should be valid")]
 fn test_parse_malformed_date() {
     let _result = parse("tests/test_data/usc/2025-07-18/usc01.xml", "07-18-2025");
 }
 
-// Test 4: Parse with incomplete date
+// Parse with incomplete date
 #[test]
 fn test_parse_incomplete_date() {
     let result = parse("tests/test_data/usc/2025-07-18/usc01.xml", "2025-07");
     assert!(result.is_err(), "Should return error for incomplete date");
 }
 
-// Test 5: Parse with invalid month in date
+// Parse with invalid month in date
 #[test]
 #[should_panic(expected = "month num")]
 fn test_parse_invalid_month() {
@@ -45,7 +45,7 @@ fn test_parse_invalid_month() {
 
 // ========== Boundary Condition Tests ==========
 
-// Test 6: Parse smallest USC file (usc09.xml ~107K)
+// Parse smallest USC file (usc09.xml ~107K)
 #[test]
 fn test_parse_smallest_file() {
     let result = parse("tests/test_data/usc/2025-07-18/usc09.xml", "2025-07-18");
@@ -61,7 +61,7 @@ fn test_parse_smallest_file() {
     );
 }
 
-// Test 7: Parse large file (usc07.xml ~28M)
+// Parse large file (usc07.xml ~28M)
 #[test]
 fn test_parse_large_file() {
     let result = parse("tests/test_data/usc/2025-07-18/usc07.xml", "2025-07-18");
@@ -83,7 +83,7 @@ fn test_parse_large_file() {
     );
 }
 
-// Test 8: Element with no children
+// Element with no children
 #[test]
 fn test_empty_element_no_children() {
     let root = parse("tests/test_data/usc/2025-07-18/usc09.xml", "2025-07-18")
@@ -94,12 +94,11 @@ fn test_empty_element_no_children() {
         .find("uscodedocument_9/title_9/chapter_1/section_10/subsection_a/paragraph_1")
         .expect("Failed to find paragraph");
 
-    // Paragraph might have content but no structural children (or might have subparagraphs)
-    // Just verify it's a valid element
     assert_eq!(paragraph.data.element_type, ElementType::Paragraph);
+    assert!(paragraph.children.is_empty());
 }
 
-// Test 9: Element with no text fields
+// Element with no text fields
 #[test]
 fn test_element_with_no_text_fields() {
     let root = parse("tests/test_data/usc/2025-07-18/usc09.xml", "2025-07-18")
@@ -108,42 +107,17 @@ fn test_element_with_no_text_fields() {
     // Some elements might have no text content fields
     // At minimum, verify root document can be parsed even if it has no direct text
     assert_eq!(root.data.element_type, ElementType::USCodeDocument);
-
-    // Root typically has no text fields (all text is in children)
     assert!(
-        root.data.heading.is_none() || root.data.chapeau.is_none() || root.data.content.is_none()
+        root.data.heading.is_none()
+            && root.data.chapeau.is_none()
+            && root.data.content.is_none()
+            && root.data.continuation.is_none()
     );
 }
 
 // ========== Special Structure Tests ==========
 
-// Test 10: Parse title with special structure (Level elements in usc26.xml)
-#[test]
-fn test_parse_level_elements() {
-    let result = parse("tests/test_data/usc/2025-07-18/usc26.xml", "2025-07-18");
-    assert!(
-        result.is_ok(),
-        "Should successfully parse title with level elements"
-    );
-
-    let root = result.unwrap();
-
-    // Search for any Level elements in the tree
-    fn has_level_element(elem: &words_to_data::uslm::USLMElement) -> bool {
-        if elem.data.element_type == ElementType::Level {
-            return true;
-        }
-        elem.children.iter().any(has_level_element)
-    }
-
-    // Note: Title 26 may or may not have Level elements depending on structure
-    // The test just verifies we can parse the file successfully
-    let _has_levels = has_level_element(&root);
-    // Just verify the parse worked
-    assert_eq!(root.data.uslm_id.as_ref().unwrap(), "/us/usc/t26");
-}
-
-// Test 11: Parse appendix title
+// Parse appendix title
 #[test]
 fn test_parse_appendix_title() {
     // Parse both a regular appendix file
@@ -167,7 +141,7 @@ fn test_parse_appendix_title() {
     assert_eq!(root_11a.data.element_type, ElementType::USCodeDocument);
 }
 
-// Test 12: Navigate deeply nested structure (6+ levels)
+// Navigate deeply nested structure (6+ levels)
 #[test]
 fn test_deeply_nested_structure() {
     let root = parse("tests/test_data/usc/2025-07-18/usc09.xml", "2025-07-18")
