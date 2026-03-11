@@ -23,3 +23,7 @@ CLAUDE.md
 # Python bindings
 *.so
 *.pyc
+
+# Unzipped test files
+tests/test_data/bills/
+tests/test_data/usc/

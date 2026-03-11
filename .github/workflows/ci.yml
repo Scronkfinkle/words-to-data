@@ -16,6 +16,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+      with:
+        lfs: true
 
     - name: Install Rust toolchain
       uses: dtolnay/rust-toolchain@stable
@@ -30,6 +32,9 @@ jobs:
 
     - name: Build (Rust only)
       run: cargo build --lib --verbose
+
+    - name: Unzip test files
+      run: cd tests/test_data && tar xvf test_files.tar.xz
 
     - name: Run Rust tests
       run: cargo test --verbose
@@ -46,6 +51,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+      with:
+        lfs: true
 
     - name: Install Rust toolchain
       uses: dtolnay/rust-toolchain@stable
@@ -72,6 +79,9 @@ jobs:
 
     - name: Build Python package
       run: maturin build --release
+
+    - name: Unzip test files
+      run: cd tests/test_data && tar xvf test_files.tar.xz
       
     - name: Install Python package
       run: pip install target/wheels/words_to_data*.whl
