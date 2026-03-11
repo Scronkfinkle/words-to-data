@@ -287,15 +287,15 @@ fn extract_source_credits(node: &roxmltree::Node) -> Vec<SourceCredit> {
                         description,
                     });
                 }
-            } else if let Some(text) = descendant.text() {
-                if text.contains(';') {
-                    // Finalize current group
-                    if !current_refs.is_empty() {
-                        result.push(SourceCredit {
-                            ref_pairs: current_refs.clone(),
-                        });
-                        current_refs.clear();
-                    }
+            } else if let Some(text) = descendant.text()
+                && text.contains(';')
+            {
+                // Finalize current group
+                if !current_refs.is_empty() {
+                    result.push(SourceCredit {
+                        ref_pairs: current_refs.clone(),
+                    });
+                    current_refs.clear();
                 }
             }
         }
