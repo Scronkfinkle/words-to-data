@@ -5,7 +5,7 @@ use std::fs;
 use std::path::{Path, PathBuf};
 
 // Re-export from io module for backward compatibility
-pub use crate::io::{load_xml_file, write_json_file, read_json_file};
+pub use crate::io::{load_xml_file, read_json_file, write_json_file};
 
 // Re-export from date module for backward compatibility
 pub use crate::date::date_str_to_date;

@@ -26,7 +26,10 @@ fn test_parse_invalid_date_format() {
 #[test]
 fn test_parse_malformed_date() {
     let result = parse("tests/test_data/usc/2025-07-18/usc01.xml", "07-18-2025");
-    assert!(result.is_err(), "Should return error for malformed date format");
+    assert!(
+        result.is_err(),
+        "Should return error for malformed date format"
+    );
 }
 
 // Parse with incomplete date

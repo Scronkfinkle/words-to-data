@@ -1,5 +1,5 @@
-use words_to_data::uslm::path::{generate_structural_path, should_include_in_uslm_path};
 use words_to_data::uslm::ElementType;
+use words_to_data::uslm::path::{generate_structural_path, should_include_in_uslm_path};
 
 #[test]
 fn test_generate_structural_path_root_element() {

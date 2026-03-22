@@ -6,8 +6,7 @@ use crate::{
     io::load_xml_file,
     uslm::{
         self, BillType, DocumentType, ElementData, ElementType, RefPair, SourceCredit, USLMElement,
-        USLMError,
-        path::should_include_in_uslm_path,
+        USLMError, path::should_include_in_uslm_path,
     },
 };
 

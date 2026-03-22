@@ -3,7 +3,11 @@ use words_to_data::date::date_str_to_date;
 #[test]
 fn test_date_str_to_date_valid() {
     let result = date_str_to_date("2025-07-18");
-    assert!(result.is_ok(), "Failed to parse valid date: {:?}", result.err());
+    assert!(
+        result.is_ok(),
+        "Failed to parse valid date: {:?}",
+        result.err()
+    );
 
     let date = result.unwrap();
     assert_eq!(date.year(), 2025);

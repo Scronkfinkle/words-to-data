@@ -3,10 +3,17 @@ use words_to_data::io::load_xml_file;
 #[test]
 fn test_load_xml_file_success() {
     let result = load_xml_file("tests/test_data/usc/2025-07-18/usc07.xml");
-    assert!(result.is_ok(), "Failed to load XML file: {:?}", result.err());
+    assert!(
+        result.is_ok(),
+        "Failed to load XML file: {:?}",
+        result.err()
+    );
 
     let content = result.unwrap();
-    assert!(content.contains("uscDoc"), "XML content should contain uscDoc element");
+    assert!(
+        content.contains("uscDoc"),
+        "XML content should contain uscDoc element"
+    );
 }
 
 #[test]
