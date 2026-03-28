@@ -57,6 +57,11 @@ impl USLMElement {
             self.children.len()
         )
     }
+
+    fn to_json(&self) -> PyResult<String> {
+        serde_json::to_string(&self.inner)
+            .map_err(|e| PyRuntimeError::new_err(format!("JSON serialization error: {}", e)))
+    }
 }
 
 // ============================================================================
@@ -98,6 +103,11 @@ impl TextChange {
             self.tag(),
             &self.value()[..self.value().len().min(20)]
         )
+    }
+
+    fn to_json(&self) -> PyResult<String> {
+        serde_json::to_string(&self.inner)
+            .map_err(|e| PyRuntimeError::new_err(format!("JSON serialization error: {}", e)))
     }
 }
 
@@ -148,6 +158,11 @@ impl FieldChangeEvent {
             self.field_name(),
             self.changes.len()
         )
+    }
+
+    fn to_json(&self) -> PyResult<String> {
+        serde_json::to_string(&self.inner)
+            .map_err(|e| PyRuntimeError::new_err(format!("JSON serialization error: {}", e)))
     }
 }
 
@@ -268,6 +283,11 @@ impl TreeDiff {
             self.child_diffs.len()
         )
     }
+
+    fn to_json(&self) -> PyResult<String> {
+        serde_json::to_string(&self.inner)
+            .map_err(|e| PyRuntimeError::new_err(format!("JSON serialization error: {}", e)))
+    }
 }
 
 // ============================================================================
@@ -306,6 +326,11 @@ impl UscReference {
             "UscReference(path='{}', display_text='{}')",
             self.inner.path, self.inner.display_text
         )
+    }
+
+    fn to_json(&self) -> PyResult<String> {
+        serde_json::to_string(&self.inner)
+            .map_err(|e| PyRuntimeError::new_err(format!("JSON serialization error: {}", e)))
     }
 }
 
@@ -361,13 +386,18 @@ impl BillAmendment {
             self.action_types()
         )
     }
+
+    fn to_json(&self) -> PyResult<String> {
+        serde_json::to_string(&self.inner)
+            .map_err(|e| PyRuntimeError::new_err(format!("JSON serialization error: {}", e)))
+    }
 }
 
 /// Data extracted from a bill document
 #[pyclass(from_py_object)]
 #[derive(Clone)]
 struct AmendmentData {
-    bill_id: String,
+    inner: crate::uslm::bill_parser::AmendmentData,
     amendments: Vec<BillAmendment>,
 }
 
@@ -380,7 +410,7 @@ impl AmendmentData {
             .collect();
 
         AmendmentData {
-            bill_id: rust_data.bill_id,
+            inner: rust_data,
             amendments,
         }
     }
@@ -390,7 +420,7 @@ impl AmendmentData {
 impl AmendmentData {
     #[getter]
     fn bill_id(&self) -> String {
-        self.bill_id.clone()
+        self.inner.bill_id.clone()
     }
 
     #[getter]
@@ -401,9 +431,14 @@ impl AmendmentData {
     fn __repr__(&self) -> String {
         format!(
             "AmendmentData(bill_id='{}', amendments={})",
-            self.bill_id,
+            self.inner.bill_id,
             self.amendments.len()
         )
+    }
+
+    fn to_json(&self) -> PyResult<String> {
+        serde_json::to_string(&self.inner)
+            .map_err(|e| PyRuntimeError::new_err(format!("JSON serialization error: {}", e)))
     }
 }
 
