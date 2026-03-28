@@ -8,7 +8,6 @@ from .words_to_data import (
     TextChange,
     AmendmentData,
     BillAmendment,
-    UscReference,
 )
 
 __version__ = "0.1.2"
@@ -22,5 +21,4 @@ __all__ = [
     "TextChange",
     "AmendmentData",
     "BillAmendment",
-    "UscReference",
 ]

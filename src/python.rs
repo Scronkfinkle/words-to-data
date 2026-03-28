@@ -327,72 +327,17 @@ impl TreeDiff {
 // Bill parsing types
 // ============================================================================
 
-/// A reference to a USC section found in a bill
-#[pyclass(from_py_object)]
-#[derive(Clone)]
-struct UscReference {
-    inner: crate::uslm::UscReference,
-}
-
-impl UscReference {
-    fn from(rust_ref: &crate::uslm::UscReference) -> Self {
-        UscReference {
-            inner: rust_ref.clone(),
-        }
-    }
-}
-
-#[pymethods]
-impl UscReference {
-    #[getter]
-    fn path(&self) -> String {
-        self.inner.path.clone()
-    }
-
-    #[getter]
-    fn display_text(&self) -> String {
-        self.inner.display_text.clone()
-    }
-
-    fn __repr__(&self) -> String {
-        format!(
-            "UscReference(path='{}', display_text='{}')",
-            self.inner.path, self.inner.display_text
-        )
-    }
-
-    fn to_json(&self) -> PyResult<String> {
-        serde_json::to_string(&self.inner)
-            .map_err(|e| PyRuntimeError::new_err(format!("JSON serialization error: {}", e)))
-    }
-
-    #[staticmethod]
-    fn from_json(json_str: &str) -> PyResult<Self> {
-        let inner: crate::uslm::UscReference = serde_json::from_str(json_str)
-            .map_err(|e| PyValueError::new_err(format!("JSON deserialization error: {}", e)))?;
-        Ok(Self { inner })
-    }
-}
-
 /// An amendment found in a bill that modifies the US Code
 #[pyclass(from_py_object)]
 #[derive(Clone)]
 struct BillAmendment {
     inner: crate::uslm::BillAmendment,
-    target_paths: Vec<UscReference>,
 }
 
 impl BillAmendment {
     fn from(rust_amendment: &crate::uslm::BillAmendment) -> Self {
-        let target_paths = rust_amendment
-            .target_paths
-            .iter()
-            .map(UscReference::from)
-            .collect();
-
         BillAmendment {
             inner: rust_amendment.clone(),
-            target_paths,
         }
     }
 }
@@ -409,21 +354,20 @@ impl BillAmendment {
     }
 
     #[getter]
-    fn target_paths(&self) -> Vec<UscReference> {
-        self.target_paths.clone()
-    }
-
-    #[getter]
-    fn source_path(&self) -> String {
-        self.inner.source_path.clone()
+    fn amending_text(&self) -> String {
+        self.inner.amending_text.clone()
     }
 
     fn __repr__(&self) -> String {
+        let text_preview = if self.inner.amending_text.len() > 50 {
+            format!("{}...", &self.inner.amending_text[..50])
+        } else {
+            self.inner.amending_text.clone()
+        };
         format!(
-            "BillAmendment(source_path='{}', target_paths={}, action_types={:?})",
-            self.inner.source_path,
-            self.target_paths.len(),
-            self.action_types()
+            "BillAmendment(action_types={:?}, amending_text='{}')",
+            self.action_types(),
+            text_preview
         )
     }
 
@@ -577,6 +521,5 @@ fn words_to_data(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_class::<TextChange>()?;
     m.add_class::<AmendmentData>()?;
     m.add_class::<BillAmendment>()?;
-    m.add_class::<UscReference>()?;
     Ok(())
 }

@@ -1,23 +1,46 @@
-from words_to_data import TreeDiff, compute_diff, parse_uslm_xml, USLMElement, parse_bill_amendments, AmendmentData, BillAmendment, UscReference, FieldChangeEvent, TextChange
+from words_to_data import (
+    TreeDiff,
+    compute_diff,
+    parse_uslm_xml,
+    USLMElement,
+    parse_bill_amendments,
+    AmendmentData,
+    BillAmendment,
+    FieldChangeEvent,
+    TextChange,
+)
+
 
 def test_uslm_elements():
     element = parse_uslm_xml("tests/test_data/usc/2025-07-30/usc26.xml", "2025-07-30")
-    s174a = element.find("uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a")
-    assert isinstance(element,USLMElement)
-    assert isinstance(s174a,USLMElement)
+    s174a = element.find(
+        "uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a"
+    )
+    assert isinstance(element, USLMElement)
+    assert isinstance(s174a, USLMElement)
+
 
 def test_diffs():
-    old = parse_uslm_xml('tests/test_data/usc/2025-07-18/usc26.xml', '2025-07-18')
-    new = parse_uslm_xml('tests/test_data/usc/2025-07-30/usc26.xml', '2025-07-30')
+    old = parse_uslm_xml("tests/test_data/usc/2025-07-18/usc26.xml", "2025-07-18")
+    new = parse_uslm_xml("tests/test_data/usc/2025-07-30/usc26.xml", "2025-07-30")
     # Compute diff
     diff = compute_diff(old, new)
-    s174a = diff.find("uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a")
+    s174a = diff.find(
+        "uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a"
+    )
     assert isinstance(s174a, TreeDiff)
     field_change = s174a.changes[0]
     assert len(field_change.changes) == 2
     assert field_change.field_name == "chapeau"
-    assert field_change.old_value == "In the case of a taxpayer’s specified research or experimental expenditures for any taxable year—"
-    assert field_change.new_value == "In the case of a taxpayer’s foreign research or experimental expenditures for any taxable year—"
+    assert (
+        field_change.old_value
+        == "In the case of a taxpayer’s specified research or experimental expenditures for any taxable year—"
+    )
+    assert (
+        field_change.new_value
+        == "In the case of a taxpayer’s foreign research or experimental expenditures for any taxable year—"
+    )
+
 
 def test_bill_parsing():
     # Parse bill amendments
@@ -31,18 +54,21 @@ def test_bill_parsing():
     # Validate BillAmendment
     amendment = data.amendments[0]
     assert isinstance(amendment, BillAmendment)
-    assert amendment.source_path.startswith("/us/pl/")
-    assert len(amendment.target_paths) > 0
+    assert len(amendment.amending_text) > 0
     assert len(amendment.action_types) > 0
 
-    # Validate UscReference
-    ref = amendment.target_paths[0]
-    assert isinstance(ref, UscReference)
-    assert ref.path.startswith("/us/usc/")
-    assert len(ref.display_text) > 0
-
     # Validate action types are valid strings
-    valid_actions = ["amend", "add", "delete", "insert", "redesignate", "repeal"]
+    valid_actions = [
+        "amend",
+        "add",
+        "delete",
+        "insert",
+        "redesignate",
+        "repeal",
+        "move",
+        "strike",
+        "strikeandinsert",
+    ]
     assert all(action in valid_actions for action in amendment.action_types)
 
 
@@ -57,8 +83,8 @@ def test_to_json_methods():
     assert "path" in parsed or "data" in parsed  # should have structure
 
     # Test TreeDiff.to_json() and nested types
-    old = parse_uslm_xml('tests/test_data/usc/2025-07-18/usc26.xml', '2025-07-18')
-    new = parse_uslm_xml('tests/test_data/usc/2025-07-30/usc26.xml', '2025-07-30')
+    old = parse_uslm_xml("tests/test_data/usc/2025-07-18/usc26.xml", "2025-07-18")
+    new = parse_uslm_xml("tests/test_data/usc/2025-07-30/usc26.xml", "2025-07-30")
     diff = compute_diff(old, new)
     diff_json = diff.to_json()
     assert isinstance(diff_json, str)
@@ -66,7 +92,9 @@ def test_to_json_methods():
     assert "root_path" in parsed_diff
 
     # Test FieldChangeEvent.to_json()
-    s174a = diff.find("uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a")
+    s174a = diff.find(
+        "uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a"
+    )
     assert s174a is not None
     field_change = s174a.changes[0]
     field_json = field_change.to_json()
@@ -94,15 +122,8 @@ def test_to_json_methods():
     amendment_json = amendment.to_json()
     assert isinstance(amendment_json, str)
     parsed_amendment = json.loads(amendment_json)
-    assert "source_path" in parsed_amendment
-
-    # Test UscReference.to_json()
-    ref = amendment.target_paths[0]
-    ref_json = ref.to_json()
-    assert isinstance(ref_json, str)
-    parsed_ref = json.loads(ref_json)
-    assert "path" in parsed_ref
-    assert "display_text" in parsed_ref
+    assert "amending_text" in parsed_amendment
+    assert "action_types" in parsed_amendment
 
 
 def test_from_json_roundtrip():
@@ -117,8 +138,8 @@ def test_from_json_roundtrip():
     assert len(restored_element.children) == len(element.children)
 
     # Test TreeDiff round-trip
-    old = parse_uslm_xml('tests/test_data/usc/2025-07-18/usc26.xml', '2025-07-18')
-    new = parse_uslm_xml('tests/test_data/usc/2025-07-30/usc26.xml', '2025-07-30')
+    old = parse_uslm_xml("tests/test_data/usc/2025-07-18/usc26.xml", "2025-07-18")
+    new = parse_uslm_xml("tests/test_data/usc/2025-07-30/usc26.xml", "2025-07-30")
     diff = compute_diff(old, new)
     diff_json = diff.to_json()
     restored_diff = TreeDiff.from_json(diff_json)
@@ -127,7 +148,9 @@ def test_from_json_roundtrip():
     assert len(restored_diff.child_diffs) == len(diff.child_diffs)
 
     # Test FieldChangeEvent round-trip
-    s174a = diff.find("uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a")
+    s174a = diff.find(
+        "uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a"
+    )
     assert s174a is not None
     field_change = s174a.changes[0]
     field_json = field_change.to_json()
@@ -158,13 +181,5 @@ def test_from_json_roundtrip():
     amendment_json = amendment.to_json()
     restored_amendment = BillAmendment.from_json(amendment_json)
     assert isinstance(restored_amendment, BillAmendment)
-    assert restored_amendment.source_path == amendment.source_path
+    assert restored_amendment.amending_text == amendment.amending_text
     assert restored_amendment.action_types == amendment.action_types
-
-    # Test UscReference round-trip
-    ref = amendment.target_paths[0]
-    ref_json = ref.to_json()
-    restored_ref = UscReference.from_json(ref_json)
-    assert isinstance(restored_ref, UscReference)
-    assert restored_ref.path == ref.path
-    assert restored_ref.display_text == ref.display_text

@@ -194,44 +194,17 @@ def compute_diff(old_element: USLMElement, new_element: USLMElement) -> TreeDiff
     """
     ...
 
-class UscReference:
-    """A reference to a USC section found in a bill"""
-
-    @property
-    def path(self) -> str:
-        """The USLM path being referenced (e.g., '/us/usc/t7/s2025/c/1/A/ii')"""
-        ...
-
-    @property
-    def display_text(self) -> str:
-        """The human-readable text of the reference (e.g., '7 U.S.C. 2025(c)(1)(A)(ii)')"""
-        ...
-
-    def to_json(self) -> str:
-        """Serialize the reference to a JSON string."""
-        ...
-
-    @staticmethod
-    def from_json(json_str: str) -> UscReference:
-        """Deserialize a JSON string to a UscReference."""
-        ...
-
 class BillAmendment:
     """An amendment found in a bill that modifies the US Code"""
 
     @property
-    def action_types(self) -> list[Literal["amend", "add", "delete", "insert", "redesignate", "repeal"]]:
+    def action_types(self) -> list[Literal["amend", "add", "delete", "insert", "redesignate", "repeal", "move", "strike", "strikeandinsert"]]:
         """Types of amending actions performed by this amendment"""
         ...
 
     @property
-    def target_paths(self) -> list[UscReference]:
-        """USC sections that this amendment affects"""
-        ...
-
-    @property
-    def source_path(self) -> str:
-        """The bill element path where this amendment occurs"""
+    def amending_text(self) -> str:
+        """The full readable text of the amending instruction"""
         ...
 
     def to_json(self) -> str:
