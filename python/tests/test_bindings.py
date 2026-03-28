@@ -1,4 +1,4 @@
-from words_to_data import TreeDiff, compute_diff, parse_uslm_xml, USLMElement, parse_bill_amendments, AmendmentData, BillAmendment, UscReference
+from words_to_data import TreeDiff, compute_diff, parse_uslm_xml, USLMElement, parse_bill_amendments, AmendmentData, BillAmendment, UscReference, FieldChangeEvent, TextChange
 
 def test_uslm_elements():
     element = parse_uslm_xml("tests/test_data/usc/2025-07-30/usc26.xml", "2025-07-30")
@@ -103,3 +103,68 @@ def test_to_json_methods():
     parsed_ref = json.loads(ref_json)
     assert "path" in parsed_ref
     assert "display_text" in parsed_ref
+
+
+def test_from_json_roundtrip():
+    """Test that from_json() can deserialize JSON produced by to_json()"""
+
+    # Test USLMElement round-trip
+    element = parse_uslm_xml("tests/test_data/usc/2025-07-30/usc26.xml", "2025-07-30")
+    element_json = element.to_json()
+    restored_element = USLMElement.from_json(element_json)
+    assert isinstance(restored_element, USLMElement)
+    assert restored_element.data["path"] == element.data["path"]
+    assert len(restored_element.children) == len(element.children)
+
+    # Test TreeDiff round-trip
+    old = parse_uslm_xml('tests/test_data/usc/2025-07-18/usc26.xml', '2025-07-18')
+    new = parse_uslm_xml('tests/test_data/usc/2025-07-30/usc26.xml', '2025-07-30')
+    diff = compute_diff(old, new)
+    diff_json = diff.to_json()
+    restored_diff = TreeDiff.from_json(diff_json)
+    assert isinstance(restored_diff, TreeDiff)
+    assert restored_diff.root_path == diff.root_path
+    assert len(restored_diff.child_diffs) == len(diff.child_diffs)
+
+    # Test FieldChangeEvent round-trip
+    s174a = diff.find("uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a")
+    assert s174a is not None
+    field_change = s174a.changes[0]
+    field_json = field_change.to_json()
+    restored_field = FieldChangeEvent.from_json(field_json)
+    assert isinstance(restored_field, FieldChangeEvent)
+    assert restored_field.field_name == field_change.field_name
+    assert restored_field.old_value == field_change.old_value
+    assert restored_field.new_value == field_change.new_value
+
+    # Test TextChange round-trip
+    text_change = field_change.changes[0]
+    text_json = text_change.to_json()
+    restored_text = TextChange.from_json(text_json)
+    assert isinstance(restored_text, TextChange)
+    assert restored_text.value == text_change.value
+    assert restored_text.tag == text_change.tag
+
+    # Test AmendmentData round-trip
+    data = parse_bill_amendments("tests/test_data/bills/hr-119-21.xml")
+    data_json = data.to_json()
+    restored_data = AmendmentData.from_json(data_json)
+    assert isinstance(restored_data, AmendmentData)
+    assert restored_data.bill_id == data.bill_id
+    assert len(restored_data.amendments) == len(data.amendments)
+
+    # Test BillAmendment round-trip
+    amendment = data.amendments[0]
+    amendment_json = amendment.to_json()
+    restored_amendment = BillAmendment.from_json(amendment_json)
+    assert isinstance(restored_amendment, BillAmendment)
+    assert restored_amendment.source_path == amendment.source_path
+    assert restored_amendment.action_types == amendment.action_types
+
+    # Test UscReference round-trip
+    ref = amendment.target_paths[0]
+    ref_json = ref.to_json()
+    restored_ref = UscReference.from_json(ref_json)
+    assert isinstance(restored_ref, UscReference)
+    assert restored_ref.path == ref.path
+    assert restored_ref.display_text == ref.display_text

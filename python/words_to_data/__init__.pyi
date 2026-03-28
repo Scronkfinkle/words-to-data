@@ -30,6 +30,11 @@ class USLMElement:
           """Serialize the element to a JSON string."""
           ...
 
+      @staticmethod
+      def from_json(json_str: str) -> USLMElement:
+          """Deserialize a JSON string to a USLMElement."""
+          ...
+
 class TextChange:
     """A single word-level change within a text field"""
 
@@ -55,6 +60,11 @@ class TextChange:
 
     def to_json(self) -> str:
         """Serialize the change to a JSON string."""
+        ...
+
+    @staticmethod
+    def from_json(json_str: str) -> TextChange:
+        """Deserialize a JSON string to a TextChange."""
         ...
 
 class FieldChangeEvent:
@@ -92,6 +102,11 @@ class FieldChangeEvent:
 
     def to_json(self) -> str:
         """Serialize the field change event to a JSON string."""
+        ...
+
+    @staticmethod
+    def from_json(json_str: str) -> FieldChangeEvent:
+        """Deserialize a JSON string to a FieldChangeEvent."""
         ...
 
 class TreeDiff:
@@ -147,6 +162,11 @@ class TreeDiff:
         """Serialize the diff to a JSON string."""
         ...
 
+    @staticmethod
+    def from_json(json_str: str) -> TreeDiff:
+        """Deserialize a JSON string to a TreeDiff."""
+        ...
+
 def parse_uslm_xml(path: str, date: str) -> USLMElement:
     """Parse a USLM XML file and return as a USLMElement.
 
@@ -191,6 +211,11 @@ class UscReference:
         """Serialize the reference to a JSON string."""
         ...
 
+    @staticmethod
+    def from_json(json_str: str) -> UscReference:
+        """Deserialize a JSON string to a UscReference."""
+        ...
+
 class BillAmendment:
     """An amendment found in a bill that modifies the US Code"""
 
@@ -213,6 +238,11 @@ class BillAmendment:
         """Serialize the amendment to a JSON string."""
         ...
 
+    @staticmethod
+    def from_json(json_str: str) -> BillAmendment:
+        """Deserialize a JSON string to a BillAmendment."""
+        ...
+
 class AmendmentData:
     """Data extracted from a bill document"""
 
@@ -228,6 +258,11 @@ class AmendmentData:
 
     def to_json(self) -> str:
         """Serialize the amendment data to a JSON string."""
+        ...
+
+    @staticmethod
+    def from_json(json_str: str) -> AmendmentData:
+        """Deserialize a JSON string to an AmendmentData."""
         ...
 
 def parse_bill_amendments(path: str) -> AmendmentData:

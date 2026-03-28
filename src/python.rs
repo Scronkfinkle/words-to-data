@@ -62,6 +62,13 @@ impl USLMElement {
         serde_json::to_string(&self.inner)
             .map_err(|e| PyRuntimeError::new_err(format!("JSON serialization error: {}", e)))
     }
+
+    #[staticmethod]
+    fn from_json(json_str: &str) -> PyResult<Self> {
+        let inner: crate::uslm::USLMElement = serde_json::from_str(json_str)
+            .map_err(|e| PyValueError::new_err(format!("JSON deserialization error: {}", e)))?;
+        Ok(Self::from(&inner))
+    }
 }
 
 // ============================================================================
@@ -108,6 +115,13 @@ impl TextChange {
     fn to_json(&self) -> PyResult<String> {
         serde_json::to_string(&self.inner)
             .map_err(|e| PyRuntimeError::new_err(format!("JSON serialization error: {}", e)))
+    }
+
+    #[staticmethod]
+    fn from_json(json_str: &str) -> PyResult<Self> {
+        let inner: crate::diff::TextChange = serde_json::from_str(json_str)
+            .map_err(|e| PyValueError::new_err(format!("JSON deserialization error: {}", e)))?;
+        Ok(Self { inner })
     }
 }
 
@@ -163,6 +177,18 @@ impl FieldChangeEvent {
     fn to_json(&self) -> PyResult<String> {
         serde_json::to_string(&self.inner)
             .map_err(|e| PyRuntimeError::new_err(format!("JSON serialization error: {}", e)))
+    }
+
+    #[staticmethod]
+    fn from_json(json_str: &str) -> PyResult<Self> {
+        let inner: crate::diff::FieldChangeEvent = serde_json::from_str(json_str)
+            .map_err(|e| PyValueError::new_err(format!("JSON deserialization error: {}", e)))?;
+        let changes = inner
+            .changes
+            .iter()
+            .map(|tc| TextChange { inner: tc.clone() })
+            .collect();
+        Ok(Self { inner, changes })
     }
 }
 
@@ -288,6 +314,13 @@ impl TreeDiff {
         serde_json::to_string(&self.inner)
             .map_err(|e| PyRuntimeError::new_err(format!("JSON serialization error: {}", e)))
     }
+
+    #[staticmethod]
+    fn from_json(json_str: &str) -> PyResult<Self> {
+        let inner: RustTreeDiff = serde_json::from_str(json_str)
+            .map_err(|e| PyValueError::new_err(format!("JSON deserialization error: {}", e)))?;
+        Ok(Self::from(&inner))
+    }
 }
 
 // ============================================================================
@@ -331,6 +364,13 @@ impl UscReference {
     fn to_json(&self) -> PyResult<String> {
         serde_json::to_string(&self.inner)
             .map_err(|e| PyRuntimeError::new_err(format!("JSON serialization error: {}", e)))
+    }
+
+    #[staticmethod]
+    fn from_json(json_str: &str) -> PyResult<Self> {
+        let inner: crate::uslm::UscReference = serde_json::from_str(json_str)
+            .map_err(|e| PyValueError::new_err(format!("JSON deserialization error: {}", e)))?;
+        Ok(Self { inner })
     }
 }
 
@@ -391,6 +431,13 @@ impl BillAmendment {
         serde_json::to_string(&self.inner)
             .map_err(|e| PyRuntimeError::new_err(format!("JSON serialization error: {}", e)))
     }
+
+    #[staticmethod]
+    fn from_json(json_str: &str) -> PyResult<Self> {
+        let inner: crate::uslm::BillAmendment = serde_json::from_str(json_str)
+            .map_err(|e| PyValueError::new_err(format!("JSON deserialization error: {}", e)))?;
+        Ok(Self::from(&inner))
+    }
 }
 
 /// Data extracted from a bill document
@@ -439,6 +486,13 @@ impl AmendmentData {
     fn to_json(&self) -> PyResult<String> {
         serde_json::to_string(&self.inner)
             .map_err(|e| PyRuntimeError::new_err(format!("JSON serialization error: {}", e)))
+    }
+
+    #[staticmethod]
+    fn from_json(json_str: &str) -> PyResult<Self> {
+        let inner: crate::uslm::bill_parser::AmendmentData = serde_json::from_str(json_str)
+            .map_err(|e| PyValueError::new_err(format!("JSON deserialization error: {}", e)))?;
+        Ok(Self::from(inner))
     }
 }
 
