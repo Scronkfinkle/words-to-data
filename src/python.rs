@@ -481,6 +481,7 @@ impl ChangeAnnotation {
 }
 
 #[pymethods]
+#[allow(clippy::too_many_arguments)]
 impl ChangeAnnotation {
     #[new]
     #[pyo3(signature = (operation, bill_id, causative_text, annotator, confidence=None, notes=None, reasoning=None, related_paths=None))]
