@@ -1,3 +1,7 @@
+[workspace]
+members = [".", "annotator"]
+resolver = "2"
+
 [package]
 name = "words-to-data"
 version = "0.1.2"
