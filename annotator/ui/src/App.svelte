@@ -70,18 +70,19 @@
       diff.added.length > 0 ||
       diff.removed.length > 0
     ) {
-      results.push({
-        path: diff.root_path,
-        fieldChanges: diff.changes.length,
-        added: diff.added.length,
-        removed: diff.removed.length,
-        // Keep the first field change for a preview snippet
-        preview: diff.changes[0]
-          ? `${diff.changes[0].field_name}: "${diff.changes[0].old_value.slice(0, 60)}…"`
-          : diff.added.length > 0
-            ? `+${diff.added.length} added`
-            : `-${diff.removed.length} removed`,
-      });
+       results.push({
+          path: diff.root_path,
+          fieldChanges: diff.changes.length,
+          added: diff.added.length,
+          removed: diff.removed.length,
+          changes: diff.changes,
+          // Keep the first field change for a preview snippet
+          preview: diff.changes[0]
+            ? `${diff.changes[0].field_name}: "${diff.changes[0].old_value.slice(0, 60)}…"`
+            : diff.added.length > 0
+              ? `+${diff.added.length} added`
+              : `-${diff.removed.length} removed`,
+        });
     }
     for (const child of diff.child_diffs) {
       extractChangedNodes(child, results);
@@ -333,8 +334,20 @@
               title={node.path}
             >
               <div class="node-path">{shortPath(node.path)}</div>
-              <div class="node-preview">{node.preview}</div>
-              <div class="node-badges">
+               <div class="node-changes">
+                 {#each node.changes as change}
+                   <div class="change-entry">
+                     <span class="field-name">{change.field_name}:</span>
+                     <span class="old-val">{change.old_value}</span>
+                     <span class="change-arrow">→</span>
+                     <span class="new-val">{change.new_value}</span>
+                   </div>
+                 {/each}
+                 {#if node.changes.length === 0}
+                   <div class="node-preview">{node.preview}</div>
+                 {/if}
+               </div>
+               <div class="node-badges">
                 {#if node.fieldChanges > 0}<span class="badge-change"
                     >~{node.fieldChanges}</span
                   >{/if}
@@ -676,18 +689,58 @@
   }
 
   .node-preview {
-    font-size: 10px;
-    color: #64748b;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-bottom: 3px;
-  }
-
-  .node-badges {
-    display: flex;
-    gap: 4px;
-  }
+     font-size: 10px;
+     color: #64748b;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     margin-bottom: 3px;
+   }
+ 
+   .node-changes {
+     margin-bottom: 6px;
+     display: flex;
+     flex-direction: column;
+     gap: 4px;
+   }
+ 
+   .change-entry {
+     font-size: 10px;
+     line-height: 1.4;
+     display: flex;
+     flex-wrap: wrap;
+     gap: 4px;
+     align-items: baseline;
+   }
+ 
+   .field-name {
+     font-weight: 600;
+     color: #475569;
+   }
+ 
+   .old-val {
+     color: #991b1b;
+     background: #fef2f2;
+     padding: 0 2px;
+     border-radius: 2px;
+     text-decoration: line-through;
+   }
+ 
+   .new-val {
+     color: #166534;
+     background: #dcfce7;
+     padding: 0 2px;
+     border-radius: 2px;
+   }
+ 
+   .change-arrow {
+     color: #94a3b8;
+   }
+ 
+   .node-badges {
+     display: flex;
+     gap: 4px;
+   }
 
   /* ── badges ─────────────────────────────────────────────────────────────── */
   .badge {
