@@ -151,9 +151,11 @@
 .panel-left {
   flex: 0 0 22%;
 }
+
 .panel-center {
   flex: 1;
 }
+
 .panel-right {
   flex: 0 0 26%;
 }
@@ -215,9 +217,23 @@
 .amendment-item:hover {
   background: #f8fafc;
 }
+
 .amendment-item.selected {
   background: #eff6ff;
   border-left: 3px solid #2563eb;
+}
+
+.amendment-item.has-scores {
+  border-left: 3px solid #16a34a;
+}
+
+.amendment-item.has-scores.selected {
+  border-left: 3px solid #2563eb;
+}
+
+.score-tag {
+  font-size: 12px;
+  margin-right: 2px;
 }
 
 .amendment-ops {
@@ -299,9 +315,42 @@
 .node-item:hover {
   background: #f8fafc;
 }
+
 .node-item.selected {
   background: #eff6ff;
   border-left: 3px solid #2563eb;
+}
+
+.node-item.has-similarity {
+  background: #f0fdf4;
+}
+
+.node-item.has-similarity.selected {
+  background: #dcfce7;
+}
+
+.node-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.node-header-badges {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.similarity-score {
+  background: #16a34a;
+  color: white;
+  border-radius: 3px;
+  padding: 1px 6px;
+  font-size: 10px;
+  font-weight: 700;
+  flex-shrink: 0;
 }
 
 .node-path {
@@ -365,6 +414,23 @@
   gap: 4px;
 }
 
+.added-removed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 4px;
+}
+
+.added-removed-list .badge-add,
+.added-removed-list .badge-remove {
+  font-family: monospace;
+  font-size: 10px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /* ── badges ─────────────────────────────────────────────────────────────── */
 .badge {
   background: #e2e8f0;
@@ -399,6 +465,20 @@
   color: #1e40af;
 }
 
+.badge-scores {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge-annotated {
+  background: #dbeafe;
+  color: #1e40af;
+  border-radius: 3px;
+  padding: 1px 5px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
 .badge-change {
   background: #fef3c7;
   color: #78350f;
@@ -407,6 +487,7 @@
   font-size: 10px;
   font-weight: 600;
 }
+
 .badge-add {
   background: #dcfce7;
   color: #14532d;
@@ -415,6 +496,7 @@
   font-size: 10px;
   font-weight: 600;
 }
+
 .badge-remove {
   background: #fef2f2;
   color: #7f1d1d;
@@ -439,6 +521,7 @@ button {
 button:hover:not(:disabled) {
   background: #e2e8f0;
 }
+
 button:disabled {
   opacity: 0.45;
   cursor: not-allowed;
@@ -518,9 +601,11 @@ button:disabled {
   flex: 1;
   min-width: 240px;
 }
+
 .causative-field input {
   width: 100%;
 }
+
 .short-input {
   width: 140px;
 }
