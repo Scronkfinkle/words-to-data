@@ -27,3 +27,6 @@ CLAUDE.md
 # Unzipped test files
 tests/test_data/bills/
 tests/test_data/usc/
+
+# folder to dump test scripts
+hacks/
