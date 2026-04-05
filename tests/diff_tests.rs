@@ -64,10 +64,7 @@ fn test_similarities() {
         .expect("Error running parser");
     let diff = TreeDiff::from_elements(&doc_old, &doc_new);
 
-    let mut amendment_data = parse_bill_amendments(
-        "/home/jesse/code/rust/words_to_data/tests/test_data/bills/hr-119-21.xml",
-    )
-    .unwrap();
+    let mut amendment_data = parse_bill_amendments("tests/test_data/bills/hr-119-21.xml").unwrap();
 
     // This part is handled by LLM's, and I don't want to add that logic to
     // this library yet (or at all). It will probably be added as another tool
