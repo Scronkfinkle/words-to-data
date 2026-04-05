@@ -26,6 +26,9 @@
         # nicer commits
         pkgs.commitizen
 
+        # Pre-commit hooks
+        pkgs.pre-commit
+
         # Annotation tool (Tauri desktop app)
         pkgs.nodejs
         pkgs.webkitgtk_4_1   # WebKit2GTK webview engine (libsoup3 variant)
