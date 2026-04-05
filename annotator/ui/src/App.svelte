@@ -119,8 +119,10 @@
   );
 
   // ── helpers ───────────────────────────────────────────────────────────────────
-  function removeAmendmentFilter(index) {
-    amendmentFilters = amendmentFilters.filter((_, i) => i !== index);
+  function removeAmendmentFilter() {
+    if (amendmentFilters.length > 1) {
+      amendmentFilters = amendmentFilters.slice(0, -1);
+    }
   }
   function addAmendmentFilter() {
     // We use the spread operator to create a new array reference.
