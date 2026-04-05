@@ -25,10 +25,10 @@ jobs:
         components: rustfmt, clippy
 
     - name: Check formatting
-      run: cargo fmt -p words-to-data -- --check
+      run: cargo fmt --check
 
     - name: Run clippy
-      run: cargo clippy -p words-to-data --all-targets --all-features -- -D warnings
+      run: cargo clippy --all-targets --all-features -- -D warnings
 
     - name: Build (Rust only)
       run: cargo build -p words-to-data --lib --verbose
@@ -82,7 +82,7 @@ jobs:
 
     - name: Unzip test files
       run: cd tests/test_data && tar xvf test_files.tar.xz
-      
+
     - name: Install Python package
       run: pip install target/wheels/words_to_data*.whl
 

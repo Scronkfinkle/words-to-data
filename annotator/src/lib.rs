@@ -6,7 +6,10 @@ use words_to_data::{
     legal_diff::{
         AnnotationMetadata, AnnotationStatus, BillReference, ChangeAnnotation, LegalDiff,
     },
-    uslm::{AmendingAction, bill_parser::{parse_bill_amendments, AmendmentData}},
+    uslm::{
+        AmendingAction,
+        bill_parser::{AmendmentData, parse_bill_amendments},
+    },
     utils::parse_uslm_xml,
 };
 
@@ -75,9 +78,7 @@ async fn load_bill(path: String) -> Result<String, String> {
 async fn load_bills(paths: Vec<String>) -> Result<String, String> {
     let handles: Vec<_> = paths
         .into_iter()
-        .map(|path| {
-            thread::spawn(move || parse_bill_amendments(&path).map_err(|e| e.to_string()))
-        })
+        .map(|path| thread::spawn(move || parse_bill_amendments(&path).map_err(|e| e.to_string())))
         .collect();
 
     let mut results = Vec::new();
