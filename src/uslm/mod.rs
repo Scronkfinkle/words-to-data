@@ -376,7 +376,7 @@ impl BillAmendment {
 ///
 /// This is designed to exist as single entries for every logical
 /// amending action. For example, given the following amending text:
-/// ```
+/// ```ignore
 ///(B)
 /// in subsection (b)--
 ///
@@ -388,14 +388,14 @@ impl BillAmendment {
 ///   by inserting "and which are attributable to foreign research (within the meaning of section 41(d)(4)(F))" before the period at the end, and
 /// ```
 /// we would annotate that with two Bill Diffs:
-/// ```
+/// ```ignore
 /// {
 ///  "removed": ["specified"],
 ///  "added": ["foreign"]
 /// }
 /// ```
 /// and
-/// ```
+/// ```ignore
 /// {
 ///  "removed": [],
 ///  "added": [
