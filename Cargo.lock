@@ -5130,6 +5130,7 @@ dependencies = [
  "pyo3",
  "pythonize",
  "rayon",
+ "regex",
  "roxmltree",
  "rstest",
  "serde",
