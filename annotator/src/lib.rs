@@ -127,16 +127,39 @@ fn create_annotation(
 
 /// Combine a TreeDiff with a list of annotations into a LegalDiff and write
 /// it as pretty-printed JSON to the given output path.
+///
+/// The amendments parameter contains all bill amendments; only those referenced
+/// by the annotations will be included in the output.
 #[tauri::command]
 fn export_legal_diff(
     tree_diff_json: String,
     annotations_json: String,
+    bills_json: String,
     output_path: String,
 ) -> Result<(), String> {
     let tree_diff: TreeDiff = serde_json::from_str(&tree_diff_json).map_err(|e| e.to_string())?;
     let annotations: Vec<ChangeAnnotation> =
         serde_json::from_str(&annotations_json).map_err(|e| e.to_string())?;
+    let bills: Vec<AmendmentData> = serde_json::from_str(&bills_json).map_err(|e| e.to_string())?;
+
+    // Collect amendment IDs referenced by annotations
+    let referenced_ids: std::collections::HashSet<&str> = annotations
+        .iter()
+        .map(|a| a.source_bill.amendment_id.as_str())
+        .collect();
+
+    // Build a map of only the referenced amendments
+    let mut amendments = std::collections::HashMap::new();
+    for bill in &bills {
+        for (id, amendment) in &bill.amendments {
+            if referenced_ids.contains(id.as_str()) {
+                amendments.insert(id.clone(), amendment.clone());
+            }
+        }
+    }
+
     let mut legal_diff = LegalDiff::new(&tree_diff);
+    legal_diff.set_amendments(amendments);
     for annotation in annotations {
         legal_diff.add_annotation(annotation);
     }

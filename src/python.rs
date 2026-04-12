@@ -693,6 +693,16 @@ impl LegalDiff {
         Ok(result)
     }
 
+    #[getter]
+    fn amendments_dict(&self) -> PyResult<Py<PyAny>> {
+        let data = serde_json::to_value(&self.inner.amendments).unwrap();
+        let result = Python::attach(|py| {
+            let obj = pythonize(py, &data).unwrap();
+            obj.unbind()
+        });
+        Ok(result)
+    }
+
     /// Add an annotation for a specific structural path
     fn add_annotation(&mut self, annotation: &ChangeAnnotation) {
         self.inner.add_annotation(annotation.inner.clone());

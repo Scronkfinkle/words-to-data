@@ -318,6 +318,7 @@
       await invoke("export_legal_diff", {
         treeDiffJson: JSON.stringify(treeDiff),
         annotationsJson: JSON.stringify(annotations),
+        billsJson: JSON.stringify(billsData),
         outputPath,
       });
     } catch (e) {

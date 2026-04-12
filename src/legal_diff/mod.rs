@@ -1,8 +1,11 @@
-use std::{collections::HashSet, hash::Hash};
+use std::{collections::HashMap, collections::HashSet, hash::Hash};
 
 use serde::{Deserialize, Serialize};
 
-use crate::{diff::TreeDiff, uslm::AmendingAction};
+use crate::{
+    diff::TreeDiff,
+    uslm::{AmendingAction, BillAmendment},
+};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct LegalDiff {
@@ -11,6 +14,11 @@ pub struct LegalDiff {
 
     /// List of annotated changes
     pub annotations: Vec<ChangeAnnotation>,
+
+    /// The amendments that were annotated, keyed by amendment_id
+    /// Each annotation's source_bill.amendment_id references an entry here
+    #[serde(default)]
+    pub amendments: HashMap<String, BillAmendment>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -82,7 +90,13 @@ impl LegalDiff {
         LegalDiff {
             tree_diff: tree_diff.clone(),
             annotations: Vec::new(),
+            amendments: HashMap::new(),
         }
+    }
+
+    /// Set the amendments map
+    pub fn set_amendments(&mut self, amendments: HashMap<String, BillAmendment>) {
+        self.amendments = amendments;
     }
 
     /// Add an annotation for a specific structural path
