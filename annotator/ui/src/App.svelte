@@ -72,21 +72,56 @@
     new Set(similarityScores.map((s) => s.amendment_id)),
   );
 
+  // ── mention matches ────────────────────────────────────────────────────────
+  // Computed by scanning amendment text for section references
+  // Map: amendment_id -> Array<{tree_diff_path, matched_text}>
+  let mentionMatches = $state(new Map());
+  // Set of amendment IDs that have mention matches
+  let amendmentsWithMentions = $derived(new Set(mentionMatches.keys()));
+  // Lookup: tree_diff_path -> Set<amendment_id> (reverse lookup)
+  let mentionsByPath = $derived.by(() => {
+    const lookup = new Map();
+    for (const [amendmentId, matches] of mentionMatches.entries()) {
+      for (const match of matches) {
+        if (!lookup.has(match.tree_diff_path)) {
+          lookup.set(match.tree_diff_path, new Set());
+        }
+        lookup.get(match.tree_diff_path).add(amendmentId);
+      }
+    }
+    return lookup;
+  });
+
   // ── derived ───────────────────────────────────────────────────────────────────
   let filteredNodes = $derived.by(() => {
     let nodes = nodeFilter.trim()
       ? changedNodes.filter((n) => n.path.includes(nodeFilter.trim()))
       : changedNodes;
 
-    // Sort by similarity score if an amendment is selected and we have scores
-    if (selectedAmendment && similarityByAmendment.has(selectedAmendment.id)) {
-      const scoresForAmendment = similarityByAmendment.get(
-        selectedAmendment.id,
+    // Sort by: 1) similarity scores, 2) regex matches, 3) others
+    if (selectedAmendment) {
+      const scoresForAmendment =
+        similarityByAmendment.get(selectedAmendment.id) ?? new Map();
+      const mentionsForAmendment =
+        mentionMatches.get(selectedAmendment.id) ?? [];
+      const mentionedPaths = new Set(
+        mentionsForAmendment.map((m) => m.tree_diff_path),
       );
+
       nodes = [...nodes].sort((a, b) => {
         const scoreA = scoresForAmendment.get(a.path)?.score ?? -1;
         const scoreB = scoresForAmendment.get(b.path)?.score ?? -1;
-        return scoreB - scoreA; // Descending
+        const aMention = mentionedPaths.has(a.path);
+        const bMention = mentionedPaths.has(b.path);
+
+        // Primary: similarity scores (higher first)
+        if (scoreA > 0 || scoreB > 0) {
+          if (scoreA !== scoreB) return scoreB - scoreA;
+        }
+        // Secondary: regex matches
+        if (aMention !== bMention) return bMention ? 1 : -1;
+        // Tertiary: keep original order
+        return 0;
       });
     }
     return nodes;
@@ -101,14 +136,16 @@
         )
       : amendments;
 
-    // Sort amendments with similarity scores to the top
-    if (amendmentsWithScores.size > 0) {
-      result = [...result].sort((a, b) => {
-        const aHasScores = amendmentsWithScores.has(a.id) ? 1 : 0;
-        const bHasScores = amendmentsWithScores.has(b.id) ? 1 : 0;
-        return bHasScores - aHasScores;
-      });
-    }
+    // Sort amendments: mentions first, then similarity scores, then rest
+    result = [...result].sort((a, b) => {
+      // Mentions get highest priority
+      const aHasMentions = amendmentsWithMentions.has(a.id) ? 2 : 0;
+      const bHasMentions = amendmentsWithMentions.has(b.id) ? 2 : 0;
+      // Scores get secondary priority
+      const aHasScores = amendmentsWithScores.has(a.id) ? 1 : 0;
+      const bHasScores = amendmentsWithScores.has(b.id) ? 1 : 0;
+      return bHasMentions + bHasScores - (aHasMentions + aHasScores);
+    });
     return result;
   });
 
@@ -183,6 +220,14 @@
     );
   }
 
+  function getMentionMatch(nodePath) {
+    if (!selectedAmendment || !mentionMatches.has(selectedAmendment.id)) {
+      return null;
+    }
+    const matches = mentionMatches.get(selectedAmendment.id);
+    return matches.find((m) => m.tree_diff_path === nodePath) ?? null;
+  }
+
   // ── file picking ──────────────────────────────────────────────────────────────
   async function pickOldUsc() {
     const p = await open({ multiple: false, title: "Select Old USC XML" });
@@ -230,6 +275,22 @@
     }
   }
 
+  async function scanMentions() {
+    if (!treeDiff || billsData.length === 0) {
+      error = "Load files first before scanning mentions.";
+      return;
+    }
+    try {
+      const mentionsJson = await invoke("scan_amendments_for_mentions", {
+        treeDiffJson: JSON.stringify(treeDiff),
+        billsJson: JSON.stringify(billsData),
+      });
+      mentionMatches = new Map(Object.entries(JSON.parse(mentionsJson)));
+    } catch (e) {
+      error = String(e);
+    }
+  }
+
   // ── load ──────────────────────────────────────────────────────────────────────
   async function loadFiles() {
     const validBillPaths = billPaths.filter((p) => p.trim() !== "");
@@ -250,6 +311,7 @@
     amendments = [];
     changedNodes = [];
     annotations = [];
+    mentionMatches = new Map();
     selectedAmendment = null;
     selectedNodePaths = new Set();
     causativeText = "";
@@ -380,6 +442,7 @@
       // Reconstruct derived state
       amendments = billsData.flatMap((bill) => Object.values(bill.amendments));
       changedNodes = extractChangedNodes(treeDiff);
+      mentionMatches = new Map();
 
       // Reset selection state
       selectedAmendment = null;
@@ -467,6 +530,16 @@
       {#if similarityScores.length > 0}
         <span class="badge badge-scores">{similarityScores.length} scores</span>
       {/if}
+      <button
+        class="btn-mentions"
+        onclick={scanMentions}
+        disabled={!treeDiff || billsData.length === 0}
+      >
+        Scan Mentions
+      </button>
+      {#if mentionMatches.size > 0}
+        <span class="badge badge-mentions">{mentionMatches.size} matches</span>
+      {/if}
     </div>
   </div>
 
@@ -522,6 +595,16 @@
                 {#if annotationsByAmendment.get(amendment.id)}
                   <span class="badge-annotated"
                     >{annotationsByAmendment.get(amendment.id)}✓</span
+                  >
+                {/if}
+                {#if mentionMatches.has(amendment.id)}
+                  <span
+                    class="mention-tag"
+                    title={mentionMatches
+                      .get(amendment.id)
+                      .map((m) => `${m.matched_text} → ${m.tree_diff_path}`)
+                      .join("\n")}
+                    >🔗{mentionMatches.get(amendment.id).length}</span
                   >
                 {/if}
                 {#if amendmentsWithScores.has(amendment.id)}
@@ -581,10 +664,12 @@
         <ul class="node-list" role="listbox" aria-multiselectable="true">
           {#each filteredNodes as node (node.path)}
             {@const similarity = getSimilarityScore(node.path)}
+            {@const mention = getMentionMatch(node.path)}
             <li
               class="node-item"
               class:selected={selectedNodePaths.has(node.path)}
               class:has-similarity={similarity !== null}
+              class:has-mention={mention !== null}
               onclick={() => toggleNode(node.path)}
               onkeydown={(e) => e.key === "Enter" && toggleNode(node.path)}
               role="option"
@@ -592,14 +677,8 @@
               tabindex="0"
               title={node.path}
             >
-              <div class="node-header">
-                <div class="node-path">{shortPath(node.path)}</div>
-                <div class="node-header-badges">
-                  {#if annotationsByPath.get(node.path)}
-                    <span class="badge-annotated"
-                      >{annotationsByPath.get(node.path)}✓</span
-                    >
-                  {/if}
+              {#if similarity || mention}
+                <div class="node-match-tags">
                   {#if similarity}
                     <span
                       class="similarity-score"
@@ -611,6 +690,24 @@
                     >
                       {(similarity.score * 100).toFixed(0)}%
                     </span>
+                  {/if}
+                  {#if mention}
+                    <span
+                      class="mention-badge"
+                      title="Mentioned as: {mention.matched_text}"
+                    >
+                      🔗 {mention.matched_text}
+                    </span>
+                  {/if}
+                </div>
+              {/if}
+              <div class="node-header">
+                <div class="node-path">{shortPath(node.path)}</div>
+                <div class="node-header-badges">
+                  {#if annotationsByPath.get(node.path)}
+                    <span class="badge-annotated"
+                      >{annotationsByPath.get(node.path)}✓</span
+                    >
                   {/if}
                 </div>
               </div>

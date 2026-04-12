@@ -143,40 +143,79 @@ impl TreeDiff {
     /// This function will generate compatible regexes for relevant strucutural elements to match those.
     pub fn mention_regex(&self) -> Option<Regex> {
         if self.root_path.contains("section") {
-            let mut regex = String::from(r"[Ss]ection\s*");
+            let mut mreg = String::from(self.section_regex().unwrap().as_str());
             let split: Vec<_> = self.root_path.split("/").collect();
             let mut started = false;
             for part in split {
                 let (part_name, part_num) = part.split_once("_").unwrap();
                 if started {
-                    regex += r"\(";
-                    regex += part_num;
-                    regex += r"\)\s*"
+                    mreg += r"\(";
+                    mreg += part_num;
+                    mreg += r"\)\s*"
                 }
                 if part_name == "section" {
                     started = true;
-                    regex += part_num;
-                    regex += r"\s*";
                 }
             }
-            Some(Regex::from_str(regex.as_str()).unwrap())
+            Some(Regex::from_str(mreg.as_str()).unwrap())
         } else {
             None
         }
     }
 
-    /// Generates a list of all candidate mention regexes for a TreeDiff
-    pub fn mention_regexes(&self) -> Vec<Regex> {
-        let mut regs: Vec<Regex> = Vec::new();
-        if let Some(reg) = self.mention_regex() {
-            regs.push(reg);
+    pub fn section_regex(&self) -> Option<Regex> {
+        if self.root_path.contains("section") {
+            let mut regex = String::from(r"[Ss]ection\s*");
+            let split: Vec<_> = self.root_path.split("/").collect();
+            for part in split {
+                let (part_name, part_num) = part.split_once("_").unwrap();
+                if part_name == "section" {
+                    regex += part_num;
+                    regex += r"\s*";
+                    return Some(Regex::from_str(regex.as_str()).unwrap());
+                }
+            }
         }
-        for child in self.child_diffs.iter() {
-            let mut child_regs = child.mention_regexes();
-            regs.append(&mut child_regs);
-        }
-        regs
+        None
     }
+
+    /// Generates a list of all candidate regexes for a TreeDiff
+    pub fn all_regexes(&self) -> Vec<Regex> {
+        let mut res = Vec::new();
+        if let Some(sreg) = self.section_regex() {
+            res.push(sreg.clone());
+            if let Some(mreg) = self.mention_regex()
+                && mreg.as_str() != sreg.as_str()
+            {
+                res.push(mreg);
+            }
+        }
+
+        res
+    }
+
+    // fn all_regexes_rec(&self, visited: &mut HashSet<String>) -> Vec<Regex> {
+    //     let mut regs: Vec<Regex> = Vec::new();
+    //     if let Some(reg) = self.mention_regex() {
+    //         let reg_str = reg.to_string();
+    //         if !visited.contains(&reg_str) {
+    //             visited.insert(reg_str);
+    //             regs.push(reg);
+    //         }
+    //     }
+    //     if let Some(reg) = self.section_regex() {
+    //         let reg_str = reg.to_string();
+    //         if !visited.contains(&reg_str) {
+    //             visited.insert(reg_str);
+    //             regs.push(reg);
+    //         }
+    //     }
+    //     for child in self.child_diffs.iter() {
+    //         let mut child_regs = child.all_regexes_rec(visited);
+    //         regs.append(&mut child_regs);
+    //     }
+    //     regs
+    // }
 
     /// Compute the diff between two USLM element trees
     ///
