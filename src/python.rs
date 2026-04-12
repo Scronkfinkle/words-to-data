@@ -6,7 +6,10 @@ use pyo3::prelude::*;
 use pythonize::pythonize;
 use serde_json;
 
-use crate::diff::{AmendmentSimilarity as RustAmendmentSimilarity, TreeDiff as RustTreeDiff};
+use crate::diff::{
+    AmendmentSimilarity as RustAmendmentSimilarity, MentionMatch as RustMentionMatch,
+    TreeDiff as RustTreeDiff,
+};
 use crate::uslm::parser::ParseError;
 
 #[pyclass(from_py_object)]
@@ -337,6 +340,23 @@ impl TreeDiff {
             .map(|s| AmendmentSimilarity { inner: s })
             .collect())
     }
+
+    /// Scan all amendment texts for mentions of changed sections.
+    ///
+    /// Uses regexes generated from this TreeDiff to find section mentions
+    /// in each amendment's amending_text.
+    ///
+    /// Returns a dictionary mapping amendment_id to list of MentionMatch objects.
+    fn scan_for_mentions(
+        &self,
+        amendment_data: &AmendmentData,
+    ) -> PyResult<std::collections::HashMap<String, Vec<MentionMatch>>> {
+        let mentions = self.inner.scan_for_mentions(&amendment_data.inner);
+        Ok(mentions
+            .into_iter()
+            .map(|(k, v)| (k, v.iter().map(MentionMatch::from).collect()))
+            .collect())
+    }
 }
 
 // ============================================================================
@@ -402,6 +422,57 @@ impl AmendmentSimilarity {
     #[staticmethod]
     fn from_json(json_str: &str) -> PyResult<Self> {
         let inner: RustAmendmentSimilarity = serde_json::from_str(json_str)
+            .map_err(|e| PyValueError::new_err(format!("JSON deserialization error: {}", e)))?;
+        Ok(Self { inner })
+    }
+}
+
+// ============================================================================
+// MentionMatch
+// ============================================================================
+
+/// A match found when scanning amendment text for section mentions
+#[pyclass(from_py_object)]
+#[derive(Clone)]
+struct MentionMatch {
+    inner: RustMentionMatch,
+}
+
+impl MentionMatch {
+    fn from(rust_match: &RustMentionMatch) -> Self {
+        MentionMatch {
+            inner: rust_match.clone(),
+        }
+    }
+}
+
+#[pymethods]
+impl MentionMatch {
+    #[getter]
+    fn tree_diff_path(&self) -> String {
+        self.inner.tree_diff_path.clone()
+    }
+
+    #[getter]
+    fn matched_text(&self) -> String {
+        self.inner.matched_text.clone()
+    }
+
+    fn __repr__(&self) -> String {
+        format!(
+            "MentionMatch(path='{}', matched_text='{}')",
+            self.inner.tree_diff_path, self.inner.matched_text
+        )
+    }
+
+    fn to_json(&self) -> PyResult<String> {
+        serde_json::to_string(&self.inner)
+            .map_err(|e| PyRuntimeError::new_err(format!("JSON serialization error: {}", e)))
+    }
+
+    #[staticmethod]
+    fn from_json(json_str: &str) -> PyResult<Self> {
+        let inner: RustMentionMatch = serde_json::from_str(json_str)
             .map_err(|e| PyValueError::new_err(format!("JSON deserialization error: {}", e)))?;
         Ok(Self { inner })
     }
@@ -1048,6 +1119,7 @@ fn words_to_data(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_class::<BillAmendment>()?;
     m.add_class::<BillDiff>()?;
     m.add_class::<AmendmentSimilarity>()?;
+    m.add_class::<MentionMatch>()?;
     // legal_diff types
     m.add_class::<LegalDiff>()?;
     m.add_class::<ChangeAnnotation>()?;
