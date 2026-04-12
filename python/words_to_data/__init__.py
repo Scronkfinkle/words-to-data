@@ -10,6 +10,7 @@ from .words_to_data import (
     BillAmendment,
     BillDiff,
     AmendmentSimilarity,
+    MentionMatch,
     # legal_diff types
     LegalDiff,
     ChangeAnnotation,
@@ -30,6 +31,7 @@ __all__ = [
     "BillAmendment",
     "BillDiff",
     "AmendmentSimilarity",
+    "MentionMatch",
     # legal_diff types
     "LegalDiff",
     "ChangeAnnotation",

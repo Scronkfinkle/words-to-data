@@ -1,6 +1,7 @@
 use std::collections::{HashMap, HashSet};
 use std::str::FromStr;
 
+use rayon::prelude::*;
 use regex::Regex;
 use serde::{Deserialize, Serialize};
 use similar::{ChangeTag, TextDiff};
@@ -490,6 +491,63 @@ impl TreeDiff {
         }
         words
     }
+
+    /// Scan all amendment texts for mentions of changed sections.
+    ///
+    /// Uses the regexes from `all_regexes()` to find section mentions in each
+    /// amendment's `amending_text`. This helps identify which amendments might
+    /// be responsible for changes at specific structural paths.
+    ///
+    /// # Arguments
+    ///
+    /// * `data` - Amendment data from a parsed bill
+    ///
+    /// # Returns
+    ///
+    /// A map from amendment_id to list of matches found in that amendment's text.
+    pub fn scan_for_mentions(&self, data: &AmendmentData) -> HashMap<String, Vec<MentionMatch>> {
+        // Collect all regexes with their source paths recursively
+        let regex_with_paths = self.collect_regexes_with_paths();
+
+        // Scan each amendment's text against all regexes
+        let mut results: HashMap<String, Vec<MentionMatch>> = HashMap::new();
+
+        for (amendment_id, amendment) in &data.amendments {
+            let text = &amendment.amending_text;
+            let matches: Vec<MentionMatch> = regex_with_paths
+                .par_iter()
+                .filter_map(|(path, reg)| {
+                    reg.find(text).map(|mat| MentionMatch {
+                        tree_diff_path: path.clone(),
+                        matched_text: mat.as_str().to_string(),
+                    })
+                })
+                .collect();
+
+            if !matches.is_empty() {
+                results.insert(amendment_id.clone(), matches);
+            }
+        }
+
+        results
+    }
+
+    /// Recursively collect regexes with their source paths from this TreeDiff.
+    fn collect_regexes_with_paths(&self) -> Vec<(String, Regex)> {
+        let mut result = Vec::new();
+
+        // Add regexes from this node
+        for reg in self.all_regexes() {
+            result.push((self.root_path.clone(), reg));
+        }
+
+        // Recurse into children
+        for child in &self.child_diffs {
+            result.extend(child.collect_regexes_with_paths());
+        }
+
+        result
+    }
 }
 
 /// Similarity between a TreeDiff and a bill amendment
@@ -513,6 +571,19 @@ pub struct AmendmentSimilarity {
     pub matched_words: i32,
     /// Total significant words in the TreeDiff's changes
     pub tree_diff_words: i32,
+}
+
+/// A match found when scanning amendment text for section mentions.
+///
+/// When scanning bill amendments against a TreeDiff's regexes, this struct
+/// captures each match, linking the structural path from the TreeDiff to
+/// the text that matched in the amendment.
+#[derive(Debug, Clone, PartialEq, Eq, Hash, Serialize, Deserialize)]
+pub struct MentionMatch {
+    /// The structural path from the TreeDiff that generated this match
+    pub tree_diff_path: String,
+    /// The text that matched the regex pattern
+    pub matched_text: String,
 }
 
 /// Check if a word is a stop word (case-insensitive)

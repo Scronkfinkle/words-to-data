@@ -1,6 +1,6 @@
 use rstest::rstest;
 use words_to_data::{
-    diff::TreeDiff,
+    diff::{MentionMatch, TreeDiff},
     uslm::{BillDiff, TextContentField, bill_parser::parse_bill_amendments, parser::parse},
 };
 
@@ -193,4 +193,36 @@ fn test_get_all_regexes() {
 
     let regs = s174a.all_regexes();
     assert_eq!(regs.len(), 2);
+}
+
+#[test]
+fn test_scan_for_mentions_should_find_section_174_mentions_in_bill() {
+    // Parse USC documents and create TreeDiff
+    let doc_old = parse("tests/test_data/usc/2025-07-18/usc26.xml", "2025-07-18")
+        .expect("Error running parser");
+    let doc_new = parse("tests/test_data/usc/2025-07-30/usc26.xml", "2025-07-30")
+        .expect("Error running parser");
+    let diff = TreeDiff::from_elements(&doc_old, &doc_new);
+
+    // Parse the bill that amends Section 174
+    let amendment_data = parse_bill_amendments("tests/test_data/bills/hr-119-21.xml").unwrap();
+
+    // Scan for mentions - this should find "Section 174" mentions in the amendment texts
+    let mentions = diff.scan_for_mentions(&amendment_data);
+
+    // We expect at least one amendment to mention Section 174
+    assert!(
+        !mentions.is_empty(),
+        "Should find at least one amendment mentioning Section 174"
+    );
+
+    // Check that the matched text includes "Section 174"
+    let all_matches: Vec<&MentionMatch> = mentions.values().flatten().collect();
+    let has_section_174 = all_matches.iter().any(|m| m.matched_text.contains("174"));
+
+    assert!(
+        has_section_174,
+        "Should find a match containing '174', got matches: {:?}",
+        all_matches
+    );
 }

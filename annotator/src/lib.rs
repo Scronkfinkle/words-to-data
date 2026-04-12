@@ -1,9 +1,8 @@
-use std::{collections::HashMap, str::FromStr, thread};
+use std::{str::FromStr, thread};
 
-use rayon::iter::{IntoParallelRefIterator, ParallelIterator};
 use serde::{Deserialize, Serialize};
 use words_to_data::{
-    diff::TreeDiff,
+    diff::{MentionMatch, TreeDiff},
     legal_diff::{
         AnnotationMetadata, AnnotationStatus, BillReference, ChangeAnnotation, LegalDiff,
     },
@@ -43,20 +42,10 @@ pub struct Workspace {
     pub annotations: Vec<ChangeAnnotation>,
 }
 
-/// A match found when scanning amendment text for section mentions.
-#[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct MentionMatch {
-    /// The structural path from the TreeDiff that generated this match
-    pub tree_diff_path: String,
-    /// The text that matched the regex pattern
-    pub matched_text: String,
-}
-
 /// Scan all amendment texts for mentions of changed sections.
 ///
-/// Uses the `mention_regexes()` method on TreeDiff to generate patterns for
-/// sections that have changes, then runs those patterns against each
-/// amendment's amending_text.
+/// Uses the library's `scan_for_mentions()` method on TreeDiff to find
+/// section mentions in amendment texts.
 ///
 /// Returns a map from amendment_id to list of matches found.
 #[tauri::command]
@@ -67,50 +56,18 @@ fn scan_amendments_for_mentions(
     let tree_diff: TreeDiff = serde_json::from_str(&tree_diff_json).map_err(|e| e.to_string())?;
     let bills: Vec<AmendmentData> = serde_json::from_str(&bills_json).map_err(|e| e.to_string())?;
 
-    // Collect all regexes with their source paths
-    let regex_with_paths: Vec<(String, regex::Regex)> = collect_regexes_with_paths(&tree_diff);
-
-    // Scan each amendment's text against all regexes
-    let mut results: HashMap<String, Vec<MentionMatch>> = HashMap::new();
+    // Aggregate results across all bills
+    let mut results: std::collections::HashMap<String, Vec<MentionMatch>> =
+        std::collections::HashMap::new();
 
     for bill in &bills {
-        for (amendment_id, amendment) in &bill.amendments {
-            let text = &amendment.amending_text;
-            let matches: Vec<_> = regex_with_paths
-                .par_iter()
-                .filter_map(|(path, reg)| {
-                    reg.find(text).map(|mat| {
-                        Some(MentionMatch {
-                            tree_diff_path: path.clone(),
-                            matched_text: mat.as_str().to_string(),
-                        })
-                    })
-                })
-                .collect();
-            for m in matches {
-                results
-                    .entry(amendment_id.clone())
-                    .or_default()
-                    .push(m.unwrap().clone());
-            }
+        let mentions = tree_diff.scan_for_mentions(bill);
+        for (amendment_id, matches) in mentions {
+            results.entry(amendment_id).or_default().extend(matches);
         }
     }
-    serde_json::to_string(&results).map_err(|e| e.to_string())
-}
 
-/// Recursively collect regexes with their source paths from a TreeDiff.
-fn collect_regexes_with_paths(diff: &TreeDiff) -> Vec<(String, regex::Regex)> {
-    let mut result = Vec::new();
-    let regs: Vec<_> = diff
-        .all_regexes()
-        .iter()
-        .map(|reg| (diff.root_path.clone(), reg.clone()))
-        .collect();
-    result.extend(regs);
-    for child in &diff.child_diffs {
-        result.extend(collect_regexes_with_paths(child));
-    }
-    result
+    serde_json::to_string(&results).map_err(|e| e.to_string())
 }
 
 /// Load two USC XML files, compute and return the TreeDiff as a JSON string.

@@ -171,6 +171,22 @@ class TreeDiff:
         """
         ...
 
+    def scan_for_mentions(
+        self, amendment_data: AmendmentData
+    ) -> dict[str, list[MentionMatch]]:
+        """Scan all amendment texts for mentions of changed sections.
+
+        Uses regexes generated from this TreeDiff to find section mentions
+        in each amendment's amending_text.
+
+        Args:
+            amendment_data: The parsed amendment data from a bill
+
+        Returns:
+            Dictionary mapping amendment_id to list of MentionMatch objects
+        """
+        ...
+
     def to_json(self) -> str:
         """Serialize the diff to a JSON string."""
         ...
@@ -228,6 +244,33 @@ class AmendmentSimilarity:
     @staticmethod
     def from_json(json_str: str) -> AmendmentSimilarity:
         """Deserialize a JSON string to an AmendmentSimilarity."""
+        ...
+
+class MentionMatch:
+    """A match found when scanning amendment text for section mentions.
+
+    When scanning bill amendments against a TreeDiff's regexes, this captures
+    each match, linking the structural path from the TreeDiff to the text that
+    matched in the amendment.
+    """
+
+    @property
+    def tree_diff_path(self) -> str:
+        """The structural path from the TreeDiff that generated this match"""
+        ...
+
+    @property
+    def matched_text(self) -> str:
+        """The text that matched the regex pattern"""
+        ...
+
+    def to_json(self) -> str:
+        """Serialize to a JSON string."""
+        ...
+
+    @staticmethod
+    def from_json(json_str: str) -> MentionMatch:
+        """Deserialize a JSON string to a MentionMatch."""
         ...
 
 def parse_uslm_xml(path: str, date: str) -> USLMElement:
