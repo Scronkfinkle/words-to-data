@@ -542,6 +542,11 @@ class LegalDiff:
         """All annotations as a dictionary (path -> list of annotation dicts)"""
         ...
 
+    @property
+    def amendments_dict(self) -> dict[str, dict[str, Any]]:
+        """The amendments that were annotated, keyed by amendment_id"""
+        ...
+
     def add_annotation(self, annotation: ChangeAnnotation) -> None:
         """Add an annotation for a specific structural path.
 

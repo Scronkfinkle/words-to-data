@@ -45,6 +45,8 @@ dependencies = [
 name = "annotator"
 version = "0.1.0"
 dependencies = [
+ "rayon",
+ "regex",
  "serde",
  "serde_json",
  "tauri",
@@ -5130,6 +5132,7 @@ dependencies = [
  "pyo3",
  "pythonize",
  "rayon",
+ "regex",
  "roxmltree",
  "rstest",
  "serde",

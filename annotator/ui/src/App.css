@@ -123,6 +123,22 @@
   background: #6d28d9;
 }
 
+.btn-mentions {
+  background: #c026d3;
+  color: white;
+  border-color: #a21caf;
+  font-weight: 500;
+}
+
+.btn-mentions:hover:not(:disabled) {
+  background: #a21caf;
+}
+
+.badge-mentions {
+  background: #fae8ff;
+  color: #86198f;
+}
+
 .error-bar {
   background: #fef2f2;
   color: #991b1b;
@@ -329,6 +345,21 @@
   background: #dcfce7;
 }
 
+.node-item.has-mention {
+  background: #fdf4ff;
+}
+
+.node-item.has-mention.selected {
+  background: #fae8ff;
+}
+
+.node-match-tags {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+
 .node-header {
   display: flex;
   justify-content: space-between;
@@ -468,6 +499,29 @@
 .badge-scores {
   background: #dcfce7;
   color: #166534;
+}
+
+.mention-tag {
+  background: #fae8ff;
+  color: #86198f;
+  border-radius: 3px;
+  padding: 1px 5px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.mention-badge {
+  background: #fae8ff;
+  color: #86198f;
+  border-radius: 3px;
+  padding: 1px 6px;
+  font-size: 10px;
+  font-weight: 600;
+  flex-shrink: 0;
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .badge-annotated {
