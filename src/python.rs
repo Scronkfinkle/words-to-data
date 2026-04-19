@@ -302,6 +302,11 @@ impl TreeDiff {
         self.inner.find(path).map(TreeDiff::from)
     }
 
+    /// Return a shallow copy of this TreeDiff without children
+    fn shallow(&self) -> TreeDiff {
+        TreeDiff::from(&self.inner.shallow())
+    }
+
     fn __repr__(&self) -> String {
         format!(
             "TreeDiff(path='{}', changes={}, added={}, removed={}, child_diffs={})",

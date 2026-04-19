@@ -353,6 +353,28 @@ def test_legal_diff_json_roundtrip():
     assert restored_anns[0].source_bill.bill_id == "119-21"
 
 
+def test_tree_diff_shallow():
+    """Test that shallow() returns a TreeDiff without children"""
+    old = parse_uslm_xml("tests/test_data/usc/2025-07-18/usc26.xml", "2025-07-18")
+    new = parse_uslm_xml("tests/test_data/usc/2025-07-30/usc26.xml", "2025-07-30")
+    diff = compute_diff(old, new)
+
+    # Find a node with children
+    s174 = diff.find(
+        "uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174"
+    )
+    assert s174 is not None
+    assert len(s174.child_diffs) > 0, "Section 174 should have child diffs"
+
+    # Get shallow copy
+    shallow = s174.shallow()
+
+    # Verify shallow copy has same data but no children
+    assert shallow.root_path == s174.root_path
+    assert len(shallow.changes) == len(s174.changes)
+    assert len(shallow.child_diffs) == 0, "Shallow copy should have no children"
+
+
 def test_annotation_types_json_roundtrip():
     """Test JSON roundtrip for ChangeAnnotation and nested types"""
     import json
@@ -382,7 +404,7 @@ def test_annotation_types_json_roundtrip():
     assert restored_ann.metadata.confidence == annotation.metadata.confidence
 
     # Test BillReference roundtrip
-        
+
     bill_ref = BillReference(bill_id="119-21", amendment_id="test", causative_text="Section 2(a)(1)")
     bill_json = bill_ref.to_json()
     restored_bill = BillReference.from_json(bill_json)

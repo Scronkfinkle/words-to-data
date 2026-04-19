@@ -158,6 +158,17 @@ class TreeDiff:
         """
         ...
 
+    def shallow(self) -> TreeDiff:
+        """Return a shallow copy of this TreeDiff without children.
+
+        Useful when correlating a specific diff node with other data
+        without needing the full subtree.
+
+        Returns:
+            A new TreeDiff with the same data but empty child_diffs
+        """
+        ...
+
     def calculate_amendment_similarities(
         self, amendment_data: AmendmentData
     ) -> list[AmendmentSimilarity]:
