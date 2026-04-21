@@ -30,6 +30,10 @@ class USLMElement:
           """Serialize the element to a JSON string."""
           ...
 
+      def to_dict(self) -> dict[str, Any]:
+          """Serialize the element to a dictionary."""
+          ...
+
       @staticmethod
       def from_json(json_str: str) -> USLMElement:
           """Deserialize a JSON string to a USLMElement."""
@@ -60,6 +64,10 @@ class TextChange:
 
     def to_json(self) -> str:
         """Serialize the change to a JSON string."""
+        ...
+
+    def to_dict(self) -> dict[str, Any]:
+        """Serialize the change to a dictionary."""
         ...
 
     @staticmethod
@@ -102,6 +110,10 @@ class FieldChangeEvent:
 
     def to_json(self) -> str:
         """Serialize the field change event to a JSON string."""
+        ...
+
+    def to_dict(self) -> dict[str, Any]:
+        """Serialize the field change event to a dictionary."""
         ...
 
     @staticmethod
@@ -202,6 +214,10 @@ class TreeDiff:
         """Serialize the diff to a JSON string."""
         ...
 
+    def to_dict(self) -> dict[str, Any]:
+        """Serialize the diff to a dictionary."""
+        ...
+
     @staticmethod
     def from_json(json_str: str) -> TreeDiff:
         """Deserialize a JSON string to a TreeDiff."""
@@ -252,6 +268,10 @@ class AmendmentSimilarity:
         """Serialize to a JSON string."""
         ...
 
+    def to_dict(self) -> dict[str, Any]:
+        """Serialize to a dictionary."""
+        ...
+
     @staticmethod
     def from_json(json_str: str) -> AmendmentSimilarity:
         """Deserialize a JSON string to an AmendmentSimilarity."""
@@ -277,6 +297,10 @@ class MentionMatch:
 
     def to_json(self) -> str:
         """Serialize to a JSON string."""
+        ...
+
+    def to_dict(self) -> dict[str, Any]:
+        """Serialize to a dictionary."""
         ...
 
     @staticmethod
@@ -341,6 +365,10 @@ class BillDiff:
         """Serialize to a JSON string."""
         ...
 
+    def to_dict(self) -> dict[str, Any]:
+        """Serialize to a dictionary."""
+        ...
+
     @staticmethod
     def from_json(json_str: str) -> BillDiff:
         """Deserialize a JSON string to a BillDiff."""
@@ -387,6 +415,10 @@ class BillAmendment:
         """Serialize the amendment to a JSON string."""
         ...
 
+    def to_dict(self) -> dict[str, Any]:
+        """Serialize the amendment to a dictionary."""
+        ...
+
     @staticmethod
     def from_json(json_str: str) -> BillAmendment:
         """Deserialize a JSON string to a BillAmendment."""
@@ -416,6 +448,10 @@ class AmendmentData:
 
     def to_json(self) -> str:
         """Serialize the amendment data to a JSON string."""
+        ...
+
+    def to_dict(self) -> dict[str, Any]:
+        """Serialize the amendment data to a dictionary."""
         ...
 
     @staticmethod
@@ -474,6 +510,10 @@ class BillReference:
         """Serialize to a JSON string."""
         ...
 
+    def to_dict(self) -> dict[str, Any]:
+        """Serialize to a dictionary."""
+        ...
+
     @staticmethod
     def from_json(json_str: str) -> BillReference:
         """Deserialize a JSON string to a BillReference."""
@@ -514,6 +554,10 @@ class AnnotationMetadata:
 
     def to_json(self) -> str:
         """Serialize to a JSON string."""
+        ...
+
+    def to_dict(self) -> dict[str, Any]:
+        """Serialize to a dictionary."""
         ...
 
     @staticmethod
@@ -568,6 +612,10 @@ class ChangeAnnotation:
 
     def to_json(self) -> str:
         """Serialize to a JSON string."""
+        ...
+
+    def to_dict(self) -> dict[str, Any]:
+        """Serialize to a dictionary."""
         ...
 
     @staticmethod
@@ -642,6 +690,10 @@ class LegalDiff:
 
     def to_json(self) -> str:
         """Serialize to a JSON string."""
+        ...
+
+    def to_dict(self) -> dict[str, Any]:
+        """Serialize to a dictionary."""
         ...
 
     @staticmethod

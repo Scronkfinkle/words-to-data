@@ -126,6 +126,51 @@ def test_to_json_methods():
     assert "action_types" in parsed_amendment
 
 
+def test_to_dict_methods():
+    """Test that to_dict() returns Python dicts compatible with json.dumps"""
+    import json
+    from words_to_data import BillDiff
+
+    # Test BillDiff.to_dict()
+    bill_diff = BillDiff(["added", "words"], ["removed"])
+    d = bill_diff.to_dict()
+    assert isinstance(d, dict)
+    assert d["added"] == ["added", "words"]
+    assert d["removed"] == ["removed"]
+
+    # Test it works with json.dumps
+    json_str = json.dumps(d, indent=2)
+    assert isinstance(json_str, str)
+    parsed = json.loads(json_str)
+    assert parsed == d
+
+    # Test BillAmendment.to_dict()
+    data = parse_bill_amendments("tests/test_data/bills/hr-119-21.xml")
+    amendment = data.amendments[0]
+    amendment_dict = amendment.to_dict()
+    assert isinstance(amendment_dict, dict)
+    assert "id" in amendment_dict
+    assert "amending_text" in amendment_dict
+    assert "action_types" in amendment_dict
+
+    # Test list of amendments with json.dumps
+    amendments_list = [a.to_dict() for a in data.amendments]
+    json_str = json.dumps(amendments_list, indent=2)
+    assert isinstance(json_str, str)
+
+    # Test TreeDiff.to_dict()
+    old = parse_uslm_xml("tests/test_data/usc/2025-07-18/usc26.xml", "2025-07-18")
+    new = parse_uslm_xml("tests/test_data/usc/2025-07-30/usc26.xml", "2025-07-30")
+    diff = compute_diff(old, new)
+    diff_dict = diff.to_dict()
+    assert isinstance(diff_dict, dict)
+    assert "root_path" in diff_dict
+
+    # Test USLMElement.to_dict()
+    element_dict = new.to_dict()
+    assert isinstance(element_dict, dict)
+
+
 def test_from_json_roundtrip():
     """Test that from_json() can deserialize JSON produced by to_json()"""
 
