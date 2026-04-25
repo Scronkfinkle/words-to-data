@@ -36,7 +36,8 @@ fn make_section_174a_annotation(annotator: &str) -> ChangeAnnotation {
             causative_text: amendment.amending_text,
         },
         paths: vec![
-            "uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a".to_string(),
+            "uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a"
+                .to_string(),
         ],
         metadata: AnnotationMetadata {
             status: AnnotationStatus::Pending,
@@ -167,7 +168,7 @@ fn should_return_none_for_unannotated_path() {
 fn should_get_diff_node_for_existing_path() {
     let tree_diff = make_test_tree_diff();
     let legal_diff = LegalDiff::new(&tree_diff);
-    let path = "uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a";
+    let path = "uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a";
 
     let node = legal_diff.get_diff_node(path);
     assert!(node.is_some());
@@ -192,8 +193,8 @@ fn should_return_all_annotated_paths() {
     let tree_diff = make_test_tree_diff();
     let mut legal_diff = LegalDiff::new(&tree_diff);
 
-    let path1 = "uscodedocument_26/title_26/section_174".to_string();
-    let path2 = "uscodedocument_26/title_26/section_175".to_string();
+    let path1 = "uscode/title_26/section_174".to_string();
+    let path2 = "uscode/title_26/section_175".to_string();
 
     legal_diff.add_annotation(make_test_annotation(
         AmendingAction::Amend,
@@ -230,7 +231,8 @@ fn should_return_paths_with_changes_but_no_annotations() {
     let unannotated = legal_diff.unannotated_paths();
 
     // We know section 174(a) has changes from the diff_tests
-    let s174a_path = "uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a";
+    let s174a_path =
+        "uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a";
     assert!(unannotated.contains(&s174a_path.to_string()));
 }
 

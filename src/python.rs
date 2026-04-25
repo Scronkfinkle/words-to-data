@@ -76,6 +76,11 @@ impl USLMElement {
         })
     }
 
+    fn merge_children(&mut self, other: &mut USLMElement) {
+        self.inner.merge_children_mut(&mut other.inner);
+        self.children.append(&mut other.children.clone());
+    }
+
     #[staticmethod]
     fn from_json(json_str: &str) -> PyResult<Self> {
         let inner: crate::uslm::USLMElement = serde_json::from_str(json_str)

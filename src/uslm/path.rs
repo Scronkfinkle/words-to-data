@@ -41,8 +41,8 @@ pub fn should_include_in_uslm_path(element_type: ElementType) -> bool {
 /// # Format
 ///
 /// Paths use the format `elementtype_value` with `/` separators:
-/// - For root elements: `"uscodedocument_26"`
-/// - For nested elements: `"uscodedocument_26/title_26/chapter_1/section_174/level_a/subsection_1"`
+/// - For root elements: `"uscode"`
+/// - For nested elements: `"uscode/title_26/chapter_1/section_174/level_a/subsection_1"`
 ///
 /// # Arguments
 ///
@@ -60,13 +60,9 @@ pub fn should_include_in_uslm_path(element_type: ElementType) -> bool {
 /// use words_to_data::uslm::path::generate_structural_path;
 /// use words_to_data::uslm::ElementType;
 ///
-/// // Root element
-/// let root = generate_structural_path(ElementType::USCodeDocument, "26", None);
-/// assert_eq!(root, "uscodedocument_26");
-///
 /// // Child element
-/// let section = generate_structural_path(ElementType::Section, "174", Some("uscodedocument_26/title_26"));
-/// assert_eq!(section, "uscodedocument_26/title_26/section_174");
+/// let section = generate_structural_path(ElementType::Section, "174", Some("uscode/title_26"));
+/// assert_eq!(section, "uscode/title_26/section_174");
 /// ```
 pub fn generate_structural_path(
     element_type: ElementType,

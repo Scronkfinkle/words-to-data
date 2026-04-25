@@ -54,7 +54,7 @@ fn main() -> Result<(), Box< dyn std::error::Error>> {
     let title_26 = parse("tests/test_data/usc/2025-07-18/usc26.xml", "2025-07-18")?;
 
     // Navigate to §174(a)
-    let s174a = title_26.find("uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a").expect("§174 (a) not found");
+    let s174a = title_26.find("uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a").expect("§174 (a) not found");
 
     // Print the chapeau value
     println!(
@@ -73,7 +73,7 @@ fn main() -> Result<(), Box< dyn std::error::Error>> {
 from words_to_data import parse_uslm_xml
 
 title_26 = parse_uslm_xml("tests/test_data/usc/2025-07-18/usc26.xml", "2025-07-18")
-s174a = title_26.find("uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a")
+s174a = title_26.find("uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a")
 print(f"§ 174(a) chapeau: {s174a.data['chapeau']}")
 ```
 
@@ -89,7 +89,7 @@ fn main() -> Result<(), Box< dyn std::error::Error>> {
 
     let diff = TreeDiff::from_elements(&doc_old, &doc_new);
 
-    let s174a_diff = diff.find("uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a").expect("Section 174A has no changes, nor does its children!");
+    let s174a_diff = diff.find("uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a").expect("Section 174A has no changes, nor does its children!");
 
     for change in s174a_diff.changes.iter() {
         println!("{:#?} Changed:", change.field_name);
@@ -111,7 +111,7 @@ doc_new = parse_uslm_xml("tests/test_data/usc/2025-07-30/usc26.xml", "2025-07-30
 
 diff = compute_diff(doc_old, doc_new)
 
-s174a_diff = diff.find("uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a")
+s174a_diff = diff.find("uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a")
 
 for change in s174a_diff.changes:
     print(f"{change.field_name} Changed:")
@@ -169,7 +169,7 @@ Documents are represented as trees of `USLMElement` structures. Each element con
 The library uses two types of paths:
 
 1. **Structural Path**: Full hierarchy including all elements
-   Example: `uscodedocument_26/title_26/subtitle_A/chapter_1/section_174`
+   Example: `uscode/title_26/subtitle_A/chapter_1/section_174`
 
 2. **USLM ID**: Official USLM identifier (excludes structural-only elements)
    Example: `/us/usc/t26/s174/a/1`

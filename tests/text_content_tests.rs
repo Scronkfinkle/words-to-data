@@ -8,7 +8,7 @@ fn test_parse_heading_field() {
 
     // Navigate to title element
     let title = root
-        .find("uscodedocument_9/title_9")
+        .find("uscode/title_9")
         .expect("Failed to find title element");
 
     // Verify heading exists and matches expected value
@@ -30,7 +30,7 @@ fn test_parse_content_field() {
 
     // Navigate to a paragraph which has actual content text
     let paragraph = root
-        .find("uscodedocument_9/title_9/chapter_1/section_10/subsection_a/paragraph_1")
+        .find("uscode/title_9/chapter_1/section_10/subsection_a/paragraph_1")
         .expect("Failed to find paragraph element");
 
     // Verify content field exists and contains text
@@ -60,7 +60,7 @@ fn test_parse_chapeau_field() {
 
     // Navigate to section 10 subsection a which has chapeau
     let subsection = root
-        .find("uscodedocument_9/title_9/chapter_1/section_10/subsection_a")
+        .find("uscode/title_9/chapter_1/section_10/subsection_a")
         .expect("Failed to find subsection with chapeau");
 
     // Verify chapeau field exists
@@ -86,7 +86,7 @@ fn test_parse_mixed_text_fields() {
 
     // Section 1 has both heading and content
     let section = root
-        .find("uscodedocument_1/title_1/chapter_1/section_1")
+        .find("uscode/title_1/chapter_1/section_1")
         .expect("Failed to find section element");
 
     // Verify both fields exist
@@ -136,7 +136,7 @@ fn test_parse_chapter_heading() {
 
     // Navigate to chapter 1
     let chapter = root
-        .find("uscodedocument_9/title_9/chapter_1")
+        .find("uscode/title_9/chapter_1")
         .expect("Failed to find chapter element");
 
     // Verify chapter has heading
@@ -161,7 +161,7 @@ fn test_all_text_field_accessors() {
 
     // Get subsection with chapeau
     let subsection = root
-        .find("uscodedocument_9/title_9/chapter_1/section_10/subsection_a")
+        .find("uscode/title_9/chapter_1/section_10/subsection_a")
         .expect("Failed to find subsection");
 
     // Test all accessor methods exist and work
@@ -185,7 +185,7 @@ fn test_parse_special_characters_in_text() {
 
     // Section 1 has "§ 1." in its number display
     let section = root
-        .find("uscodedocument_1/title_1/chapter_1/section_1")
+        .find("uscode/title_1/chapter_1/section_1")
         .expect("Failed to find section element");
 
     // The number_display field should contain the § symbol

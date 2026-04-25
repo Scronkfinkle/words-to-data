@@ -132,7 +132,11 @@ pub enum BillType {
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
 #[serde(rename_all = "snake_case")]
 pub enum USCType {
+    /// The entire US Code (container for all titles at a point in time)
+    #[serde(rename = "us_code")]
+    USCode,
     /// A standard USC Title
+    /// TODO remove this in favor of USCode
     Title,
     /// An appendix to a USC Title
     TitleAppendix,
@@ -459,7 +463,7 @@ pub struct RefPair {
 ///
 /// 1. **Structural Path** (`path`): Includes all hierarchy elements, even
 ///    non-USLM ones like `Level`. Example:
-///    `uscodedocument_26/title_26/subtitle_k/chapter_100/section_9834/level_1`
+///    `uscode/title_26/subtitle_k/chapter_100/section_9834/level_1`
 ///
 /// 2. **USLM ID** (`uslm_id`): Official USLM identifier following standard format.
 ///    Only present for elements in the USLM scheme. Example: `/us/usc/t26/s9834/a/1`
@@ -475,7 +479,7 @@ pub struct ElementData {
     /// Note that combining this with the date field gives a unique identifier for the document
     /// For example:
     ///
-    /// uscodedocument_26/title_26/subtitle_k/chapter_100/subchapter_c/section_9834/level_1
+    /// uscode/title_26/subtitle_k/chapter_100/subchapter_c/section_9834/level_1
     ///
     pub path: String,
 
@@ -605,7 +609,7 @@ impl USLMElement {
     ///
     /// Recursively searches this element and all descendants for an element
     /// with the specified path. The path must be a fully qualified structural
-    /// path (e.g., "uscodedocument_7/title_7/chapter_1/section_1").
+    /// path (e.g., "uscode/title_7/chapter_1/section_1").
     ///
     /// # Arguments
     ///
@@ -622,11 +626,11 @@ impl USLMElement {
     /// # use words_to_data::uslm::parser::parse;
     /// # let element = parse("tests/test_data/usc/2025-07-18/usc07.xml", "2025-07-18").unwrap();
     /// // Find a specific section
-    /// let section = element.find("uscodedocument_7/title_7/chapter_1/section_2");
+    /// let section = element.find("uscode/title_7/chapter_1/section_2");
     /// assert!(section.is_some());
     ///
     /// // Non-existent path returns None
-    /// let missing = element.find("uscodedocument_7/title_99");
+    /// let missing = element.find("uscode/title_99");
     /// assert!(missing.is_none());
     /// ```
     pub fn find(&self, path: &str) -> Option<&USLMElement> {
@@ -649,5 +653,10 @@ impl USLMElement {
             assert!(child_vec.len() == 1);
             child_vec[0].find(path)
         }
+    }
+
+    /// Merge the children of one node into another
+    pub fn merge_children_mut(&mut self, other: &mut USLMElement) {
+        self.children.append(&mut other.children);
     }
 }

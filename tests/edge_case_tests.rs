@@ -55,7 +55,10 @@ fn test_parse_smallest_file() {
     assert!(result.is_ok(), "Should successfully parse smallest file");
 
     let root = result.unwrap();
-    assert_eq!(root.data.uslm_id.as_ref().unwrap(), "/us/usc/t9");
+    // Root is now uscode container, first child is the title
+    assert_eq!(root.data.path, "uscode");
+    let title = &root.children[0];
+    assert_eq!(title.data.uslm_id.as_ref().unwrap(), "/us/usc/t9");
 
     // Should have at least some content
     assert!(
@@ -71,7 +74,10 @@ fn test_parse_large_file() {
     assert!(result.is_ok(), "Should successfully parse large file");
 
     let root = result.unwrap();
-    assert_eq!(root.data.uslm_id.as_ref().unwrap(), "/us/usc/t7");
+    // Root is now uscode container, first child is the title
+    assert_eq!(root.data.path, "uscode");
+    let title = &root.children[0];
+    assert_eq!(title.data.uslm_id.as_ref().unwrap(), "/us/usc/t7");
 
     // Count elements to verify complete parsing
     fn count_elements(elem: &words_to_data::uslm::USLMElement) -> usize {
@@ -94,7 +100,7 @@ fn test_empty_element_no_children() {
 
     // Find a leaf paragraph element with no children
     let paragraph = root
-        .find("uscodedocument_9/title_9/chapter_1/section_10/subsection_a/paragraph_1")
+        .find("uscode/title_9/chapter_1/section_10/subsection_a/paragraph_1")
         .expect("Failed to find paragraph");
 
     assert_eq!(paragraph.data.element_type, ElementType::Paragraph);
@@ -151,9 +157,8 @@ fn test_deeply_nested_structure() {
         .expect("Failed to parse usc09.xml");
 
     // Try to find a deeply nested element (paragraph or deeper)
-    // uscodedocument_9/title_9/chapter_1/section_10/subsection_a/paragraph_1 = 6 levels
-    let deep_elem =
-        root.find("uscodedocument_9/title_9/chapter_1/section_10/subsection_a/paragraph_1");
+    // uscode/title_9/chapter_1/section_10/subsection_a/paragraph_1 = 6 levels
+    let deep_elem = root.find("uscode/title_9/chapter_1/section_10/subsection_a/paragraph_1");
 
     assert!(deep_elem.is_some(), "Should find deeply nested paragraph");
 

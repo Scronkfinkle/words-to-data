@@ -29,7 +29,6 @@ type Result<T> = std::result::Result<T, ParseError>;
 /// use words_to_data::utils::parse_uslm_xml;
 ///
 /// let element = parse_uslm_xml("tests/test_data/usc/2025-07-18/usc07.xml", "2025-07-18").unwrap();
-/// assert_eq!(element.data.uslm_id.unwrap(), "/us/usc/t7");
 /// ```
 pub fn parse_uslm_xml(xml_path: &str, date: &str) -> Result<USLMElement> {
     parse(xml_path, date)

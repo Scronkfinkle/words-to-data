@@ -5,8 +5,8 @@ use thiserror::Error;
 use crate::{
     io::load_xml_file,
     uslm::{
-        self, BillType, DocumentType, ElementData, ElementType, RefPair, SourceCredit, USLMElement,
-        USLMError, path::should_include_in_uslm_path,
+        self, BillType, DocumentType, ElementData, ElementType, RefPair, SourceCredit, USCType,
+        USLMElement, USLMError, path::should_include_in_uslm_path,
     },
 };
 
@@ -188,8 +188,73 @@ pub fn parse_from_str(xml_str: &str, date: &str) -> Result<USLMElement> {
     };
     // This is guaranteed safe by the matcher above
     let top_level_node = top_level_node.unwrap();
-    let element = parse_element(top_level_node, &document_type, date, None, None, None, 0)?;
-    Ok(element)
+
+    // For USC documents, create a uscode container and parse title as direct child
+    match &document_type {
+        DocumentType::USCode { .. } => {
+            let d = crate::date::date_str_to_date(date)?;
+
+            // Create the container document type with USCType::USCode
+            let container_doc_type = DocumentType::USCode {
+                usc_type: USCType::USCode,
+            };
+
+            // Create the uscode container element
+            let container_data = ElementData {
+                path: "uscode".to_string(),
+                element_type: ElementType::USCodeDocument,
+                document_type: container_doc_type.clone(),
+                date: d,
+                number_value: String::new(),
+                number_display: String::new(),
+                verbose_name: "US Code".to_string(),
+                heading: None,
+                chapeau: None,
+                proviso: None,
+                content: None,
+                continuation: None,
+                uslm_id: None,
+                uslm_uuid: None,
+                source_credits: vec![],
+            };
+
+            // Find <main> and parse its children as direct children of the container
+            let main_node = top_level_node
+                .children()
+                .find(|n| n.has_tag_name("main"))
+                .unwrap_or(top_level_node);
+
+            let mut children: Vec<USLMElement> = Vec::new();
+            for child in main_node.children() {
+                let child_element = parse_element(
+                    child,
+                    &container_doc_type,
+                    date,
+                    Some("US Code"),
+                    Some("uscode".to_string()),
+                    None,
+                    1,
+                );
+                match child_element {
+                    Ok(e) => children.push(e),
+                    Err(ParseError::UnknownElement)
+                    | Err(ParseError::RepealedElement)
+                    | Err(ParseError::ReservedElement) => {}
+                    Err(other) => return Err(other),
+                }
+            }
+
+            Ok(USLMElement {
+                data: container_data,
+                children,
+            })
+        }
+        // For other document types (bills), use the original logic
+        _ => {
+            let element = parse_element(top_level_node, &document_type, date, None, None, None, 0)?;
+            Ok(element)
+        }
+    }
 }
 
 /// Parse a USLM XML document into a USLMElement tree
@@ -226,9 +291,10 @@ pub fn parse_from_str(xml_str: &str, date: &str) -> Result<USLMElement> {
 /// ```
 /// use words_to_data::uslm::parser::parse;
 ///
-/// // Parse a USC title
+/// // Parse a USC title - root is uscode container, title is first child
 /// let usc = parse("tests/test_data/usc/2025-07-18/usc07.xml", "2025-07-18").unwrap();
-/// assert_eq!(usc.data.uslm_id.unwrap(), "/us/usc/t7");
+/// assert_eq!(usc.data.path, "uscode");
+/// assert_eq!(usc.children[0].data.uslm_id.as_ref().unwrap(), "/us/usc/t7");
 ///
 /// // Parse a public law
 /// let bill = parse("tests/test_data/bills/hr-119-21.xml", "2025-07-04").unwrap();

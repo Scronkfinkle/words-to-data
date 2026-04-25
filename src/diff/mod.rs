@@ -150,7 +150,10 @@ impl TreeDiff {
             let split: Vec<_> = self.root_path.split("/").collect();
             let mut started = false;
             for part in split {
-                let (part_name, part_num) = part.split_once("_").unwrap();
+                // Skip parts without underscore (like "uscode")
+                let Some((part_name, part_num)) = part.split_once("_") else {
+                    continue;
+                };
                 if started {
                     mreg += r"\(";
                     mreg += part_num;
@@ -171,7 +174,10 @@ impl TreeDiff {
             let mut regex = String::from(r"[Ss]ection\s*");
             let split: Vec<_> = self.root_path.split("/").collect();
             for part in split {
-                let (part_name, part_num) = part.split_once("_").unwrap();
+                // Skip parts without underscore (like "uscode")
+                let Some((part_name, part_num)) = part.split_once("_") else {
+                    continue;
+                };
                 if part_name == "section" {
                     regex += part_num;
                     regex += r"\D";
@@ -310,7 +316,7 @@ impl TreeDiff {
     ///
     /// Recursively searches this element and all descendants for an element
     /// with the specified path. The path must be a fully qualified structural
-    /// path (e.g., "uscodedocument_7/title_7/chapter_1/section_1").
+    /// path (e.g., "uscode/title_7/chapter_1/section_1").
     ///
     /// # Arguments
     ///
