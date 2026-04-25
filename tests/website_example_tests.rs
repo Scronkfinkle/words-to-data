@@ -2,9 +2,6 @@
 //!
 //! These tests replicate the examples shown on wordstodata.com
 //! If any of these tests fail, the website examples at w2d_site/index.html need to be updated.
-//!
-//! Site location: /home/jesse/code/w2d_site/index.html
-
 use words_to_data::{
     diff::TreeDiff,
     uslm::{TextContentField, bill_parser::parse_bill_amendments, parser::parse},
@@ -24,7 +21,8 @@ fn website_example_parse_usc_document() {
         .expect("Failed to parse USC Title 26");
 
     // Navigate to §174(a) (path shown on website)
-    let s174a_path = "uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a";
+    let s174a_path =
+        "uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a";
     let s174a = title_26
         .find(s174a_path)
         .expect("§174(a) not found - website example path may need updating");
@@ -47,7 +45,8 @@ fn website_example_parse_usc_json_structure() {
     let title_26 = parse("tests/test_data/usc/2025-07-18/usc26.xml", "2025-07-18")
         .expect("Failed to parse USC Title 26");
 
-    let s174a_path = "uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a";
+    let s174a_path =
+        "uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a";
     let s174a = title_26.find(s174a_path).unwrap();
 
     // Verify key fields shown in website JSON output
@@ -97,7 +96,8 @@ fn website_example_compute_diff() {
     let diff = TreeDiff::from_elements(&doc_old, &doc_new);
 
     // Find the diff for §174(a) (as shown on website)
-    let s174a_path = "uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a";
+    let s174a_path =
+        "uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a";
     let s174a_diff = diff
         .find(s174a_path)
         .expect("§174(a) diff not found - this path has changes and should exist");
@@ -146,7 +146,8 @@ fn website_example_diff_json_structure() {
     let doc_new = parse("tests/test_data/usc/2025-07-30/usc26.xml", "2025-07-30").unwrap();
 
     let diff = TreeDiff::from_elements(&doc_old, &doc_new);
-    let s174a_path = "uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a";
+    let s174a_path =
+        "uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a";
     let s174a_diff = diff.find(s174a_path).unwrap();
 
     let chapeau_change = s174a_diff

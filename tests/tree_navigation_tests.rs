@@ -6,11 +6,11 @@ fn test_find_root_in_real_document() {
     let root = parse("tests/test_data/usc/2025-07-18/usc09.xml", "2025-07-18")
         .expect("Failed to parse usc09.xml");
 
-    let result = root.find("uscodedocument_9");
+    let result = root.find("uscode");
     assert!(result.is_some(), "Should find root");
 
     let found = result.unwrap();
-    assert_eq!(found.data.path, "uscodedocument_9");
+    assert_eq!(found.data.path, "uscode");
     assert_eq!(found.data.element_type, ElementType::USCodeDocument);
 }
 
@@ -20,11 +20,11 @@ fn test_find_title_element() {
     let root = parse("tests/test_data/usc/2025-07-18/usc09.xml", "2025-07-18")
         .expect("Failed to parse usc09.xml");
 
-    let result = root.find("uscodedocument_9/title_9");
+    let result = root.find("uscode/title_9");
     assert!(result.is_some(), "Should find title");
 
     let found = result.unwrap();
-    assert_eq!(found.data.path, "uscodedocument_9/title_9");
+    assert_eq!(found.data.path, "uscode/title_9");
     assert_eq!(found.data.element_type, ElementType::Title);
 }
 
@@ -34,7 +34,7 @@ fn test_find_chapter_element() {
     let root = parse("tests/test_data/usc/2025-07-18/usc01.xml", "2025-07-18")
         .expect("Failed to parse usc01.xml");
 
-    let result = root.find("uscodedocument_1/title_1/chapter_1");
+    let result = root.find("uscode/title_1/chapter_1");
     assert!(result.is_some(), "Should find chapter");
 
     let found = result.unwrap();
@@ -48,7 +48,7 @@ fn test_find_section_element() {
     let root = parse("tests/test_data/usc/2025-07-18/usc04.xml", "2025-07-18")
         .expect("Failed to parse usc04.xml");
 
-    let result = root.find("uscodedocument_4/title_4/chapter_1/section_1");
+    let result = root.find("uscode/title_4/chapter_1/section_1");
     assert!(result.is_some(), "Should find section");
 
     let found = result.unwrap();
@@ -61,7 +61,7 @@ fn test_find_subsection_element() {
     let root = parse("tests/test_data/usc/2025-07-18/usc09.xml", "2025-07-18")
         .expect("Failed to parse usc09.xml");
 
-    let result = root.find("uscodedocument_9/title_9/chapter_1/section_10/subsection_a");
+    let result = root.find("uscode/title_9/chapter_1/section_10/subsection_a");
     assert!(result.is_some(), "Should find subsection");
 
     let found = result.unwrap();
@@ -75,8 +75,7 @@ fn test_find_paragraph_element() {
     let root = parse("tests/test_data/usc/2025-07-18/usc09.xml", "2025-07-18")
         .expect("Failed to parse usc09.xml");
 
-    let result =
-        root.find("uscodedocument_9/title_9/chapter_1/section_10/subsection_a/paragraph_1");
+    let result = root.find("uscode/title_9/chapter_1/section_10/subsection_a/paragraph_1");
     assert!(result.is_some(), "Should find paragraph");
 
     let found = result.unwrap();
@@ -89,7 +88,7 @@ fn test_find_nonexistent_path() {
     let root = parse("tests/test_data/usc/2025-07-18/usc09.xml", "2025-07-18")
         .expect("Failed to parse usc09.xml");
 
-    let result = root.find("uscodedocument_9/title_9/chapter_99");
+    let result = root.find("uscode/title_9/chapter_99");
     assert!(result.is_none(), "Should not find nonexistent chapter");
 }
 
@@ -99,7 +98,7 @@ fn test_find_partial_path_fails() {
     let root = parse("tests/test_data/usc/2025-07-18/usc09.xml", "2025-07-18")
         .expect("Failed to parse usc09.xml");
 
-    let result = root.find("uscodedocument_9/title_9/chapter_1/section_99");
+    let result = root.find("uscode/title_9/chapter_1/section_99");
     assert!(result.is_none(), "Should not find nonexistent section");
 }
 
@@ -109,7 +108,7 @@ fn test_find_wrong_title_prefix() {
     let root = parse("tests/test_data/usc/2025-07-18/usc09.xml", "2025-07-18")
         .expect("Failed to parse usc09.xml");
 
-    let result = root.find("uscodedocument_26/title_26");
+    let result = root.find("uscode/title_26");
     assert!(result.is_none(), "Should not find wrong title");
 }
 
@@ -119,7 +118,7 @@ fn test_find_preserves_children() {
     let root = parse("tests/test_data/usc/2025-07-18/usc09.xml", "2025-07-18")
         .expect("Failed to parse usc09.xml");
 
-    let result = root.find("uscodedocument_9/title_9/chapter_1/section_10/subsection_a");
+    let result = root.find("uscode/title_9/chapter_1/section_10/subsection_a");
     assert!(result.is_some(), "Should find subsection");
 
     let found = result.unwrap();
@@ -147,15 +146,15 @@ fn test_find_appendix_element() {
     let root = parse("tests/test_data/usc/2025-07-18/usc05A.xml", "2025-07-18")
         .expect("Failed to parse usc05A.xml");
 
-    // usc05A is Title 5 Appendix - verify root can be found
-    let result = root.find("uscodedocument_5a");
-    assert!(result.is_some(), "Should find appendix document root");
+    // usc05A is Title 5 Appendix - root is now uscode
+    let result = root.find("uscode");
+    assert!(result.is_some(), "Should find uscode root");
 
     let found = result.unwrap();
     assert_eq!(found.data.element_type, ElementType::USCodeDocument);
 
     // Try to find title element within appendix
-    let title_result = root.find("uscodedocument_5a/title_5a");
+    let title_result = root.find("uscode/title_5a");
     if let Some(result) = title_result {
         assert_eq!(result.data.element_type, ElementType::Title);
     }
@@ -168,9 +167,8 @@ fn test_find_deeply_nested_structure() {
         .expect("Failed to parse usc09.xml");
 
     // Navigate to subparagraph (6 levels deep)
-    let result = root.find(
-        "uscodedocument_9/title_9/chapter_1/section_16/subsection_a/paragraph_1/subparagraph_A",
-    );
+    let result =
+        root.find("uscode/title_9/chapter_1/section_16/subsection_a/paragraph_1/subparagraph_A");
 
     if let Some(found) = result {
         assert_eq!(found.data.element_type, ElementType::Subparagraph);
@@ -186,6 +184,6 @@ fn test_find_path_too_deep() {
         .expect("Failed to parse usc09.xml");
 
     // Try to navigate beyond what exists
-    let result = root.find("uscodedocument_9/title_9/chapter_1/section_1/subsection_a/paragraph_1/subparagraph_a/clause_1/subclause_1/item_1");
+    let result = root.find("uscode/title_9/chapter_1/section_1/subsection_a/paragraph_1/subparagraph_a/clause_1/subclause_1/item_1");
     assert!(result.is_none(), "Path too deep should return None");
 }

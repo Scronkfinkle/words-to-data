@@ -14,7 +14,7 @@ from words_to_data import (
 def test_uslm_elements():
     element = parse_uslm_xml("tests/test_data/usc/2025-07-30/usc26.xml", "2025-07-30")
     s174a = element.find(
-        "uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a"
+        "uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a"
     )
     assert isinstance(element, USLMElement)
     assert isinstance(s174a, USLMElement)
@@ -26,7 +26,7 @@ def test_diffs():
     # Compute diff
     diff = compute_diff(old, new)
     s174a = diff.find(
-        "uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a"
+        "uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a"
     )
     assert isinstance(s174a, TreeDiff)
     field_change = s174a.changes[0]
@@ -93,7 +93,7 @@ def test_to_json_methods():
 
     # Test FieldChangeEvent.to_json()
     s174a = diff.find(
-        "uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a"
+        "uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a"
     )
     assert s174a is not None
     field_change = s174a.changes[0]
@@ -194,7 +194,7 @@ def test_from_json_roundtrip():
 
     # Test FieldChangeEvent round-trip
     s174a = diff.find(
-        "uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a"
+        "uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a"
     )
     assert s174a is not None
     field_change = s174a.changes[0]
@@ -262,7 +262,7 @@ def test_change_annotation_creation():
     new = parse_uslm_xml("tests/test_data/usc/2025-07-30/usc26.xml", "2025-07-30")
     diff = compute_diff(old, new)
     legal_diff = LegalDiff(diff)
-    path = "uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a"
+    path = "uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a"
     # Create a ChangeAnnotation
     annotation = ChangeAnnotation(
         operation="amend",
@@ -344,7 +344,7 @@ def test_change_annotation_with_optional_fields():
         confidence=0.95,
         notes="High confidence match based on text similarity",
         reasoning="The bill text directly matches the change observed in the diff",
-        paths=["uscodedocument_26/title_26/section_175"],
+        paths=["uscode/title_26/section_175"],
         amendment_id="test"
     )
 
@@ -366,7 +366,7 @@ def test_legal_diff_json_roundtrip():
     legal_diff = LegalDiff(diff)
 
     # Add an annotation
-    path = "uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a"
+    path = "uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a"
     annotation = ChangeAnnotation(
         operation="amend",
         bill_id="119-21",
@@ -406,7 +406,7 @@ def test_tree_diff_shallow():
 
     # Find a node with children
     s174 = diff.find(
-        "uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174"
+        "uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174"
     )
     assert s174 is not None
     assert len(s174.child_diffs) > 0, "Section 174 should have child diffs"

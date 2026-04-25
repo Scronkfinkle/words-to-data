@@ -11,20 +11,23 @@ fn test_parse_usc_title_7() {
     );
 
     let root = result.unwrap();
-    // Check that the root path is in USLM format
-    assert_eq!(root.data.uslm_id.unwrap(), "/us/usc/t7");
+    // Root is now uscode container
+    assert_eq!(root.data.path, "uscode");
+    assert!(
+        root.data.uslm_id.is_none(),
+        "USCode container has no uslm_id"
+    );
 
     // Check that children also have USLM format paths
-    // In USC, the first child is a Title element which has the same path as the document
-    if !root.children.is_empty() {
-        // The first child is the Title, which should have path /us/usc/t7
-        if let Some(uslm_id) = &root.children[0].data.uslm_id {
-            assert_eq!(
-                uslm_id, "/us/usc/t7",
-                "First child (Title) should have same path as document"
-            );
-        }
-    }
+    // The first child is a Title element
+    assert!(!root.children.is_empty());
+    let title = &root.children[0];
+    assert_eq!(
+        title.data.uslm_id.as_ref().unwrap(),
+        "/us/usc/t7",
+        "First child (Title) should have uslm_id /us/usc/t7"
+    );
+    assert_eq!(title.data.path, "uscode/title_7");
 }
 
 #[test]
@@ -88,6 +91,10 @@ fn test_appendix_vs_regular_titles(#[case] regular: &str, #[case] appendix: &str
     let appendix_root = parse(&appendix_path, "2025-07-18")
         .unwrap_or_else(|_| panic!("Failed to parse usc{}.xml", appendix));
 
+    // Both roots are uscode containers
+    assert_eq!(regular_root.data.path, "uscode");
+    assert_eq!(appendix_root.data.path, "uscode");
+
     // Both should be USC documents
     assert!(matches!(
         regular_root.data.document_type,
@@ -98,8 +105,10 @@ fn test_appendix_vs_regular_titles(#[case] regular: &str, #[case] appendix: &str
         DocumentType::USCode { .. }
     ));
 
-    // Paths should be different
-    assert_ne!(regular_root.data.path, appendix_root.data.path);
+    // The first child (title) paths should be different
+    let regular_title = &regular_root.children[0];
+    let appendix_title = &appendix_root.children[0];
+    assert_ne!(regular_title.data.path, appendix_title.data.path);
 }
 
 #[test]

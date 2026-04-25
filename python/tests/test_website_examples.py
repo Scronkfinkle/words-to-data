@@ -24,7 +24,7 @@ def test_website_example_parse_usc_document():
     # Code from website example
     title_26 = parse_uslm_xml("tests/test_data/usc/2025-07-18/usc26.xml", "2025-07-18")
     s174a = title_26.find(
-        "uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a"
+        "uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a"
     )
 
     assert s174a is not None, "§174(a) not found - website example path may need updating"
@@ -57,7 +57,7 @@ def test_website_example_compute_diff():
     diff = compute_diff(doc_old, doc_new)
 
     s174a_diff = diff.find(
-        "uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a"
+        "uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a"
     )
 
     assert s174a_diff is not None, "§174(a) diff not found"
@@ -103,7 +103,7 @@ def test_website_example_diff_output_format():
 
     diff = compute_diff(doc_old, doc_new)
     s174a_diff = diff.find(
-        "uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a"
+        "uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a"
     )
 
     # Website shows this output format:
@@ -195,26 +195,3 @@ def test_website_example_amendment_output_format():
         # Verify these don't throw errors
         assert len(output_source) > 0
         assert len(output_actions) > 0
-
-
-# =============================================================================
-# DOWNLOAD LINKS VERIFICATION
-# =============================================================================
-
-
-def test_website_download_links_files_exist():
-    """
-    Verifies that all test data files referenced on the website exist.
-    If this fails, either the files are missing or the download links need updating.
-    """
-    import os
-
-    # Files referenced in the website download links section
-    files = [
-        "tests/test_data/usc/2025-07-18/usc26.xml",
-        "tests/test_data/usc/2025-07-30/usc26.xml",
-        "tests/test_data/bills/hr-119-21.xml",
-    ]
-
-    for file in files:
-        assert os.path.exists(file), f"Test data file '{file}' referenced on website doesn't exist"

@@ -13,7 +13,9 @@ fn test_diff_generation_26() {
 
     let diff = TreeDiff::from_elements(&doc_old, &doc_new);
 
-    let s174a_diff = diff.find("uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a").expect("Section 174A has no changes, nor does its children!");
+    let s174a_diff = diff
+        .find("uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a")
+        .expect("Section 174A has no changes, nor does its children!");
     let change = s174a_diff
         .changes
         .first()
@@ -142,7 +144,9 @@ fn test_similarities() {
 
     // Section 174(a) has "specified" -> "foreign" change
     // Both words are in the amendment, so precision should be 1.0
-    let s174a_sim = similarity.get("uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a").unwrap();
+    let s174a_sim = similarity
+        .get("uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a")
+        .unwrap();
     assert_eq!(s174a_sim.matched_words, 2);
     assert_eq!(s174a_sim.tree_diff_words, 2);
     assert_eq!(s174a_sim.precision, 1.0);
@@ -155,7 +159,7 @@ fn test_similarities() {
     assert_eq!(s174a_sim.score, 1.0);
 
     // Section 174(a)(2)(B) has more changes, check it matches well
-    let s174a2b_sim = similarity.get("uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a/paragraph_2/subparagraph_B").unwrap();
+    let s174a2b_sim = similarity.get("uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a/paragraph_2/subparagraph_B").unwrap();
     assert_eq!(s174a2b_sim.matched_words, 17);
     assert!(
         s174a2b_sim.score > 0.0,
@@ -172,7 +176,7 @@ fn test_correct_matching_regex() {
 
     let diff: TreeDiff = TreeDiff::from_elements(&result_a, &result_b);
 
-    let s174a = diff.find("uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_A/part_IV/subpart_D/section_45F/subsection_c/paragraph_1/subparagraph_A/clause_iii").unwrap();
+    let s174a = diff.find("uscode/title_26/subtitle_A/chapter_1/subchapter_A/part_IV/subpart_D/section_45F/subsection_c/paragraph_1/subparagraph_A/clause_iii").unwrap();
     let mention_regex = s174a.mention_regex().unwrap();
     let section_regex = s174a.section_regex().unwrap();
     dbg!(&mention_regex);
@@ -191,7 +195,7 @@ fn test_get_all_regexes() {
     let result_b = parse("tests/test_data/usc/2025-07-30/usc26.xml", "2025-07-30")
         .expect("unable to parse doc");
     let diff: TreeDiff = TreeDiff::from_elements(&result_a, &result_b);
-    let s174a = diff.find("uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a/paragraph_2").unwrap();
+    let s174a = diff.find("uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a/paragraph_2").unwrap();
 
     let regs = s174a.all_regexes();
     assert_eq!(regs.len(), 2);
@@ -207,7 +211,7 @@ fn test_shallow_should_return_tree_diff_without_children() {
 
     // Find a node that has children
     let s174 = diff
-        .find("uscodedocument_26/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174")
+        .find("uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174")
         .expect("Section 174 should exist");
     assert!(
         !s174.child_diffs.is_empty(),

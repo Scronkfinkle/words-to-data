@@ -7,7 +7,7 @@ fn should_parse_single_source_credit_with_one_ref() {
 
     // Find section 1 which has a simple source credit
     let section_1 = element
-        .find("uscodedocument_7/title_7/chapter_1/section_1")
+        .find("uscode/title_7/chapter_1/section_1")
         .expect("Section 1 not found");
 
     // Section 1 should have at least one source credit
@@ -39,7 +39,7 @@ fn should_parse_multiple_refs_without_semicolons() {
 
     // Find a section with multiple refs in a single source credit (no semicolons)
     let section_1b = element
-        .find("uscodedocument_7/title_7/chapter_1/section_1b")
+        .find("uscode/title_7/chapter_1/section_1b")
         .expect("Section 1b not found");
 
     assert!(
@@ -67,7 +67,7 @@ fn should_split_source_credits_by_semicolons() {
 
     // Section 1a has amendments separated by semicolons
     let section_1a = element
-        .find("uscodedocument_7/title_7/chapter_1/section_1a")
+        .find("uscode/title_7/chapter_1/section_1a")
         .expect("Section 1a not found");
 
     // Section 1a should have multiple source credits due to semicolon splitting
@@ -104,7 +104,7 @@ fn should_extract_href_as_ref_id() {
         .expect("Failed to parse USC 7");
 
     let section_1 = element
-        .find("uscodedocument_7/title_7/chapter_1/section_1")
+        .find("uscode/title_7/chapter_1/section_1")
         .expect("Section 1 not found");
 
     assert!(!section_1.data.source_credits.is_empty());
