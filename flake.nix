@@ -17,11 +17,11 @@
         pkgs.glib
 
         # Python bindings
-        pkgs.python314
+        pkgs.python313
         pkgs.maturin
 
         # Extra python packages
-        pkgs.python314Packages.tqdm
+        pkgs.python313Packages.tqdm
 
         # Needed to build packages
         pkgs.git
