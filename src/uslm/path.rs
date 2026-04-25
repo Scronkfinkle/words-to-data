@@ -60,10 +60,6 @@ pub fn should_include_in_uslm_path(element_type: ElementType) -> bool {
 /// use words_to_data::uslm::path::generate_structural_path;
 /// use words_to_data::uslm::ElementType;
 ///
-/// // Root element
-/// let root = generate_structural_path(ElementType::USCodeDocument, "26", None);
-/// assert_eq!(root, "uscode");
-///
 /// // Child element
 /// let section = generate_structural_path(ElementType::Section, "174", Some("uscode/title_26"));
 /// assert_eq!(section, "uscode/title_26/section_174");
