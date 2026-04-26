@@ -17,6 +17,11 @@ from .words_to_data import (
     ChangeAnnotation,
     BillReference,
     AnnotationMetadata,
+    # dataset types
+    Dataset,
+    DatasetMetadata,
+    VersionSnapshot,
+    SearchResult,
 )
 
 __version__ = "0.1.2"
@@ -39,4 +44,9 @@ __all__ = [
     "ChangeAnnotation",
     "BillReference",
     "AnnotationMetadata",
+    # dataset types
+    "Dataset",
+    "DatasetMetadata",
+    "VersionSnapshot",
+    "SearchResult",
 ]
