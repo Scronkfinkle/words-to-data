@@ -1496,13 +1496,9 @@ impl Dataset {
             .collect()
     }
 
-    fn get_diff_annotations(
-        &self,
-        from_date: &str,
-        to_date: &str,
-    ) -> Option<Vec<ChangeAnnotation>> {
+    fn get_annotations(&self, from_date: &str, to_date: &str) -> Option<Vec<ChangeAnnotation>> {
         self.inner
-            .get_diff_annotations(from_date, to_date)
+            .get_annotations(from_date, to_date)
             .map(|annotations| annotations.iter().map(ChangeAnnotation::from).collect())
     }
 
@@ -1591,6 +1587,20 @@ impl Dataset {
             .into_iter()
             .map(|(date, elem)| (date.to_string(), USLMElement::from(elem)))
             .collect()
+    }
+
+    /// Parse a USLM XML file and add it as a version snapshot
+    #[pyo3(signature = (xml_path, date, label=None))]
+    fn add_uslm_xml(&mut self, xml_path: &str, date: &str, label: Option<String>) -> PyResult<()> {
+        self.inner
+            .add_uslm_xml(xml_path, date, label)
+            .map_err(parse_error_to_py)
+    }
+
+    /// Load all USLM XML files from a folder and add as a merged version snapshot
+    #[pyo3(signature = (folder_path, date, label=None))]
+    fn add_uslm_folder(&mut self, folder_path: &str, date: &str, label: Option<String>) {
+        self.inner.add_uslm_folder(folder_path, date, label);
     }
 
     fn __repr__(&self) -> String {

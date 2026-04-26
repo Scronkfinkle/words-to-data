@@ -48,6 +48,20 @@ fn should_serialize_roundtrip_json() {
     assert_eq!(roundtripped.versions.len(), 2);
     assert_eq!(roundtripped.versions[0].date, "2025-07-18");
     assert_eq!(roundtripped.versions[0].label, Some("test".to_string()));
+    assert_eq!(
+        roundtripped
+            .get_annotations("2025-07-18", "2025-07-30")
+            .unwrap()
+            .len(),
+        753
+    );
+    assert_eq!(
+        roundtripped
+            .get_annotations("2025-07-18", "2025-07-20")
+            .iter()
+            .len(),
+        0
+    );
 }
 
 fn make_test_dataset() -> Dataset {

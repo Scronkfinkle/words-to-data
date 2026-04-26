@@ -163,13 +163,13 @@ impl Dataset {
     }
 
     /// Get annotations for a specific version pair
-    pub fn get_diff_annotations(&self, from: &str, to: &str) -> Option<&Vec<ChangeAnnotation>> {
+    pub fn get_annotations(&self, from: &str, to: &str) -> Option<&Vec<ChangeAnnotation>> {
         self.diff_annotations
             .get(&(from.to_string(), to.to_string()))
     }
 
     /// Get mutable annotations for a specific version pair
-    pub fn get_diff_annotations_mut(&mut self, from: &str, to: &str) -> &mut Vec<ChangeAnnotation> {
+    pub fn get_annotations_mut(&mut self, from: &str, to: &str) -> &mut Vec<ChangeAnnotation> {
         self.diff_annotations
             .entry((from.to_string(), to.to_string()))
             .or_default()
@@ -177,7 +177,7 @@ impl Dataset {
 
     /// Add an annotation for a specific version pair
     pub fn add_annotation(&mut self, from: &str, to: &str, annotation: ChangeAnnotation) {
-        self.get_diff_annotations_mut(from, to).push(annotation);
+        self.get_annotations_mut(from, to).push(annotation);
     }
 
     /// Get all annotations that include the given path (searches all version pairs)
@@ -200,7 +200,7 @@ impl Dataset {
 
     /// Get paths that have annotations for a version pair
     pub fn annotated_paths(&self, from: &str, to: &str) -> Vec<String> {
-        self.get_diff_annotations(from, to)
+        self.get_annotations(from, to)
             .map(|annotations| {
                 annotations
                     .iter()

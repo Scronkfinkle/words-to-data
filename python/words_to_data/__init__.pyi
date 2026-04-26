@@ -887,7 +887,7 @@ class Dataset:
         """Bills that caused changes in this dataset"""
         ...
 
-    def get_diff_annotations(
+    def get_annotations(
         self, from_date: str, to_date: str
     ) -> list[ChangeAnnotation] | None:
         """Get annotations for a specific version pair.
@@ -1070,13 +1070,46 @@ class Dataset:
         """
         ...
 
+    def add_uslm_xml(
+        self, xml_path: str, date: str, label: str | None = None
+    ) -> None:
+        """Parse a USLM XML file and add it as a version snapshot.
+
+        Args:
+            xml_path: Path to the USLM XML file
+            date: Publication date in YYYY-MM-DD format
+            label: Optional human-readable label for this version
+
+        Raises:
+            ValueError: If XML parsing fails
+            OSError: If file cannot be read
+        """
+        ...
+
+    def add_uslm_folder(
+        self, folder_path: str, date: str, label: str | None = None
+    ) -> None:
+        """Load all USLM XML files from a folder and add as a merged version snapshot.
+
+        Args:
+            folder_path: Path to directory containing USLM XML files
+            date: Publication date in YYYY-MM-DD format
+            label: Optional human-readable label for this version
+        """
+        ...
+
     def to_json(self) -> str:
         """Serialize the dataset to a JSON string."""
         ...
 
 
     def add_changes_to_amendment(self, amendment_id: str, bill_diff: BillDiff) -> None:
-        """"""
+        """Add changes to an existing amendment in the dataset.
+
+        Args:
+            amendment_id: The content-hash ID of the amendment
+            bill_diff: The diff to add to the amendment's changes
+        """
         ...
 
     @staticmethod
