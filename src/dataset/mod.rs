@@ -16,7 +16,7 @@ use crate::diff::TreeDiff;
 use crate::legal_diff::ChangeAnnotation;
 use crate::uslm::bill_parser::AmendmentData;
 use crate::uslm::parser::ParseError;
-use crate::uslm::{BillAmendment, BillDiff, USLMElement};
+use crate::uslm::{BillDiff, USLMElement};
 use crate::utils::{load_uslm_folder, parse_uslm_xml};
 
 /// Metadata describing a dataset
@@ -50,15 +50,6 @@ pub struct SearchResult {
     pub snippet: String,
 }
 
-/// Annotations for a specific version-pair diff
-#[derive(Debug, Clone, Serialize, Deserialize, Default)]
-pub struct DiffAnnotations {
-    /// Annotations linking changes to bills for this diff
-    pub annotations: Vec<ChangeAnnotation>,
-    /// Amendments relevant to this diff (subset of bill amendments)
-    pub amendments: HashMap<String, BillAmendment>,
-}
-
 /// Key for diff_annotations HashMap: (from_date, to_date)
 pub type VersionPair = (String, String);
 
@@ -76,7 +67,7 @@ pub struct Dataset {
 
     /// Annotations per version-pair
     #[serde_as(as = "Vec<(_, _)>")]
-    pub diff_annotations: HashMap<VersionPair, DiffAnnotations>,
+    pub diff_annotations: HashMap<VersionPair, Vec<ChangeAnnotation>>,
 }
 
 impl Dataset {
@@ -172,13 +163,13 @@ impl Dataset {
     }
 
     /// Get annotations for a specific version pair
-    pub fn get_diff_annotations(&self, from: &str, to: &str) -> Option<&DiffAnnotations> {
+    pub fn get_diff_annotations(&self, from: &str, to: &str) -> Option<&Vec<ChangeAnnotation>> {
         self.diff_annotations
             .get(&(from.to_string(), to.to_string()))
     }
 
     /// Get mutable annotations for a specific version pair
-    pub fn get_diff_annotations_mut(&mut self, from: &str, to: &str) -> &mut DiffAnnotations {
+    pub fn get_diff_annotations_mut(&mut self, from: &str, to: &str) -> &mut Vec<ChangeAnnotation> {
         self.diff_annotations
             .entry((from.to_string(), to.to_string()))
             .or_default()
@@ -186,16 +177,14 @@ impl Dataset {
 
     /// Add an annotation for a specific version pair
     pub fn add_annotation(&mut self, from: &str, to: &str, annotation: ChangeAnnotation) {
-        self.get_diff_annotations_mut(from, to)
-            .annotations
-            .push(annotation);
+        self.get_diff_annotations_mut(from, to).push(annotation);
     }
 
     /// Get all annotations that include the given path (searches all version pairs)
     pub fn annotations_for_path(&self, path: &str) -> Vec<&ChangeAnnotation> {
         self.diff_annotations
             .values()
-            .flat_map(|da| da.annotations.iter())
+            .flatten()
             .filter(|a| a.paths.iter().any(|p| p == path))
             .collect()
     }
@@ -204,7 +193,7 @@ impl Dataset {
     pub fn annotations_for_bill(&self, bill_id: &str) -> Vec<&ChangeAnnotation> {
         self.diff_annotations
             .values()
-            .flat_map(|da| da.annotations.iter())
+            .flatten()
             .filter(|a| a.source_bill.bill_id == bill_id)
             .collect()
     }
@@ -212,8 +201,8 @@ impl Dataset {
     /// Get paths that have annotations for a version pair
     pub fn annotated_paths(&self, from: &str, to: &str) -> Vec<String> {
         self.get_diff_annotations(from, to)
-            .map(|da| {
-                da.annotations
+            .map(|annotations| {
+                annotations
                     .iter()
                     .flat_map(|a| a.paths.clone())
                     .collect::<std::collections::HashSet<_>>()

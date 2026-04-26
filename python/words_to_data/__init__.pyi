@@ -834,20 +834,6 @@ class SearchResult:
         ...
 
 
-class DiffAnnotations:
-    """Annotations for a specific version-pair diff"""
-
-    @property
-    def annotations(self) -> list[ChangeAnnotation]:
-        """Annotations linking changes to bills for this diff"""
-        ...
-
-    @property
-    def amendments(self) -> list[BillAmendment]:
-        """Amendments relevant to this diff"""
-        ...
-
-
 class Dataset:
     """A versioned collection of legal documents with bill annotations"""
 
@@ -903,7 +889,7 @@ class Dataset:
 
     def get_diff_annotations(
         self, from_date: str, to_date: str
-    ) -> DiffAnnotations | None:
+    ) -> list[ChangeAnnotation] | None:
         """Get annotations for a specific version pair.
 
         Args:
@@ -911,7 +897,7 @@ class Dataset:
             to_date: Date of the newer version
 
         Returns:
-            DiffAnnotations for the version pair, or None if not found
+            List of annotations for the version pair, or None if not found
         """
         ...
 

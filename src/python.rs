@@ -8,8 +8,7 @@ use serde_json;
 
 use crate::dataset::{
     Dataset as RustDataset, DatasetError, DatasetMetadata as RustDatasetMetadata,
-    DiffAnnotations as RustDiffAnnotations, SearchResult as RustSearchResult,
-    VersionSnapshot as RustVersionSnapshot,
+    SearchResult as RustSearchResult, VersionSnapshot as RustVersionSnapshot,
 };
 use crate::diff::{
     AmendmentSimilarity as RustAmendmentSimilarity, MentionMatch as RustMentionMatch,
@@ -1446,50 +1445,6 @@ impl SearchResult {
     }
 }
 
-/// Annotations for a specific version-pair diff
-#[pyclass(from_py_object)]
-#[derive(Clone)]
-struct DiffAnnotations {
-    inner: RustDiffAnnotations,
-}
-
-impl DiffAnnotations {
-    fn from(rust: &RustDiffAnnotations) -> Self {
-        DiffAnnotations {
-            inner: rust.clone(),
-        }
-    }
-}
-
-#[pymethods]
-impl DiffAnnotations {
-    #[getter]
-    fn annotations(&self) -> Vec<ChangeAnnotation> {
-        self.inner
-            .annotations
-            .iter()
-            .map(ChangeAnnotation::from)
-            .collect()
-    }
-
-    #[getter]
-    fn amendments(&self) -> Vec<BillAmendment> {
-        self.inner
-            .amendments
-            .values()
-            .map(BillAmendment::from)
-            .collect()
-    }
-
-    fn __repr__(&self) -> String {
-        format!(
-            "DiffAnnotations(annotations={}, amendments={})",
-            self.inner.annotations.len(),
-            self.inner.amendments.len()
-        )
-    }
-}
-
 /// A versioned collection of legal documents with bill annotations
 #[pyclass(from_py_object)]
 #[derive(Clone)]
@@ -1541,10 +1496,14 @@ impl Dataset {
             .collect()
     }
 
-    fn get_diff_annotations(&self, from_date: &str, to_date: &str) -> Option<DiffAnnotations> {
+    fn get_diff_annotations(
+        &self,
+        from_date: &str,
+        to_date: &str,
+    ) -> Option<Vec<ChangeAnnotation>> {
         self.inner
             .get_diff_annotations(from_date, to_date)
-            .map(DiffAnnotations::from)
+            .map(|annotations| annotations.iter().map(ChangeAnnotation::from).collect())
     }
 
     fn add_annotation(&mut self, from_date: &str, to_date: &str, annotation: &ChangeAnnotation) {
@@ -1687,6 +1646,5 @@ fn words_to_data(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_class::<DatasetMetadata>()?;
     m.add_class::<VersionSnapshot>()?;
     m.add_class::<SearchResult>()?;
-    m.add_class::<DiffAnnotations>()?;
     Ok(())
 }
