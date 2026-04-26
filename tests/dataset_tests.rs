@@ -1,9 +1,9 @@
+use std::fs::File;
+use std::io::BufReader;
+
 use words_to_data::dataset::{Dataset, DatasetMetadata, VersionSnapshot};
 use words_to_data::diff::TreeDiff;
-use words_to_data::legal_diff::{
-    AnnotationMetadata, AnnotationStatus, BillReference, ChangeAnnotation,
-};
-use words_to_data::uslm::AmendingAction;
+use words_to_data::legal_diff::ChangeAnnotation;
 use words_to_data::uslm::bill_parser::parse_bill_amendments;
 use words_to_data::uslm::parser::parse;
 
@@ -40,22 +40,34 @@ fn should_serialize_roundtrip_json() {
 
     let mut dataset = Dataset::new(metadata);
 
-    // Add a version snapshot with real element from test data
-    let element = parse("tests/test_data/usc/2025-07-18/usc07.xml", "2025-07-18").unwrap();
-    dataset.versions.push(VersionSnapshot {
-        date: "2025-07-18".to_string(),
-        label: Some("Initial".to_string()),
-        element,
-    });
+    dataset
+        .add_uslm_xml(
+            "tests/test_data/usc/2025-07-18/usc07.xml",
+            "2025-07-18",
+            Some("test".to_string()),
+        )
+        .expect("failed to load USLM doc");
+    dataset
+        .add_uslm_xml(
+            "tests/test_data/usc/2025-07-18/usc07.xml",
+            "2025-07-30",
+            Some("test".to_string()),
+        )
+        .expect("failed to load USLM doc");
+
+    let annotations = make_annotations();
+    for annotation in annotations.into_iter() {
+        dataset.add_annotation("2025-07-18", "2025-07-30", annotation);
+    }
 
     // Serialize to JSON and back
     let json = serde_json::to_string(&dataset).unwrap();
     let roundtripped: Dataset = serde_json::from_str(&json).unwrap();
 
     assert_eq!(roundtripped.metadata.name, "Test Dataset");
-    assert_eq!(roundtripped.versions.len(), 1);
+    assert_eq!(roundtripped.versions.len(), 2);
     assert_eq!(roundtripped.versions[0].date, "2025-07-18");
-    assert_eq!(roundtripped.versions[0].label, Some("Initial".to_string()));
+    assert_eq!(roundtripped.versions[0].label, Some("test".to_string()));
 }
 
 fn make_test_dataset() -> Dataset {
@@ -195,58 +207,29 @@ fn should_add_and_query_bills() {
     assert!(not_found.is_none());
 }
 
-fn make_annotation(paths: Vec<&str>, bill_id: &str) -> ChangeAnnotation {
-    ChangeAnnotation {
-        operation: AmendingAction::Amend,
-        source_bill: BillReference {
-            bill_id: bill_id.to_string(),
-            amendment_id: "test-id".to_string(),
-            causative_text: "test instruction".to_string(),
-        },
-        paths: paths.into_iter().map(|s| s.to_string()).collect(),
-        metadata: AnnotationMetadata {
-            status: AnnotationStatus::Pending,
-            confidence: Some(0.9),
-            annotator: "test".to_string(),
-            timestamp: time::OffsetDateTime::now_utc(),
-            notes: None,
-            reasoning: None,
-        },
-    }
+fn make_annotations() -> Vec<ChangeAnnotation> {
+    let file = File::open("tests/test_data/processed/annotations.json")
+        .expect("should be able to open annotations file");
+    let annotations: Vec<ChangeAnnotation> = serde_json::from_reader(BufReader::new(file)).unwrap();
+    annotations
 }
 
 #[test]
 fn should_query_annotations_by_path() {
     let mut dataset = make_test_dataset();
 
-    // Add annotations for a version pair
-    dataset.add_annotation(
-        "2024-01-01",
-        "2024-06-01",
-        make_annotation(vec!["uscode/title_26/section_1"], "119-21"),
-    );
-    dataset.add_annotation(
-        "2024-01-01",
-        "2024-06-01",
-        make_annotation(
-            vec!["uscode/title_26/section_2", "uscode/title_26/section_3"],
-            "119-22",
-        ),
-    );
-    dataset.add_annotation(
-        "2024-01-01",
-        "2024-06-01",
-        make_annotation(vec!["uscode/title_7/section_1"], "119-21"),
-    );
+    for annotation in make_annotations().into_iter() {
+        dataset.add_annotation("2025-07-18", "2025-07-30", annotation);
+    }
 
     // Query by path
-    let found = dataset.annotations_for_path("uscode/title_26/section_1");
-    assert_eq!(found.len(), 1);
+    let found = dataset.annotations_for_path("uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_163/subsection_j/paragraph_8/subparagraph_A/clause_v");
+    assert_eq!(found.len(), 2);
     assert_eq!(found[0].source_bill.bill_id, "119-21");
 
     // Query by bill
     let found = dataset.annotations_for_bill("119-21");
-    assert_eq!(found.len(), 2);
+    assert_eq!(found.len(), 753);
 
     // No matches
     let found = dataset.annotations_for_path("uscode/title_99/section_1");

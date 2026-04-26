@@ -8,6 +8,7 @@ mod error;
 pub use error::DatasetError;
 
 use serde::{Deserialize, Serialize};
+use serde_with::serde_as;
 use std::collections::HashMap;
 use std::fs;
 
@@ -62,6 +63,7 @@ pub struct DiffAnnotations {
 pub type VersionPair = (String, String);
 
 /// A collection of versioned legal documents with bill annotations
+#[serde_as]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Dataset {
     pub metadata: DatasetMetadata,
@@ -73,6 +75,7 @@ pub struct Dataset {
     pub bills: Vec<AmendmentData>,
 
     /// Annotations per version-pair
+    #[serde_as(as = "Vec<(_, _)>")]
     pub diff_annotations: HashMap<VersionPair, DiffAnnotations>,
 }
 
