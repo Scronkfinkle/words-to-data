@@ -2260,9 +2260,9 @@ struct CongressClient {
 #[pymethods]
 impl CongressClient {
     #[new]
-    fn new(api_key: String, cache_dir: String) -> Self {
+    fn new(api_key: String) -> Self {
         CongressClient {
-            inner: RustCongressClient::new(api_key, std::path::PathBuf::from(cache_dir)),
+            inner: RustCongressClient::new(api_key),
         }
     }
 

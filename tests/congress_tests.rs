@@ -87,7 +87,7 @@ fn should_cache_and_retrieve_response() {
     let temp_dir = std::env::temp_dir().join("congress_cache_test");
     let _ = std::fs::remove_dir_all(&temp_dir);
 
-    let cache = ResponseCache::new(temp_dir.clone(), Duration::from_secs(3600));
+    let cache = ResponseCache::new(Duration::from_secs(3600));
     let key = "test/member/A000360";
     let data = r#"{"name": "Test"}"#;
 
@@ -111,7 +111,7 @@ fn should_expire_stale_cache() {
     let _ = std::fs::remove_dir_all(&temp_dir);
 
     // 0 second TTL = immediate expiry
-    let cache = ResponseCache::new(temp_dir.clone(), Duration::from_secs(0));
+    let cache = ResponseCache::new(Duration::from_secs(0));
     let key = "test/expire";
 
     cache.set(key, "data").unwrap();
@@ -142,8 +142,7 @@ fn should_parse_member_from_api_response() {
 
 #[test]
 fn should_create_congress_client() {
-    let temp_dir = std::env::temp_dir().join("congress_client_test");
-    let client = CongressClient::new("fake_key".to_string(), temp_dir);
+    let client = CongressClient::new("fake_key".to_string());
     // Just test construction doesn't panic
     assert!(client.api_key() == "fake_key");
 }
@@ -157,7 +156,7 @@ fn should_download_bill_data_live() {
     let api_key =
         std::env::var("CONGRESS_API_KEY").expect("Set CONGRESS_API_KEY env var to run this test");
 
-    let client = CongressClient::new(api_key, cache_dir.clone());
+    let client = CongressClient::new(api_key);
 
     // Use HR 1 (house bill), not pl (public law)
     let download = client.download_bill("119-hr-1").unwrap();

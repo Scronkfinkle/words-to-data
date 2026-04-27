@@ -36,6 +36,7 @@ hex = "0.4.3"
 regex = "1.12.3"
 serde_with = "3.18.0"
 ureq = "3"
+dirs = "6.0.0"
 
 [features]
 python = ["pyo3", "pythonize"]

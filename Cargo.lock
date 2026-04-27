@@ -5241,6 +5241,7 @@ dependencies = [
 name = "words-to-data"
 version = "0.2.0"
 dependencies = [
+ "dirs",
  "hex",
  "pyo3",
  "pythonize",

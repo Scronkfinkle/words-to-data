@@ -101,9 +101,8 @@ def test_dataset_member_integration():
 
 def test_congress_client_creation():
     """Test CongressClient can be created."""
-    with tempfile.TemporaryDirectory() as tmpdir:
-        client = CongressClient(api_key="test_key", cache_dir=tmpdir)
-        assert client.api_key == "test_key"
+    client = CongressClient(api_key="test_key")
+    assert client.api_key == "test_key"
 
 
 def test_bill_download_creation():

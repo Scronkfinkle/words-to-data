@@ -1,4 +1,3 @@
-use std::path::PathBuf;
 use std::time::Duration;
 
 use super::{
@@ -18,8 +17,8 @@ pub struct CongressClient {
 }
 
 impl CongressClient {
-    pub fn new(api_key: String, cache_dir: PathBuf) -> Self {
-        let cache = ResponseCache::new(cache_dir, Duration::from_secs(DEFAULT_TTL_SECS));
+    pub fn new(api_key: String) -> Self {
+        let cache = ResponseCache::new(Duration::from_secs(DEFAULT_TTL_SECS));
         let agent = ureq::Agent::new_with_defaults();
 
         Self {

@@ -1412,12 +1412,11 @@ class BillDownload:
 class CongressClient:
     """Client for downloading data from Congress.gov API"""
 
-    def __init__(self, api_key: str, cache_dir: str) -> None:
+    def __init__(self, api_key: str) -> None:
         """Create a new Congress client.
 
         Args:
             api_key: Congress.gov API key
-            cache_dir: Directory for caching downloaded data
         """
         ...
 
