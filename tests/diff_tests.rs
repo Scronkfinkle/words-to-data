@@ -66,7 +66,8 @@ fn test_similarities() {
         .expect("Error running parser");
     let diff = TreeDiff::from_elements(&doc_old, &doc_new);
 
-    let mut amendment_data = parse_bill_amendments("tests/test_data/bills/pl-119-21.xml").unwrap();
+    let mut amendment_data =
+        parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1.xml").unwrap();
 
     // This part is handled by LLM's, and I don't want to add that logic to
     // this library yet (or at all). It will probably be added as another tool
@@ -242,7 +243,8 @@ fn test_scan_for_mentions_should_find_section_45f_mentions_in_bill() {
     let diff = TreeDiff::from_elements(&doc_old, &doc_new);
 
     // Parse the bill that amends Section 45F
-    let amendment_data = parse_bill_amendments("tests/test_data/bills/pl-119-21.xml").unwrap();
+    let amendment_data =
+        parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1.xml").unwrap();
 
     // Scan for mentions - this should find "Section 45F" mentions in the amendment texts
     let mentions = diff.scan_for_mentions(&amendment_data);

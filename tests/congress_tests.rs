@@ -69,7 +69,7 @@ fn should_create_roll_call() {
 #[test]
 fn should_create_sponsor_info() {
     let sponsor_info = SponsorInfo {
-        bill_id: "119-pl-21".to_string(),
+        bill_id: "119-hr-1".to_string(),
         sponsor: "A000360".to_string(),
         cosponsors: vec![CosponsorRecord {
             bioguide_id: "B000575".to_string(),
@@ -211,16 +211,16 @@ mod dataset_integration {
         let mut dataset = Dataset::new(test_metadata());
 
         let sponsor_info = SponsorInfo {
-            bill_id: "119-pl-21".into(),
+            bill_id: "119-hr-1".into(),
             sponsor: "L000174".into(),
             cosponsors: vec![],
         };
 
         dataset.add_sponsor_info(sponsor_info);
 
-        assert!(dataset.get_sponsor_info("119-pl-21").is_some());
+        assert!(dataset.get_sponsor_info("119-hr-1").is_some());
         assert_eq!(
-            dataset.get_sponsor_info("119-pl-21").unwrap().sponsor,
+            dataset.get_sponsor_info("119-hr-1").unwrap().sponsor,
             "L000174"
         );
     }
@@ -233,7 +233,7 @@ mod dataset_integration {
 
         // Simulate a BillDownload with test data
         let bill_xml = std::fs::read_to_string(
-            PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("tests/test_data/bills/pl-119-21.xml"),
+            PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("tests/test_data/bills/119-hr-1.xml"),
         )
         .unwrap();
 
@@ -247,7 +247,7 @@ mod dataset_integration {
         member_jsons.insert("L000174".to_string(), member_json);
 
         let download = BillDownload {
-            bill_id: "119-pl-21".to_string(),
+            bill_id: "119-hr-1".to_string(),
             bill_xml,
             sponsors_json: r#"{"bill":{"sponsors":[{"bioguideId":"L000174"}]}}"#.to_string(),
             cosponsors_json: r#"{"cosponsors":[]}"#.to_string(),
@@ -257,8 +257,8 @@ mod dataset_integration {
 
         let bill_id = dataset.load_bill_download(&download).unwrap();
 
-        // Bill parsed - uses canonical ID from XML ("119-21")
-        assert_eq!(bill_id, "119-21");
+        // Bill parsed - uses bill_id from BillDownload
+        assert_eq!(bill_id, "119-hr-1");
         assert!(dataset.get_bill(&bill_id).is_some());
         // Member loaded
         assert!(dataset.get_member("L000174").is_some());

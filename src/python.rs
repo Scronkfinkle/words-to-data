@@ -1241,33 +1241,36 @@ fn compute_diff(old_element: &USLMElement, new_element: &USLMElement) -> PyResul
 /// Parse a Public Law bill and extract amendments to the US Code
 ///
 /// Args:
+///     bill_id: The bill identifier (e.g., "119-21")
 ///     path: Path to the Public Law XML file
 ///
 /// Returns:
 ///     AmendmentData containing the bill ID and all extracted amendments
 ///
 /// Raises:
-///     ValueError: If the XML is invalid or not a Public Law document
+///     ValueError: If the XML is invalid
 ///     OSError: If the file cannot be read
 #[pyfunction]
-fn parse_bill_amendments(path: &str) -> PyResult<AmendmentData> {
-    let data = crate::uslm::bill_parser::parse_bill_amendments(path).map_err(parse_error_to_py)?;
+fn parse_bill_amendments(bill_id: &str, path: &str) -> PyResult<AmendmentData> {
+    let data = crate::uslm::bill_parser::parse_bill_amendments(bill_id, path)
+        .map_err(parse_error_to_py)?;
     Ok(AmendmentData::from(data))
 }
 
 /// Parse a Public Law bill XML string and extract amendments to the US Code
 ///
 /// Args:
+///     bill_id: The bill identifier (e.g., "119-21")
 ///     xml_str: The Public Law XML content as a string
 ///
 /// Returns:
 ///     AmendmentData containing the bill ID and all extracted amendments
 ///
 /// Raises:
-///     ValueError: If the XML is invalid or not a Public Law document
+///     ValueError: If the XML is invalid
 #[pyfunction]
-fn parse_bill_amendments_from_str(xml_str: &str) -> PyResult<AmendmentData> {
-    let data = crate::uslm::bill_parser::parse_bill_amendments_from_str(xml_str)
+fn parse_bill_amendments_from_str(bill_id: &str, xml_str: &str) -> PyResult<AmendmentData> {
+    let data = crate::uslm::bill_parser::parse_bill_amendments_from_str(bill_id, xml_str)
         .map_err(parse_error_to_py)?;
     Ok(AmendmentData::from(data))
 }

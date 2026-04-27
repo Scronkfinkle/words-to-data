@@ -478,32 +478,34 @@ class AmendmentData:
         """Deserialize a JSON string to an AmendmentData."""
         ...
 
-def parse_bill_amendments(path: str) -> AmendmentData:
+def parse_bill_amendments(bill_id: str, path: str) -> AmendmentData:
     """Parse a Public Law bill and extract amendments to the US Code.
 
     Args:
+        bill_id: The bill identifier (e.g., "119-21")
         path: Path to the Public Law XML file
 
     Returns:
         AmendmentData containing the bill ID and all extracted amendments
 
     Raises:
-        ValueError: If the XML is invalid or not a Public Law document
+        ValueError: If the XML is invalid
         OSError: If the file cannot be read
     """
     ...
 
-def parse_bill_amendments_from_str(xml_str: str) -> AmendmentData:
+def parse_bill_amendments_from_str(bill_id: str, xml_str: str) -> AmendmentData:
     """Parse a Public Law bill XML string and extract amendments to the US Code.
 
     Args:
+        bill_id: The bill identifier (e.g., "119-21")
         xml_str: The Public Law XML content as a string
 
     Returns:
         AmendmentData containing the bill ID and all extracted amendments
 
     Raises:
-        ValueError: If the XML is invalid or not a Public Law document
+        ValueError: If the XML is invalid
     """
     ...
 
@@ -1426,7 +1428,7 @@ class CongressClient:
         """Download all data for a bill.
 
         Args:
-            bill_id: Bill identifier (e.g., "119-pl-21")
+            bill_id: Bill identifier (e.g., "119-hr-1")
 
         Returns:
             BillDownload containing XML, JSON, and member data

@@ -9,8 +9,8 @@ use words_to_data::{
 /// Get the amendment that modifies Section 174 from the bill
 /// This is the amendment that strikes "specified research" and inserts "foreign research"
 fn get_section_174_amendment() -> BillAmendment {
-    let data =
-        parse_bill_amendments("tests/test_data/bills/pl-119-21.xml").expect("Failed to parse bill");
+    let data = parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1.xml")
+        .expect("Failed to parse bill");
 
     data.amendments
         .into_values()
@@ -24,8 +24,8 @@ fn get_section_174_amendment() -> BillAmendment {
 /// Helper to create the real annotation for Section 174(a) change
 /// This is the instruction that changes "specified research" to "foreign research" in 26 USC 174(a)
 fn make_section_174a_annotation(annotator: &str) -> ChangeAnnotation {
-    let data =
-        parse_bill_amendments("tests/test_data/bills/pl-119-21.xml").expect("Failed to parse bill");
+    let data = parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1.xml")
+        .expect("Failed to parse bill");
     let amendment = get_section_174_amendment();
 
     ChangeAnnotation {
@@ -58,8 +58,8 @@ fn make_test_annotation(
     annotator: &str,
     path: &str,
 ) -> ChangeAnnotation {
-    let data =
-        parse_bill_amendments("tests/test_data/bills/pl-119-21.xml").expect("Failed to parse bill");
+    let data = parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1.xml")
+        .expect("Failed to parse bill");
     let amendment = get_section_174_amendment();
 
     ChangeAnnotation {

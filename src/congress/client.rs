@@ -249,7 +249,7 @@ impl CongressClient {
         })
     }
 
-    /// Parse bill_id like "119-pl-21" into (congress, type, number)
+    /// Parse bill_id like "119-hr-1" into (congress, type, number)
     fn parse_bill_id(bill_id: &str) -> Result<(u16, String, u32), CongressError> {
         let parts: Vec<&str> = bill_id.split('-').collect();
         if parts.len() != 3 {

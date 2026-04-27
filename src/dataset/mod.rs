@@ -453,12 +453,13 @@ impl Dataset {
 
         // Parse bill XML to get AmendmentData
         let bill =
-            bill_parser::parse_bill_amendments_from_str(&download.bill_xml).map_err(|e| {
-                DatasetError::Json(serde_json::Error::io(std::io::Error::new(
-                    std::io::ErrorKind::InvalidData,
-                    e.to_string(),
-                )))
-            })?;
+            bill_parser::parse_bill_amendments_from_str(&download.bill_id, &download.bill_xml)
+                .map_err(|e| {
+                    DatasetError::Json(serde_json::Error::io(std::io::Error::new(
+                        std::io::ErrorKind::InvalidData,
+                        e.to_string(),
+                    )))
+                })?;
         let bill_id = bill.bill_id.clone();
         self.add_bill(bill);
 
