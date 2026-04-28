@@ -39,12 +39,13 @@ impl USLMElement {
 impl USLMElement {
     #[getter]
     fn data(&self) -> PyResult<Py<PyAny>> {
-        let data = serde_json::to_value(&self.inner.data).unwrap();
-        let result = Python::attach(|py| {
-            let obj = pythonize(py, &data).unwrap();
-            obj.unbind()
-        });
-        Ok(result)
+        let data = serde_json::to_value(&self.inner.data)
+            .map_err(|e| PyRuntimeError::new_err(format!("JSON serialization error: {}", e)))?;
+        Python::attach(|py| {
+            pythonize(py, &data)
+                .map(|obj| obj.unbind())
+                .map_err(|e| PyRuntimeError::new_err(format!("Conversion error: {}", e)))
+        })
     }
 
     #[getter]
@@ -286,22 +287,24 @@ impl TreeDiff {
     #[getter]
     #[allow(clippy::wrong_self_convention)]
     fn from_element(&self) -> PyResult<Py<PyAny>> {
-        let data = serde_json::to_value(&self.inner.from_element).unwrap();
-        let result = Python::attach(|py| {
-            let obj = pythonize(py, &data).unwrap();
-            obj.unbind()
-        });
-        Ok(result)
+        let data = serde_json::to_value(&self.inner.from_element)
+            .map_err(|e| PyRuntimeError::new_err(format!("JSON serialization error: {}", e)))?;
+        Python::attach(|py| {
+            pythonize(py, &data)
+                .map(|obj| obj.unbind())
+                .map_err(|e| PyRuntimeError::new_err(format!("Conversion error: {}", e)))
+        })
     }
 
     #[getter]
     fn to_element(&self) -> PyResult<Py<PyAny>> {
-        let data = serde_json::to_value(&self.inner.to_element).unwrap();
-        let result = Python::attach(|py| {
-            let obj = pythonize(py, &data).unwrap();
-            obj.unbind()
-        });
-        Ok(result)
+        let data = serde_json::to_value(&self.inner.to_element)
+            .map_err(|e| PyRuntimeError::new_err(format!("JSON serialization error: {}", e)))?;
+        Python::attach(|py| {
+            pythonize(py, &data)
+                .map(|obj| obj.unbind())
+                .map_err(|e| PyRuntimeError::new_err(format!("Conversion error: {}", e)))
+        })
     }
 
     #[getter]
@@ -310,7 +313,8 @@ impl TreeDiff {
             .added
             .iter()
             .map(|elem| {
-                let data = serde_json::to_value(elem).unwrap();
+                let data = serde_json::to_value(elem)
+                    .map_err(|e| PyRuntimeError::new_err(format!("JSON serialization error: {}", e)))?;
                 pythonize(py, &data)
                     .map(|obj| obj.unbind())
                     .map_err(|e| PyRuntimeError::new_err(format!("Conversion error: {}", e)))
@@ -324,7 +328,8 @@ impl TreeDiff {
             .removed
             .iter()
             .map(|elem| {
-                let data = serde_json::to_value(elem).unwrap();
+                let data = serde_json::to_value(elem)
+                    .map_err(|e| PyRuntimeError::new_err(format!("JSON serialization error: {}", e)))?;
                 pythonize(py, &data)
                     .map(|obj| obj.unbind())
                     .map_err(|e| PyRuntimeError::new_err(format!("Conversion error: {}", e)))
@@ -860,22 +865,24 @@ impl LegalDiff {
 
     #[getter]
     fn annotations_dict(&self) -> PyResult<Py<PyAny>> {
-        let data = serde_json::to_value(&self.inner.annotations).unwrap();
-        let result = Python::attach(|py| {
-            let obj = pythonize(py, &data).unwrap();
-            obj.unbind()
-        });
-        Ok(result)
+        let data = serde_json::to_value(&self.inner.annotations)
+            .map_err(|e| PyRuntimeError::new_err(format!("JSON serialization error: {}", e)))?;
+        Python::attach(|py| {
+            pythonize(py, &data)
+                .map(|obj| obj.unbind())
+                .map_err(|e| PyRuntimeError::new_err(format!("Conversion error: {}", e)))
+        })
     }
 
     #[getter]
     fn amendments_dict(&self) -> PyResult<Py<PyAny>> {
-        let data = serde_json::to_value(&self.inner.amendments).unwrap();
-        let result = Python::attach(|py| {
-            let obj = pythonize(py, &data).unwrap();
-            obj.unbind()
-        });
-        Ok(result)
+        let data = serde_json::to_value(&self.inner.amendments)
+            .map_err(|e| PyRuntimeError::new_err(format!("JSON serialization error: {}", e)))?;
+        Python::attach(|py| {
+            pythonize(py, &data)
+                .map(|obj| obj.unbind())
+                .map_err(|e| PyRuntimeError::new_err(format!("Conversion error: {}", e)))
+        })
     }
 
     /// Add an annotation for a specific structural path
