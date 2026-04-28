@@ -1109,21 +1109,11 @@ impl BillAmendment {
 #[derive(Clone)]
 struct AmendmentData {
     inner: crate::uslm::bill_parser::AmendmentData,
-    amendments: Vec<BillAmendment>,
 }
 
 impl AmendmentData {
     fn from(rust_data: crate::uslm::bill_parser::AmendmentData) -> Self {
-        let amendments = rust_data
-            .amendments
-            .values()
-            .map(BillAmendment::from)
-            .collect();
-
-        AmendmentData {
-            inner: rust_data,
-            amendments,
-        }
+        AmendmentData { inner: rust_data }
     }
 }
 
@@ -1151,15 +1141,26 @@ impl AmendmentData {
     }
 
     #[getter]
-    fn amendments(&self) -> Vec<BillAmendment> {
-        self.amendments.clone()
+    fn amendments(&self) -> std::collections::HashMap<String, BillAmendment> {
+        self.inner
+            .amendments
+            .iter()
+            .map(|(k, v)| (k.clone(), BillAmendment::from(v)))
+            .collect()
+    }
+
+    fn get_amendment(&self, amendment_id: &str) -> Option<BillAmendment> {
+        self.inner
+            .amendments
+            .get(amendment_id)
+            .map(BillAmendment::from)
     }
 
     fn __repr__(&self) -> String {
         format!(
             "AmendmentData(bill_id='{}', amendments={})",
             self.inner.bill_id,
-            self.amendments.len()
+            self.inner.amendments.len()
         )
     }
 

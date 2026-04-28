@@ -232,7 +232,8 @@ mod dataset_integration {
 
         // Simulate a BillDownload with test data
         let bill_xml = std::fs::read_to_string(
-            PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("tests/test_data/bills/119-hr-1.xml"),
+            PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+                .join("tests/test_data/bills/119-hr-1/bill_119_hr_1.xml"),
         )
         .unwrap();
 

@@ -44,7 +44,7 @@ def test_dataset_load_bill_download():
     """Test loading BillDownload into Dataset."""
     # Get test data paths
     test_dir = Path(__file__).parent.parent.parent / "tests" / "test_data"
-    bill_xml = (test_dir / "bills" / "119-hr-1.xml").read_text()
+    bill_xml = (test_dir / "bills" / "119-hr-1/bill_119_hr_1.xml").read_text()
     member_json = (test_dir / "congress" / "members" / "L000174.json").read_text()
 
     download = BillDownload(

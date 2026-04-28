@@ -461,8 +461,12 @@ class AmendmentData:
         ...
 
     @property
-    def amendments(self) -> list[BillAmendment]:
-        """All amendments extracted from the bill"""
+    def amendments(self) -> dict[str, BillAmendment]:
+        """All amendments extracted from the bill, keyed by amendment ID"""
+        ...
+
+    def get_amendment(self, amendment_id: str) -> BillAmendment | None:
+        """Get a specific amendment by ID."""
         ...
 
     def to_json(self) -> str:
