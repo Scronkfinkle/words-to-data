@@ -410,7 +410,30 @@ def test_legal_diff_json_roundtrip():
     assert restored_anns[0].source_bill.bill_id == "119-21"
 
 
-def test_tree_diff_shallow():
+def test_getter_properties_return_correct_types():
+    """Regression: seven getters previously used unwrap() and would crash Python on error."""
+    element = parse_uslm_xml("tests/test_data/usc/2025-07-30/usc26.xml", "2025-07-30")
+
+    data = element.data
+    assert isinstance(data, dict)
+    assert "path" in data
+
+    old = parse_uslm_xml("tests/test_data/usc/2025-07-18/usc26.xml", "2025-07-18")
+    new = parse_uslm_xml("tests/test_data/usc/2025-07-30/usc26.xml", "2025-07-30")
+    diff = compute_diff(old, new)
+
+    assert isinstance(diff.from_element, dict)
+    assert isinstance(diff.to_element, dict)
+    assert isinstance(diff.added, list)
+    assert isinstance(diff.removed, list)
+
+    from words_to_data import LegalDiff
+
+    legal_diff = LegalDiff(diff)
+    assert isinstance(legal_diff.annotations_dict, dict)
+    assert isinstance(legal_diff.amendments_dict, dict)
+
+
     """Test that shallow() returns a TreeDiff without children"""
     old = parse_uslm_xml("tests/test_data/usc/2025-07-18/usc26.xml", "2025-07-18")
     new = parse_uslm_xml("tests/test_data/usc/2025-07-30/usc26.xml", "2025-07-30")
