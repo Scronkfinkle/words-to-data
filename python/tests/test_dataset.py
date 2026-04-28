@@ -141,6 +141,31 @@ def test_add_and_query_bills():
     assert not_found is None
 
 
+def test_add_uslm_folder_invalid_path_raises_os_error():
+    """Regression: add_uslm_folder previously panicked (expect()) on bad paths."""
+    import pytest
+
+    metadata = DatasetMetadata(
+        name="Test",
+        description="Test",
+        author="Test",
+        source_urls=[],
+        license="MIT",
+        version="1.0.0",
+    )
+    dataset = Dataset(metadata)
+
+    with pytest.raises(OSError):
+        dataset.add_uslm_folder("/nonexistent/path/that/does/not/exist", "2025-01-01")
+
+
+def test_version_matches_pyproject():
+    """Regression: __version__ was 0.1.2 while pyproject.toml said 0.2.0."""
+    import words_to_data
+
+    assert words_to_data.__version__ == "0.2.0"
+
+
 def test_search_text():
     metadata = DatasetMetadata(
         name="Test",
