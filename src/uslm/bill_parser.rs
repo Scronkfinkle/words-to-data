@@ -14,7 +14,7 @@ use crate::{
     io::load_xml_file,
     uslm::{
         AmendingAction, BillAmendment, ElementType,
-        parser::{ParseError, extract_number},
+        parser::{ParseError, extract_number, normalize_quotes},
     },
 };
 
@@ -215,8 +215,10 @@ fn get_amendment_data(node: &Node, bill_id: &str) -> BillAmendment {
 }
 
 fn node_text(node: &Node) -> String {
-    node.descendants()
+    let raw: String = node
+        .descendants()
         .filter(|n| n.is_text())
         .map(|n| n.text().unwrap_or(""))
-        .collect()
+        .collect();
+    normalize_quotes(&raw)
 }
