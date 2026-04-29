@@ -138,7 +138,12 @@ fn test_similarities() {
 
     amendment_data
         .amendments
-        .get_mut("3a2c877b0d3cd21b5f3942bdd611408504f60625b41a623aa79ad02274a2cfaf")
+        .values_mut()
+        .find(|amendment| {
+            amendment
+                .amending_text
+                .contains("a taxpayer’s foreign research or experimental expenditures")
+        })
         .unwrap()
         .changes = bill_diffs;
 

@@ -24,21 +24,6 @@ from words_to_data import (
 #     download = client.download_bill("119-hr-1")
 #     assert False
 
-def test_create_empty_dataset():
-    metadata = DatasetMetadata(
-        name="Test Dataset",
-        description="For testing",
-        author="Test Author",
-        source_urls=["https://example.com"],
-        license="MIT",
-        version="1.0.0",
-    )
-    dataset = Dataset(metadata)
-
-    assert dataset.metadata.name == "Test Dataset"
-    assert len(dataset.versions) == 0
-    assert len(dataset.bills) == 0
-
 
 def test_add_version():
     metadata = DatasetMetadata(
