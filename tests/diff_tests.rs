@@ -24,11 +24,11 @@ fn test_diff_generation_26() {
     assert_eq!(change.changes.len(), 2);
     assert_eq!(
         change.old_value,
-        "In the case of a taxpayer’s specified research or experimental expenditures for any taxable year—"
+        "In the case of a taxpayer's specified research or experimental expenditures for any taxable year\u{2014}"
     );
     assert_eq!(
         change.new_value,
-        "In the case of a taxpayer’s foreign research or experimental expenditures for any taxable year—"
+        "In the case of a taxpayer's foreign research or experimental expenditures for any taxable year\u{2014}"
     );
 }
 
