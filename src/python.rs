@@ -20,17 +20,12 @@ use crate::uslm::parser::ParseError;
 #[derive(Clone)]
 struct USLMElement {
     pub inner: crate::uslm::USLMElement,
-
-    /// Child elements in document order
-    pub children: Vec<USLMElement>,
 }
 
 impl USLMElement {
     pub fn from(rust_elem: &crate::uslm::USLMElement) -> Self {
-        let children = rust_elem.children.iter().map(Self::from).collect();
         USLMElement {
             inner: rust_elem.clone(),
-            children,
         }
     }
 }
@@ -47,8 +42,8 @@ impl USLMElement {
     }
 
     #[getter]
-    fn children(&self) -> PyResult<Vec<USLMElement>> {
-        Ok(self.children.clone())
+    fn children(&self) -> Vec<USLMElement> {
+        self.inner.children.iter().map(USLMElement::from).collect()
     }
 
     fn find(&self, path: &str) -> Option<USLMElement> {
@@ -60,7 +55,7 @@ impl USLMElement {
             "USLMElement(path='{}', element_type={:?}, children={})",
             self.inner.data.path,
             self.inner.data.element_type,
-            self.children.len()
+            self.inner.children.len()
         )
     }
 
@@ -79,14 +74,13 @@ impl USLMElement {
 
     fn merge_children(&mut self, other: &mut USLMElement) {
         self.inner.merge_children_mut(&mut other.inner);
-        self.children.append(&mut other.children.clone());
     }
 
     #[staticmethod]
     fn from_json(json_str: &str) -> PyResult<Self> {
         let inner: crate::uslm::USLMElement = serde_json::from_str(json_str)
             .map_err(|e| PyValueError::new_err(format!("JSON deserialization error: {}", e)))?;
-        Ok(Self::from(&inner))
+        Ok(Self { inner })
     }
 }
 
