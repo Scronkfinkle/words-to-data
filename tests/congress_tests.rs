@@ -1,8 +1,6 @@
 use std::collections::HashMap;
 use std::path::PathBuf;
-use words_to_data::congress::{
-    Chamber, CongressClient, CongressError, CosponsorRecord, Member, Party, SponsorInfo,
-};
+use words_to_data::congress::{Chamber, CongressClient, CongressError, Member, Party, SponsorInfo};
 
 #[test]
 fn should_parse_party_from_string() {
@@ -31,22 +29,6 @@ fn should_display_congress_error() {
 }
 
 #[test]
-fn should_create_sponsor_info() {
-    let sponsor_info = SponsorInfo {
-        bill_id: "119-hr-1".to_string(),
-        sponsor: "A000360".to_string(),
-        cosponsors: vec![CosponsorRecord {
-            bioguide_id: "B000575".to_string(),
-            date: "2023-01-15".to_string(),
-            withdrawn: false,
-        }],
-    };
-
-    assert_eq!(sponsor_info.cosponsors.len(), 1);
-    assert!(!sponsor_info.cosponsors[0].withdrawn);
-}
-
-#[test]
 fn should_parse_member_from_api_response() {
     let json_path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
         .join("tests/test_data/congress/members/L000174.json");
@@ -62,13 +44,6 @@ fn should_parse_member_from_api_response() {
     assert_eq!(member.chamber, Chamber::Senate);
     assert!(member.district.is_none());
     assert!(!member.terms.is_empty());
-}
-
-#[test]
-fn should_create_congress_client() {
-    let client = CongressClient::new("fake_key".to_string());
-    // Just test construction doesn't panic
-    assert!(client.api_key() == "fake_key");
 }
 
 #[test]

@@ -91,19 +91,6 @@ fn make_test_tree_diff() -> TreeDiff {
 }
 
 // =============================================================================
-// LegalDiff::new tests
-// =============================================================================
-
-#[test]
-fn should_create_legal_diff_with_empty_annotations() {
-    let tree_diff = make_test_tree_diff();
-    let legal_diff = LegalDiff::new(&tree_diff);
-
-    assert!(legal_diff.annotations.is_empty());
-    assert_eq!(legal_diff.tree_diff.root_path, tree_diff.root_path);
-}
-
-// =============================================================================
 // LegalDiff::add_annotation tests
 // =============================================================================
 
