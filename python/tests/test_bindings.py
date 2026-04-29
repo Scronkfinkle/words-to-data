@@ -410,6 +410,51 @@ def test_legal_diff_json_roundtrip():
     assert restored_anns[0].source_bill.bill_id == "119-21"
 
 
+def test_repr_methods():
+    """Regression: BillAmendment repr panicked on short IDs; TextChange repr cloned value twice."""
+    element = parse_uslm_xml("tests/test_data/usc/2025-07-30/usc26.xml", "2025-07-30")
+    assert repr(element).startswith("USLMElement(")
+
+    old = parse_uslm_xml("tests/test_data/usc/2025-07-18/usc26.xml", "2025-07-18")
+    new = parse_uslm_xml("tests/test_data/usc/2025-07-30/usc26.xml", "2025-07-30")
+    diff = compute_diff(old, new)
+    assert repr(diff).startswith("TreeDiff(")
+
+    s174a = diff.find(
+        "uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a"
+    )
+    assert repr(s174a.changes[0]).startswith("FieldChangeEvent(")
+
+    text_change = s174a.changes[0].changes[0]
+    r = repr(text_change)
+    assert r.startswith("TextChange(")
+    assert len(r) < 200
+
+    data = parse_bill_amendments("tests/test_data/bills/pl-119-21.xml")
+    assert repr(data.amendments[0]).startswith("BillAmendment(")
+
+def test_merge_children_returns_none():
+    """Regression: stub said -> USLMElement but the method has no return value."""
+    title_9 = parse_uslm_xml("tests/test_data/usc/2025-07-18/usc09.xml", "2025-07-18")
+    title_26 = parse_uslm_xml("tests/test_data/usc/2025-07-18/usc26.xml", "2025-07-18")
+    result = title_26.merge_children(title_9)
+    assert result is None
+
+
+def test_get_annotations_returns_empty_list_not_none():
+    """Regression: stub said -> list | None but the method always returns a list."""
+    from words_to_data import LegalDiff
+
+    old = parse_uslm_xml("tests/test_data/usc/2025-07-18/usc26.xml", "2025-07-18")
+    new = parse_uslm_xml("tests/test_data/usc/2025-07-30/usc26.xml", "2025-07-30")
+    legal_diff = LegalDiff(compute_diff(old, new))
+
+    result = legal_diff.get_annotations("nonexistent/path")
+    assert result is not None
+    assert isinstance(result, list)
+    assert len(result) == 0
+
+
 def test_tree_diff_shallow():
     """Test that shallow() returns a TreeDiff without children"""
     old = parse_uslm_xml("tests/test_data/usc/2025-07-18/usc26.xml", "2025-07-18")
