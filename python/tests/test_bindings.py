@@ -430,8 +430,9 @@ def test_repr_methods():
     assert r.startswith("TextChange(")
     assert len(r) < 200
 
-    data = parse_bill_amendments("tests/test_data/bills/pl-119-21.xml")
-    assert repr(data.amendments[0]).startswith("BillAmendment(")
+    data = parse_bill_amendments("119-hr-1","tests/test_data/bills/119-hr-1/bill_119_hr_1.xml")
+    first_amendment = next(iter(data.amendments.values()))
+    assert repr(first_amendment).startswith("BillAmendment(")
 
 def test_merge_children_returns_none():
     """Regression: stub said -> USLMElement but the method has no return value."""
