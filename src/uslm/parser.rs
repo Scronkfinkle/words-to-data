@@ -317,6 +317,16 @@ fn rewrap_str(s: Option<&str>) -> Option<String> {
     s.map(String::from)
 }
 
+/// Normalize Unicode typographic quotes to their ASCII equivalents.
+///
+/// USLM and bill XML documents use Unicode curly quotes. Callers
+/// expect plain ASCII quote characters, so we normalize them here
+/// at the point of text extraction rather than ad-hoc at call sites.
+pub(crate) fn normalize_quotes(s: &str) -> String {
+    s.replace(['\u{2018}', '\u{2019}'], "'") // single curly quotes → apostrophe
+        .replace(['\u{201C}', '\u{201D}'], "\"") // double curly quotes → quotation mark
+}
+
 /// Extract source credits from a USLM element
 ///
 /// This function finds all `<sourceCredit>` child nodes and extracts their references,
@@ -601,7 +611,7 @@ pub fn extract_number(element_type: ElementType, node: &roxmltree::Node) -> Resu
 fn extract_text(node: Option<roxmltree::Node>) -> Option<String> {
     match node {
         None => None,
-        Some(n) => n.text().map(String::from),
+        Some(n) => n.text().map(normalize_quotes),
     }
 }
 
@@ -614,5 +624,62 @@ fn extract_text_contents(node: &roxmltree::Node) -> TextContents {
         proviso: extract_text(node.children().find(|n| n.has_tag_name("proviso"))),
         content: extract_text(node.children().find(|n| n.has_tag_name("content"))),
         continuation: extract_text(node.children().find(|n| n.has_tag_name("continuation"))),
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::{normalize_quotes, parse};
+
+    #[test]
+    fn test_normalize_quotes_all_variants() {
+        assert_eq!(normalize_quotes("\u{2018}hello\u{2019}"), "'hello'");
+        assert_eq!(normalize_quotes("\u{201C}hello\u{201D}"), "\"hello\"");
+    }
+
+    #[test]
+    fn test_normalize_quotes_mixed() {
+        let input = "It\u{2019}s called \u{201C}agriculture\u{201D}.";
+        assert_eq!(normalize_quotes(input), "It's called \"agriculture\".");
+    }
+
+    #[test]
+    fn test_normalize_quotes_no_change() {
+        let plain = "It's called \"agriculture\".";
+        assert_eq!(normalize_quotes(plain), plain);
+    }
+
+    #[test]
+    fn test_parse_normalizes_quotes_in_uslm() {
+        let element = parse("tests/test_data/usc/2025-07-18/usc07.xml", "2025-07-18")
+            .expect("test data should parse");
+        let all_text = collect_text(&element);
+        assert!(
+            !all_text.contains('\u{2018}')
+                && !all_text.contains('\u{2019}')
+                && !all_text.contains('\u{201C}')
+                && !all_text.contains('\u{201D}'),
+            "parsed text should contain no Unicode typographic quotes"
+        );
+    }
+
+    fn collect_text(elem: &crate::uslm::USLMElement) -> String {
+        let mut buf = String::new();
+        for s in [
+            &elem.data.heading,
+            &elem.data.chapeau,
+            &elem.data.content,
+            &elem.data.proviso,
+            &elem.data.continuation,
+        ]
+        .into_iter()
+        .flatten()
+        {
+            buf.push_str(s);
+        }
+        for child in &elem.children {
+            buf.push_str(&collect_text(child));
+        }
+        buf
     }
 }
