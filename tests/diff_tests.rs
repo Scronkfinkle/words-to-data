@@ -142,7 +142,7 @@ fn test_similarities() {
         .find(|amendment| {
             amendment
                 .amending_text
-                .contains("a taxpayer’s foreign research or experimental expenditures")
+                .contains("a taxpayer's foreign research or experimental expenditures")
         })
         .unwrap()
         .changes = bill_diffs;
