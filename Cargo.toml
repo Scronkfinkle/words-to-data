@@ -1,5 +1,5 @@
 [workspace]
-members = [".", "annotator"]
+members = [".", "annotator", "sleuth"]
 resolver = "2"
 
 [package]

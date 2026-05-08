@@ -41,6 +41,10 @@
         pkgs.glib-networking  # TLS support for WebKit
         pkgs.openssl          # TLS
         pkgs.librsvg          # SVG rendering
+
+        # SLEUTH (iced-rs)
+        pkgs.libxkbcommon
+
     ];
     devInputs = [
         pkgs.rustfmt
@@ -60,6 +64,8 @@
 
       # Without this, will throw a "No GSettings schemas are installed on the system" when opening a dialog box
       GSETTINGS_SCHEMA_DIR="${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}/glib-2.0/schemas";
+
+      LD_LIBRARY_PATH = "${pkgs.libxkbcommon}/lib:${pkgs.xorg.libxcb}/lib";
     };
 
   };

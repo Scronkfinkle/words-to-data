@@ -1,0 +1,10 @@
+[package]
+name = "sleuth"
+version = "0.1.0"
+edition = "2024"
+description = "Structured Legal Examination Using Tracked History - a legal code diff viewer"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+words-to-data = { path = ".." }
+iced = { version = "0.14", features = ["advanced"] }
