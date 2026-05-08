@@ -140,3 +140,14 @@ fn test_parse_from_str_should_produce_same_result_as_parse() {
     assert_eq!(from_str.data.path, from_file.data.path);
     assert_eq!(from_str.children.len(), from_file.children.len());
 }
+
+#[test]
+fn test_parse_text_fields() {
+    let result = parse("tests/test_data/usc/2025-07-30/usc26.xml", "2025-07-30")
+        .expect("failed to load XML");
+    let s174b = result
+        .find("uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_b")
+        .expect("Failed to find S174(b)");
+    assert!(s174b.data.heading.is_some());
+    assert!(s174b.data.content.is_some());
+}
