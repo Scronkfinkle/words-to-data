@@ -31,6 +31,12 @@ pub struct AppState {
     /// Set of paths with changes in current diff (for fast lookup)
     pub changed_paths: HashSet<String>,
 
+    /// Set of paths that have descendant changes (for tree badges)
+    pub paths_with_descendant_changes: HashSet<String>,
+
+    /// Flattened diff cache: path -> shallow TreeDiff (O(1) lookup)
+    pub diff_cache: std::collections::HashMap<String, TreeDiff>,
+
     /// Set of expanded tree paths
     pub tree_expanded: HashSet<String>,
 
@@ -67,6 +73,8 @@ impl Default for AppState {
             selected_version_index: 0,
             current_diff: None,
             changed_paths: HashSet::new(),
+            paths_with_descendant_changes: HashSet::new(),
+            diff_cache: std::collections::HashMap::new(),
             tree_expanded: HashSet::new(),
             view_mode: ViewMode::default(),
             show_blame: true,
@@ -90,6 +98,8 @@ impl AppState {
     fn recompute_diff(&mut self) {
         self.current_diff = None;
         self.changed_paths.clear();
+        self.paths_with_descendant_changes.clear();
+        self.diff_cache.clear();
 
         let Some(ref dataset) = self.dataset else {
             return;
@@ -103,28 +113,44 @@ impl AppState {
         let to = &dataset.versions[self.selected_version_index];
 
         let diff = TreeDiff::from_elements(&from.element, &to.element);
-        self.collect_changed_paths(&diff);
+        self.flatten_diff_to_cache(&diff);
+
+        // Pre-compute paths with descendant changes
+        for changed_path in &self.changed_paths {
+            let mut current = changed_path.as_str();
+            while let Some(pos) = current.rfind('/') {
+                current = &current[..pos];
+                if !current.is_empty() {
+                    self.paths_with_descendant_changes
+                        .insert(current.to_string());
+                }
+            }
+        }
+
         self.current_diff = Some(diff);
     }
 
-    /// Recursively collect paths with changes into changed_paths set
-    fn collect_changed_paths(&mut self, diff: &TreeDiff) {
+    /// Flatten TreeDiff into cache HashMap for O(1) lookups
+    fn flatten_diff_to_cache(&mut self, diff: &TreeDiff) {
+        // Store shallow copy (no children) in cache
         if !diff.changes.is_empty() || !diff.added.is_empty() || !diff.removed.is_empty() {
             self.changed_paths.insert(diff.root_path.clone());
+            self.diff_cache
+                .insert(diff.root_path.clone(), diff.shallow());
         }
         for child in &diff.child_diffs {
-            self.collect_changed_paths(child);
+            self.flatten_diff_to_cache(child);
         }
     }
 
-    /// Check if path or any descendant has changes
+    /// Check if path or any descendant has changes (O(1) lookup)
     fn has_descendant_changes(&self, path: &str) -> bool {
-        self.changed_paths.iter().any(|p| p.starts_with(path))
+        self.paths_with_descendant_changes.contains(path)
     }
 
-    /// Get diff for specific path from cached tree diff
+    /// Get diff for specific path (O(1) cache lookup)
     fn get_diff_for_path(&self, path: &str) -> Option<&TreeDiff> {
-        self.current_diff.as_ref()?.find(path)
+        self.diff_cache.get(path)
     }
 
     /// Update state in response to a message
@@ -436,7 +462,7 @@ impl AppState {
     fn render_tree_node<'a>(
         &'a self,
         element: &'a words_to_data::uslm::USLMElement,
-        _depth: usize,
+        depth: usize,
     ) -> Element<'a, Message> {
         let path = &element.data.path;
         let is_expanded = self.tree_expanded.contains(path);
@@ -521,7 +547,7 @@ impl AppState {
         // Children (if expanded)
         if has_children && is_expanded {
             for child in &element.children {
-                let child_view = self.render_tree_node(child, _depth + 1);
+                let child_view = self.render_tree_node(child, depth + 1);
                 let indented =
                     container(child_view).padding(iced::Padding::from([0.0, 0.0]).left(16.0));
                 col = col.push(indented);
@@ -605,11 +631,12 @@ impl AppState {
 
         let mut fields_content = column![].spacing(4);
 
-        // Helper to render a field
+        // Helper to render a field with word-level diff highlighting
         let render_field =
             |field: TextContentField, field_text: &'a str, size: f32| -> Element<'a, Message> {
                 if let Some(diff) = diff {
                     if let Some(change) = diff.changes.iter().find(|c| c.field_name == field) {
+                        // Build rich text with colored spans
                         let spans: Vec<iced::widget::text::Span<'a, (), iced::Font>> = change
                             .changes
                             .iter()
@@ -619,10 +646,9 @@ impl AppState {
                                     TextChangeType::Insert => {
                                         s.color(colors::INSERT_FG).background(colors::INSERT_BG)
                                     }
-                                    TextChangeType::Delete => s
-                                        .color(colors::DELETE_FG)
-                                        .background(colors::DELETE_BG)
-                                        .strikethrough(true),
+                                    TextChangeType::Delete => {
+                                        s.color(colors::DELETE_FG).background(colors::DELETE_BG)
+                                    }
                                     TextChangeType::Equal => s.color(colors::TEXT_PRIMARY),
                                 }
                             })
