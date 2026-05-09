@@ -606,34 +606,35 @@ impl AppState {
         let mut fields_content = column![].spacing(4);
 
         // Helper to render a field
-        let render_field = |field: TextContentField,
-                            field_text: &'a str,
-                            size: f32|
-         -> Element<'a, Message> {
-            if let Some(diff) = diff {
-                if let Some(change) = diff.changes.iter().find(|c| c.field_name == field) {
-                    let spans: Vec<iced::widget::text::Span<'a, (), iced::Font>> = change
-                        .changes
-                        .iter()
-                        .map(|tc| {
-                            let s = span::<(), iced::Font>(&tc.value);
-                            match tc.tag {
-                                TextChangeType::Insert => s
-                                    .color(colors::INSERT_FG)
-                                    .background(colors::INSERT_BG),
-                                TextChangeType::Delete => s
-                                    .color(colors::DELETE_FG)
-                                    .background(colors::DELETE_BG)
-                                    .strikethrough(true),
-                                TextChangeType::Equal => s.color(colors::TEXT_PRIMARY),
-                            }
-                        })
-                        .collect();
-                    return rich_text(spans).size(size).into();
+        let render_field =
+            |field: TextContentField, field_text: &'a str, size: f32| -> Element<'a, Message> {
+                if let Some(diff) = diff {
+                    if let Some(change) = diff.changes.iter().find(|c| c.field_name == field) {
+                        let spans: Vec<iced::widget::text::Span<'a, (), iced::Font>> = change
+                            .changes
+                            .iter()
+                            .map(|tc| {
+                                let s = span::<(), iced::Font>(&tc.value);
+                                match tc.tag {
+                                    TextChangeType::Insert => {
+                                        s.color(colors::INSERT_FG).background(colors::INSERT_BG)
+                                    }
+                                    TextChangeType::Delete => s
+                                        .color(colors::DELETE_FG)
+                                        .background(colors::DELETE_BG)
+                                        .strikethrough(true),
+                                    TextChangeType::Equal => s.color(colors::TEXT_PRIMARY),
+                                }
+                            })
+                            .collect();
+                        return rich_text(spans).size(size).into();
+                    }
                 }
-            }
-            text(field_text).size(size).color(colors::TEXT_PRIMARY).into()
-        };
+                text(field_text)
+                    .size(size)
+                    .color(colors::TEXT_PRIMARY)
+                    .into()
+            };
 
         // Heading
         if let Some(ref heading) = element.data.heading {
@@ -663,13 +664,14 @@ impl AppState {
         let element_row: Element<'a, Message> = if has_changes && self.show_blame {
             if let Some((bill_id, color)) = self.get_blame_for_path(path) {
                 // Party color stripe
-                let stripe = container(text(""))
-                    .width(4.0)
-                    .height(Length::Shrink)
-                    .style(move |_| container::Style {
-                        background: Some(color.into()),
-                        ..Default::default()
-                    });
+                let stripe =
+                    container(text(""))
+                        .width(4.0)
+                        .height(Length::Shrink)
+                        .style(move |_| container::Style {
+                            background: Some(color.into()),
+                            ..Default::default()
+                        });
 
                 // Bill label
                 let label = text(bill_id).size(10).color(colors::TEXT_SECONDARY);
@@ -786,11 +788,8 @@ impl AppState {
 
                 for path in sorted_paths {
                     // Extract short name from path
-                    let short_name: String = path
-                        .rsplit('/')
-                        .next()
-                        .unwrap_or(path)
-                        .replace('_', " ");
+                    let short_name: String =
+                        path.rsplit('/').next().unwrap_or(path).replace('_', " ");
 
                     let is_selected = self.selected_path.as_ref() == Some(path);
                     let path_clone = path.clone();
@@ -841,7 +840,9 @@ impl AppState {
 
         let version_count = dataset.versions.len();
         if version_count == 0 {
-            return container(text("No versions")).height(Length::Fixed(56.0)).into();
+            return container(text("No versions"))
+                .height(Length::Fixed(56.0))
+                .into();
         }
 
         let current_date = dataset
@@ -858,9 +859,20 @@ impl AppState {
             .unwrap_or("");
 
         let info = if version_label.is_empty() {
-            text(format!("{} ({}/{})", current_date, self.selected_version_index + 1, version_count))
+            text(format!(
+                "{} ({}/{})",
+                current_date,
+                self.selected_version_index + 1,
+                version_count
+            ))
         } else {
-            text(format!("{} - {} ({}/{})", current_date, version_label, self.selected_version_index + 1, version_count))
+            text(format!(
+                "{} - {} ({}/{})",
+                current_date,
+                version_label,
+                self.selected_version_index + 1,
+                version_count
+            ))
         }
         .size(12)
         .color(colors::TEXT_SECONDARY);
@@ -892,7 +904,9 @@ impl AppState {
                 .into()
         };
 
-        let content = column![info, timeline_row].spacing(4).align_x(iced::Alignment::Center);
+        let content = column![info, timeline_row]
+            .spacing(4)
+            .align_x(iced::Alignment::Center);
 
         container(content)
             .width(Length::Fill)
