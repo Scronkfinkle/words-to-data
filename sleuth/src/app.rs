@@ -2,7 +2,7 @@
 
 use std::collections::HashSet;
 
-use iced::widget::{button, column, container, rich_text, row, scrollable, span, text};
+use iced::widget::{button, column, container, rich_text, row, scrollable, slider, span, text};
 use iced::{Element, Length, Task};
 
 use words_to_data::dataset::Dataset;
@@ -605,7 +605,44 @@ impl AppState {
                     text("No annotations for this version").into()
                 }
             }
-            ChangesTab::AllPaths => text("All changed paths (TODO)").into(),
+            ChangesTab::AllPaths => {
+                if self.changed_paths.is_empty() {
+                    return text("No changes in this version").into();
+                }
+
+                let mut col = column![].spacing(2);
+                let mut sorted_paths: Vec<_> = self.changed_paths.iter().collect();
+                sorted_paths.sort();
+
+                for path in sorted_paths {
+                    // Extract short name from path
+                    let short_name: String = path
+                        .rsplit('/')
+                        .next()
+                        .unwrap_or(path)
+                        .replace('_', " ");
+
+                    let is_selected = self.selected_path.as_ref() == Some(path);
+                    let path_clone = path.clone();
+                    let path_btn = button(text(short_name).size(11))
+                        .padding([2, 4])
+                        .style(move |_, status| {
+                            let bg = match status {
+                                button::Status::Hovered => Some(colors::HOVER.into()),
+                                _ if is_selected => Some(colors::SELECTION.into()),
+                                _ => None,
+                            };
+                            button::Style {
+                                background: bg,
+                                text_color: colors::TEXT_PRIMARY,
+                                ..Default::default()
+                            }
+                        })
+                        .on_press(Message::SelectPath(path_clone));
+                    col = col.push(path_btn);
+                }
+                col.into()
+            }
             ChangesTab::Lifetime => {
                 if let Some(ref path) = self.selected_path {
                     let annotations = dataset.annotations_for_path(path);
@@ -626,43 +663,70 @@ impl AppState {
         }
     }
 
-    /// Bottom panel: timeline
+    /// Bottom panel: timeline with scrubber
     fn view_timeline(&self) -> Element<Message> {
         let Some(ref dataset) = self.dataset else {
-            return container(text("")).height(Length::Fixed(48.0)).into();
+            return container(text("")).height(Length::Fixed(56.0)).into();
         };
 
         let version_count = dataset.versions.len();
+        if version_count == 0 {
+            return container(text("No versions")).height(Length::Fixed(56.0)).into();
+        }
+
         let current_date = dataset
             .versions
             .get(self.selected_version_index)
             .map(|v| v.date.as_str())
             .unwrap_or("--");
 
-        let info = text(format!(
-            "Version {} of {} | {}",
-            self.selected_version_index + 1,
-            version_count,
-            current_date
-        ))
+        // Version label
+        let version_label = dataset
+            .versions
+            .get(self.selected_version_index)
+            .and_then(|v| v.label.as_deref())
+            .unwrap_or("");
+
+        let info = if version_label.is_empty() {
+            text(format!("{} ({}/{})", current_date, self.selected_version_index + 1, version_count))
+        } else {
+            text(format!("{} - {} ({}/{})", current_date, version_label, self.selected_version_index + 1, version_count))
+        }
         .size(12)
         .color(colors::TEXT_SECONDARY);
 
-        let prev_btn = iced::widget::button(text("◀").size(14))
+        // Navigation buttons
+        let prev_btn = button(text("◀").size(12))
             .padding([4, 8])
             .on_press(Message::PrevVersion);
 
-        let next_btn = iced::widget::button(text("▶").size(14))
+        let next_btn = button(text("▶").size(12))
             .padding([4, 8])
             .on_press(Message::NextVersion);
 
-        let controls = row![prev_btn, info, next_btn]
-            .spacing(16)
-            .align_y(iced::Alignment::Center);
+        // Slider (only if >1 version)
+        let timeline_row: Element<Message> = if version_count > 1 {
+            let max = (version_count - 1) as u32;
+            let current = self.selected_version_index as u32;
+            let scrubber = slider(0..=max, current, |v| Message::VersionChange(v as usize))
+                .width(Length::Fill);
 
-        container(controls)
+            row![prev_btn, scrubber, next_btn]
+                .spacing(8)
+                .align_y(iced::Alignment::Center)
+                .into()
+        } else {
+            row![prev_btn, next_btn]
+                .spacing(8)
+                .align_y(iced::Alignment::Center)
+                .into()
+        };
+
+        let content = column![info, timeline_row].spacing(4).align_x(iced::Alignment::Center);
+
+        container(content)
             .width(Length::Fill)
-            .height(Length::Fixed(48.0))
+            .height(Length::Fixed(56.0))
             .padding(8)
             .center_x(Length::Fill)
             .style(|_| container::Style {
