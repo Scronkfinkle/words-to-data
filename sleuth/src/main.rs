@@ -18,6 +18,7 @@ fn main() -> iced::Result {
     iced::application(AppState::boot, AppState::update, AppState::view)
         .title(TITLE)
         .theme(theme)
+        .subscription(AppState::subscription)
         .window(window::Settings {
             size: iced::Size::new(1400.0, 900.0),
             min_size: Some(iced::Size::new(800.0, 600.0)),

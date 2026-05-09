@@ -46,12 +46,18 @@ pub enum Message {
     DatasetLoaded(Box<words_to_data::dataset::Dataset>),
     /// Dataset load failed
     DatasetError(String),
+    /// Update loader path input
+    LoaderPathChanged(String),
 
     // Search
     /// Update search query
     SearchQueryChanged(String),
     /// Execute search
     SearchSubmit,
+
+    // Keyboard
+    /// Keyboard event
+    KeyPressed(iced::keyboard::Key, iced::keyboard::Modifiers),
 }
 
 /// View mode for the reading pane
