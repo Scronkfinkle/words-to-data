@@ -537,14 +537,7 @@ impl AppState {
             if let Some(ref path) = self.selected_path {
                 if let Some(version) = dataset.versions.get(self.selected_version_index) {
                     if let Some(element) = version.element.find(path) {
-                        // Build reading view with optional blame gutter
-                        if self.show_blame {
-                            let blame = self.render_blame_gutter(path);
-                            let content = self.render_element_content(element);
-                            row![blame, content].spacing(8).into()
-                        } else {
-                            self.render_element_content(element)
-                        }
+                        self.render_element_content(element)
                     } else {
                         text("Element not found").into()
                     }
@@ -569,31 +562,25 @@ impl AppState {
             .into()
     }
 
-    /// Render blame gutter showing bill attribution
-    fn render_blame_gutter(&self, path: &str) -> Element<Message> {
-        let Some(ref dataset) = self.dataset else {
-            return container(text("")).width(4.0).into();
-        };
-
-        // Get annotations for this path
-        let annotations = dataset.annotations_for_path(path);
-
-        if annotations.is_empty() {
-            return container(text("")).width(4.0).into();
-        }
-
-        // Get sponsor party for first annotation
+    /// Get bill attribution info for a path (bill_id, party color)
+    fn get_blame_for_path(&self, path: &str) -> Option<(String, iced::Color)> {
         use words_to_data::congress::Party;
-        let color = if let Some(ann) = annotations.first() {
-            if let Some(sponsor_info) = dataset.get_sponsor_info(&ann.source_bill.bill_id) {
-                if let Some(member) = dataset.get_member(&sponsor_info.sponsor) {
-                    match &member.party {
-                        Party::Republican => colors::PARTY_R,
-                        Party::Democrat => colors::PARTY_D,
-                        Party::Independent | Party::Other(_) => colors::PARTY_I,
-                    }
-                } else {
-                    colors::TEXT_SECONDARY
+
+        let dataset = self.dataset.as_ref()?;
+        let annotations = dataset.annotations_for_path(path);
+        let ann = annotations.first()?;
+
+        let bill_id = &ann.source_bill.bill_id;
+
+        // Format as "hr7024·118" style
+        let formatted_id = bill_id.replace("-", "·");
+
+        let color = if let Some(sponsor_info) = dataset.get_sponsor_info(bill_id) {
+            if let Some(member) = dataset.get_member(&sponsor_info.sponsor) {
+                match &member.party {
+                    Party::Republican => colors::PARTY_R,
+                    Party::Democrat => colors::PARTY_D,
+                    Party::Independent | Party::Other(_) => colors::PARTY_I,
                 }
             } else {
                 colors::TEXT_SECONDARY
@@ -602,17 +589,10 @@ impl AppState {
             colors::TEXT_SECONDARY
         };
 
-        container(text(""))
-            .width(4.0)
-            .height(Length::Fill)
-            .style(move |_| container::Style {
-                background: Some(color.into()),
-                ..Default::default()
-            })
-            .into()
+        Some((formatted_id, color))
     }
 
-    /// Render element content for reading view with diff highlighting
+    /// Render element content for reading view with diff highlighting and blame
     fn render_element_content<'a>(
         &'a self,
         element: &'a words_to_data::uslm::USLMElement,
@@ -621,17 +601,17 @@ impl AppState {
 
         let path = &element.data.path;
         let diff = self.get_diff_for_path(path);
-        let mut content = column![].spacing(8);
+        let has_changes = diff.is_some_and(|d| !d.changes.is_empty());
 
-        // Helper to render field with or without diff
+        let mut fields_content = column![].spacing(4);
+
+        // Helper to render a field
         let render_field = |field: TextContentField,
                             field_text: &'a str,
                             size: f32|
          -> Element<'a, Message> {
             if let Some(diff) = diff {
-                // Find change for this field
                 if let Some(change) = diff.changes.iter().find(|c| c.field_name == field) {
-                    // Render with word-level highlighting
                     let spans: Vec<iced::widget::text::Span<'a, (), iced::Font>> = change
                         .changes
                         .iter()
@@ -652,41 +632,75 @@ impl AppState {
                     return rich_text(spans).size(size).into();
                 }
             }
-            // No diff - plain text
             text(field_text).size(size).color(colors::TEXT_PRIMARY).into()
         };
 
         // Heading
         if let Some(ref heading) = element.data.heading {
-            content = content.push(render_field(TextContentField::Heading, heading, 20.0));
+            fields_content =
+                fields_content.push(render_field(TextContentField::Heading, heading, 20.0));
         }
 
         // Chapeau
         if let Some(ref chapeau) = element.data.chapeau {
-            content = content.push(render_field(TextContentField::Chapeau, chapeau, 14.0));
+            fields_content =
+                fields_content.push(render_field(TextContentField::Chapeau, chapeau, 14.0));
         }
 
         // Content
         if let Some(ref body) = element.data.content {
-            content = content.push(render_field(TextContentField::Content, body, 14.0));
+            fields_content =
+                fields_content.push(render_field(TextContentField::Content, body, 14.0));
         }
 
         // Proviso
         if let Some(ref proviso) = element.data.proviso {
-            content = content.push(render_field(TextContentField::Proviso, proviso, 13.0));
+            fields_content =
+                fields_content.push(render_field(TextContentField::Proviso, proviso, 13.0));
         }
+
+        // Wrap with blame gutter if has changes
+        let element_row: Element<'a, Message> = if has_changes && self.show_blame {
+            if let Some((bill_id, color)) = self.get_blame_for_path(path) {
+                // Party color stripe
+                let stripe = container(text(""))
+                    .width(4.0)
+                    .height(Length::Shrink)
+                    .style(move |_| container::Style {
+                        background: Some(color.into()),
+                        ..Default::default()
+                    });
+
+                // Bill label
+                let label = text(bill_id).size(10).color(colors::TEXT_SECONDARY);
+
+                let blame_col = column![stripe, label].spacing(2);
+                row![blame_col, fields_content].spacing(8).into()
+            } else {
+                fields_content.into()
+            }
+        } else {
+            fields_content.into()
+        };
+
+        // Build final with children
+        let mut final_content = column![element_row].spacing(8);
 
         // Children
         for child in &element.children {
-            content = content.push(self.render_element_content(child));
+            final_content = final_content.push(self.render_element_content(child));
         }
 
-        // Continuation
+        // Continuation (after children, no blame wrap)
         if let Some(ref continuation) = element.data.continuation {
-            content = content.push(render_field(TextContentField::Continuation, continuation, 14.0));
+            final_content = final_content.push(render_field(
+                TextContentField::Continuation,
+                continuation,
+                14.0,
+            ));
         }
 
-        content.into()
+        final_content.into()
     }
 
     /// Right panel: changes panel (360px)
