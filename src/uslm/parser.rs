@@ -609,10 +609,27 @@ pub fn extract_number(element_type: ElementType, node: &roxmltree::Node) -> Resu
 }
 
 fn extract_text(node: Option<roxmltree::Node>) -> Option<String> {
-    match node {
-        None => None,
-        Some(n) => n.text().map(normalize_quotes),
+    node.map(|n| {
+        let text = collect_all_text(&n);
+        if text.is_empty() {
+            return None;
+        }
+        Some(normalize_quotes(&text))
+    })?
+}
+
+fn collect_all_text(node: &roxmltree::Node) -> String {
+    let mut result = String::new();
+    for child in node.children() {
+        if child.is_text() {
+            if let Some(t) = child.text() {
+                result.push_str(t);
+            }
+        } else if child.is_element() {
+            result.push_str(&collect_all_text(&child));
+        }
     }
+    result
 }
 
 fn extract_text_contents(node: &roxmltree::Node) -> TextContents {
