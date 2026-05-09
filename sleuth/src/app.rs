@@ -2,11 +2,11 @@
 
 use std::collections::HashSet;
 
-use iced::widget::{button, column, container, row, scrollable, text};
+use iced::widget::{button, column, container, rich_text, row, scrollable, span, text};
 use iced::{Element, Length, Task};
 
 use words_to_data::dataset::Dataset;
-use words_to_data::diff::TreeDiff;
+use words_to_data::diff::{TextChangeType, TreeDiff};
 
 use crate::message::{ChangesTab, Message, TimelineStyle, ViewMode};
 use crate::theme::colors;
@@ -113,6 +113,11 @@ impl AppState {
     /// Check if path or any descendant has changes
     fn has_descendant_changes(&self, path: &str) -> bool {
         self.changed_paths.iter().any(|p| p.starts_with(path))
+    }
+
+    /// Get diff for specific path from cached tree diff
+    fn get_diff_for_path(&self, path: &str) -> Option<&TreeDiff> {
+        self.current_diff.as_ref()?.find(path)
     }
 
     /// Update state in response to a message
@@ -307,10 +312,10 @@ impl AppState {
         }
 
         // Label (clickable to select)
-        let label = if element.data.verbose_name.is_empty() {
-            &element.data.number_display
-        } else {
+        let label = if element.data.number_display.is_empty() {
             &element.data.verbose_name
+        } else {
+            &element.data.number_display
         };
 
         let label_color = if is_selected {
@@ -376,7 +381,14 @@ impl AppState {
             if let Some(ref path) = self.selected_path {
                 if let Some(version) = dataset.versions.get(self.selected_version_index) {
                     if let Some(element) = version.element.find(path) {
-                        self.render_element_content(element)
+                        // Build reading view with optional blame gutter
+                        if self.show_blame {
+                            let blame = self.render_blame_gutter(path);
+                            let content = self.render_element_content(element);
+                            row![blame, content].spacing(8).into()
+                        } else {
+                            self.render_element_content(element)
+                        }
                     } else {
                         text("Element not found").into()
                     }
@@ -401,36 +413,111 @@ impl AppState {
             .into()
     }
 
-    /// Render element content for reading view
-    fn render_element_content<'a>(&'a self, element: &'a words_to_data::uslm::USLMElement) -> Element<'a, Message> {
+    /// Render blame gutter showing bill attribution
+    fn render_blame_gutter(&self, path: &str) -> Element<Message> {
+        let Some(ref dataset) = self.dataset else {
+            return container(text("")).width(4.0).into();
+        };
+
+        // Get annotations for this path
+        let annotations = dataset.annotations_for_path(path);
+
+        if annotations.is_empty() {
+            return container(text("")).width(4.0).into();
+        }
+
+        // Get sponsor party for first annotation
+        use words_to_data::congress::Party;
+        let color = if let Some(ann) = annotations.first() {
+            if let Some(sponsor_info) = dataset.get_sponsor_info(&ann.source_bill.bill_id) {
+                if let Some(member) = dataset.get_member(&sponsor_info.sponsor) {
+                    match &member.party {
+                        Party::Republican => colors::PARTY_R,
+                        Party::Democrat => colors::PARTY_D,
+                        Party::Independent | Party::Other(_) => colors::PARTY_I,
+                    }
+                } else {
+                    colors::TEXT_SECONDARY
+                }
+            } else {
+                colors::TEXT_SECONDARY
+            }
+        } else {
+            colors::TEXT_SECONDARY
+        };
+
+        container(text(""))
+            .width(4.0)
+            .height(Length::Fill)
+            .style(move |_| container::Style {
+                background: Some(color.into()),
+                ..Default::default()
+            })
+            .into()
+    }
+
+    /// Render element content for reading view with diff highlighting
+    fn render_element_content<'a>(
+        &'a self,
+        element: &'a words_to_data::uslm::USLMElement,
+    ) -> Element<'a, Message> {
+        use words_to_data::uslm::TextContentField;
+
+        let path = &element.data.path;
+        let diff = self.get_diff_for_path(path);
         let mut content = column![].spacing(8);
+
+        // Helper to render field with or without diff
+        let render_field = |field: TextContentField,
+                            field_text: &'a str,
+                            size: f32|
+         -> Element<'a, Message> {
+            if let Some(diff) = diff {
+                // Find change for this field
+                if let Some(change) = diff.changes.iter().find(|c| c.field_name == field) {
+                    // Render with word-level highlighting
+                    let spans: Vec<iced::widget::text::Span<'a, (), iced::Font>> = change
+                        .changes
+                        .iter()
+                        .map(|tc| {
+                            let s = span::<(), iced::Font>(&tc.value);
+                            match tc.tag {
+                                TextChangeType::Insert => s
+                                    .color(colors::INSERT_FG)
+                                    .background(colors::INSERT_BG),
+                                TextChangeType::Delete => s
+                                    .color(colors::DELETE_FG)
+                                    .background(colors::DELETE_BG)
+                                    .strikethrough(true),
+                                TextChangeType::Equal => s.color(colors::TEXT_PRIMARY),
+                            }
+                        })
+                        .collect();
+                    return rich_text(spans).size(size).into();
+                }
+            }
+            // No diff - plain text
+            text(field_text).size(size).color(colors::TEXT_PRIMARY).into()
+        };
 
         // Heading
         if let Some(ref heading) = element.data.heading {
-            content = content.push(
-                text(heading)
-                    .size(20)
-                    .color(colors::TEXT_PRIMARY),
-            );
+            content = content.push(render_field(TextContentField::Heading, heading, 20.0));
         }
 
         // Chapeau
         if let Some(ref chapeau) = element.data.chapeau {
-            content = content.push(text(chapeau).color(colors::TEXT_PRIMARY));
+            content = content.push(render_field(TextContentField::Chapeau, chapeau, 14.0));
         }
 
         // Content
         if let Some(ref body) = element.data.content {
-            content = content.push(text(body).color(colors::TEXT_PRIMARY));
+            content = content.push(render_field(TextContentField::Content, body, 14.0));
         }
 
         // Proviso
         if let Some(ref proviso) = element.data.proviso {
-            content = content.push(
-                text(proviso)
-                    .color(colors::TEXT_SECONDARY)
-                    .size(14),
-            );
+            content = content.push(render_field(TextContentField::Proviso, proviso, 13.0));
         }
 
         // Children
@@ -440,7 +527,7 @@ impl AppState {
 
         // Continuation
         if let Some(ref continuation) = element.data.continuation {
-            content = content.push(text(continuation).color(colors::TEXT_PRIMARY));
+            content = content.push(render_field(TextContentField::Continuation, continuation, 14.0));
         }
 
         content.into()
@@ -460,16 +547,14 @@ impl AppState {
             let is_active = self.changes_tab == tab;
             iced::widget::button(text(*label).size(12))
                 .padding([4, 8])
-                .style(move |_, _| {
-                    iced::widget::button::Style {
-                        background: if is_active {
-                            Some(colors::SELECTION.into())
-                        } else {
-                            None
-                        },
-                        text_color: colors::TEXT_PRIMARY,
-                        ..Default::default()
-                    }
+                .style(move |_, _| iced::widget::button::Style {
+                    background: if is_active {
+                        Some(colors::SELECTION.into())
+                    } else {
+                        None
+                    },
+                    text_color: colors::TEXT_PRIMARY,
+                    ..Default::default()
                 })
                 .on_press(Message::SetChangesTab(tab))
                 .into()
@@ -520,9 +605,7 @@ impl AppState {
                     text("No annotations for this version").into()
                 }
             }
-            ChangesTab::AllPaths => {
-                text("All changed paths (TODO)").into()
-            }
+            ChangesTab::AllPaths => text("All changed paths (TODO)").into(),
             ChangesTab::Lifetime => {
                 if let Some(ref path) = self.selected_path {
                     let annotations = dataset.annotations_for_path(path);
@@ -546,9 +629,7 @@ impl AppState {
     /// Bottom panel: timeline
     fn view_timeline(&self) -> Element<Message> {
         let Some(ref dataset) = self.dataset else {
-            return container(text(""))
-                .height(Length::Fixed(48.0))
-                .into();
+            return container(text("")).height(Length::Fixed(48.0)).into();
         };
 
         let version_count = dataset.versions.len();
