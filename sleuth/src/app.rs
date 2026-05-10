@@ -12,7 +12,7 @@ use iced::{Element, Length, Subscription, Task};
 use words_to_data::dataset::Dataset;
 use words_to_data::diff::{TextChangeType, TreeDiff};
 
-use crate::message::{ChangesTab, Message, TimelineStyle, ViewMode};
+use crate::message::{Message, TimelineStyle, ViewMode};
 use crate::theme::colors;
 
 /// Main application state
@@ -50,9 +50,6 @@ pub struct AppState {
     /// Timeline display style
     pub timeline_style: TimelineStyle,
 
-    /// Active tab in changes panel
-    pub changes_tab: ChangesTab,
-
     /// Search overlay visible
     pub show_search: bool,
 
@@ -83,7 +80,6 @@ impl Default for AppState {
             view_mode: ViewMode::default(),
             show_blame: true,
             timeline_style: TimelineStyle::default(),
-            changes_tab: ChangesTab::default(),
             show_search: false,
             show_loader: false,
             search_query: String::new(),
@@ -213,10 +209,7 @@ impl AppState {
                 self.timeline_style = style;
                 Task::none()
             }
-            Message::SetChangesTab(tab) => {
-                self.changes_tab = tab;
-                Task::none()
-            }
+            Message::SetChangesTab(_) => Task::none(), // Unused
             Message::ToggleSearch => {
                 self.show_search = !self.show_search;
                 if self.show_search {
@@ -341,8 +334,6 @@ impl AppState {
             stack![base, self.view_search_modal()].into()
         } else if self.show_loader {
             stack![base, self.view_loader_modal()].into()
-        } else if self.blame_detail_path.is_some() {
-            stack![base, self.view_blame_modal()].into()
         } else {
             base
         }
@@ -446,181 +437,6 @@ impl AppState {
             .height(Length::Fill)
             .center_x(Length::Fill)
             .padding(iced::Padding::from([0.0, 0.0]).top(100.0));
-
-        stack![backdrop, centered].into()
-    }
-
-    /// Blame detail modal overlay
-    fn view_blame_modal(&self) -> Element<Message> {
-        use words_to_data::annotation::AnnotationStatus;
-
-        let backdrop = button(text(""))
-            .width(Length::Fill)
-            .height(Length::Fill)
-            .style(|_, _| button::Style {
-                background: Some(iced::Color::from_rgba(0.0, 0.0, 0.0, 0.5).into()),
-                ..Default::default()
-            })
-            .on_press(Message::CloseOverlays);
-
-        let Some(ref path) = self.blame_detail_path else {
-            return backdrop.into();
-        };
-
-        let Some(ref dataset) = self.dataset else {
-            return backdrop.into();
-        };
-
-        let annotations = dataset.annotations_for_path(path);
-        let Some(ann) = annotations.first() else {
-            let modal =
-                container(text("No annotation found for this path").color(colors::TEXT_SECONDARY))
-                    .width(600.0)
-                    .padding(20)
-                    .style(|_| container::Style {
-                        background: Some(colors::PAPER.into()),
-                        border: iced::Border {
-                            radius: 8.0.into(),
-                            width: 1.0,
-                            color: colors::PAPER_BORDER,
-                        },
-                        ..Default::default()
-                    });
-            let centered = container(modal)
-                .width(Length::Fill)
-                .height(Length::Fill)
-                .center_x(Length::Fill)
-                .padding(iced::Padding::from([0.0, 0.0]).top(80.0));
-            return stack![backdrop, centered].into();
-        };
-
-        // Build modal content
-        let mut content = column![].spacing(12);
-
-        // Header with bill ID and operation
-        let header = text(format!(
-            "Bill {} — {}",
-            ann.source_bill.bill_id,
-            ann.operation_display()
-        ))
-        .size(18)
-        .color(colors::TEXT_PRIMARY);
-        content = content.push(header);
-
-        // Status badge
-        let status_text = match ann.metadata.status {
-            AnnotationStatus::Pending => "Pending review",
-            AnnotationStatus::Verified => "Verified",
-            AnnotationStatus::Disputed => "Disputed",
-            AnnotationStatus::Rejected => "Rejected",
-        };
-        let status_color = match ann.metadata.status {
-            AnnotationStatus::Verified => colors::INSERT_FG,
-            AnnotationStatus::Rejected => colors::DELETE_FG,
-            AnnotationStatus::Disputed => colors::BADGE_CHANGED,
-            AnnotationStatus::Pending => colors::TEXT_SECONDARY,
-        };
-        let status = text(status_text).size(12).color(status_color);
-        content = content.push(status);
-
-        // Causative text section
-        if !ann.source_bill.causative_text.is_empty() {
-            let causative_label = text("Causative Text")
-                .size(12)
-                .color(colors::TEXT_SECONDARY);
-            let causative_body = container(
-                text(&ann.source_bill.causative_text)
-                    .size(13)
-                    .color(colors::TEXT_PRIMARY),
-            )
-            .padding(8)
-            .style(|_| container::Style {
-                background: Some(colors::PAPER_DARK.into()),
-                border: iced::Border {
-                    radius: 4.0.into(),
-                    ..Default::default()
-                },
-                ..Default::default()
-            });
-            content = content.push(column![causative_label, causative_body].spacing(4));
-        }
-
-        // Confidence (if present)
-        if let Some(conf) = ann.metadata.confidence {
-            let conf_text = text(format!("Confidence: {:.0}%", conf * 100.0))
-                .size(12)
-                .color(colors::TEXT_SECONDARY);
-            content = content.push(conf_text);
-        }
-
-        // Annotator
-        let annotator = text(format!("Annotator: {}", ann.metadata.annotator))
-            .size(12)
-            .color(colors::TEXT_SECONDARY);
-        content = content.push(annotator);
-
-        // Reasoning (if present)
-        if let Some(ref reasoning) = ann.metadata.reasoning {
-            let reason_label = text("Reasoning").size(12).color(colors::TEXT_SECONDARY);
-            let reason_body = container(text(reasoning).size(13).color(colors::TEXT_PRIMARY))
-                .padding(8)
-                .style(|_| container::Style {
-                    background: Some(colors::PAPER_DARK.into()),
-                    border: iced::Border {
-                        radius: 4.0.into(),
-                        ..Default::default()
-                    },
-                    ..Default::default()
-                });
-            content = content.push(column![reason_label, reason_body].spacing(4));
-        }
-
-        // Notes (if present)
-        if let Some(ref notes) = ann.metadata.notes {
-            let notes_label = text("Notes").size(12).color(colors::TEXT_SECONDARY);
-            let notes_body = container(text(notes).size(13).color(colors::TEXT_PRIMARY))
-                .padding(8)
-                .style(|_| container::Style {
-                    background: Some(colors::PAPER_DARK.into()),
-                    border: iced::Border {
-                        radius: 4.0.into(),
-                        ..Default::default()
-                    },
-                    ..Default::default()
-                });
-            content = content.push(column![notes_label, notes_body].spacing(4));
-        }
-
-        // Close button
-        let close_btn = button(text("Close").size(14))
-            .padding([8, 16])
-            .on_press(Message::CloseOverlays);
-        content = content.push(close_btn);
-
-        let modal = container(scrollable(content).height(Length::Shrink))
-            .width(600.0)
-            .max_height(500.0)
-            .padding(20)
-            .style(|_| container::Style {
-                background: Some(colors::PAPER.into()),
-                border: iced::Border {
-                    radius: 8.0.into(),
-                    width: 1.0,
-                    color: colors::PAPER_BORDER,
-                },
-                shadow: iced::Shadow {
-                    color: iced::Color::from_rgba(0.0, 0.0, 0.0, 0.2),
-                    offset: iced::Vector::new(0.0, 4.0),
-                    blur_radius: 16.0,
-                },
-                ..Default::default()
-            });
-
-        let centered = container(modal)
-            .width(Length::Fill)
-            .height(Length::Fill)
-            .center_x(Length::Fill)
-            .padding(iced::Padding::from([0.0, 0.0]).top(80.0));
 
         stack![backdrop, centered].into()
     }
@@ -1015,42 +831,27 @@ impl AppState {
         final_content.into()
     }
 
-    /// Right panel: changes panel (360px)
+    /// Right panel: detail pane (360px)
+    /// Shows blame detail when selected, otherwise hint
     fn view_changes_pane(&self) -> Element<Message> {
-        let header = text("Changes").size(16).color(colors::TEXT_PRIMARY);
-
-        let tab_labels = ["This Version", "All Paths", "Lifetime"];
-        let tabs = row(tab_labels.iter().enumerate().map(|(i, label)| {
-            let tab = match i {
-                0 => ChangesTab::ThisVersion,
-                1 => ChangesTab::AllPaths,
-                _ => ChangesTab::Lifetime,
-            };
-            let is_active = self.changes_tab == tab;
-            iced::widget::button(text(*label).size(12))
-                .padding([4, 8])
-                .style(move |_, _| iced::widget::button::Style {
-                    background: if is_active {
-                        Some(colors::SELECTION.into())
-                    } else {
-                        None
-                    },
-                    text_color: colors::TEXT_PRIMARY,
-                    ..Default::default()
-                })
-                .on_press(Message::SetChangesTab(tab))
-                .into()
-        }))
-        .spacing(4);
-
-        let changes_content = self.render_changes_content();
-
-        let content = column![header, tabs, changes_content].spacing(8);
+        let content = if let Some(ref path) = self.blame_detail_path {
+            self.render_blame_detail(path)
+        } else {
+            // Hint when nothing selected
+            column![
+                text("Attribution").size(16).color(colors::TEXT_PRIMARY),
+                text("Click a bill label in the reading view to see annotation details")
+                    .size(12)
+                    .color(colors::TEXT_SECONDARY),
+            ]
+            .spacing(8)
+            .into()
+        };
 
         container(scrollable(content).height(Length::Fill))
             .width(Length::Fixed(360.0))
             .height(Length::Fill)
-            .padding(8)
+            .padding(12)
             .style(|_| container::Style {
                 background: Some(colors::PAPER_DARK.into()),
                 ..Default::default()
@@ -1058,88 +859,120 @@ impl AppState {
             .into()
     }
 
-    /// Render changes panel content based on active tab
-    fn render_changes_content(&self) -> Element<Message> {
+    /// Render blame detail content for right pane
+    fn render_blame_detail(&self, path: &str) -> Element<Message> {
+        use words_to_data::annotation::AnnotationStatus;
+
         let Some(ref dataset) = self.dataset else {
-            return text("No dataset").into();
+            return text("No dataset").size(12).into();
         };
 
-        match self.changes_tab {
-            ChangesTab::ThisVersion => {
-                if dataset.versions.len() < 2 || self.selected_version_index == 0 {
-                    return text("No previous version to compare").into();
-                }
-                let from_date = &dataset.versions[self.selected_version_index - 1].date;
-                let to_date = &dataset.versions[self.selected_version_index].date;
+        let annotations = dataset.annotations_for_path(path);
+        let Some(ann) = annotations.first() else {
+            return text("No annotation for this path")
+                .size(12)
+                .color(colors::TEXT_SECONDARY)
+                .into();
+        };
 
-                if let Some(annotations) = dataset.get_annotations(from_date, to_date) {
-                    let mut col = column![].spacing(4);
-                    for ann in annotations {
-                        let bill_text = format!(
-                            "Bill {}: {}",
-                            ann.source_bill.bill_id,
-                            ann.operation_display()
-                        );
-                        col = col.push(text(bill_text).size(12));
-                    }
-                    col.into()
-                } else {
-                    text("No annotations for this version").into()
-                }
-            }
-            ChangesTab::AllPaths => {
-                if self.changed_paths.is_empty() {
-                    return text("No changes in this version").into();
-                }
+        let mut content = column![].spacing(12);
 
-                let mut col = column![].spacing(2);
-                let mut sorted_paths: Vec<_> = self.changed_paths.iter().collect();
-                sorted_paths.sort();
+        // Header
+        let header = text(format!(
+            "{} — {}",
+            ann.source_bill.bill_id,
+            ann.operation_display()
+        ))
+        .size(16)
+        .color(colors::TEXT_PRIMARY);
+        content = content.push(header);
 
-                for path in sorted_paths {
-                    // Extract short name from path
-                    let short_name: String =
-                        path.rsplit('/').next().unwrap_or(path).replace('_', " ");
+        // Status
+        let status_text = match ann.metadata.status {
+            AnnotationStatus::Pending => "Pending review",
+            AnnotationStatus::Verified => "Verified",
+            AnnotationStatus::Disputed => "Disputed",
+            AnnotationStatus::Rejected => "Rejected",
+        };
+        let status_color = match ann.metadata.status {
+            AnnotationStatus::Verified => colors::INSERT_FG,
+            AnnotationStatus::Rejected => colors::DELETE_FG,
+            AnnotationStatus::Disputed => colors::BADGE_CHANGED,
+            AnnotationStatus::Pending => colors::TEXT_SECONDARY,
+        };
+        content = content.push(text(status_text).size(11).color(status_color));
 
-                    let is_selected = self.selected_path.as_ref() == Some(path);
-                    let path_clone = path.clone();
-                    let path_btn = button(text(short_name).size(11))
-                        .padding([2, 4])
-                        .style(move |_, status| {
-                            let bg = match status {
-                                button::Status::Hovered => Some(colors::HOVER.into()),
-                                _ if is_selected => Some(colors::SELECTION.into()),
-                                _ => None,
-                            };
-                            button::Style {
-                                background: bg,
-                                text_color: colors::TEXT_PRIMARY,
-                                ..Default::default()
-                            }
-                        })
-                        .on_press(Message::SelectPath(path_clone));
-                    col = col.push(path_btn);
-                }
-                col.into()
-            }
-            ChangesTab::Lifetime => {
-                if let Some(ref path) = self.selected_path {
-                    let annotations = dataset.annotations_for_path(path);
-                    if annotations.is_empty() {
-                        text("No changes to this element").into()
-                    } else {
-                        let mut col = column![].spacing(4);
-                        for ann in annotations {
-                            let bill_text = format!("Bill {}", ann.source_bill.bill_id);
-                            col = col.push(text(bill_text).size(12));
-                        }
-                        col.into()
-                    }
-                } else {
-                    text("Select an element to see its history").into()
-                }
-            }
+        // Causative text
+        if !ann.source_bill.causative_text.is_empty() {
+            let label = text("Causative Text")
+                .size(11)
+                .color(colors::TEXT_SECONDARY);
+            let body = container(
+                text(&ann.source_bill.causative_text)
+                    .size(12)
+                    .color(colors::TEXT_PRIMARY),
+            )
+            .padding(8)
+            .style(|_| container::Style {
+                background: Some(colors::PAPER.into()),
+                border: iced::Border {
+                    radius: 4.0.into(),
+                    ..Default::default()
+                },
+                ..Default::default()
+            });
+            content = content.push(column![label, body].spacing(4));
         }
+
+        // Confidence
+        if let Some(conf) = ann.metadata.confidence {
+            content = content.push(
+                text(format!("Confidence: {:.0}%", conf * 100.0))
+                    .size(11)
+                    .color(colors::TEXT_SECONDARY),
+            );
+        }
+
+        // Annotator
+        content = content.push(
+            text(format!("Annotator: {}", ann.metadata.annotator))
+                .size(11)
+                .color(colors::TEXT_SECONDARY),
+        );
+
+        // Reasoning
+        if let Some(ref reasoning) = ann.metadata.reasoning {
+            let label = text("Reasoning").size(11).color(colors::TEXT_SECONDARY);
+            let body = container(text(reasoning).size(12).color(colors::TEXT_PRIMARY))
+                .padding(8)
+                .style(|_| container::Style {
+                    background: Some(colors::PAPER.into()),
+                    border: iced::Border {
+                        radius: 4.0.into(),
+                        ..Default::default()
+                    },
+                    ..Default::default()
+                });
+            content = content.push(column![label, body].spacing(4));
+        }
+
+        // Notes
+        if let Some(ref notes) = ann.metadata.notes {
+            let label = text("Notes").size(11).color(colors::TEXT_SECONDARY);
+            let body = container(text(notes).size(12).color(colors::TEXT_PRIMARY))
+                .padding(8)
+                .style(|_| container::Style {
+                    background: Some(colors::PAPER.into()),
+                    border: iced::Border {
+                        radius: 4.0.into(),
+                        ..Default::default()
+                    },
+                    ..Default::default()
+                });
+            content = content.push(column![label, body].spacing(4));
+        }
+
+        content.into()
     }
 
     /// Bottom panel: timeline with scrubber
