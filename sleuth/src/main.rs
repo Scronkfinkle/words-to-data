@@ -2,14 +2,16 @@
 //!
 //! A native Rust GUI for exploring versioned US Code with bill attribution.
 
-mod app;
 mod message;
+mod state;
 mod theme;
+mod update;
+mod views;
 
 use iced::{Task, Theme, window};
 
-use app::AppState;
 use message::Message;
+use state::AppState;
 
 /// Application title
 const TITLE: &str = "SLEUTH - Legal Code Diff Viewer";
