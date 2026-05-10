@@ -58,13 +58,8 @@ impl AppState {
     ) {
         let indent = depth as f32 * 16.0;
 
-        // Render this element's content (no children)
-        let block = self.render_single_element(element);
-        out.push(
-            container(block)
-                .padding(Padding::default().left(indent))
-                .into(),
-        );
+        // Render this element's fields directly into out
+        self.render_single_element(element, out, indent);
 
         // Recurse children
         for child in &element.children {
@@ -82,13 +77,17 @@ impl AppState {
         }
     }
 
-    /// Render single element (fields + blame) without children
-    fn render_single_element<'a>(&'a self, element: &'a USLMElement) -> Element<'a, Message> {
+    /// Render single element fields with optional blame gutter
+    /// Returns elements to push directly to flat output vec
+    fn render_single_element<'a>(
+        &'a self,
+        element: &'a USLMElement,
+        out: &mut Vec<Element<'a, Message>>,
+        indent: f32,
+    ) {
         let path = &element.data.path;
         let diff = self.get_diff_for_path(path);
         let has_changes = diff.is_some_and(|d| !d.changes.is_empty());
-
-        let mut fields_content = column![].spacing(4);
 
         // Helper to render a field with word-level diff highlighting
         let render_field =
@@ -120,33 +119,28 @@ impl AppState {
                     .into()
             };
 
-        // Heading
+        // Collect fields
+        let mut fields: Vec<Element<'a, Message>> = Vec::new();
         if let Some(ref heading) = element.data.heading {
-            fields_content =
-                fields_content.push(render_field(TextContentField::Heading, heading, 20.0));
+            fields.push(render_field(TextContentField::Heading, heading, 20.0));
         }
-
-        // Chapeau
         if let Some(ref chapeau) = element.data.chapeau {
-            fields_content =
-                fields_content.push(render_field(TextContentField::Chapeau, chapeau, 14.0));
+            fields.push(render_field(TextContentField::Chapeau, chapeau, 14.0));
         }
-
-        // Content
         if let Some(ref body) = element.data.content {
-            fields_content =
-                fields_content.push(render_field(TextContentField::Content, body, 14.0));
+            fields.push(render_field(TextContentField::Content, body, 14.0));
         }
-
-        // Proviso
         if let Some(ref proviso) = element.data.proviso {
-            fields_content =
-                fields_content.push(render_field(TextContentField::Proviso, proviso, 13.0));
+            fields.push(render_field(TextContentField::Proviso, proviso, 13.0));
         }
 
-        // Wrap with blame gutter if has changes
-        if has_changes && self.show_blame {
-            if let Some((bill_id, color)) = self.get_blame_for_path(path) {
+        if fields.is_empty() {
+            return;
+        }
+
+        // Build blame widget if needed
+        let blame_widget: Option<Element<'a, Message>> = if has_changes && self.show_blame {
+            self.get_blame_for_path(path).map(|(bill_id, color)| {
                 // Party color stripe
                 let stripe =
                     container(text(""))
@@ -179,29 +173,92 @@ impl AppState {
 
                 // Tooltip
                 let tooltip_content = self.build_blame_tooltip(path);
-                let blame_with_tooltip =
-                    tooltip(blame_btn, tooltip_content, tooltip::Position::Bottom)
-                        .gap(4)
-                        .style(|_| container::Style {
-                            background: Some(colors::PAPER.into()),
-                            border: iced::Border {
-                                radius: 4.0.into(),
-                                width: 1.0,
-                                color: colors::PAPER_BORDER,
-                            },
-                            shadow: iced::Shadow {
-                                color: iced::Color::from_rgba(0.0, 0.0, 0.0, 0.15),
-                                offset: iced::Vector::new(0.0, 2.0),
-                                blur_radius: 8.0,
-                            },
-                            ..Default::default()
-                        });
+                tooltip(blame_btn, tooltip_content, tooltip::Position::Bottom)
+                    .gap(4)
+                    .style(|_| container::Style {
+                        background: Some(colors::PAPER.into()),
+                        border: iced::Border {
+                            radius: 4.0.into(),
+                            width: 1.0,
+                            color: colors::PAPER_BORDER,
+                        },
+                        shadow: iced::Shadow {
+                            color: iced::Color::from_rgba(0.0, 0.0, 0.0, 0.15),
+                            offset: iced::Vector::new(0.0, 2.0),
+                            blur_radius: 8.0,
+                        },
+                        ..Default::default()
+                    })
+                    .into()
+            })
+        } else {
+            None
+        };
 
-                return row![blame_with_tooltip, fields_content].spacing(8).into();
-            }
+        // Push fields directly - no nested column
+        for (i, field) in fields.into_iter().enumerate() {
+            let elem: Element<'a, Message> = if i == 0 {
+                if let Some(ref _blame) = blame_widget {
+                    // First field gets blame widget in row
+                    // Re-build blame widget (can't move out of Option in loop)
+                    if let Some((bill_id, color)) = self.get_blame_for_path(path) {
+                        let stripe = container(text("")).width(4.0).height(Length::Shrink).style(
+                            move |_| container::Style {
+                                background: Some(color.into()),
+                                ..Default::default()
+                            },
+                        );
+                        let label = text(bill_id.clone()).size(10).color(colors::TEXT_SECONDARY);
+                        let blame_col = column![stripe, label].spacing(2);
+                        let path_clone = path.clone();
+                        let blame_btn = button(blame_col)
+                            .padding(2)
+                            .style(move |_, status| {
+                                let bg = match status {
+                                    button::Status::Hovered => Some(colors::HOVER.into()),
+                                    _ => None,
+                                };
+                                button::Style {
+                                    background: bg,
+                                    ..Default::default()
+                                }
+                            })
+                            .on_press(Message::ShowBlameDetail(path_clone));
+                        let tooltip_content = self.build_blame_tooltip(path);
+                        let blame_with_tooltip =
+                            tooltip(blame_btn, tooltip_content, tooltip::Position::Bottom)
+                                .gap(4)
+                                .style(|_| container::Style {
+                                    background: Some(colors::PAPER.into()),
+                                    border: iced::Border {
+                                        radius: 4.0.into(),
+                                        width: 1.0,
+                                        color: colors::PAPER_BORDER,
+                                    },
+                                    shadow: iced::Shadow {
+                                        color: iced::Color::from_rgba(0.0, 0.0, 0.0, 0.15),
+                                        offset: iced::Vector::new(0.0, 2.0),
+                                        blur_radius: 8.0,
+                                    },
+                                    ..Default::default()
+                                });
+                        row![blame_with_tooltip, field].spacing(8).into()
+                    } else {
+                        field
+                    }
+                } else {
+                    field
+                }
+            } else {
+                field
+            };
+
+            out.push(
+                container(elem)
+                    .padding(Padding::default().left(indent))
+                    .into(),
+            );
         }
-
-        fields_content.into()
     }
 
     /// Build tooltip content for blame hover
