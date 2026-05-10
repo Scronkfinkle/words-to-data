@@ -443,17 +443,34 @@ impl AppState {
 
     /// Left panel: tree navigator (280px)
     fn view_tree_pane(&self) -> Element<Message> {
-        let content = if let Some(ref dataset) = self.dataset {
+        // Load button
+        let load_btn = button(text("Load...").size(11))
+            .padding([4, 8])
+            .on_press(Message::ToggleLoader);
+
+        let header = row![
+            text("Navigator").size(14).color(colors::TEXT_PRIMARY),
+            load_btn
+        ]
+        .spacing(8)
+        .align_y(iced::Alignment::Center);
+
+        let tree_content: Element<Message> = if let Some(ref dataset) = self.dataset {
             if let Some(version) = dataset.versions.get(self.selected_version_index) {
                 self.render_tree_node(&version.element, 0)
             } else {
                 text("No version selected").into()
             }
         } else {
-            text("No dataset loaded\n\nPress ⌘O to load").into()
+            text("No dataset loaded")
+                .size(12)
+                .color(colors::TEXT_SECONDARY)
+                .into()
         };
 
-        container(scrollable(content).height(Length::Fill))
+        let content = column![header, scrollable(tree_content).height(Length::Fill)].spacing(8);
+
+        container(content)
             .width(Length::Fixed(280.0))
             .height(Length::Fill)
             .padding(8)

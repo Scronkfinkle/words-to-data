@@ -115,11 +115,11 @@ pub const ACCENT: Color = Color::from_rgb(
 
 // Badge colors
 
-/// Changed badge background (amber)
+/// Changed badge background (green)
 pub const BADGE_CHANGED: Color = Color::from_rgb(
-    0xff as f32 / 255.0,
-    0xec as f32 / 255.0,
-    0xb3 as f32 / 255.0,
+    0x81 as f32 / 255.0,
+    0xc7 as f32 / 255.0,
+    0x84 as f32 / 255.0,
 );
 
 /// New badge background (green)
