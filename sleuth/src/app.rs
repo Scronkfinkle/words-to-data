@@ -5,6 +5,7 @@ use std::collections::HashSet;
 use iced::keyboard::{Key, Modifiers, key::Named};
 use iced::widget::{
     button, column, container, rich_text, row, scrollable, slider, span, stack, text, text_input,
+    tooltip,
 };
 use iced::{Element, Length, Subscription, Task};
 
@@ -63,6 +64,9 @@ pub struct AppState {
 
     /// Loader path input
     pub loader_path: String,
+
+    /// Path for blame detail modal (None = closed)
+    pub blame_detail_path: Option<String>,
 }
 
 impl Default for AppState {
@@ -84,6 +88,7 @@ impl Default for AppState {
             show_loader: false,
             search_query: String::new(),
             loader_path: String::new(),
+            blame_detail_path: None,
         }
     }
 }
@@ -226,9 +231,16 @@ impl AppState {
                 }
                 Task::none()
             }
+            Message::ShowBlameDetail(path) => {
+                self.blame_detail_path = Some(path);
+                self.show_search = false;
+                self.show_loader = false;
+                Task::none()
+            }
             Message::CloseOverlays => {
                 self.show_search = false;
                 self.show_loader = false;
+                self.blame_detail_path = None;
                 Task::none()
             }
             Message::LoadDataset(path) => {
@@ -285,21 +297,22 @@ impl AppState {
                 if key == Key::Named(Named::Escape) {
                     self.show_search = false;
                     self.show_loader = false;
+                    self.blame_detail_path = None;
                 }
                 Task::none()
             }
+            Message::NoOp => Task::none(),
         }
     }
 
     /// Keyboard subscription
     pub fn subscription(&self) -> Subscription<Message> {
-        iced::keyboard::listen().map(|event| {
-            if let iced::keyboard::Event::KeyPressed { key, modifiers, .. } = event {
+        iced::keyboard::listen().map(|event| match event {
+            iced::keyboard::Event::KeyPressed { key, modifiers, .. } => {
                 Message::KeyPressed(key, modifiers)
-            } else {
-                // Ignore other keyboard events
-                Message::CloseOverlays // Dummy, won't trigger
             }
+            // Ignore KeyReleased and ModifiersChanged
+            _ => Message::NoOp,
         })
     }
 
@@ -328,6 +341,8 @@ impl AppState {
             stack![base, self.view_search_modal()].into()
         } else if self.show_loader {
             stack![base, self.view_loader_modal()].into()
+        } else if self.blame_detail_path.is_some() {
+            stack![base, self.view_blame_modal()].into()
         } else {
             base
         }
@@ -431,6 +446,181 @@ impl AppState {
             .height(Length::Fill)
             .center_x(Length::Fill)
             .padding(iced::Padding::from([0.0, 0.0]).top(100.0));
+
+        stack![backdrop, centered].into()
+    }
+
+    /// Blame detail modal overlay
+    fn view_blame_modal(&self) -> Element<Message> {
+        use words_to_data::annotation::AnnotationStatus;
+
+        let backdrop = button(text(""))
+            .width(Length::Fill)
+            .height(Length::Fill)
+            .style(|_, _| button::Style {
+                background: Some(iced::Color::from_rgba(0.0, 0.0, 0.0, 0.5).into()),
+                ..Default::default()
+            })
+            .on_press(Message::CloseOverlays);
+
+        let Some(ref path) = self.blame_detail_path else {
+            return backdrop.into();
+        };
+
+        let Some(ref dataset) = self.dataset else {
+            return backdrop.into();
+        };
+
+        let annotations = dataset.annotations_for_path(path);
+        let Some(ann) = annotations.first() else {
+            let modal =
+                container(text("No annotation found for this path").color(colors::TEXT_SECONDARY))
+                    .width(600.0)
+                    .padding(20)
+                    .style(|_| container::Style {
+                        background: Some(colors::PAPER.into()),
+                        border: iced::Border {
+                            radius: 8.0.into(),
+                            width: 1.0,
+                            color: colors::PAPER_BORDER,
+                        },
+                        ..Default::default()
+                    });
+            let centered = container(modal)
+                .width(Length::Fill)
+                .height(Length::Fill)
+                .center_x(Length::Fill)
+                .padding(iced::Padding::from([0.0, 0.0]).top(80.0));
+            return stack![backdrop, centered].into();
+        };
+
+        // Build modal content
+        let mut content = column![].spacing(12);
+
+        // Header with bill ID and operation
+        let header = text(format!(
+            "Bill {} — {}",
+            ann.source_bill.bill_id,
+            ann.operation_display()
+        ))
+        .size(18)
+        .color(colors::TEXT_PRIMARY);
+        content = content.push(header);
+
+        // Status badge
+        let status_text = match ann.metadata.status {
+            AnnotationStatus::Pending => "Pending review",
+            AnnotationStatus::Verified => "Verified",
+            AnnotationStatus::Disputed => "Disputed",
+            AnnotationStatus::Rejected => "Rejected",
+        };
+        let status_color = match ann.metadata.status {
+            AnnotationStatus::Verified => colors::INSERT_FG,
+            AnnotationStatus::Rejected => colors::DELETE_FG,
+            AnnotationStatus::Disputed => colors::BADGE_CHANGED,
+            AnnotationStatus::Pending => colors::TEXT_SECONDARY,
+        };
+        let status = text(status_text).size(12).color(status_color);
+        content = content.push(status);
+
+        // Causative text section
+        if !ann.source_bill.causative_text.is_empty() {
+            let causative_label = text("Causative Text")
+                .size(12)
+                .color(colors::TEXT_SECONDARY);
+            let causative_body = container(
+                text(&ann.source_bill.causative_text)
+                    .size(13)
+                    .color(colors::TEXT_PRIMARY),
+            )
+            .padding(8)
+            .style(|_| container::Style {
+                background: Some(colors::PAPER_DARK.into()),
+                border: iced::Border {
+                    radius: 4.0.into(),
+                    ..Default::default()
+                },
+                ..Default::default()
+            });
+            content = content.push(column![causative_label, causative_body].spacing(4));
+        }
+
+        // Confidence (if present)
+        if let Some(conf) = ann.metadata.confidence {
+            let conf_text = text(format!("Confidence: {:.0}%", conf * 100.0))
+                .size(12)
+                .color(colors::TEXT_SECONDARY);
+            content = content.push(conf_text);
+        }
+
+        // Annotator
+        let annotator = text(format!("Annotator: {}", ann.metadata.annotator))
+            .size(12)
+            .color(colors::TEXT_SECONDARY);
+        content = content.push(annotator);
+
+        // Reasoning (if present)
+        if let Some(ref reasoning) = ann.metadata.reasoning {
+            let reason_label = text("Reasoning").size(12).color(colors::TEXT_SECONDARY);
+            let reason_body = container(text(reasoning).size(13).color(colors::TEXT_PRIMARY))
+                .padding(8)
+                .style(|_| container::Style {
+                    background: Some(colors::PAPER_DARK.into()),
+                    border: iced::Border {
+                        radius: 4.0.into(),
+                        ..Default::default()
+                    },
+                    ..Default::default()
+                });
+            content = content.push(column![reason_label, reason_body].spacing(4));
+        }
+
+        // Notes (if present)
+        if let Some(ref notes) = ann.metadata.notes {
+            let notes_label = text("Notes").size(12).color(colors::TEXT_SECONDARY);
+            let notes_body = container(text(notes).size(13).color(colors::TEXT_PRIMARY))
+                .padding(8)
+                .style(|_| container::Style {
+                    background: Some(colors::PAPER_DARK.into()),
+                    border: iced::Border {
+                        radius: 4.0.into(),
+                        ..Default::default()
+                    },
+                    ..Default::default()
+                });
+            content = content.push(column![notes_label, notes_body].spacing(4));
+        }
+
+        // Close button
+        let close_btn = button(text("Close").size(14))
+            .padding([8, 16])
+            .on_press(Message::CloseOverlays);
+        content = content.push(close_btn);
+
+        let modal = container(scrollable(content).height(Length::Shrink))
+            .width(600.0)
+            .max_height(500.0)
+            .padding(20)
+            .style(|_| container::Style {
+                background: Some(colors::PAPER.into()),
+                border: iced::Border {
+                    radius: 8.0.into(),
+                    width: 1.0,
+                    color: colors::PAPER_BORDER,
+                },
+                shadow: iced::Shadow {
+                    color: iced::Color::from_rgba(0.0, 0.0, 0.0, 0.2),
+                    offset: iced::Vector::new(0.0, 4.0),
+                    blur_radius: 16.0,
+                },
+                ..Default::default()
+            });
+
+        let centered = container(modal)
+            .width(Length::Fill)
+            .height(Length::Fill)
+            .center_x(Length::Fill)
+            .padding(iced::Padding::from([0.0, 0.0]).top(80.0));
 
         stack![backdrop, centered].into()
     }
@@ -618,6 +808,62 @@ impl AppState {
         Some((formatted_id, color))
     }
 
+    /// Build tooltip content for blame hover
+    fn build_blame_tooltip<'a>(&'a self, path: &str) -> Element<'a, Message> {
+        use words_to_data::annotation::AnnotationStatus;
+
+        let Some(ref dataset) = self.dataset else {
+            return text("No data").size(11).into();
+        };
+
+        let annotations = dataset.annotations_for_path(path);
+        let Some(ann) = annotations.first() else {
+            return text("No annotation").size(11).into();
+        };
+
+        let mut content = column![].spacing(4).padding(8);
+
+        // Bill and operation
+        let header = text(format!(
+            "{} — {}",
+            ann.source_bill.bill_id,
+            ann.operation_display()
+        ))
+        .size(12)
+        .color(colors::TEXT_PRIMARY);
+        content = content.push(header);
+
+        // Status
+        let status_text = match ann.metadata.status {
+            AnnotationStatus::Pending => "Pending",
+            AnnotationStatus::Verified => "Verified",
+            AnnotationStatus::Disputed => "Disputed",
+            AnnotationStatus::Rejected => "Rejected",
+        };
+        let status = text(status_text).size(10).color(colors::TEXT_SECONDARY);
+        content = content.push(status);
+
+        // Truncated causative text preview
+        if !ann.source_bill.causative_text.is_empty() {
+            let preview: String = ann.source_bill.causative_text.chars().take(100).collect();
+            let preview = if ann.source_bill.causative_text.len() > 100 {
+                format!("{}...", preview)
+            } else {
+                preview
+            };
+            let causative = text(preview).size(10).color(colors::TEXT_SECONDARY);
+            content = content.push(causative);
+        }
+
+        // Click hint
+        let hint = text("Click for details")
+            .size(9)
+            .color(colors::TEXT_SECONDARY);
+        content = content.push(hint);
+
+        container(content).max_width(300.0).into()
+    }
+
     /// Render element content for reading view with diff highlighting and blame
     fn render_element_content<'a>(
         &'a self,
@@ -699,11 +945,49 @@ impl AppState {
                             ..Default::default()
                         });
 
-                // Bill label
-                let label = text(bill_id).size(10).color(colors::TEXT_SECONDARY);
+                // Bill label (clickable)
+                let label = text(bill_id.clone()).size(10).color(colors::TEXT_SECONDARY);
 
                 let blame_col = column![stripe, label].spacing(2);
-                row![blame_col, fields_content].spacing(8).into()
+
+                // Make blame gutter clickable
+                let path_clone = path.clone();
+                let blame_btn = button(blame_col)
+                    .padding(2)
+                    .style(move |_, status| {
+                        let bg = match status {
+                            button::Status::Hovered => Some(colors::HOVER.into()),
+                            _ => None,
+                        };
+                        button::Style {
+                            background: bg,
+                            ..Default::default()
+                        }
+                    })
+                    .on_press(Message::ShowBlameDetail(path_clone));
+
+                // Build tooltip content
+                let tooltip_content = self.build_blame_tooltip(path);
+
+                let blame_with_tooltip =
+                    tooltip(blame_btn, tooltip_content, tooltip::Position::Bottom)
+                        .gap(4)
+                        .style(|_| container::Style {
+                            background: Some(colors::PAPER.into()),
+                            border: iced::Border {
+                                radius: 4.0.into(),
+                                width: 1.0,
+                                color: colors::PAPER_BORDER,
+                            },
+                            shadow: iced::Shadow {
+                                color: iced::Color::from_rgba(0.0, 0.0, 0.0, 0.15),
+                                offset: iced::Vector::new(0.0, 2.0),
+                                blur_radius: 8.0,
+                            },
+                            ..Default::default()
+                        });
+
+                row![blame_with_tooltip, fields_content].spacing(8).into()
             } else {
                 fields_content.into()
             }

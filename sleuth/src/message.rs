@@ -36,6 +36,8 @@ pub enum Message {
     ToggleSearch,
     /// Toggle dataset loader (⌘O)
     ToggleLoader,
+    /// Show blame detail modal for a path
+    ShowBlameDetail(String),
     /// Close all overlays
     CloseOverlays,
 
@@ -58,6 +60,9 @@ pub enum Message {
     // Keyboard
     /// Keyboard event
     KeyPressed(iced::keyboard::Key, iced::keyboard::Modifiers),
+
+    /// No-op (used for ignored events)
+    NoOp,
 }
 
 /// View mode for the reading pane
