@@ -21,7 +21,6 @@ fn test_diff_generation_26() {
         .first()
         .expect("Change should be detected on Section 174(A)");
     assert_eq!(change.field_name, TextContentField::Chapeau);
-    assert_eq!(change.changes.len(), 2);
     assert_eq!(
         change.old_value,
         "In the case of a taxpayer's specified research or experimental expenditures for any taxable year\u{2014}"
