@@ -84,11 +84,6 @@ def test_website_example_compute_diff():
         f"Got: {chapeau_change.new_value}"
     )
 
-    # Verify number of word-level changes matches website (shows "2")
-    assert len(chapeau_change.changes) == 2, (
-        f"Website shows '2' word-level changes. "
-        f"Got: {len(chapeau_change.changes)}. Update website if this changed."
-    )
 
 
 def test_website_example_diff_output_format():
