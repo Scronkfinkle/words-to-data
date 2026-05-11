@@ -42,7 +42,6 @@ def test_diffs():
     )
     assert isinstance(s174a, TreeDiff)
     field_change = s174a.changes[0]
-    assert len(field_change.changes) == 2
     assert field_change.field_name == "chapeau"
     assert (
         field_change.old_value

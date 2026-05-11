@@ -660,7 +660,12 @@ pub fn diff_elements(element_a: &USLMElement, element_b: &USLMElement) -> Vec<Fi
     .into_iter()
     {
         let field_changes = diff_field(element_a, element_b, field_name);
-        if !field_changes.changes.is_empty() {
+        // Only include if there are actual changes (Insert or Delete), not just Equal
+        let has_real_changes = field_changes
+            .changes
+            .iter()
+            .any(|c| c.tag != TextChangeType::Equal);
+        if has_real_changes {
             changes.push(field_changes);
         }
     }
@@ -690,9 +695,7 @@ fn diff_field(
     let diff = TextDiff::from_words(a.as_str(), b.as_str());
     let changes: Vec<TextChange> = diff
         .iter_all_changes()
-        // Remove non-changes
-        .filter(|c| c.tag() != ChangeTag::Equal)
-        // Case to our own diff stucture
+        // Keep all changes including Equal for word-level diff rendering
         .map(|c| {
             let tag = match c.tag() {
                 ChangeTag::Delete => TextChangeType::Delete,

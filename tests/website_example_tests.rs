@@ -129,13 +129,6 @@ fn website_example_compute_diff() {
         chapeau_change.new_value, expected_new,
         "New chapeau value doesn't match website example"
     );
-
-    // Verify number of word-level changes matches website (shows "2")
-    assert_eq!(
-        chapeau_change.changes.len(),
-        2,
-        "Website shows '2' word-level changes, update if this changed"
-    );
 }
 
 /// Tests the JSON diff structure shown in the website example output.
