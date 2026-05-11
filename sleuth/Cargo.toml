@@ -7,4 +7,8 @@ license = "MIT OR Apache-2.0"
 
 [dependencies]
 words-to-data = { path = ".." }
-iced = { version = "0.14", features = ["advanced"] }
+iced = { version = "0.14", features = ["advanced", "wgpu"] }
+rfd = "0.15"
+
+[features]
+python = []

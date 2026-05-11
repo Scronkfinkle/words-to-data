@@ -1,6 +1,6 @@
 //! Modal overlay views (search, loader)
 
-use iced::widget::{button, column, container, stack, text, text_input};
+use iced::widget::{button, column, container, stack, text};
 use iced::{Element, Length};
 
 use crate::message::Message;
@@ -19,7 +19,7 @@ impl AppState {
             })
             .on_press(Message::CloseOverlays);
 
-        let input = text_input("Search elements...", &self.search_query)
+        let input = iced::widget::text_input("Search elements...", &self.search_query)
             .on_input(Message::SearchQueryChanged)
             .on_submit(Message::SearchSubmit)
             .padding(12)
@@ -69,22 +69,16 @@ impl AppState {
 
         let title = text("Load Dataset").size(18).color(colors::TEXT_PRIMARY);
 
-        let input = text_input("Path to dataset JSON...", &self.loader_path)
-            .on_input(Message::LoaderPathChanged)
-            .on_submit(Message::LoadDataset(self.loader_path.clone()))
-            .padding(12)
-            .size(14);
+        let browse_btn = button(text("Browse for JSON file...").size(14))
+            .padding([12, 24])
+            .on_press(Message::OpenFilePicker);
 
-        let load_btn = button(text("Load").size(14))
-            .padding([8, 16])
-            .on_press(Message::LoadDataset(self.loader_path.clone()));
-
-        let hint = text("Enter path to .json dataset file")
+        let hint = text("Select a .json dataset file")
             .size(11)
             .color(colors::TEXT_SECONDARY);
 
-        let modal = container(column![title, input, load_btn, hint].spacing(12))
-            .width(500.0)
+        let modal = container(column![title, browse_btn, hint].spacing(12))
+            .width(400.0)
             .padding(20)
             .style(|_| container::Style {
                 background: Some(colors::PAPER.into()),

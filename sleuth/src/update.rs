@@ -91,6 +91,26 @@ impl AppState {
                 self.blame_detail_path = None;
                 Task::none()
             }
+            Message::OpenFilePicker => Task::future(async {
+                rfd::AsyncFileDialog::new()
+                    .add_filter("JSON", &["json"])
+                    .set_title("Open Dataset")
+                    .pick_file()
+                    .await
+            })
+            .map(|handle| match handle {
+                Some(h) => Message::FileSelected(h.path().to_path_buf()),
+                None => Message::FilePickerCancelled,
+            }),
+            Message::FileSelected(path) => {
+                self.show_loader = false;
+                let path_str = path.to_string_lossy().to_string();
+                match Dataset::load(&path_str) {
+                    Ok(dataset) => Task::done(Message::DatasetLoaded(Box::new(dataset))),
+                    Err(e) => Task::done(Message::DatasetError(e.to_string())),
+                }
+            }
+            Message::FilePickerCancelled => Task::none(),
             Message::LoadDataset(path) => {
                 self.show_loader = false;
                 match Dataset::load(&path) {

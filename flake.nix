@@ -10,6 +10,9 @@
     pkgs = import nixpkgs { system = "x86_64-linux";};
 
     stdInputs = [
+        pkgs.perf
+        pkgs.vulkan-tools
+        pkgs.vulkan-loader
         # Rust
         pkgs.cargo
         pkgs.rustc
@@ -65,7 +68,7 @@
       # Without this, will throw a "No GSettings schemas are installed on the system" when opening a dialog box
       GSETTINGS_SCHEMA_DIR="${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}/glib-2.0/schemas";
 
-      LD_LIBRARY_PATH = "${pkgs.libxkbcommon}/lib:${pkgs.xorg.libxcb}/lib";
+      LD_LIBRARY_PATH = "${pkgs.vulkan-loader}/lib:${pkgs.libxkbcommon}/lib:${pkgs.xorg.libxcb}/lib";
     };
 
   };

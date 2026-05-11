@@ -42,6 +42,12 @@ pub enum Message {
     CloseOverlays,
 
     // Dataset operations
+    /// Open file picker dialog
+    OpenFilePicker,
+    /// File selected from picker
+    FileSelected(std::path::PathBuf),
+    /// File picker cancelled
+    FilePickerCancelled,
     /// Load a dataset from path
     LoadDataset(String),
     /// Dataset loaded successfully
