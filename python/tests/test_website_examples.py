@@ -7,7 +7,7 @@ If any of these tests fail, the website examples at w2d_site/index.html need to 
 Site location: /home/jesse/code/w2d_site/index.html
 """
 
-from words_to_data import parse_uslm_xml, compute_diff, parse_bill_amendments
+from words_to_data import parse_uslm_xml, compute_diff, parse_bill_amendments, Dataset, DatasetMetadata
 
 
 # =============================================================================
@@ -188,3 +188,48 @@ def test_website_example_amendment_output_format():
         # Verify these don't throw errors
         assert len(output_source) > 0
         assert len(output_actions) > 0
+
+
+# =============================================================================
+# WEBSITE EXAMPLE: Dataset Workflow
+# https://wordstodata.com/#examples (Example 4)
+# =============================================================================
+
+
+def test_website_example_dataset_workflow():
+    """
+    Tests the Dataset workflow example shown on the website.
+    If this fails, update the "Dataset Quick Start" section in index.html and README.md.
+    """
+    metadata = DatasetMetadata(
+        name="Tax Code Changes",
+        description="Tracking Title 26 changes",
+        author="Author",
+        source_urls=[],
+        license="MIT",
+        version="1.0.0",
+    )
+    dataset = Dataset(metadata)
+
+    # Add versions
+    dataset.add_uslm_xml(
+        "tests/test_data/usc/2025-07-18/usc26.xml",
+        "2025-07-18",
+        label="Pre-Amendment",
+    )
+    dataset.add_uslm_xml(
+        "tests/test_data/usc/2025-07-30/usc26.xml",
+        "2025-07-30",
+        label="Post-Amendment",
+    )
+
+    assert len(dataset.versions) == 2
+
+    # Add bill
+    bill = parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml")
+    dataset.add_bill(bill)
+
+    # Compute diff via dataset
+    diff = dataset.compute_diff("2025-07-18", "2025-07-30")
+    s174a = diff.find("uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a")
+    assert s174a is not None
