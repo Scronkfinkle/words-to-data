@@ -124,6 +124,8 @@ dataset.save("my_dataset.json")
 
 ### Download from Congress API
 
+Bills can be automatically fetched with additional metadata from the congress.gov API
+
 **Rust:**
 ```rust
 use words_to_data::congress::CongressClient;
