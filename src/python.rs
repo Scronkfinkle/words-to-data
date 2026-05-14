@@ -1962,9 +1962,10 @@ struct CongressClient {
 #[pymethods]
 impl CongressClient {
     #[new]
-    fn new(api_key: String) -> Self {
+    #[pyo3(signature = (api_key, cache_dir=None))]
+    fn new(api_key: String, cache_dir: Option<String>) -> Self {
         CongressClient {
-            inner: RustCongressClient::new(api_key),
+            inner: RustCongressClient::new(api_key, cache_dir),
         }
     }
 

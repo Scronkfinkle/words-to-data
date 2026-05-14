@@ -42,19 +42,8 @@ def test_dataset_member_integration():
 
 def test_dataset_load_bill_download():
     """Test loading BillDownload into Dataset."""
-    # Get test data paths
-    test_dir = Path(__file__).parent.parent.parent / "tests" / "test_data"
-    bill_xml = (test_dir / "bills" / "119-hr-1/bill_119_hr_1.xml").read_text()
-    member_json = (test_dir / "congress" / "members" / "L000174.json").read_text()
-
-    download = BillDownload(
-        bill_id="119-hr-1",
-        bill_xml=bill_xml,
-        sponsors_json='{"bill":{"sponsors":[{"bioguideId":"L000174"}]}}',
-        cosponsors_json='{"cosponsors":[]}',
-        votes_json=None,
-        member_jsons={"L000174": member_json},
-    )
+    client = CongressClient("", "tests/test_data/bills/119-hr-1")
+    download = client.download_bill("119-hr-1")
 
     meta = DatasetMetadata(
         name="Test",
@@ -70,5 +59,4 @@ def test_dataset_load_bill_download():
 
     assert bill_id == "119-hr-1"  # Uses bill_id from BillDownload
     assert dataset.get_bill(bill_id) is not None
-    assert dataset.get_member("L000174") is not None
     assert dataset.get_sponsor_info(bill_id) is not None

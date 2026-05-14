@@ -14,8 +14,9 @@ pub struct CongressClient {
 }
 
 impl CongressClient {
-    pub fn new(api_key: String) -> Self {
-        let cache = ResponseCache::new(Duration::from_secs(DEFAULT_TTL_SECS));
+    pub fn new(api_key: String, cache_dir: Option<String>) -> Self {
+        let cache_path = cache_dir.map(std::path::PathBuf::from);
+        let cache = ResponseCache::new(Duration::from_secs(DEFAULT_TTL_SECS), cache_path);
         let agent = ureq::Agent::new_with_defaults();
 
         Self {

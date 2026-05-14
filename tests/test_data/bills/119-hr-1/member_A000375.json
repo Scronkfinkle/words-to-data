@@ -65,7 +65,7 @@
             }
         ],
         "sponsoredLegislation": {
-            "count": 187,
+            "count": 188,
             "url": "https://api.congress.gov/v3/member/A000375/sponsored-legislation"
         },
         "state": "Texas",

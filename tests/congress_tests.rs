@@ -47,6 +47,20 @@ fn should_parse_member_from_api_response() {
 }
 
 #[test]
+fn download_bill_parsing() {
+    let client = CongressClient::new(
+        "".to_string(),
+        Some("tests/test_data/bills/119-hr-1".to_string()),
+    );
+
+    let download = client.download_bill("119-hr-1").unwrap();
+
+    assert!(!download.bill_xml.is_empty());
+    assert!(!download.sponsors_json.is_empty());
+    assert!(!download.member_jsons.is_empty());
+}
+
+#[test]
 #[ignore] // Requires live API key - run with: cargo test -- --ignored
 fn should_download_bill_data_live() {
     let cache_dir = std::env::temp_dir().join("congress_download_test");
@@ -55,7 +69,7 @@ fn should_download_bill_data_live() {
     let api_key =
         std::env::var("CONGRESS_API_KEY").expect("Set CONGRESS_API_KEY env var to run this test");
 
-    let client = CongressClient::new(api_key);
+    let client = CongressClient::new(api_key, Some(cache_dir.to_string_lossy().to_string()));
 
     // Use HR 1 (house bill), not pl (public law)
     let download = client.download_bill("119-hr-1").unwrap();
