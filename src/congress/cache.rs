@@ -11,12 +11,10 @@ pub struct ResponseCache {
 }
 
 impl ResponseCache {
-    pub fn new(ttl: Duration) -> Self {
-        let xdg_dir = dirs::cache_dir().unwrap().join("words_to_data/");
-        Self {
-            cache_dir: xdg_dir,
-            ttl,
-        }
+    pub fn new(ttl: Duration, cache_dir: Option<PathBuf>) -> Self {
+        let cache_dir =
+            cache_dir.unwrap_or_else(|| dirs::cache_dir().unwrap().join("words_to_data/"));
+        Self { cache_dir, ttl }
     }
 
     fn key_to_path(&self, key: &str) -> PathBuf {
