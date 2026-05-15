@@ -1242,7 +1242,7 @@ class BillDownload:
         self,
         bill_id: str,
         bill_xml: str,
-        sponsors_json: str,
+        bill_metadata_json: str,
         cosponsors_json: str,
         votes_json: str | None,
         member_jsons: dict[str, str],
@@ -1255,7 +1255,7 @@ class BillDownload:
     def bill_xml(self) -> str: ...
 
     @property
-    def sponsors_json(self) -> str: ...
+    def bill_metadata_json(self) -> str: ...
 
     @property
     def cosponsors_json(self) -> str: ...
