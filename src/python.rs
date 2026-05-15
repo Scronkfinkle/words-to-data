@@ -1886,11 +1886,11 @@ struct BillDownload {
 #[pymethods]
 impl BillDownload {
     #[new]
-    #[pyo3(signature = (bill_id, bill_xml, sponsors_json, cosponsors_json, votes_json, member_jsons))]
+    #[pyo3(signature = (bill_id, bill_xml, bill_metadata_json, cosponsors_json, votes_json, member_jsons))]
     fn new(
         bill_id: String,
         bill_xml: String,
-        sponsors_json: String,
+        bill_metadata_json: String,
         cosponsors_json: String,
         votes_json: Option<String>,
         member_jsons: std::collections::HashMap<String, String>,
@@ -1899,7 +1899,7 @@ impl BillDownload {
             inner: RustBillDownload {
                 bill_id,
                 bill_xml,
-                sponsors_json,
+                bill_metadata_json,
                 cosponsors_json,
                 votes_json,
                 member_jsons,
@@ -1918,8 +1918,8 @@ impl BillDownload {
     }
 
     #[getter]
-    fn sponsors_json(&self) -> String {
-        self.inner.sponsors_json.clone()
+    fn bill_metadata_json(&self) -> String {
+        self.inner.bill_metadata_json.clone()
     }
 
     #[getter]

@@ -125,9 +125,9 @@ impl CongressClient {
         // Fetch bill XML from api.congress.gov
         let bill_xml = self.fetch_bill_xml(congress, &bill_type, number)?;
 
-        // Fetch sponsors
+        // Fetch bill metadata (includes sponsors, actions, committees, etc.)
         let bill_endpoint = format!("bill/{}/{}/{}", congress, bill_type, number);
-        let sponsors_json = self.fetch(&bill_endpoint, "json")?;
+        let bill_metadata_json = self.fetch(&bill_endpoint, "json")?;
 
         // Fetch cosponsors
         let cosponsors_endpoint = format!("{}/cosponsors", bill_endpoint);
@@ -135,7 +135,7 @@ impl CongressClient {
 
         // Collect member bioguide IDs from sponsors
         let mut member_ids: Vec<String> = Vec::new();
-        if let Ok(v) = serde_json::from_str::<Value>(&sponsors_json)
+        if let Ok(v) = serde_json::from_str::<Value>(&bill_metadata_json)
             && let Some(sponsors) = v["bill"]["sponsors"].as_array()
         {
             for s in sponsors {
@@ -170,7 +170,7 @@ impl CongressClient {
         Ok(BillDownload {
             bill_id: bill_id.to_string(),
             bill_xml,
-            sponsors_json,
+            bill_metadata_json,
             cosponsors_json,
             votes_json,
             member_jsons,

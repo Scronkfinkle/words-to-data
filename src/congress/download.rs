@@ -6,7 +6,7 @@ use std::collections::HashMap;
 pub struct BillDownload {
     pub bill_id: String,
     pub bill_xml: String,
-    pub sponsors_json: String,
+    pub bill_metadata_json: String,
     pub cosponsors_json: String,
     pub votes_json: Option<String>,
     pub member_jsons: HashMap<String, String>,

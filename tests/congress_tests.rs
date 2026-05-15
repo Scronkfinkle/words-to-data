@@ -56,7 +56,7 @@ fn download_bill_parsing() {
     let download = client.download_bill("119-hr-1").unwrap();
 
     assert!(!download.bill_xml.is_empty());
-    assert!(!download.sponsors_json.is_empty());
+    assert!(!download.bill_metadata_json.is_empty());
     assert!(!download.member_jsons.is_empty());
 }
 
@@ -75,7 +75,7 @@ fn should_download_bill_data_live() {
     let download = client.download_bill("119-hr-1").unwrap();
 
     assert!(!download.bill_xml.is_empty());
-    assert!(!download.sponsors_json.is_empty());
+    assert!(!download.bill_metadata_json.is_empty());
     assert!(!download.member_jsons.is_empty());
 
     let _ = std::fs::remove_dir_all(&cache_dir);
@@ -162,7 +162,7 @@ mod dataset_integration {
         let download = BillDownload {
             bill_id: "119-hr-1".to_string(),
             bill_xml,
-            sponsors_json: r#"{"bill":{"sponsors":[{"bioguideId":"L000174"}]}}"#.to_string(),
+            bill_metadata_json: r#"{"bill":{"sponsors":[{"bioguideId":"L000174"}]}}"#.to_string(),
             cosponsors_json: r#"{"cosponsors":[]}"#.to_string(),
             votes_json: None,
             member_jsons,

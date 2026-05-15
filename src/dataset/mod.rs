@@ -425,8 +425,8 @@ impl Dataset {
         let bill_id = bill.bill_id.clone();
         self.add_bill(bill);
 
-        // Parse sponsors JSON
-        let sponsors_v: Value = serde_json::from_str(&download.sponsors_json)?;
+        // Parse bill metadata JSON to extract sponsor
+        let sponsors_v: Value = serde_json::from_str(&download.bill_metadata_json)?;
         let sponsor_id = sponsors_v["bill"]["sponsors"]
             .as_array()
             .and_then(|arr| arr.first())
