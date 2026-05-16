@@ -1377,11 +1377,11 @@ impl Dataset {
     }
 
     #[getter]
-    fn bills(&self) -> Vec<Bill> {
+    fn bills(&self) -> std::collections::HashMap<String, Bill> {
         self.inner
             .bills
             .iter()
-            .map(|b| Bill::from(b.clone()))
+            .map(|(k, v)| (k.clone(), Bill::from(v.clone())))
             .collect()
     }
 
