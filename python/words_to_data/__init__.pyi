@@ -829,6 +829,11 @@ class Dataset:
         """Bills that caused changes in this dataset, keyed by bill_id"""
         ...
 
+    @property
+    def diff_annotations(self) -> dict[tuple[str, str], list[ChangeAnnotation]]:
+        """Annotations per version-pair, keyed by (from_date, to_date)"""
+        ...
+
     def get_annotations(
         self, from_date: str, to_date: str
     ) -> list[ChangeAnnotation] | None:
