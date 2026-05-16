@@ -42,7 +42,7 @@ def test_dataset_member_integration():
 
 def test_dataset_load_bill_download():
     """Test loading BillDownload into Dataset."""
-    client = CongressClient("", "tests/test_data/bills/119-hr-1")
+    client = CongressClient("", "tests/test_data/congress_client_cache")
     download = client.download_bill("119-hr-1")
 
     meta = DatasetMetadata(
