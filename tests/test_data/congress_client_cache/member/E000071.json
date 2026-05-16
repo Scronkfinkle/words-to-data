@@ -1,0 +1,115 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1721 Longworth House Office Building",
+            "phoneNumber": "(202) 225-2002",
+            "zipCode": 20515
+        },
+        "bioguideId": "E000071",
+        "birthYear": "1970",
+        "cosponsoredLegislation": {
+            "count": 680,
+            "url": "https://api.congress.gov/v3/member/E000071/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/e000071_200.jpg"
+        },
+        "directOrderName": "Jake Ellzey",
+        "district": 6,
+        "firstName": "Jake",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Ellzey, Jake",
+        "lastName": "Ellzey",
+        "officialWebsiteUrl": "https://ellzey.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Jake Ellzey",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Jake",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Ellzey, Jake",
+                "lastName": "Ellzey",
+                "startDate": "2021-07-29T16:00:00Z"
+            },
+            {
+                "directOrderName": "Jake Ellzey",
+                "endDate": "2024-02-27T13:20:58Z",
+                "firstName": "Jake",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Ellzey, Jake",
+                "lastName": "Ellzey",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Jake Ellzey",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Jake",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Ellzey, Jake",
+                "lastName": "Ellzey",
+                "startDate": "2024-02-27T13:20:59Z"
+            },
+            {
+                "directOrderName": "Jake Ellzey",
+                "firstName": "Jake",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Ellzey, Jake",
+                "lastName": "Ellzey",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 11,
+            "url": "https://api.congress.gov/v3/member/E000071/sponsored-legislation"
+        },
+        "state": "Texas",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 6,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 6,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 6,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:17Z"
+    },
+    "request": {
+        "bioguideId": "e000071",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

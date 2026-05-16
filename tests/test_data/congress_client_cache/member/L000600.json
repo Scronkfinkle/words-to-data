@@ -1,0 +1,109 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "422 Cannon House Office Building",
+            "phoneNumber": "(202) 225-3161",
+            "zipCode": 20515
+        },
+        "bioguideId": "L000600",
+        "birthYear": "1981",
+        "cosponsoredLegislation": {
+            "count": 614,
+            "url": "https://api.congress.gov/v3/member/L000600/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/680901e76c2e6631263de716_200.jpg"
+        },
+        "directOrderName": "Nicholas A. Langworthy",
+        "district": 23,
+        "firstName": "Nicholas",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Langworthy, Nicholas A.",
+        "lastName": "Langworthy",
+        "middleName": "A.",
+        "officialWebsiteUrl": "https://langworthy.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Nicholas A. Langworthy",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Nicholas",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Langworthy, Nicholas A.",
+                "lastName": "Langworthy",
+                "middleName": "A.",
+                "startDate": "2024-02-27T13:20:57Z"
+            },
+            {
+                "directOrderName": "Nicholas A. Langworthy",
+                "endDate": "2024-02-27T13:20:56Z",
+                "firstName": "Nicholas",
+                "invertedOrderName": "Langworthy, Nicholas A.",
+                "lastName": "Langworthy",
+                "middleName": "A.",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Nicholas A. Langworthy",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Nicholas",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Langworthy, Nicholas A.",
+                "lastName": "Langworthy",
+                "middleName": "A.",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Nicholas A. Langworthy",
+                "firstName": "Nicholas",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Langworthy, Nicholas A.",
+                "lastName": "Langworthy",
+                "middleName": "A.",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 75,
+            "url": "https://api.congress.gov/v3/member/L000600/sponsored-legislation"
+        },
+        "state": "New York",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 23,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 23,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NY",
+                "stateName": "New York"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "l000600",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

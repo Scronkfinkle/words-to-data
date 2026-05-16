@@ -1,0 +1,120 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2411 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-8171",
+            "zipCode": 20515
+        },
+        "bioguideId": "S001215",
+        "birthYear": "1983",
+        "cosponsoredLegislation": {
+            "count": 1509,
+            "url": "https://api.congress.gov/v3/member/S001215/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/s001215_200.jpg"
+        },
+        "directOrderName": "Haley M. Stevens",
+        "district": 11,
+        "firstName": "Haley",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Stevens, Haley M.",
+        "lastName": "Stevens",
+        "middleName": "M.",
+        "officialWebsiteUrl": "https://stevens.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Haley M. Stevens",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Haley",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Stevens, Haley M.",
+                "lastName": "Stevens",
+                "middleName": "M.",
+                "startDate": "2019-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Haley M. Stevens",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Haley",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Stevens, Haley M.",
+                "lastName": "Stevens",
+                "middleName": "M.",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Haley M. Stevens",
+                "firstName": "Haley",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Stevens, Haley M.",
+                "lastName": "Stevens",
+                "middleName": "M.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 123,
+            "url": "https://api.congress.gov/v3/member/S001215/sponsored-legislation"
+        },
+        "state": "Michigan",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 11,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 11,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 11,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 11,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:15Z"
+    },
+    "request": {
+        "bioguideId": "s001215",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

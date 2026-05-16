@@ -1,0 +1,176 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2135 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-4011",
+            "zipCode": 20515
+        },
+        "bioguideId": "C001072",
+        "birthYear": "1974",
+        "cosponsoredLegislation": {
+            "count": 6225,
+            "url": "https://api.congress.gov/v3/member/C001072/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/c001072_200.jpg"
+        },
+        "directOrderName": "André Carson",
+        "district": 7,
+        "firstName": "André",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Carson, André",
+        "lastName": "Carson",
+        "officialWebsiteUrl": "https://carson.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2008
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "André Carson",
+                "endDate": "2024-02-27T13:20:51Z",
+                "firstName": "André",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Carson, André",
+                "lastName": "Carson",
+                "startDate": "2008-03-11T00:00:00Z"
+            },
+            {
+                "directOrderName": "André Carson",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "André",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Carson, André",
+                "lastName": "Carson",
+                "startDate": "2024-02-27T13:20:52Z"
+            },
+            {
+                "directOrderName": "André Carson",
+                "firstName": "André",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Carson, André",
+                "lastName": "Carson",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 170,
+            "url": "https://api.congress.gov/v3/member/C001072/sponsored-legislation"
+        },
+        "state": "Indiana",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 110,
+                "district": 7,
+                "endYear": 2009,
+                "memberType": "Representative",
+                "startYear": 2008,
+                "stateCode": "IN",
+                "stateName": "Indiana"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 111,
+                "district": 7,
+                "endYear": 2011,
+                "memberType": "Representative",
+                "startYear": 2009,
+                "stateCode": "IN",
+                "stateName": "Indiana"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 7,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "IN",
+                "stateName": "Indiana"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 7,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "IN",
+                "stateName": "Indiana"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 7,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "IN",
+                "stateName": "Indiana"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 7,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "IN",
+                "stateName": "Indiana"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 7,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "IN",
+                "stateName": "Indiana"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 7,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "IN",
+                "stateName": "Indiana"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 7,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "IN",
+                "stateName": "Indiana"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 7,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "IN",
+                "stateName": "Indiana"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:13Z"
+    },
+    "request": {
+        "bioguideId": "c001072",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

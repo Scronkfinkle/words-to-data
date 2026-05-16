@@ -1,0 +1,86 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1408 Longworth House Office Building",
+            "phoneNumber": "(202) 225-3611",
+            "zipCode": 20515
+        },
+        "bioguideId": "M001237",
+        "birthYear": "1970",
+        "cosponsoredLegislation": {
+            "count": 312,
+            "url": "https://api.congress.gov/v3/member/M001237/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/69d7f4ee7304cef7a0c977a8_200.jpg"
+        },
+        "directOrderName": "Kristen McDonald Rivet",
+        "district": 8,
+        "firstName": "Kristen",
+        "honorificName": "Ms.",
+        "invertedOrderName": "McDonald Rivet, Kristen",
+        "lastName": "McDonald Rivet",
+        "officialWebsiteUrl": "https://mcdonaldrivet.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2025
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Kristen McDonald Rivet",
+                "endDate": "2025-01-10T17:36:18Z",
+                "firstName": "Kristen",
+                "honorificName": "Ms.",
+                "invertedOrderName": "McDonald Rivet, Kristen",
+                "lastName": "McDonald Rivet",
+                "startDate": "2025-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Kristen McDonald Rivet",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Kristen",
+                "honorificName": "Ms.",
+                "invertedOrderName": "McDonald Rivet, Kristen",
+                "lastName": "McDonald Rivet",
+                "startDate": "2025-01-10T17:36:19Z"
+            },
+            {
+                "directOrderName": "Kristen McDonald Rivet",
+                "firstName": "Kristen",
+                "honorificName": "Ms.",
+                "invertedOrderName": "McDonald Rivet, Kristen",
+                "lastName": "McDonald Rivet",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 16,
+            "url": "https://api.congress.gov/v3/member/M001237/sponsored-legislation"
+        },
+        "state": "Michigan",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 8,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            }
+        ],
+        "updateDate": "2026-04-09T20:03:04Z"
+    },
+    "request": {
+        "bioguideId": "m001237",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,165 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2263 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-4741",
+            "zipCode": 20515
+        },
+        "bioguideId": "M000687",
+        "birthYear": "1948",
+        "cosponsoredLegislation": {
+            "count": 2842,
+            "url": "https://api.congress.gov/v3/member/M000687/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/m000687_200.jpg"
+        },
+        "directOrderName": "Kweisi Mfume",
+        "district": 7,
+        "firstName": "Kweisi",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Mfume, Kweisi",
+        "lastName": "Mfume",
+        "officialWebsiteUrl": "https://mfume.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 1987
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Kweisi Mfume",
+                "endDate": "2024-02-27T13:20:52Z",
+                "firstName": "KWEISI",
+                "invertedOrderName": "Mfume, Kweisi",
+                "lastName": "MFUME",
+                "startDate": "1987-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Kweisi Mfume",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Kweisi",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Mfume, Kweisi",
+                "lastName": "Mfume",
+                "startDate": "2024-02-27T13:20:53Z"
+            },
+            {
+                "directOrderName": "Kweisi Mfume",
+                "firstName": "Kweisi",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Mfume, Kweisi",
+                "lastName": "Mfume",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 95,
+            "url": "https://api.congress.gov/v3/member/M000687/sponsored-legislation"
+        },
+        "state": "Maryland",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 100,
+                "district": 7,
+                "endYear": 1989,
+                "memberType": "Representative",
+                "startYear": 1987,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 101,
+                "district": 7,
+                "endYear": 1991,
+                "memberType": "Representative",
+                "startYear": 1989,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 102,
+                "district": 7,
+                "endYear": 1993,
+                "memberType": "Representative",
+                "startYear": 1991,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 103,
+                "district": 7,
+                "endYear": 1995,
+                "memberType": "Representative",
+                "startYear": 1993,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 104,
+                "district": 7,
+                "endYear": 1997,
+                "memberType": "Representative",
+                "startYear": 1995,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 7,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2020,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 7,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 7,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 7,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "m000687",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

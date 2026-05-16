@@ -1,0 +1,100 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1208 Longworth House Office Building",
+            "phoneNumber": "(202) 225-4636",
+            "zipCode": 20515
+        },
+        "bioguideId": "M001233",
+        "birthYear": "1962",
+        "cosponsoredLegislation": {
+            "count": 190,
+            "url": "https://api.congress.gov/v3/member/M001233/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/677448630b34857ecc909125_200.jpg"
+        },
+        "directOrderName": "Mark B. Messmer",
+        "district": 8,
+        "firstName": "Mark",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Messmer, Mark B.",
+        "lastName": "Messmer",
+        "middleName": "B.",
+        "officialWebsiteUrl": "https://messmer.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2025
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Mark Messmer",
+                "endDate": "2025-01-10T17:36:18Z",
+                "firstName": "Mark",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Messmer, Mark",
+                "lastName": "Messmer",
+                "middleName": "B.",
+                "startDate": "2025-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Mark Messmer",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Mark",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Messmer, Mark",
+                "lastName": "Messmer",
+                "middleName": "B.",
+                "startDate": "2025-01-10T17:36:19Z"
+            },
+            {
+                "directOrderName": "Mark Messmer",
+                "endDate": "2025-04-28T13:04:18Z",
+                "firstName": "Mark",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Messmer, Mark",
+                "lastName": "Messmer",
+                "middleName": "B.",
+                "startDate": "2025-01-17T05:00:00Z"
+            },
+            {
+                "directOrderName": "Mark B. Messmer",
+                "firstName": "Mark",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Messmer, Mark B.",
+                "lastName": "Messmer",
+                "middleName": "B.",
+                "startDate": "2025-04-28T13:04:19Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 14,
+            "url": "https://api.congress.gov/v3/member/M001233/sponsored-legislation"
+        },
+        "state": "Indiana",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 8,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "IN",
+                "stateName": "Indiana"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:20Z"
+    },
+    "request": {
+        "bioguideId": "m001233",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,215 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2204 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-6105",
+            "zipCode": 20515
+        },
+        "bioguideId": "S000250",
+        "birthYear": "1955",
+        "cosponsoredLegislation": {
+            "count": 4638,
+            "url": "https://api.congress.gov/v3/member/S000250/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Congressional Pictorial Directory",
+            "imageUrl": "https://www.congress.gov/img/member/115_rp_tx_32_sessions_pete_200.jpg"
+        },
+        "directOrderName": "Pete Sessions",
+        "district": 17,
+        "firstName": "Pete",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Sessions, Pete",
+        "lastName": "Sessions",
+        "officialWebsiteUrl": "https://sessions.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 1997
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Pete Sessions",
+                "endDate": "2024-02-27T13:20:58Z",
+                "firstName": "PETE",
+                "invertedOrderName": "Sessions, Pete",
+                "lastName": "SESSIONS",
+                "startDate": "1997-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Pete Sessions",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Pete",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Sessions, Pete",
+                "lastName": "Sessions",
+                "startDate": "2024-02-27T13:20:59Z"
+            },
+            {
+                "directOrderName": "Pete Sessions",
+                "firstName": "Pete",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Sessions, Pete",
+                "lastName": "Sessions",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 455,
+            "url": "https://api.congress.gov/v3/member/S000250/sponsored-legislation"
+        },
+        "state": "Texas",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 105,
+                "district": 5,
+                "endYear": 1999,
+                "memberType": "Representative",
+                "startYear": 1997,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 106,
+                "district": 5,
+                "endYear": 2001,
+                "memberType": "Representative",
+                "startYear": 1999,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 107,
+                "district": 5,
+                "endYear": 2003,
+                "memberType": "Representative",
+                "startYear": 2001,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 108,
+                "district": 32,
+                "endYear": 2005,
+                "memberType": "Representative",
+                "startYear": 2003,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 109,
+                "district": 32,
+                "endYear": 2007,
+                "memberType": "Representative",
+                "startYear": 2005,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 110,
+                "district": 32,
+                "endYear": 2009,
+                "memberType": "Representative",
+                "startYear": 2007,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 111,
+                "district": 32,
+                "endYear": 2011,
+                "memberType": "Representative",
+                "startYear": 2009,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 32,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 32,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 32,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 32,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 17,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 17,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 17,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:17Z"
+    },
+    "request": {
+        "bioguideId": "s000250",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

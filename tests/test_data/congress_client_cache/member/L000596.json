@@ -1,0 +1,104 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "226 Cannon House Office Building",
+            "phoneNumber": "(202) 225-5961",
+            "zipCode": 20515
+        },
+        "bioguideId": "L000596",
+        "birthYear": "1989",
+        "cosponsoredLegislation": {
+            "count": 577,
+            "url": "https://api.congress.gov/v3/member/L000596/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/l000596_200.jpg"
+        },
+        "directOrderName": "Anna Paulina Luna",
+        "district": 13,
+        "firstName": "Anna Paulina",
+        "honorificName": "Mrs.",
+        "invertedOrderName": "Luna, Anna Paulina",
+        "lastName": "Luna",
+        "officialWebsiteUrl": "https://luna.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Anna Paulina Luna",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Anna Paulina",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Luna, Anna Paulina",
+                "lastName": "Luna",
+                "startDate": "2024-02-27T13:20:50Z"
+            },
+            {
+                "directOrderName": "Anna Paulina Luna",
+                "endDate": "2024-02-27T13:20:49Z",
+                "firstName": "Anna Paulina",
+                "invertedOrderName": "Luna, Anna Paulina",
+                "lastName": "Luna",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Anna Paulina Luna",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Anna Paulina",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Luna, Anna Paulina",
+                "lastName": "Luna",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Anna Paulina Luna",
+                "firstName": "Anna Paulina",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Luna, Anna Paulina",
+                "lastName": "Luna",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 78,
+            "url": "https://api.congress.gov/v3/member/L000596/sponsored-legislation"
+        },
+        "state": "Florida",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 13,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 13,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "l000596",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

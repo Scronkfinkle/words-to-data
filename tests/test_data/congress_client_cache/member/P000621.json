@@ -1,0 +1,86 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1007 Longworth House Office Building",
+            "phoneNumber": "(202) 225-5751",
+            "zipCode": 20515
+        },
+        "bioguideId": "P000621",
+        "birthYear": "1956",
+        "cosponsoredLegislation": {
+            "count": 190,
+            "url": "https://api.congress.gov/v3/member/P000621/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/67745d3b0b34857ecc909167_200.jpg"
+        },
+        "directOrderName": "Nellie Pou",
+        "district": 9,
+        "firstName": "Nellie",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Pou, Nellie",
+        "lastName": "Pou",
+        "officialWebsiteUrl": "https://pou.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2025
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Nellie Pou",
+                "endDate": "2025-01-10T17:36:18Z",
+                "firstName": "Nellie",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Pou, Nellie",
+                "lastName": "Pou",
+                "startDate": "2025-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Nellie Pou",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Nellie",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Pou, Nellie",
+                "lastName": "Pou",
+                "startDate": "2025-01-10T17:36:19Z"
+            },
+            {
+                "directOrderName": "Nellie Pou",
+                "firstName": "Nellie",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Pou, Nellie",
+                "lastName": "Pou",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 11,
+            "url": "https://api.congress.gov/v3/member/P000621/sponsored-legislation"
+        },
+        "state": "New Jersey",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 9,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:20Z"
+    },
+    "request": {
+        "bioguideId": "p000621",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1406 Longworth House Office Building",
+            "phoneNumber": "(202) 225-3801",
+            "zipCode": 20515
+        },
+        "bioguideId": "W000788",
+        "birthYear": "1978",
+        "cosponsoredLegislation": {
+            "count": 1932,
+            "url": "https://api.congress.gov/v3/member/W000788/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/w000788_200.jpg"
+        },
+        "directOrderName": "Nikema Williams",
+        "district": 5,
+        "firstName": "Nikema",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Williams, Nikema",
+        "lastName": "Williams",
+        "officialWebsiteUrl": "https://nikemawilliams.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Nikema Williams",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Nikema",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Williams, Nikema",
+                "lastName": "Williams",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Nikema Williams",
+                "firstName": "Nikema",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Williams, Nikema",
+                "lastName": "Williams",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 152,
+            "url": "https://api.congress.gov/v3/member/W000788/sponsored-legislation"
+        },
+        "state": "Georgia",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 5,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "GA",
+                "stateName": "Georgia"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 5,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "GA",
+                "stateName": "Georgia"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 5,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "GA",
+                "stateName": "Georgia"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "w000788",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

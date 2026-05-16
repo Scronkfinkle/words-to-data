@@ -1,0 +1,146 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "172 Cannon House Office Building",
+            "phoneNumber": "(202) 225-5716",
+            "zipCode": 20515
+        },
+        "bioguideId": "B001287",
+        "birthYear": "1965",
+        "cosponsoredLegislation": {
+            "count": 1929,
+            "url": "https://api.congress.gov/v3/member/B001287/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "GPO Member Guide",
+            "imageUrl": "https://www.congress.gov/img/member/b001287_200.jpg"
+        },
+        "directOrderName": "Ami Bera",
+        "district": 6,
+        "firstName": "Ami",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Bera, Ami",
+        "lastName": "Bera",
+        "officialWebsiteUrl": "https://bera.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2013
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Ami Bera",
+                "endDate": "2024-02-27T13:20:47Z",
+                "firstName": "Ami",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Bera, Ami",
+                "lastName": "Bera",
+                "startDate": "2013-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Ami Bera",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Ami",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Bera, Ami",
+                "lastName": "Bera",
+                "startDate": "2024-02-27T13:20:48Z"
+            },
+            {
+                "directOrderName": "Ami Bera",
+                "firstName": "Ami",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Bera, Ami",
+                "lastName": "Bera",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 115,
+            "url": "https://api.congress.gov/v3/member/B001287/sponsored-legislation"
+        },
+        "state": "California",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 7,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 7,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 7,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 7,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 7,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 6,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 6,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "CA",
+                "stateName": "California"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:17Z"
+    },
+    "request": {
+        "bioguideId": "b001287",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

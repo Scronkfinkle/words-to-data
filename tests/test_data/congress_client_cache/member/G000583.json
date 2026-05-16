@@ -1,0 +1,126 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "106 Cannon House Office Building",
+            "phoneNumber": "(202) 225-4465",
+            "zipCode": 20515
+        },
+        "bioguideId": "G000583",
+        "birthYear": "1975",
+        "cosponsoredLegislation": {
+            "count": 3184,
+            "url": "https://api.congress.gov/v3/member/G000583/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Congressional Pictorial Directory",
+            "imageUrl": "https://www.congress.gov/img/member/115_rp_nj_5_gottheimer_josh_200.jpg"
+        },
+        "directOrderName": "Josh Gottheimer",
+        "district": 5,
+        "firstName": "Josh",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Gottheimer, Josh",
+        "lastName": "Gottheimer",
+        "officialWebsiteUrl": "https://gottheimer.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2017
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Josh Gottheimer",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Josh",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Gottheimer, Josh",
+                "lastName": "Gottheimer",
+                "startDate": "2017-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Josh Gottheimer",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Josh",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Gottheimer, Josh",
+                "lastName": "Gottheimer",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Josh Gottheimer",
+                "firstName": "Josh",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Gottheimer, Josh",
+                "lastName": "Gottheimer",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 200,
+            "url": "https://api.congress.gov/v3/member/G000583/sponsored-legislation"
+        },
+        "state": "New Jersey",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 5,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 5,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 5,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 5,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 5,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:15Z"
+    },
+    "request": {
+        "bioguideId": "g000583",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,96 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1717 Longworth House Office Building",
+            "phoneNumber": "(202) 225-2371",
+            "zipCode": 20515
+        },
+        "bioguideId": "B001315",
+        "birthYear": "1977",
+        "cosponsoredLegislation": {
+            "count": 915,
+            "url": "https://api.congress.gov/v3/member/B001315/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/b001315_200.jpg"
+        },
+        "directOrderName": "Nikki Budzinski",
+        "district": 13,
+        "firstName": "Nikki",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Budzinski, Nikki",
+        "lastName": "Budzinski",
+        "officialWebsiteUrl": "https://budzinski.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Nikki Budzinski",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Nikki",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Budzinski, Nikki",
+                "lastName": "Budzinski",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Nikki Budzinski",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Nikki",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Budzinski, Nikki",
+                "lastName": "Budzinski",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Nikki Budzinski",
+                "firstName": "Nikki",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Budzinski, Nikki",
+                "lastName": "Budzinski",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 34,
+            "url": "https://api.congress.gov/v3/member/B001315/sponsored-legislation"
+        },
+        "state": "Illinois",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 13,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 13,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "b001315",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

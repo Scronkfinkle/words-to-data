@@ -1,0 +1,96 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "461 Cannon House Office Building",
+            "phoneNumber": "(202) 225-2542",
+            "zipCode": 20515
+        },
+        "bioguideId": "C001133",
+        "birthYear": "1982",
+        "cosponsoredLegislation": {
+            "count": 644,
+            "url": "https://api.congress.gov/v3/member/C001133/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/c001133_200.jpg"
+        },
+        "directOrderName": "Juan Ciscomani",
+        "district": 6,
+        "firstName": "Juan",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Ciscomani, Juan",
+        "lastName": "Ciscomani",
+        "officialWebsiteUrl": "https://ciscomani.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Juan Ciscomani",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Juan",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Ciscomani, Juan",
+                "lastName": "Ciscomani",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Juan Ciscomani",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Juan",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Ciscomani, Juan",
+                "lastName": "Ciscomani",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Juan Ciscomani",
+                "firstName": "Juan",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Ciscomani, Juan",
+                "lastName": "Ciscomani",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 62,
+            "url": "https://api.congress.gov/v3/member/C001133/sponsored-legislation"
+        },
+        "state": "Arizona",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 6,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "AZ",
+                "stateName": "Arizona"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 6,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "AZ",
+                "stateName": "Arizona"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:17Z"
+    },
+    "request": {
+        "bioguideId": "c001133",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

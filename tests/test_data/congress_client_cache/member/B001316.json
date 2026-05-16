@@ -1,0 +1,87 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1108 Longworth House Office Building",
+            "phoneNumber": "(202) 225-6536",
+            "zipCode": 20515
+        },
+        "bioguideId": "B001316",
+        "birthYear": "1976",
+        "cosponsoredLegislation": {
+            "count": 376,
+            "url": "https://api.congress.gov/v3/member/B001316/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/b001316_200.jpg"
+        },
+        "directOrderName": "Eric Burlison",
+        "district": 7,
+        "firstName": "Eric",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Burlison, Eric",
+        "lastName": "Burlison",
+        "officialWebsiteUrl": "https://burlison.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Eric Burlison",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Eric",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Burlison, Eric",
+                "lastName": "Burlison",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Eric Burlison",
+                "firstName": "Eric",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Burlison, Eric",
+                "lastName": "Burlison",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 52,
+            "url": "https://api.congress.gov/v3/member/B001316/sponsored-legislation"
+        },
+        "state": "Missouri",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 7,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "MO",
+                "stateName": "Missouri"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 7,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "MO",
+                "stateName": "Missouri"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "b001316",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

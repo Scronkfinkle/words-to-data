@@ -1,0 +1,151 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "107 Cannon House Office Building",
+            "phoneNumber": "(202) 225-2831",
+            "zipCode": 20515
+        },
+        "bioguideId": "W000814",
+        "birthYear": "1953",
+        "cosponsoredLegislation": {
+            "count": 3081,
+            "url": "https://api.congress.gov/v3/member/W000814/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/w000814_200.jpg"
+        },
+        "directOrderName": "Randy K. Weber, Sr.",
+        "district": 14,
+        "firstName": "Randy",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Weber, Randy K. Sr.",
+        "lastName": "Weber",
+        "middleName": "K.",
+        "officialWebsiteUrl": "https://weber.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2013
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Randy K. Weber, Sr.",
+                "endDate": "2024-02-27T13:20:58Z",
+                "firstName": "Randy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Weber, Randy K., Sr.",
+                "lastName": "Weber",
+                "middleName": "K.",
+                "startDate": "2013-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Randy K. Weber, Sr.",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Randy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Weber, Randy K.",
+                "lastName": "Weber",
+                "middleName": "K.",
+                "startDate": "2024-02-27T13:20:59Z"
+            },
+            {
+                "directOrderName": "Randy K. Weber, Sr.",
+                "firstName": "Randy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Weber, Randy K. Sr.",
+                "lastName": "Weber",
+                "middleName": "K.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 105,
+            "url": "https://api.congress.gov/v3/member/W000814/sponsored-legislation"
+        },
+        "state": "Texas",
+        "suffixName": "Sr.",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 14,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 14,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 14,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 14,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 14,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 14,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 14,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:13Z"
+    },
+    "request": {
+        "bioguideId": "w000814",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

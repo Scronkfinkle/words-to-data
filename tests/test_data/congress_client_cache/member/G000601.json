@@ -1,0 +1,99 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1716 Longworth House Office Building",
+            "phoneNumber": "(202) 225-5071",
+            "zipCode": 20515
+        },
+        "bioguideId": "G000601",
+        "birthYear": "1968",
+        "cosponsoredLegislation": {
+            "count": 194,
+            "url": "https://api.congress.gov/v3/member/G000601/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "imageUrl": "https://www.congress.gov/img/member/6774277d0b34857ecc9090a7_200.jpg"
+        },
+        "directOrderName": "Craig A. Goldman",
+        "district": 12,
+        "firstName": "Craig",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Goldman, Craig A.",
+        "lastName": "Goldman",
+        "middleName": "A.",
+        "officialWebsiteUrl": "https://craiggoldman.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2025
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Craig Goldman",
+                "endDate": "2025-01-10T17:36:18Z",
+                "firstName": "Craig",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Goldman, Craig",
+                "lastName": "Goldman",
+                "middleName": "A.",
+                "startDate": "2025-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Craig Goldman",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Craig",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Goldman, Craig",
+                "lastName": "Goldman",
+                "middleName": "A.",
+                "startDate": "2025-01-10T17:36:19Z"
+            },
+            {
+                "directOrderName": "Craig Goldman",
+                "endDate": "2025-04-28T13:04:25Z",
+                "firstName": "Craig",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Goldman, Craig",
+                "lastName": "Goldman",
+                "middleName": "A.",
+                "startDate": "2025-01-17T05:00:00Z"
+            },
+            {
+                "directOrderName": "Craig A. Goldman",
+                "firstName": "Craig",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Goldman, Craig A.",
+                "lastName": "Goldman",
+                "middleName": "A.",
+                "startDate": "2025-04-28T13:04:26Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 8,
+            "url": "https://api.congress.gov/v3/member/G000601/sponsored-legislation"
+        },
+        "state": "Texas",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 12,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:20Z"
+    },
+    "request": {
+        "bioguideId": "g000601",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

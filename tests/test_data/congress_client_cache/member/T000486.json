@@ -1,0 +1,106 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1414 Longworth House Office Building",
+            "phoneNumber": "(202) 225-4361",
+            "zipCode": 20515
+        },
+        "bioguideId": "T000486",
+        "birthYear": "1988",
+        "cosponsoredLegislation": {
+            "count": 1265,
+            "url": "https://api.congress.gov/v3/member/T000486/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/t000486_200.jpg"
+        },
+        "directOrderName": "Ritchie Torres",
+        "district": 15,
+        "firstName": "Ritchie",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Torres, Ritchie",
+        "lastName": "Torres",
+        "officialWebsiteUrl": "https://ritchietorres.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Ritchie Torres",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Ritchie",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Torres, Ritchie",
+                "lastName": "Torres",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Ritchie Torres",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Ritchie",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Torres, Ritchie",
+                "lastName": "Torres",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Ritchie Torres",
+                "firstName": "Ritchie",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Torres, Ritchie",
+                "lastName": "Torres",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 166,
+            "url": "https://api.congress.gov/v3/member/T000486/sponsored-legislation"
+        },
+        "state": "New York",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 15,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 15,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 15,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NY",
+                "stateName": "New York"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "t000486",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

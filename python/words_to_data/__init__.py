@@ -31,6 +31,11 @@ from .words_to_data import (
     SponsorInfo,
     BillDownload,
     CongressClient,
+    # vote types
+    VotePosition,
+    MemberVote,
+    HouseRollCall,
+    BillVotes,
 )
 
 __version__ = "0.3.0"
@@ -67,4 +72,9 @@ __all__ = [
     "SponsorInfo",
     "BillDownload",
     "CongressClient",
+    # vote types
+    "VotePosition",
+    "MemberVote",
+    "HouseRollCall",
+    "BillVotes",
 ]

@@ -1,0 +1,115 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1710 Longworth House Office Building",
+            "phoneNumber": "(202) 225-2536",
+            "zipCode": 20515
+        },
+        "bioguideId": "D000032",
+        "birthYear": "1978",
+        "cosponsoredLegislation": {
+            "count": 1287,
+            "url": "https://api.congress.gov/v3/member/D000032/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/d000032_200.jpg"
+        },
+        "directOrderName": "Byron Donalds",
+        "district": 19,
+        "firstName": "Byron",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Donalds, Byron",
+        "lastName": "Donalds",
+        "officialWebsiteUrl": "https://donalds.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Byron Donalds",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Byron",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Donalds, Byron",
+                "lastName": "Donalds",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Byron Donalds",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Byron",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Donalds, Byron",
+                "lastName": "Donalds",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Byron Donalds",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Byron",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Donalds, Byron",
+                "lastName": "Donalds",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Byron Donalds",
+                "firstName": "Byron",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Donalds, Byron",
+                "lastName": "Donalds",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 144,
+            "url": "https://api.congress.gov/v3/member/D000032/sponsored-legislation"
+        },
+        "state": "Florida",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 19,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 19,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 19,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "d000032",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,99 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1620 Longworth House Office Building",
+            "phoneNumber": "(202) 225-6416",
+            "zipCode": 20515
+        },
+        "bioguideId": "H001094",
+        "birthYear": "1964",
+        "cosponsoredLegislation": {
+            "count": 593,
+            "url": "https://api.congress.gov/v3/member/H001094/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/h001094_200.jpg"
+        },
+        "directOrderName": "Val T. Hoyle",
+        "district": 4,
+        "firstName": "Val",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Hoyle, Val T.",
+        "lastName": "Hoyle",
+        "middleName": "T.",
+        "officialWebsiteUrl": "https://hoyle.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Val T. Hoyle",
+                "endDate": "2024-02-27T13:20:56Z",
+                "firstName": "Val",
+                "invertedOrderName": "Hoyle, Val T.",
+                "lastName": "Hoyle",
+                "middleName": "T.",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Val T. Hoyle",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Val",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Hoyle, Val T.",
+                "lastName": "Hoyle",
+                "middleName": "T.",
+                "startDate": "2024-02-27T13:20:57Z"
+            },
+            {
+                "directOrderName": "Val T. Hoyle",
+                "firstName": "Val",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Hoyle, Val T.",
+                "lastName": "Hoyle",
+                "middleName": "T.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 23,
+            "url": "https://api.congress.gov/v3/member/H001094/sponsored-legislation"
+        },
+        "state": "Oregon",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 4,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "OR",
+                "stateName": "Oregon"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 4,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "OR",
+                "stateName": "Oregon"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "h001094",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

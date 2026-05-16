@@ -1,0 +1,137 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2210 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-2726",
+            "zipCode": 20515
+        },
+        "bioguideId": "C001055",
+        "birthYear": "1952",
+        "cosponsoredLegislation": {
+            "count": 3066,
+            "url": "https://api.congress.gov/v3/member/C001055/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/c001055_200.jpg"
+        },
+        "directOrderName": "Ed Case",
+        "district": 1,
+        "firstName": "Ed",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Case, Ed",
+        "lastName": "Case",
+        "officialWebsiteUrl": "https://case.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2002
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Ed Case",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Ed",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Case, Ed",
+                "lastName": "Case",
+                "startDate": "2002-11-30T00:00:00Z"
+            },
+            {
+                "directOrderName": "Ed Case",
+                "firstName": "Ed",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Case, Ed",
+                "lastName": "Case",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 133,
+            "url": "https://api.congress.gov/v3/member/C001055/sponsored-legislation"
+        },
+        "state": "Hawaii",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 107,
+                "district": 2,
+                "endYear": 2003,
+                "memberType": "Representative",
+                "startYear": 2002,
+                "stateCode": "HI",
+                "stateName": "Hawaii"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 108,
+                "district": 2,
+                "endYear": 2005,
+                "memberType": "Representative",
+                "startYear": 2003,
+                "stateCode": "HI",
+                "stateName": "Hawaii"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 109,
+                "district": 2,
+                "endYear": 2007,
+                "memberType": "Representative",
+                "startYear": 2005,
+                "stateCode": "HI",
+                "stateName": "Hawaii"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 1,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "HI",
+                "stateName": "Hawaii"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 1,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "HI",
+                "stateName": "Hawaii"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 1,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "HI",
+                "stateName": "Hawaii"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 1,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "HI",
+                "stateName": "Hawaii"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:15Z"
+    },
+    "request": {
+        "bioguideId": "c001055",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

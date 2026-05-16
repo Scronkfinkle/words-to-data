@@ -1,0 +1,110 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "448 Cannon House Office Building",
+            "phoneNumber": "(202) 225-2778",
+            "zipCode": 20515
+        },
+        "bioguideId": "G000593",
+        "birthYear": "1954",
+        "cosponsoredLegislation": {
+            "count": 748,
+            "url": "https://api.congress.gov/v3/member/G000593/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/g000593_200.jpg"
+        },
+        "directOrderName": "Carlos A. Gimenez",
+        "district": 28,
+        "firstName": "Carlos",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Gimenez, Carlos A.",
+        "lastName": "Gimenez",
+        "middleName": "A.",
+        "officialWebsiteUrl": "https://gimenez.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Carlos A. Gimenez",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Carlos",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Gimenez, Carlos A.",
+                "lastName": "Gimenez",
+                "middleName": "A.",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Carlos A. Gimenez",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Carlos",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Gimenez, Carlos A.",
+                "lastName": "Gimenez",
+                "middleName": "A.",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Carlos A. Gimenez",
+                "firstName": "Carlos",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Gimenez, Carlos A.",
+                "lastName": "Gimenez",
+                "middleName": "A.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 55,
+            "url": "https://api.congress.gov/v3/member/G000593/sponsored-legislation"
+        },
+        "state": "Florida",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 26,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 28,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 28,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "g000593",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

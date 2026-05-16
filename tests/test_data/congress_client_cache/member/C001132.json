@@ -1,0 +1,104 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "307 Cannon House Office Building",
+            "phoneNumber": "(202) 225-3361",
+            "zipCode": 20515
+        },
+        "bioguideId": "C001132",
+        "birthYear": "1980",
+        "cosponsoredLegislation": {
+            "count": 985,
+            "url": "https://api.congress.gov/v3/member/C001132/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/c001132_200.jpg"
+        },
+        "directOrderName": "Elijah Crane",
+        "district": 2,
+        "firstName": "Elijah",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Crane, Elijah",
+        "lastName": "Crane",
+        "officialWebsiteUrl": "https://crane.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Elijah Crane",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Elijah",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Crane, Elijah",
+                "lastName": "Crane",
+                "startDate": "2024-02-27T13:20:47Z"
+            },
+            {
+                "directOrderName": "Elijah Crane",
+                "endDate": "2024-02-27T13:20:46Z",
+                "firstName": "Elijah",
+                "invertedOrderName": "Crane, Elijah",
+                "lastName": "Crane",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Elijah Crane",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Elijah",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Crane, Elijah",
+                "lastName": "Crane",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Elijah Crane",
+                "firstName": "Elijah",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Crane, Elijah",
+                "lastName": "Crane",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 51,
+            "url": "https://api.congress.gov/v3/member/C001132/sponsored-legislation"
+        },
+        "state": "Arizona",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 2,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "AZ",
+                "stateName": "Arizona"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 2,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "AZ",
+                "stateName": "Arizona"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:17Z"
+    },
+    "request": {
+        "bioguideId": "c001132",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

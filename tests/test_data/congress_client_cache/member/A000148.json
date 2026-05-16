@@ -1,0 +1,97 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1524 Longworth House Office Building",
+            "phoneNumber": "(202) 225-5931",
+            "zipCode": 20515
+        },
+        "bioguideId": "A000148",
+        "birthYear": "1988",
+        "cosponsoredLegislation": {
+            "count": 968,
+            "url": "https://api.congress.gov/v3/member/A000148/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/67817e391f9ad6ea6fb1ebda_200.jpg"
+        },
+        "directOrderName": "Jake Auchincloss",
+        "district": 4,
+        "firstName": "Jake",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Auchincloss, Jake",
+        "lastName": "Auchincloss",
+        "officialWebsiteUrl": "https://auchincloss.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Jake Auchincloss",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Jake",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Auchincloss, Jake",
+                "lastName": "Auchincloss",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Jake Auchincloss",
+                "firstName": "Jake",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Auchincloss, Jake",
+                "lastName": "Auchincloss",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 23,
+            "url": "https://api.congress.gov/v3/member/A000148/sponsored-legislation"
+        },
+        "state": "Massachusetts",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 4,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 4,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 4,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "a000148",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

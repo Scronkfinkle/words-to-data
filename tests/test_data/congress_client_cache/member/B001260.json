@@ -1,0 +1,176 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2409 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-5015",
+            "zipCode": 20515
+        },
+        "bioguideId": "B001260",
+        "birthYear": "1951",
+        "cosponsoredLegislation": {
+            "count": 1896,
+            "url": "https://api.congress.gov/v3/member/B001260/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/b001260_200.jpg"
+        },
+        "directOrderName": "Vern Buchanan",
+        "district": 16,
+        "firstName": "Vern",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Buchanan, Vern",
+        "lastName": "Buchanan",
+        "officialWebsiteUrl": "https://buchanan.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2007
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Vern Buchanan",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Vern",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Buchanan, Vern",
+                "lastName": "Buchanan",
+                "startDate": "2007-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Vern Buchanan",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Vern",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Buchanan, Vern",
+                "lastName": "Buchanan",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Vern Buchanan",
+                "firstName": "Vern",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Buchanan, Vern",
+                "lastName": "Buchanan",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 212,
+            "url": "https://api.congress.gov/v3/member/B001260/sponsored-legislation"
+        },
+        "state": "Florida",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 110,
+                "district": 13,
+                "endYear": 2009,
+                "memberType": "Representative",
+                "startYear": 2007,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 111,
+                "district": 13,
+                "endYear": 2011,
+                "memberType": "Representative",
+                "startYear": 2009,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 13,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 16,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 16,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 16,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 16,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 16,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 16,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 16,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:13Z"
+    },
+    "request": {
+        "bioguideId": "b001260",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,102 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1714 Longworth House Office Building",
+            "phoneNumber": "(202) 225-2801",
+            "zipCode": 20515
+        },
+        "bioguideId": "J000301",
+        "birthYear": "1976",
+        "cosponsoredLegislation": {
+            "count": 724,
+            "url": "https://api.congress.gov/v3/member/J000301/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/j000301_200.jpg"
+        },
+        "directOrderName": "Dusty Johnson",
+        "firstName": "Dusty",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Johnson, Dusty",
+        "lastName": "Johnson",
+        "officialWebsiteUrl": "https://dustyjohnson.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Dusty Johnson",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Dusty",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Johnson, Dusty",
+                "lastName": "Johnson",
+                "startDate": "2019-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Dusty Johnson",
+                "firstName": "Dusty",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Johnson, Dusty",
+                "lastName": "Johnson",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 133,
+            "url": "https://api.congress.gov/v3/member/J000301/sponsored-legislation"
+        },
+        "state": "South Dakota",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "SD",
+                "stateName": "South Dakota"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "SD",
+                "stateName": "South Dakota"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "SD",
+                "stateName": "South Dakota"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "SD",
+                "stateName": "South Dakota"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "j000301",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

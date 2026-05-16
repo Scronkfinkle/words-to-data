@@ -1,0 +1,106 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "409 Cannon House Office Building",
+            "phoneNumber": "(202) 225-6730",
+            "zipCode": 20515
+        },
+        "bioguideId": "B000668",
+        "birthYear": "1952",
+        "cosponsoredLegislation": {
+            "count": 347,
+            "url": "https://api.congress.gov/v3/member/B000668/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/b000668_200.jpg"
+        },
+        "directOrderName": "Cliff Bentz",
+        "district": 2,
+        "firstName": "Cliff",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Bentz, Cliff",
+        "lastName": "Bentz",
+        "officialWebsiteUrl": "https://bentz.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Cliff Bentz",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Cliff",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Bentz, Cliff",
+                "lastName": "Bentz",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Cliff Bentz",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Cliff",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Bentz, Cliff",
+                "lastName": "Bentz",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Cliff Bentz",
+                "firstName": "Cliff",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Bentz, Cliff",
+                "lastName": "Bentz",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 27,
+            "url": "https://api.congress.gov/v3/member/B000668/sponsored-legislation"
+        },
+        "state": "Oregon",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 2,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "OR",
+                "stateName": "Oregon"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 2,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "OR",
+                "stateName": "Oregon"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 2,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "OR",
+                "stateName": "Oregon"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "b000668",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,229 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2159 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-5006",
+            "zipCode": 20515
+        },
+        "bioguideId": "D000096",
+        "birthYear": "1941",
+        "cosponsoredLegislation": {
+            "count": 7631,
+            "url": "https://api.congress.gov/v3/member/D000096/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Congressional Pictorial Directory",
+            "imageUrl": "https://www.congress.gov/img/member/116_rp_il_7_davis_danny_200.jpg"
+        },
+        "directOrderName": "Danny K. Davis",
+        "district": 7,
+        "firstName": "Danny",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Davis, Danny K.",
+        "lastName": "Davis",
+        "middleName": "K.",
+        "officialWebsiteUrl": "https://davis.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 1997
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Danny K. Davis",
+                "endDate": "2024-02-27T13:20:50Z",
+                "firstName": "DANNY",
+                "invertedOrderName": "Davis, Danny K.",
+                "lastName": "DAVIS",
+                "middleName": "K.",
+                "startDate": "1997-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Danny K. Davis",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Danny",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Davis, Danny K.",
+                "lastName": "Davis",
+                "middleName": "K.",
+                "startDate": "2024-02-27T13:20:51Z"
+            },
+            {
+                "directOrderName": "Danny K. Davis",
+                "firstName": "Danny",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Davis, Danny K.",
+                "lastName": "Davis",
+                "middleName": "K.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 404,
+            "url": "https://api.congress.gov/v3/member/D000096/sponsored-legislation"
+        },
+        "state": "Illinois",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 105,
+                "district": 7,
+                "endYear": 1999,
+                "memberType": "Representative",
+                "startYear": 1997,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 106,
+                "district": 7,
+                "endYear": 2001,
+                "memberType": "Representative",
+                "startYear": 1999,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 107,
+                "district": 7,
+                "endYear": 2003,
+                "memberType": "Representative",
+                "startYear": 2001,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 108,
+                "district": 7,
+                "endYear": 2005,
+                "memberType": "Representative",
+                "startYear": 2003,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 109,
+                "district": 7,
+                "endYear": 2007,
+                "memberType": "Representative",
+                "startYear": 2005,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 110,
+                "district": 7,
+                "endYear": 2009,
+                "memberType": "Representative",
+                "startYear": 2007,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 111,
+                "district": 7,
+                "endYear": 2011,
+                "memberType": "Representative",
+                "startYear": 2009,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 7,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 7,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 7,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 7,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 7,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 7,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 7,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 7,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:12Z"
+    },
+    "request": {
+        "bioguideId": "d000096",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

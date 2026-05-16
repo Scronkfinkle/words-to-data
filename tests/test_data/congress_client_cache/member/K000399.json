@@ -1,0 +1,119 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "152 Cannon House Office Building",
+            "phoneNumber": "(202) 225-4215",
+            "zipCode": 20515
+        },
+        "bioguideId": "K000399",
+        "birthYear": "1971",
+        "cosponsoredLegislation": {
+            "count": 644,
+            "url": "https://api.congress.gov/v3/member/K000399/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/66b0ce45b0288a917d98f619_200.jpg"
+        },
+        "directOrderName": "Jennifer A. Kiggans",
+        "district": 2,
+        "firstName": "Jennifer",
+        "honorificName": "Mrs.",
+        "invertedOrderName": "Kiggans, Jennifer A.",
+        "lastName": "Kiggans",
+        "middleName": "A.",
+        "officialWebsiteUrl": "https://kiggans.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Jennifer Kiggans",
+                "endDate": "2024-02-27T13:20:59Z",
+                "firstName": "Jennifer",
+                "invertedOrderName": "Kiggans, Jennifer A",
+                "lastName": "Kiggans",
+                "middleName": "A.",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Jennifer Kiggans",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Jennifer",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Kiggans, Jennifer A.",
+                "lastName": "Kiggans",
+                "middleName": "A.",
+                "startDate": "2024-02-27T13:21:00Z"
+            },
+            {
+                "directOrderName": "Jennifer Kiggans",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Jennifer",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Kiggans, Jennifer A.",
+                "lastName": "Kiggans",
+                "middleName": "A.",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Jennifer Kiggans",
+                "endDate": "2025-04-28T13:04:26Z",
+                "firstName": "Jennifer",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Kiggans, Jennifer A.",
+                "lastName": "Kiggans",
+                "middleName": "A.",
+                "startDate": "2025-01-17T05:00:00Z"
+            },
+            {
+                "directOrderName": "Jennifer A. Kiggans",
+                "firstName": "Jennifer",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Kiggans, Jennifer A.",
+                "lastName": "Kiggans",
+                "middleName": "A.",
+                "startDate": "2025-04-28T13:04:27Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 80,
+            "url": "https://api.congress.gov/v3/member/K000399/sponsored-legislation"
+        },
+        "state": "Virginia",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 2,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "VA",
+                "stateName": "Virginia"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 2,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "VA",
+                "stateName": "Virginia"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:19Z"
+    },
+    "request": {
+        "bioguideId": "k000399",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

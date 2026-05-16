@@ -1,0 +1,96 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1605 Longworth House Office Building",
+            "phoneNumber": "(202) 225-3035",
+            "zipCode": 20515
+        },
+        "bioguideId": "M001224",
+        "birthYear": "1974",
+        "cosponsoredLegislation": {
+            "count": 430,
+            "url": "https://api.congress.gov/v3/member/M001224/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/680008c5f22eaf56065817f4_200.jpg"
+        },
+        "directOrderName": "Nathaniel Moran",
+        "district": 1,
+        "firstName": "Nathaniel",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Moran, Nathaniel",
+        "lastName": "Moran",
+        "officialWebsiteUrl": "https://moran.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Nathaniel Moran",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Nathaniel",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Moran, Nathaniel",
+                "lastName": "Moran",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Nathaniel Moran",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Nathaniel",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Moran, Nathaniel",
+                "lastName": "Moran",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Nathaniel Moran",
+                "firstName": "Nathaniel",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Moran, Nathaniel",
+                "lastName": "Moran",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 42,
+            "url": "https://api.congress.gov/v3/member/M001224/sponsored-legislation"
+        },
+        "state": "Texas",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 1,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 1,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:19Z"
+    },
+    "request": {
+        "bioguideId": "m001224",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

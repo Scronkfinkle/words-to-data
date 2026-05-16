@@ -1,0 +1,100 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1104 Longworth House Office Building",
+            "phoneNumber": "(202) 225-5951",
+            "zipCode": 20515
+        },
+        "bioguideId": "N000026",
+        "birthYear": "1968",
+        "cosponsoredLegislation": {
+            "count": 795,
+            "url": "https://api.congress.gov/v3/member/N000026/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/n000026_200.jpg"
+        },
+        "directOrderName": "Troy E. Nehls",
+        "district": 22,
+        "firstName": "Troy",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Nehls, Troy E.",
+        "lastName": "Nehls",
+        "middleName": "E.",
+        "officialWebsiteUrl": "https://nehls.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Troy E. Nehls",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Troy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Nehls, Troy E.",
+                "lastName": "Nehls",
+                "middleName": "E.",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Troy E. Nehls",
+                "firstName": "Troy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Nehls, Troy E.",
+                "lastName": "Nehls",
+                "middleName": "E.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 89,
+            "url": "https://api.congress.gov/v3/member/N000026/sponsored-legislation"
+        },
+        "state": "Texas",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 22,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 22,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 22,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:17Z"
+    },
+    "request": {
+        "bioguideId": "n000026",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

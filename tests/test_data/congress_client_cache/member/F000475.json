@@ -1,0 +1,124 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2418 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-2472",
+            "zipCode": 20515
+        },
+        "bioguideId": "F000475",
+        "birthYear": "1976",
+        "cosponsoredLegislation": {
+            "count": 708,
+            "url": "https://api.congress.gov/v3/member/F000475/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/f000475_200.jpg"
+        },
+        "directOrderName": "Brad Finstad",
+        "district": 1,
+        "firstName": "Brad",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Finstad, Brad",
+        "lastName": "Finstad",
+        "officialWebsiteUrl": "https://finstad.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2022
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Brad Finstad",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Brad",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Finstad, Brad",
+                "lastName": "Finstad",
+                "startDate": "2022-08-11T04:00:00Z"
+            },
+            {
+                "directOrderName": "Brad Finstad",
+                "endDate": "2024-02-27T13:20:53Z",
+                "firstName": "Brad",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Finstad, Brad",
+                "lastName": "Finstad",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Brad Finstad",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Brad",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Finstad, Brad",
+                "lastName": "Finstad",
+                "startDate": "2024-02-27T13:20:54Z"
+            },
+            {
+                "directOrderName": "Brad Finstad",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Brad",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Finstad, Brad",
+                "lastName": "Finstad",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Brad Finstad",
+                "firstName": "Brad",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Finstad, Brad",
+                "lastName": "Finstad",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 59,
+            "url": "https://api.congress.gov/v3/member/F000475/sponsored-legislation"
+        },
+        "state": "Minnesota",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 1,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2022,
+                "stateCode": "MN",
+                "stateName": "Minnesota"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 1,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "MN",
+                "stateName": "Minnesota"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 1,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "MN",
+                "stateName": "Minnesota"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:17Z"
+    },
+    "request": {
+        "bioguideId": "f000475",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

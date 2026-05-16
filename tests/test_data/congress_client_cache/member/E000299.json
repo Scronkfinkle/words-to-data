@@ -1,0 +1,116 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2448 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-4831",
+            "zipCode": 20515
+        },
+        "bioguideId": "E000299",
+        "birthYear": "1969",
+        "cosponsoredLegislation": {
+            "count": 1490,
+            "url": "https://api.congress.gov/v3/member/E000299/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/e000299_200.jpg"
+        },
+        "directOrderName": "Veronica Escobar",
+        "district": 16,
+        "firstName": "Veronica",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Escobar, Veronica",
+        "lastName": "Escobar",
+        "officialWebsiteUrl": "https://escobar.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Veronica Escobar",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Veronica",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Escobar, Veronica",
+                "lastName": "Escobar",
+                "startDate": "2019-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Veronica Escobar",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Veronica",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Escobar, Veronica",
+                "lastName": "Escobar",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Veronica Escobar",
+                "firstName": "Veronica",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Escobar, Veronica",
+                "lastName": "Escobar",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 74,
+            "url": "https://api.congress.gov/v3/member/E000299/sponsored-legislation"
+        },
+        "state": "Texas",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 16,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 16,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 16,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 16,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "e000299",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

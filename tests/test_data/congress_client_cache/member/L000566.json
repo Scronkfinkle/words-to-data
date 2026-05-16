@@ -1,0 +1,180 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2470 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-6405",
+            "zipCode": 20515
+        },
+        "bioguideId": "L000566",
+        "birthYear": "1956",
+        "cosponsoredLegislation": {
+            "count": 2318,
+            "url": "https://api.congress.gov/v3/member/L000566/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/6984c938b1dfe04d989a1e21_200.jpg"
+        },
+        "directOrderName": "Robert E. Latta",
+        "district": 5,
+        "firstName": "Robert",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Latta, Robert E.",
+        "lastName": "Latta",
+        "middleName": "E.",
+        "officialWebsiteUrl": "https://latta.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2007
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Robert E. Latta",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Robert",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Latta, Robert E.",
+                "lastName": "Latta",
+                "middleName": "E.",
+                "startDate": "2007-12-13T00:00:00Z"
+            },
+            {
+                "directOrderName": "Robert E. Latta",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Robert",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Latta, Robert E.",
+                "lastName": "Latta",
+                "middleName": "E.",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Robert E. Latta",
+                "firstName": "Robert",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Latta, Robert E.",
+                "lastName": "Latta",
+                "middleName": "E.",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 237,
+            "url": "https://api.congress.gov/v3/member/L000566/sponsored-legislation"
+        },
+        "state": "Ohio",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 110,
+                "district": 5,
+                "endYear": 2009,
+                "memberType": "Representative",
+                "startYear": 2007,
+                "stateCode": "OH",
+                "stateName": "Ohio"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 111,
+                "district": 5,
+                "endYear": 2011,
+                "memberType": "Representative",
+                "startYear": 2009,
+                "stateCode": "OH",
+                "stateName": "Ohio"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 5,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "OH",
+                "stateName": "Ohio"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 5,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "OH",
+                "stateName": "Ohio"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 5,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "OH",
+                "stateName": "Ohio"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 5,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "OH",
+                "stateName": "Ohio"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 5,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "OH",
+                "stateName": "Ohio"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 5,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "OH",
+                "stateName": "Ohio"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 5,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "OH",
+                "stateName": "Ohio"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 5,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "OH",
+                "stateName": "Ohio"
+            }
+        ],
+        "updateDate": "2026-02-05T17:24:50Z"
+    },
+    "request": {
+        "bioguideId": "l000566",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

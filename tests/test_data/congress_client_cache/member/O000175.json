@@ -1,0 +1,95 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "151 Cannon House Office Building",
+            "phoneNumber": "(202) 225-4311",
+            "zipCode": 20515
+        },
+        "bioguideId": "O000175",
+        "birthYear": "1971",
+        "cosponsoredLegislation": {
+            "count": 671,
+            "url": "https://api.congress.gov/v3/member/O000175/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/o000175_200.jpg"
+        },
+        "directOrderName": "Andrew Ogles",
+        "district": 5,
+        "firstName": "Andrew",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Ogles, Andrew",
+        "lastName": "Ogles",
+        "officialWebsiteUrl": "https://ogles.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Andrew Ogles",
+                "endDate": "2024-02-27T13:20:57Z",
+                "firstName": "Andrew",
+                "invertedOrderName": "Ogles, Andrew",
+                "lastName": "Ogles",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Andrew Ogles",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Andrew",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Ogles, Andrew",
+                "lastName": "Ogles",
+                "startDate": "2024-02-27T13:20:58Z"
+            },
+            {
+                "directOrderName": "Andrew Ogles",
+                "firstName": "Andrew",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Ogles, Andrew",
+                "lastName": "Ogles",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 201,
+            "url": "https://api.congress.gov/v3/member/O000175/sponsored-legislation"
+        },
+        "state": "Tennessee",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 5,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TN",
+                "stateName": "Tennessee"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 5,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TN",
+                "stateName": "Tennessee"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:19Z"
+    },
+    "request": {
+        "bioguideId": "o000175",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

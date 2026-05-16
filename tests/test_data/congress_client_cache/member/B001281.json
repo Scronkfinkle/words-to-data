@@ -1,0 +1,146 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2079 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-4324",
+            "zipCode": 20515
+        },
+        "bioguideId": "B001281",
+        "birthYear": "1950",
+        "cosponsoredLegislation": {
+            "count": 3185,
+            "url": "https://api.congress.gov/v3/member/B001281/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/b001281_200.jpg"
+        },
+        "directOrderName": "Joyce Beatty",
+        "district": 3,
+        "firstName": "Joyce",
+        "honorificName": "Mrs.",
+        "invertedOrderName": "Beatty, Joyce",
+        "lastName": "Beatty",
+        "officialWebsiteUrl": "https://beatty.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2013
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Joyce Beatty",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Joyce",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Beatty, Joyce",
+                "lastName": "Beatty",
+                "startDate": "2013-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Joyce Beatty",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Joyce",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Beatty, Joyce",
+                "lastName": "Beatty",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Joyce Beatty",
+                "firstName": "Joyce",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Beatty, Joyce",
+                "lastName": "Beatty",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 181,
+            "url": "https://api.congress.gov/v3/member/B001281/sponsored-legislation"
+        },
+        "state": "Ohio",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 3,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "OH",
+                "stateName": "Ohio"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 3,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "OH",
+                "stateName": "Ohio"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 3,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "OH",
+                "stateName": "Ohio"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 3,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "OH",
+                "stateName": "Ohio"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 3,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "OH",
+                "stateName": "Ohio"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 3,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "OH",
+                "stateName": "Ohio"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 3,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "OH",
+                "stateName": "Ohio"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:13Z"
+    },
+    "request": {
+        "bioguideId": "b001281",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

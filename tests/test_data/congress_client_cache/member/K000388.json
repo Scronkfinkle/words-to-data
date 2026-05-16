@@ -1,0 +1,127 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2243 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-4306",
+            "zipCode": 20515
+        },
+        "bioguideId": "K000388",
+        "birthYear": "1966",
+        "cosponsoredLegislation": {
+            "count": 1048,
+            "url": "https://api.congress.gov/v3/member/K000388/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Congressional Pictorial Directory",
+            "imageUrl": "https://www.congress.gov/img/member/116_rp_ms_1_kelly_trent_200.jpg"
+        },
+        "directOrderName": "Trent Kelly",
+        "district": 1,
+        "firstName": "Trent",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Kelly, Trent",
+        "lastName": "Kelly",
+        "officialWebsiteUrl": "https://trentkelly.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2015
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Trent Kelly",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Trent",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Kelly, Trent",
+                "lastName": "Kelly",
+                "startDate": "2015-06-09T00:00:00Z"
+            },
+            {
+                "directOrderName": "Trent Kelly",
+                "firstName": "Trent",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Kelly, Trent",
+                "lastName": "Kelly",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 67,
+            "url": "https://api.congress.gov/v3/member/K000388/sponsored-legislation"
+        },
+        "state": "Mississippi",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 1,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "MS",
+                "stateName": "Mississippi"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 1,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "MS",
+                "stateName": "Mississippi"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 1,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "MS",
+                "stateName": "Mississippi"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 1,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "MS",
+                "stateName": "Mississippi"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 1,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "MS",
+                "stateName": "Mississippi"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 1,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "MS",
+                "stateName": "Mississippi"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:14Z"
+    },
+    "request": {
+        "bioguideId": "k000388",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

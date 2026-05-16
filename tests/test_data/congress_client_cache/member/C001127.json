@@ -1,0 +1,117 @@
+{
+    "member": {
+        "bioguideId": "C001127",
+        "birthYear": "1979",
+        "cosponsoredLegislation": {
+            "count": 1292,
+            "url": "https://api.congress.gov/v3/member/C001127/cosponsored-legislation"
+        },
+        "currentMember": false,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/c001127_200.jpg"
+        },
+        "directOrderName": "Sheila Cherfilus-McCormick",
+        "district": 20,
+        "firstName": "Sheila",
+        "honorificName": "Mrs.",
+        "invertedOrderName": "Cherfilus-McCormick, Sheila",
+        "lastName": "Cherfilus-McCormick",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2022
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Sheila Cherfilus-McCormick",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Sheila",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Cherfilus-McCormick, Sheila",
+                "lastName": "Cherfilus-McCormick",
+                "startDate": "2022-01-18T05:00:00Z"
+            },
+            {
+                "directOrderName": "Sheila Cherfilus-McCormick",
+                "endDate": "2024-02-27T13:20:49Z",
+                "firstName": "Sheila",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Cherfilus-McCormick, Sheila",
+                "lastName": "Cherfilus-McCormick",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Sheila Cherfilus-McCormick",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Sheila",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Cherfilus-McCormick, Sheila",
+                "lastName": "Cherfilus-McCormick",
+                "startDate": "2024-02-27T13:20:50Z"
+            },
+            {
+                "directOrderName": "Sheila Cherfilus-McCormick",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Sheila",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Cherfilus-McCormick, Sheila",
+                "lastName": "Cherfilus-McCormick",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Sheila Cherfilus-McCormick",
+                "firstName": "Sheila",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Cherfilus-McCormick, Sheila",
+                "lastName": "Cherfilus-McCormick",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 45,
+            "url": "https://api.congress.gov/v3/member/C001127/sponsored-legislation"
+        },
+        "state": "Florida",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 20,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2022,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 20,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 20,
+                "endYear": 2026,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            }
+        ],
+        "updateDate": "2026-04-22T11:18:26Z"
+    },
+    "request": {
+        "bioguideId": "c001127",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

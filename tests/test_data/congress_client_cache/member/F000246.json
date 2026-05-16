@@ -1,0 +1,106 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2416 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-6673",
+            "zipCode": 20515
+        },
+        "bioguideId": "F000246",
+        "birthYear": "1967",
+        "cosponsoredLegislation": {
+            "count": 671,
+            "url": "https://api.congress.gov/v3/member/F000246/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/f000246_200.jpg"
+        },
+        "directOrderName": "Pat Fallon",
+        "district": 4,
+        "firstName": "Pat",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Fallon, Pat",
+        "lastName": "Fallon",
+        "officialWebsiteUrl": "https://fallon.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Pat Fallon",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Pat",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Fallon, Pat",
+                "lastName": "Fallon",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Pat Fallon",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Pat",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Fallon, Pat",
+                "lastName": "Fallon",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Pat Fallon",
+                "firstName": "Pat",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Fallon, Pat",
+                "lastName": "Fallon",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 62,
+            "url": "https://api.congress.gov/v3/member/F000246/sponsored-legislation"
+        },
+        "state": "Texas",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 4,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 4,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 4,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "f000246",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

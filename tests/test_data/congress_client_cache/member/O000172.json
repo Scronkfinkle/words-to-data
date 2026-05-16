@@ -1,0 +1,116 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "250 Cannon House Office Building",
+            "phoneNumber": "(202) 225-3965",
+            "zipCode": 20515
+        },
+        "bioguideId": "O000172",
+        "birthYear": "1989",
+        "cosponsoredLegislation": {
+            "count": 1622,
+            "url": "https://api.congress.gov/v3/member/O000172/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/o000172_200.jpg"
+        },
+        "directOrderName": "Alexandria Ocasio-Cortez",
+        "district": 14,
+        "firstName": "Alexandria",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Ocasio-Cortez, Alexandria",
+        "lastName": "Ocasio-Cortez",
+        "officialWebsiteUrl": "https://ocasio-cortez.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Alexandria Ocasio-Cortez",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Alexandria",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Ocasio-Cortez, Alexandria",
+                "lastName": "Ocasio-Cortez",
+                "startDate": "2019-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Alexandria Ocasio-Cortez",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Alexandria",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Ocasio-Cortez, Alexandria",
+                "lastName": "Ocasio-Cortez",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Alexandria Ocasio-Cortez",
+                "firstName": "Alexandria",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Ocasio-Cortez, Alexandria",
+                "lastName": "Ocasio-Cortez",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 71,
+            "url": "https://api.congress.gov/v3/member/O000172/sponsored-legislation"
+        },
+        "state": "New York",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 14,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 14,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 14,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 14,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NY",
+                "stateName": "New York"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:15Z"
+    },
+    "request": {
+        "bioguideId": "o000172",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

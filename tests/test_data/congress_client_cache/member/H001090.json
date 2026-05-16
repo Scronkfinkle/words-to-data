@@ -1,0 +1,107 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "209 Cannon House Office Building",
+            "phoneNumber": "(202) 225-4540",
+            "zipCode": 20515
+        },
+        "bioguideId": "H001090",
+        "birthYear": "1986",
+        "cosponsoredLegislation": {
+            "count": 1887,
+            "url": "https://api.congress.gov/v3/member/H001090/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/h001090_200.jpg"
+        },
+        "directOrderName": "Josh Harder",
+        "district": 9,
+        "firstName": "Josh",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Harder, Josh",
+        "lastName": "Harder",
+        "officialWebsiteUrl": "https://harder.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Josh Harder",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Josh",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Harder, Josh",
+                "lastName": "Harder",
+                "startDate": "2019-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Josh Harder",
+                "firstName": "Josh",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Harder, Josh",
+                "lastName": "Harder",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 153,
+            "url": "https://api.congress.gov/v3/member/H001090/sponsored-legislation"
+        },
+        "state": "California",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 10,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 10,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 9,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 9,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "CA",
+                "stateName": "California"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:17Z"
+    },
+    "request": {
+        "bioguideId": "h001090",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

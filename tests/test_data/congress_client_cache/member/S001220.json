@@ -1,0 +1,109 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "449 Cannon House Office Building",
+            "phoneNumber": "(202) 225-4801",
+            "zipCode": 20515
+        },
+        "bioguideId": "S001220",
+        "birthYear": "1970",
+        "cosponsoredLegislation": {
+            "count": 212,
+            "url": "https://api.congress.gov/v3/member/S001220/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/s001220_200.jpg"
+        },
+        "directOrderName": "Dale W. Strong",
+        "district": 5,
+        "firstName": "Dale",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Strong, Dale W.",
+        "lastName": "Strong",
+        "middleName": "W.",
+        "officialWebsiteUrl": "https://strong.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Dale W. Strong",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Dale",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Strong, Dale W.",
+                "lastName": "Strong",
+                "middleName": "W.",
+                "startDate": "2024-02-27T13:20:47Z"
+            },
+            {
+                "directOrderName": "Dale W. Strong",
+                "firstName": "Dale",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Strong, Dale W.",
+                "lastName": "Strong",
+                "middleName": "W.",
+                "startDate": "2025-01-17T05:00:00Z"
+            },
+            {
+                "directOrderName": "Dale W. Strong",
+                "endDate": "2024-02-27T13:20:46Z",
+                "firstName": "Dale",
+                "invertedOrderName": "Strong, Dale W.",
+                "lastName": "Strong",
+                "middleName": "W.",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Dale W. Strong",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Dale",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Strong, Dale W.",
+                "lastName": "Strong",
+                "middleName": "W.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 28,
+            "url": "https://api.congress.gov/v3/member/S001220/sponsored-legislation"
+        },
+        "state": "Alabama",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 5,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "AL",
+                "stateName": "Alabama"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 5,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "AL",
+                "stateName": "Alabama"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:17Z"
+    },
+    "request": {
+        "bioguideId": "s001220",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

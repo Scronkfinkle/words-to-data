@@ -1,0 +1,229 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2310 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-3461",
+            "zipCode": 20515
+        },
+        "bioguideId": "M001137",
+        "birthYear": "1953",
+        "cosponsoredLegislation": {
+            "count": 5831,
+            "url": "https://api.congress.gov/v3/member/M001137/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image, Congressional Pictorial Directory, 109th.",
+            "imageUrl": "https://www.congress.gov/img/member/m001137_200.jpg"
+        },
+        "directOrderName": "Gregory W. Meeks",
+        "district": 5,
+        "firstName": "Gregory",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Meeks, Gregory W.",
+        "lastName": "Meeks",
+        "middleName": "W.",
+        "officialWebsiteUrl": "https://meeks.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 1997
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Gregory W. Meeks",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Gregory",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Meeks, Gregory W.",
+                "lastName": "Meeks",
+                "middleName": "W.",
+                "startDate": "2024-02-27T13:20:56Z"
+            },
+            {
+                "directOrderName": "Gregory W. Meeks",
+                "endDate": "2024-02-27T13:20:55Z",
+                "firstName": "GREGORY",
+                "invertedOrderName": "Meeks, Gregory W.",
+                "lastName": "MEEKS",
+                "middleName": "W.",
+                "startDate": "1997-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Gregory W. Meeks",
+                "firstName": "Gregory",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Meeks, Gregory W.",
+                "lastName": "Meeks",
+                "middleName": "W.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 243,
+            "url": "https://api.congress.gov/v3/member/M001137/sponsored-legislation"
+        },
+        "state": "New York",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 105,
+                "district": 6,
+                "endYear": 1999,
+                "memberType": "Representative",
+                "startYear": 1997,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 106,
+                "district": 6,
+                "endYear": 2001,
+                "memberType": "Representative",
+                "startYear": 1999,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 107,
+                "district": 6,
+                "endYear": 2003,
+                "memberType": "Representative",
+                "startYear": 2001,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 108,
+                "district": 6,
+                "endYear": 2005,
+                "memberType": "Representative",
+                "startYear": 2003,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 109,
+                "district": 6,
+                "endYear": 2007,
+                "memberType": "Representative",
+                "startYear": 2005,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 110,
+                "district": 6,
+                "endYear": 2009,
+                "memberType": "Representative",
+                "startYear": 2007,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 111,
+                "district": 6,
+                "endYear": 2011,
+                "memberType": "Representative",
+                "startYear": 2009,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 6,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 5,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 5,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 5,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 5,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 5,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 5,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 5,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NY",
+                "stateName": "New York"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:14Z"
+    },
+    "request": {
+        "bioguideId": "m001137",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1081,13 +1081,30 @@ class Dataset:
         ...
 
     @property
-    def members(self) -> list[Member]:
-        """All Congress members."""
+    def members(self) -> dict[str, Member]:
+        """Congress members by bioguide ID."""
         ...
 
     @property
-    def sponsors(self) -> list[SponsorInfo]:
-        """All sponsor info records."""
+    def sponsors(self) -> dict[str, SponsorInfo]:
+        """Sponsor info by bill ID."""
+        ...
+
+    def add_bill_votes(self, votes: BillVotes) -> None:
+        """Add roll call votes for a bill."""
+        ...
+
+    def get_bill_votes(self, bill_id: str) -> BillVotes | None:
+        """Get roll call votes for a bill."""
+        ...
+
+    def votes_by_member(self, bioguide_id: str) -> list[tuple[HouseRollCall, VotePosition]]:
+        """Get all roll calls where a member voted, with their position."""
+        ...
+
+    @property
+    def all_bill_votes(self) -> dict[str, BillVotes]:
+        """Roll call votes by bill ID."""
         ...
 
     def load_bill_download(self, download: BillDownload) -> str:
@@ -1292,6 +1309,95 @@ class CongressClient:
             BillDownload containing XML, JSON, and member data
         """
         ...
+
+
+# ============================================================================
+# Vote types
+# ============================================================================
+
+class VotePosition:
+    """How a member voted on a roll call"""
+
+    @staticmethod
+    def yea() -> VotePosition: ...
+
+    @staticmethod
+    def nay() -> VotePosition: ...
+
+    @staticmethod
+    def not_voting() -> VotePosition: ...
+
+    @staticmethod
+    def present() -> VotePosition: ...
+
+    def is_yea(self) -> bool: ...
+    def is_nay(self) -> bool: ...
+    def is_not_voting(self) -> bool: ...
+    def is_present(self) -> bool: ...
+    def name(self) -> str: ...
+
+
+class MemberVote:
+    """A single member's vote on a roll call"""
+
+    def __init__(self, bioguide_id: str, position: VotePosition) -> None: ...
+
+    @property
+    def bioguide_id(self) -> str: ...
+
+    @property
+    def position(self) -> VotePosition: ...
+
+
+class HouseRollCall:
+    """A House roll call vote with all member votes"""
+
+    @property
+    def congress(self) -> int: ...
+
+    @property
+    def session(self) -> int: ...
+
+    @property
+    def roll_number(self) -> int: ...
+
+    @property
+    def date(self) -> str: ...
+
+    @property
+    def question(self) -> str: ...
+
+    @property
+    def result(self) -> str: ...
+
+    @property
+    def yea_count(self) -> int: ...
+
+    @property
+    def nay_count(self) -> int: ...
+
+    @property
+    def not_voting_count(self) -> int: ...
+
+    @property
+    def present_count(self) -> int: ...
+
+    @property
+    def member_votes(self) -> list[MemberVote]: ...
+
+    def get_vote(self, bioguide_id: str) -> VotePosition | None:
+        """Get a member's vote on this roll call."""
+        ...
+
+
+class BillVotes:
+    """All roll call votes for a bill"""
+
+    @property
+    def bill_id(self) -> str: ...
+
+    @property
+    def roll_calls(self) -> list[HouseRollCall]: ...
 
 
 __version__: str

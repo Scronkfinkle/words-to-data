@@ -1,0 +1,100 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "251 Cannon House Office Building",
+            "phoneNumber": "(202) 225-5361",
+            "zipCode": 20515
+        },
+        "bioguideId": "K000398",
+        "birthYear": "1968",
+        "cosponsoredLegislation": {
+            "count": 670,
+            "url": "https://api.congress.gov/v3/member/K000398/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/k000398_200.jpg"
+        },
+        "directOrderName": "Thomas H. Kean, Jr.",
+        "district": 7,
+        "firstName": "Thomas",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Kean, Thomas H.",
+        "lastName": "Kean",
+        "middleName": "H.",
+        "officialWebsiteUrl": "https://kean.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Thomas H. Kean, Jr.",
+                "endDate": "2024-02-27T13:20:54Z",
+                "firstName": "Thomas",
+                "invertedOrderName": "Kean, Thomas H.",
+                "lastName": "Kean",
+                "middleName": "H.",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Thomas H. Kean, Jr.",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Thomas",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Kean, Thomas H.",
+                "lastName": "Kean",
+                "middleName": "H.",
+                "startDate": "2024-02-27T13:20:55Z"
+            },
+            {
+                "directOrderName": "Thomas H. Kean, Jr.",
+                "firstName": "Thomas",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Kean, Thomas H.",
+                "lastName": "Kean",
+                "middleName": "H.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 53,
+            "url": "https://api.congress.gov/v3/member/K000398/sponsored-legislation"
+        },
+        "state": "New Jersey",
+        "suffixName": "Jr.",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 7,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 7,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "k000398",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

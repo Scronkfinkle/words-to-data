@@ -1,0 +1,120 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2402 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-2132",
+            "zipCode": 20515
+        },
+        "bioguideId": "B000740",
+        "birthYear": "1973",
+        "cosponsoredLegislation": {
+            "count": 781,
+            "url": "https://api.congress.gov/v3/member/B000740/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/b000740_200.jpg"
+        },
+        "directOrderName": "Stephanie I. Bice",
+        "district": 5,
+        "firstName": "Stephanie",
+        "honorificName": "Mrs.",
+        "invertedOrderName": "Bice, Stephanie I.",
+        "lastName": "Bice",
+        "middleName": "I.",
+        "officialWebsiteUrl": "https://bice.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Stephanie I. Bice",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Stephanie",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Bice, Stephanie I.",
+                "lastName": "Bice",
+                "middleName": "I.",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Stephanie I. Bice",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Stephanie",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Bice, Stephanie I.",
+                "lastName": "Bice",
+                "middleName": "I.",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Stephanie I. Bice",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Stephanie",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Bice, Stephanie I.",
+                "lastName": "Bice",
+                "middleName": "I.",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Stephanie I. Bice",
+                "firstName": "Stephanie",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Bice, Stephanie I.",
+                "lastName": "Bice",
+                "middleName": "I.",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 83,
+            "url": "https://api.congress.gov/v3/member/B000740/sponsored-legislation"
+        },
+        "state": "Oklahoma",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 5,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "OK",
+                "stateName": "Oklahoma"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 5,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "OK",
+                "stateName": "Oklahoma"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 5,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "OK",
+                "stateName": "Oklahoma"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "b000740",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

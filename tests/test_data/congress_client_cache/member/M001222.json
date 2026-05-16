@@ -1,0 +1,99 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "143 Cannon House Office Building",
+            "phoneNumber": "(202) 225-3876",
+            "zipCode": 20515
+        },
+        "bioguideId": "M001222",
+        "birthYear": "1988",
+        "cosponsoredLegislation": {
+            "count": 434,
+            "url": "https://api.congress.gov/v3/member/M001222/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/680908fb6c2e6631263de71f_200.jpg"
+        },
+        "directOrderName": "Max L. Miller",
+        "district": 7,
+        "firstName": "Max",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Miller, Max L.",
+        "lastName": "Miller",
+        "middleName": "L.",
+        "officialWebsiteUrl": "https://maxmiller.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Max L. Miller",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Max",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Miller, Max L.",
+                "lastName": "Miller",
+                "middleName": "L.",
+                "startDate": "2024-02-27T13:20:57Z"
+            },
+            {
+                "directOrderName": "Max L. Miller",
+                "endDate": "2024-02-27T13:20:56Z",
+                "firstName": "Max",
+                "invertedOrderName": "Miller, Max L.",
+                "lastName": "Miller",
+                "middleName": "L.",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Max L. Miller",
+                "firstName": "Max",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Miller, Max L.",
+                "lastName": "Miller",
+                "middleName": "L.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 43,
+            "url": "https://api.congress.gov/v3/member/M001222/sponsored-legislation"
+        },
+        "state": "Ohio",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 7,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "OH",
+                "stateName": "Ohio"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 7,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "OH",
+                "stateName": "Ohio"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "m001222",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

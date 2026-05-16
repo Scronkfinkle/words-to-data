@@ -1,0 +1,105 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "322 Cannon House Office Building",
+            "phoneNumber": "(202) 225-2365",
+            "zipCode": 20515
+        },
+        "bioguideId": "V000136",
+        "birthYear": "1984",
+        "cosponsoredLegislation": {
+            "count": 545,
+            "url": "https://api.congress.gov/v3/member/V000136/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/v000136_200.jpg"
+        },
+        "directOrderName": "Gabe Vasquez",
+        "district": 2,
+        "firstName": "Gabe",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Vasquez, Gabe",
+        "lastName": "Vasquez",
+        "nickName": "Gabe",
+        "officialWebsiteUrl": "https://vasquez.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Gabe Vasquez",
+                "endDate": "2024-02-27T13:20:55Z",
+                "firstName": "Gabe",
+                "invertedOrderName": "Vasquez, Gabe",
+                "lastName": "Vasquez",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Gabe Vasquez",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Gabe",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Vasquez, Gabe",
+                "lastName": "Vasquez",
+                "startDate": "2024-02-27T13:20:56Z"
+            },
+            {
+                "directOrderName": "Gabe Vasquez",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Gabe",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Vasquez, Gabe",
+                "lastName": "Vasquez",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Gabe Vasquez",
+                "firstName": "Gabe",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Vasquez, Gabe",
+                "lastName": "Vasquez",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 60,
+            "url": "https://api.congress.gov/v3/member/V000136/sponsored-legislation"
+        },
+        "state": "New Mexico",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 2,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NM",
+                "stateName": "New Mexico"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 2,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NM",
+                "stateName": "New Mexico"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "v000136",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,104 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1610 Longworth House Office Building",
+            "phoneNumber": "(202) 225-8699",
+            "zipCode": 20515
+        },
+        "bioguideId": "I000058",
+        "birthYear": "1961",
+        "cosponsoredLegislation": {
+            "count": 613,
+            "url": "https://api.congress.gov/v3/member/I000058/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/i000058_200.jpg"
+        },
+        "directOrderName": "Glenn Ivey",
+        "district": 4,
+        "firstName": "Glenn",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Ivey, Glenn",
+        "lastName": "Ivey",
+        "officialWebsiteUrl": "https://ivey.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Glenn Ivey",
+                "endDate": "2024-02-27T13:20:52Z",
+                "firstName": "Glenn",
+                "invertedOrderName": "Ivey, Glenn",
+                "lastName": "Ivey",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Glenn Ivey",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Glenn",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Ivey, Glenn",
+                "lastName": "Ivey",
+                "startDate": "2024-02-27T13:20:53Z"
+            },
+            {
+                "directOrderName": "Glenn Ivey",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Glenn",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Ivey, Glenn",
+                "lastName": "Ivey",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Glenn Ivey",
+                "firstName": "Glenn",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Ivey, Glenn",
+                "lastName": "Ivey",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 10,
+            "url": "https://api.congress.gov/v3/member/I000058/sponsored-legislation"
+        },
+        "state": "Maryland",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 4,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 4,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "i000058",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

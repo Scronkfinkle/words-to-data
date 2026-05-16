@@ -1,0 +1,137 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2350 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-1621",
+            "zipCode": 20515
+        },
+        "bioguideId": "W000812",
+        "birthYear": "1962",
+        "cosponsoredLegislation": {
+            "count": 1613,
+            "url": "https://api.congress.gov/v3/member/W000812/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/695fc654ddd5f76cbbad2f67_200.jpg"
+        },
+        "directOrderName": "Ann Wagner",
+        "district": 2,
+        "firstName": "Ann",
+        "honorificName": "Mrs.",
+        "invertedOrderName": "Wagner, Ann",
+        "lastName": "Wagner",
+        "officialWebsiteUrl": "https://wagner.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2013
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Ann Wagner",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Ann",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Wagner, Ann",
+                "lastName": "Wagner",
+                "startDate": "2013-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Ann Wagner",
+                "firstName": "Ann",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Wagner, Ann",
+                "lastName": "Wagner",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 133,
+            "url": "https://api.congress.gov/v3/member/W000812/sponsored-legislation"
+        },
+        "state": "Missouri",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 2,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "MO",
+                "stateName": "Missouri"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 2,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "MO",
+                "stateName": "Missouri"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 2,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "MO",
+                "stateName": "Missouri"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 2,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "MO",
+                "stateName": "Missouri"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 2,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "MO",
+                "stateName": "Missouri"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 2,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "MO",
+                "stateName": "Missouri"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 2,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "MO",
+                "stateName": "Missouri"
+            }
+        ],
+        "updateDate": "2026-01-08T19:47:12Z"
+    },
+    "request": {
+        "bioguideId": "w000812",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

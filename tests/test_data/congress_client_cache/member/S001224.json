@@ -1,0 +1,96 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1030 Longworth House Office Building",
+            "phoneNumber": "(202) 225-4201",
+            "zipCode": 20515
+        },
+        "bioguideId": "S001224",
+        "birthYear": "1953",
+        "cosponsoredLegislation": {
+            "count": 584,
+            "url": "https://api.congress.gov/v3/member/S001224/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/s001224_200.jpg"
+        },
+        "directOrderName": "Keith Self",
+        "district": 3,
+        "firstName": "Keith",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Self, Keith",
+        "lastName": "Self",
+        "officialWebsiteUrl": "https://keithself.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Keith Self",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Keith",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Self, Keith",
+                "lastName": "Self",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Keith Self",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Keith",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Self, Keith",
+                "lastName": "Self",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Keith Self",
+                "firstName": "Keith",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Self, Keith",
+                "lastName": "Self",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 83,
+            "url": "https://api.congress.gov/v3/member/S001224/sponsored-legislation"
+        },
+        "state": "Texas",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 3,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 3,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:19Z"
+    },
+    "request": {
+        "bioguideId": "s001224",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

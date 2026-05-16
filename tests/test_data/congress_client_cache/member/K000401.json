@@ -1,0 +1,102 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2445 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-2523",
+            "zipCode": 20515
+        },
+        "bioguideId": "K000401",
+        "birthYear": "1985",
+        "cosponsoredLegislation": {
+            "count": 275,
+            "url": "https://api.congress.gov/v3/member/K000401/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/k000401_200.jpg"
+        },
+        "directOrderName": "Kevin Kiley",
+        "district": 3,
+        "firstName": "Kevin",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Kiley, Kevin",
+        "lastName": "Kiley",
+        "officialWebsiteUrl": "https://kiley.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "I",
+                "partyName": "Independent",
+                "startYear": 2026
+            },
+            {
+                "endYear": 2026,
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Kevin Kiley",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Kevin",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Kiley, Kevin",
+                "lastName": "Kiley",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Kevin Kiley",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Kevin",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Kiley, Kevin",
+                "lastName": "Kiley",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Kevin Kiley",
+                "firstName": "Kevin",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Kiley, Kevin",
+                "lastName": "Kiley",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 43,
+            "url": "https://api.congress.gov/v3/member/K000401/sponsored-legislation"
+        },
+        "state": "California",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 3,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 3,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "CA",
+                "stateName": "California"
+            }
+        ],
+        "updateDate": "2026-03-20T07:30:24Z"
+    },
+    "request": {
+        "bioguideId": "k000401",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

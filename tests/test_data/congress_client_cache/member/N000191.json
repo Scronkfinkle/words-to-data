@@ -1,0 +1,127 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2400 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-2161",
+            "zipCode": 20515
+        },
+        "bioguideId": "N000191",
+        "birthYear": "1984",
+        "cosponsoredLegislation": {
+            "count": 2692,
+            "url": "https://api.congress.gov/v3/member/N000191/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/n000191_200.jpg"
+        },
+        "directOrderName": "Joe Neguse",
+        "district": 2,
+        "firstName": "Joe",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Neguse, Joe",
+        "lastName": "Neguse",
+        "leadership": [
+            {
+                "congress": 118,
+                "type": "Assistant Democratic Leader"
+            },
+            {
+                "congress": 119,
+                "current": true,
+                "type": "Assistant Leader"
+            }
+        ],
+        "officialWebsiteUrl": "https://neguse.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Joe Neguse",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Joe",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Neguse, Joe",
+                "lastName": "Neguse",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Joe Neguse",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Joe",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Neguse, Joe",
+                "lastName": "Neguse",
+                "startDate": "2019-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Joe Neguse",
+                "firstName": "Joe",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Neguse, Joe",
+                "lastName": "Neguse",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 348,
+            "url": "https://api.congress.gov/v3/member/N000191/sponsored-legislation"
+        },
+        "state": "Colorado",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 2,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "CO",
+                "stateName": "Colorado"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 2,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "CO",
+                "stateName": "Colorado"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 2,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "CO",
+                "stateName": "Colorado"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 2,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "CO",
+                "stateName": "Colorado"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:15Z"
+    },
+    "request": {
+        "bioguideId": "n000191",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

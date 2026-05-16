@@ -1,0 +1,115 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "142 Cannon House Office Building",
+            "phoneNumber": "(202) 225-8490",
+            "zipCode": 20515
+        },
+        "bioguideId": "L000595",
+        "birthYear": "1981",
+        "cosponsoredLegislation": {
+            "count": 443,
+            "url": "https://api.congress.gov/v3/member/L000595/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/l000595_200.jpg"
+        },
+        "directOrderName": "Julia Letlow",
+        "district": 5,
+        "firstName": "Julia",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Letlow, Julia",
+        "lastName": "Letlow",
+        "officialWebsiteUrl": "https://letlow.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Julia Letlow",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Julia",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Letlow, Julia",
+                "lastName": "Letlow",
+                "startDate": "2021-04-13T16:00:00Z"
+            },
+            {
+                "directOrderName": "Julia Letlow",
+                "endDate": "2024-02-27T13:20:51Z",
+                "firstName": "Julia",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Letlow, Julia",
+                "lastName": "Letlow",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Julia Letlow",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Julia",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Letlow, Julia",
+                "lastName": "Letlow",
+                "startDate": "2024-02-27T13:20:52Z"
+            },
+            {
+                "directOrderName": "Julia Letlow",
+                "firstName": "Julia",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Letlow, Julia",
+                "lastName": "Letlow",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 30,
+            "url": "https://api.congress.gov/v3/member/L000595/sponsored-legislation"
+        },
+        "state": "Louisiana",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 5,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "LA",
+                "stateName": "Louisiana"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 5,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "LA",
+                "stateName": "Louisiana"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 5,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "LA",
+                "stateName": "Louisiana"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:17Z"
+    },
+    "request": {
+        "bioguideId": "l000595",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

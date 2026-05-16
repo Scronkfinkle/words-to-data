@@ -1,0 +1,99 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "153 Cannon House Office Building",
+            "phoneNumber": "(202) 225-5765",
+            "zipCode": 20515
+        },
+        "bioguideId": "B001323",
+        "birthYear": "1977",
+        "cosponsoredLegislation": {
+            "count": 176,
+            "url": "https://api.congress.gov/v3/member/B001323/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/6774217e0b34857ecc909040_200.jpg"
+        },
+        "directOrderName": "Nicholas J. Begich III",
+        "firstName": "Nicholas",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Begich, Nicholas J.",
+        "lastName": "Begich",
+        "middleName": "J.",
+        "officialWebsiteUrl": "https://begich.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2025
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Nicholas Begich",
+                "endDate": "2025-04-28T13:04:12Z",
+                "firstName": "Nicholas",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Begich, Nicholas",
+                "lastName": "Begich",
+                "middleName": "J.",
+                "startDate": "2025-01-17T05:00:00Z"
+            },
+            {
+                "directOrderName": "Nicholas Begich",
+                "endDate": "2025-01-10T17:36:18Z",
+                "firstName": "Nicholas",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Begich, Nicholas",
+                "lastName": "Begich",
+                "middleName": "J.",
+                "startDate": "2025-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Nicholas Begich",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Nicholas",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Begich, Nicholas",
+                "lastName": "Begich",
+                "middleName": "J.",
+                "startDate": "2025-01-10T17:36:19Z"
+            },
+            {
+                "directOrderName": "Nicholas J. Begich III",
+                "firstName": "Nicholas",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Begich, Nicholas J.",
+                "lastName": "Begich",
+                "middleName": "J.",
+                "startDate": "2025-04-28T13:04:13Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 33,
+            "url": "https://api.congress.gov/v3/member/B001323/sponsored-legislation"
+        },
+        "state": "Alaska",
+        "suffixName": "III",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "AK",
+                "stateName": "Alaska"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:12Z"
+    },
+    "request": {
+        "bioguideId": "b001323",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}
