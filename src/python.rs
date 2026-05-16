@@ -1377,11 +1377,27 @@ impl Dataset {
     }
 
     #[getter]
-    fn bills(&self) -> Vec<Bill> {
+    fn bills(&self) -> std::collections::HashMap<String, Bill> {
         self.inner
             .bills
             .iter()
-            .map(|b| Bill::from(b.clone()))
+            .map(|(k, v)| (k.clone(), Bill::from(v.clone())))
+            .collect()
+    }
+
+    #[getter]
+    fn diff_annotations(
+        &self,
+    ) -> std::collections::HashMap<(String, String), Vec<ChangeAnnotation>> {
+        self.inner
+            .diff_annotations
+            .iter()
+            .map(|((from, to), annotations)| {
+                (
+                    (from.clone(), to.clone()),
+                    annotations.iter().map(ChangeAnnotation::from).collect(),
+                )
+            })
             .collect()
     }
 
