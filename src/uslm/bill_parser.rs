@@ -101,7 +101,7 @@ pub fn parse_bill_amendments_from_str(bill_id: &str, xml_str: &str) -> Result<Bi
 /// ```
 /// use words_to_data::uslm::bill_parser::parse_bill_amendments;
 ///
-/// let bill = parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml").unwrap();
+/// let bill = parse_bill_amendments("119-21", "tests/test_data/congress_client_cache/bill/119/hr/1/public_law.xml").unwrap();
 /// assert_eq!(bill.bill_id, "119-21");
 /// assert!(!bill.amendments.is_empty());
 /// ```

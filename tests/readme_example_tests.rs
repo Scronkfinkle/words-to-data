@@ -8,6 +8,8 @@ use words_to_data::{
     uslm::bill_parser::parse_bill_amendments,
 };
 
+const PL_XML_PATH: &str = "tests/test_data/congress_client_cache/bill/119/hr/1/public_law.xml";
+
 /// Tests the Dataset Workflow example from README.md Quick Start section.
 /// This is the primary example showing the full workflow.
 #[test]
@@ -41,8 +43,7 @@ fn readme_example_dataset_workflow() {
         .expect("Failed to add new version");
 
     // Add bill
-    let bill = parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml")
-        .expect("Failed to parse bill");
+    let bill = parse_bill_amendments("119-21", PL_XML_PATH).expect("Failed to parse bill");
     dataset.add_bill(bill);
 
     // Compute diff
@@ -103,8 +104,7 @@ fn readme_example_dataset_workflow_results() {
         )
         .unwrap();
 
-    let bill = parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml")
-        .unwrap();
+    let bill = parse_bill_amendments("119-21", PL_XML_PATH).unwrap();
     dataset.add_bill(bill);
 
     // Verify versions added

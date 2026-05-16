@@ -11,6 +11,7 @@ from words_to_data import (
     TextChange,
 )
 
+PL_XML_PATH = "tests/test_data/congress_client_cache/bill/119/hr/1/public_law.xml"
 
 def test_load_uslm_folder():
     result = load_uslm_folder("tests/test_data/usc/2025-07-30", "2025-07-30")
@@ -55,7 +56,7 @@ def test_diffs():
 
 def test_bill_parsing():
     # Parse bill amendments
-    bill = parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml")
+    bill = parse_bill_amendments("119-21", PL_XML_PATH)
 
     # Validate Bill
     assert isinstance(bill, Bill)
@@ -121,7 +122,7 @@ def test_to_json_methods():
     assert "value" in parsed_text
 
     # Test Bill.to_json() and nested types
-    bill = parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml")
+    bill = parse_bill_amendments("119-21", PL_XML_PATH)
     bill_json = bill.to_json()
     assert isinstance(bill_json, str)
     parsed_bill = json.loads(bill_json)
@@ -156,7 +157,7 @@ def test_to_dict_methods():
     assert parsed == d
 
     # Test BillAmendment.to_dict()
-    bill = parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml")
+    bill = parse_bill_amendments("119-21", PL_XML_PATH)
     amendment = next(iter(bill.amendments.values()))
     amendment_dict = amendment.to_dict()
     assert isinstance(amendment_dict, dict)
@@ -225,7 +226,7 @@ def test_from_json_roundtrip():
     assert restored_text.tag == text_change.tag
 
     # Test Bill round-trip
-    bill = parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml")
+    bill = parse_bill_amendments("119-21", PL_XML_PATH)
     bill_json = bill.to_json()
     restored_bill = Bill.from_json(bill_json)
     assert isinstance(restored_bill, Bill)
@@ -313,7 +314,7 @@ def test_repr_methods():
     assert r.startswith("TextChange(")
     assert len(r) < 200
 
-    data = parse_bill_amendments("119-hr-1","tests/test_data/bills/119-hr-1/bill_119_hr_1.xml")
+    data = parse_bill_amendments("119-hr-1",PL_XML_PATH)
     first_amendment = next(iter(data.amendments.values()))
     assert repr(first_amendment).startswith("BillAmendment(")
 

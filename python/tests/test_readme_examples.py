@@ -9,6 +9,8 @@ import tempfile
 import os
 from words_to_data import Dataset, DatasetMetadata, parse_bill_amendments
 
+PL_XML_PATH = "tests/test_data/congress_client_cache/bill/119/hr/1/public_law.xml"
+
 
 def test_readme_example_dataset_workflow():
     """
@@ -37,7 +39,7 @@ def test_readme_example_dataset_workflow():
 
     # Add bill
     bill = parse_bill_amendments(
-        "119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml"
+        "119-21", PL_XML_PATH
     )
     dataset.add_bill(bill)
 
@@ -89,7 +91,7 @@ def test_readme_example_dataset_workflow_results():
     )
 
     bill = parse_bill_amendments(
-        "119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml"
+        "119-21", PL_XML_PATH
     )
     dataset.add_bill(bill)
 

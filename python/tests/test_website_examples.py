@@ -15,6 +15,8 @@ from words_to_data import parse_uslm_xml, compute_diff, parse_bill_amendments, D
 # https://wordstodata.com/#examples (Example 1)
 # =============================================================================
 
+PL_XML_PATH = "tests/test_data/congress_client_cache/bill/119/hr/1/public_law.xml"
+
 
 def test_website_example_parse_usc_document():
     """
@@ -130,7 +132,7 @@ def test_website_example_extract_amendments():
     If this fails, update the "Extract Amendments from a Bill" section in index.html.
     """
     # Code from website example
-    data = parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml")
+    data = parse_bill_amendments("119-21", PL_XML_PATH)
 
     # Verify bill_id matches website (shows "119-21")
     assert data.bill_id == "119-21", (
@@ -152,7 +154,7 @@ def test_website_example_amendment_structure():
     Tests that amendments have the structure shown in the website example.
     If this fails, update the amendment output section in index.html.
     """
-    data = parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml")
+    data = parse_bill_amendments("119-21", PL_XML_PATH)
 
     # Website shows action_types field for each amendment
     for amendment in data.amendments.values():
@@ -177,7 +179,7 @@ def test_website_example_amendment_output_format():
           USC sections modified: 1
           Actions: [Amend, Delete, Insert]
     """
-    data = parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml")
+    data = parse_bill_amendments("119-21", PL_XML_PATH)
 
     # The website example shows iterating over amendments
     for amendment in list(data.amendments.values())[:5]:  # Just check first 5
@@ -226,7 +228,7 @@ def test_website_example_dataset_workflow():
     assert len(dataset.versions) == 2
 
     # Add bill
-    bill = parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml")
+    bill = parse_bill_amendments("119-21", PL_XML_PATH)
     dataset.add_bill(bill)
 
     # Compute diff via dataset

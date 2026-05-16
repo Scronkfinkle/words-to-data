@@ -1,5 +1,4 @@
 use words_to_data::uslm::bill_parser::{parse_bill_amendments, parse_bill_amendments_from_str};
-
 const PL_XML_PATH: &str = "tests/test_data/congress_client_cache/bill/119/hr/1/public_law.xml";
 
 #[test]

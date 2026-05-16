@@ -24,6 +24,8 @@ from words_to_data import (
 #     download = client.download_bill("119-hr-1")
 #     assert False
 
+PL_XML_PATH = "tests/test_data/congress_client_cache/bill/119/hr/1/public_law.xml"
+
 
 def test_add_version():
     metadata = DatasetMetadata(
@@ -127,7 +129,7 @@ def test_add_and_query_bills():
     )
     dataset = Dataset(metadata)
 
-    bill = parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml")
+    bill = parse_bill_amendments("119-21", PL_XML_PATH)
     dataset.add_bill(bill)
 
     assert len(dataset.bills) == 1
