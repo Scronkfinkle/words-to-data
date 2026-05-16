@@ -825,8 +825,8 @@ class Dataset:
         ...
 
     @property
-    def bills(self) -> list[Bill]:
-        """Bills that caused changes in this dataset"""
+    def bills(self) -> dict[str, Bill]:
+        """Bills that caused changes in this dataset, keyed by bill_id"""
         ...
 
     def get_annotations(

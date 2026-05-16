@@ -66,7 +66,8 @@ pub struct Dataset {
     pub versions: Vec<VersionSnapshot>,
 
     /// Bills that caused changes in this dataset
-    pub bills: Vec<Bill>,
+    #[serde_as(as = "Vec<(_, _)>")]
+    pub bills: HashMap<String, Bill>,
 
     /// Annotations per version-pair
     #[serde_as(as = "Vec<(_, _)>")]
@@ -94,7 +95,7 @@ impl Dataset {
         Dataset {
             metadata,
             versions: Vec::new(),
-            bills: Vec::new(),
+            bills: HashMap::new(),
             diff_annotations: HashMap::new(),
             members: HashMap::new(),
             sponsors: HashMap::new(),
@@ -166,16 +167,16 @@ impl Dataset {
 
     /// Add a bill to the dataset
     pub fn add_bill(&mut self, bill: Bill) {
-        self.bills.push(bill);
+        self.bills.insert(bill.bill_id.clone(), bill);
     }
 
     /// Get a bill by its ID
     pub fn get_bill(&self, bill_id: &str) -> Option<&Bill> {
-        self.bills.iter().find(|b| b.bill_id == bill_id)
+        self.bills.get(bill_id)
     }
 
     pub fn add_changes_to_amendment(&mut self, amendment_id: &str, bill_diff: &BillDiff) {
-        for bill in self.bills.iter_mut() {
+        for bill in self.bills.values_mut() {
             if let Some(amendment) = bill.amendments.get_mut(amendment_id) {
                 amendment.changes.push(bill_diff.clone());
                 return;
