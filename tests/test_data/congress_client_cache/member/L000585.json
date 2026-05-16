@@ -1,0 +1,136 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "503 Cannon House Office Building",
+            "phoneNumber": "(202) 225-6201",
+            "zipCode": 20515
+        },
+        "bioguideId": "L000585",
+        "birthYear": "1968",
+        "cosponsoredLegislation": {
+            "count": 1071,
+            "url": "https://api.congress.gov/v3/member/L000585/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Congressional Pictorial Directory",
+            "imageUrl": "https://www.congress.gov/img/member/115_rp_il_18_lahood_darin_200.jpg"
+        },
+        "directOrderName": "Darin LaHood",
+        "district": 16,
+        "firstName": "Darin",
+        "honorificName": "Mr.",
+        "invertedOrderName": "LaHood, Darin",
+        "lastName": "LaHood",
+        "officialWebsiteUrl": "https://lahood.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2015
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Darin LaHood",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Darin",
+                "honorificName": "Mr.",
+                "invertedOrderName": "LaHood, Darin",
+                "lastName": "LaHood",
+                "startDate": "2015-09-17T00:00:00Z"
+            },
+            {
+                "directOrderName": "Darin LaHood",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Darin",
+                "honorificName": "Mr.",
+                "invertedOrderName": "LaHood, Darin",
+                "lastName": "LaHood",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Darin LaHood",
+                "firstName": "Darin",
+                "honorificName": "Mr.",
+                "invertedOrderName": "LaHood, Darin",
+                "lastName": "LaHood",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 136,
+            "url": "https://api.congress.gov/v3/member/L000585/sponsored-legislation"
+        },
+        "state": "Illinois",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 18,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 18,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 18,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 18,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 16,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 16,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "l000585",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

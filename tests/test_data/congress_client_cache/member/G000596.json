@@ -1,0 +1,123 @@
+{
+    "member": {
+        "bioguideId": "G000596",
+        "birthYear": "1974",
+        "cosponsoredLegislation": {
+            "count": 432,
+            "url": "https://api.congress.gov/v3/member/G000596/cosponsored-legislation"
+        },
+        "currentMember": false,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/g000596_200.jpg"
+        },
+        "directOrderName": "Marjorie Taylor Greene",
+        "district": 14,
+        "firstName": "Marjorie",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Greene, Marjorie Taylor",
+        "lastName": "Greene",
+        "middleName": "Taylor",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Marjorie Taylor Greene",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Marjorie",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Greene, Marjorie Taylor",
+                "lastName": "Greene",
+                "middleName": "Taylor",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Marjorie Taylor Greene",
+                "endDate": "2024-02-27T13:20:50Z",
+                "firstName": "Marjorie",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Greene, Marjorie Taylor",
+                "lastName": "Greene",
+                "middleName": "Taylor",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Marjorie Taylor Greene",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Marjorie",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Greene, Marjorie Taylor",
+                "lastName": "Greene",
+                "middleName": "Taylor",
+                "startDate": "2024-02-27T13:20:51Z"
+            },
+            {
+                "directOrderName": "Marjorie Taylor Greene",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Marjorie",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Greene, Marjorie Taylor",
+                "lastName": "Greene",
+                "middleName": "Taylor",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Marjorie Taylor Greene",
+                "firstName": "Marjorie",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Greene, Marjorie Taylor",
+                "lastName": "Greene",
+                "middleName": "Taylor",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 111,
+            "url": "https://api.congress.gov/v3/member/G000596/sponsored-legislation"
+        },
+        "state": "Georgia",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 14,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "GA",
+                "stateName": "Georgia"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 14,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "GA",
+                "stateName": "Georgia"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 14,
+                "endYear": 2026,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "GA",
+                "stateName": "Georgia"
+            }
+        ],
+        "updateDate": "2026-01-06T12:37:11Z"
+    },
+    "request": {
+        "bioguideId": "g000596",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

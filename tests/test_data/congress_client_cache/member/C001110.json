@@ -1,0 +1,130 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2082 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-2965",
+            "zipCode": 20515
+        },
+        "bioguideId": "C001110",
+        "birthYear": "1958",
+        "cosponsoredLegislation": {
+            "count": 1844,
+            "url": "https://api.congress.gov/v3/member/C001110/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Congressional Pictorial Directory",
+            "imageUrl": "https://www.congress.gov/img/member/115_rp_ca_46_correa_j_200.jpg"
+        },
+        "directOrderName": "J. Luis Correa",
+        "district": 46,
+        "firstName": "J.",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Correa, J. Luis",
+        "lastName": "Correa",
+        "middleName": "Luis",
+        "officialWebsiteUrl": "https://correa.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2017
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "J. Luis Correa",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "J.",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Correa, J. Luis",
+                "lastName": "Correa",
+                "middleName": "Luis",
+                "startDate": "2017-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "J. Luis Correa",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "J.",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Correa, J. Luis",
+                "lastName": "Correa",
+                "middleName": "Luis",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "J. Luis Correa",
+                "firstName": "J.",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Correa, J. Luis",
+                "lastName": "Correa",
+                "middleName": "Luis",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 119,
+            "url": "https://api.congress.gov/v3/member/C001110/sponsored-legislation"
+        },
+        "state": "California",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 46,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 46,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 46,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 46,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 46,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "CA",
+                "stateName": "California"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:15Z"
+    },
+    "request": {
+        "bioguideId": "c001110",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

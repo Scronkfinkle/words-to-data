@@ -1,0 +1,181 @@
+{
+    "member": {
+        "bioguideId": "S001157",
+        "birthYear": "1945",
+        "cosponsoredLegislation": {
+            "count": 3547,
+            "url": "https://api.congress.gov/v3/member/S001157/cosponsored-legislation"
+        },
+        "currentMember": false,
+        "deathYear": "2026",
+        "depiction": {
+            "attribution": "Congressional Pictorial Directory",
+            "imageUrl": "https://www.congress.gov/img/member/116_rp_ga_13_scott_david_200.jpg"
+        },
+        "directOrderName": "David Scott",
+        "district": 13,
+        "firstName": "David",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Scott, David",
+        "lastName": "Scott",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2003
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "David Scott",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "David",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Scott, David",
+                "lastName": "Scott",
+                "startDate": "2003-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "David Scott",
+                "firstName": "David",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Scott, David",
+                "lastName": "Scott",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 116,
+            "url": "https://api.congress.gov/v3/member/S001157/sponsored-legislation"
+        },
+        "state": "Georgia",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 108,
+                "district": 13,
+                "endYear": 2005,
+                "memberType": "Representative",
+                "startYear": 2003,
+                "stateCode": "GA",
+                "stateName": "Georgia"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 109,
+                "district": 13,
+                "endYear": 2007,
+                "memberType": "Representative",
+                "startYear": 2005,
+                "stateCode": "GA",
+                "stateName": "Georgia"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 110,
+                "district": 13,
+                "endYear": 2009,
+                "memberType": "Representative",
+                "startYear": 2007,
+                "stateCode": "GA",
+                "stateName": "Georgia"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 111,
+                "district": 13,
+                "endYear": 2011,
+                "memberType": "Representative",
+                "startYear": 2009,
+                "stateCode": "GA",
+                "stateName": "Georgia"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 13,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "GA",
+                "stateName": "Georgia"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 13,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "GA",
+                "stateName": "Georgia"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 13,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "GA",
+                "stateName": "Georgia"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 13,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "GA",
+                "stateName": "Georgia"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 13,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "GA",
+                "stateName": "Georgia"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 13,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "GA",
+                "stateName": "Georgia"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 13,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "GA",
+                "stateName": "Georgia"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 13,
+                "endYear": 2026,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "GA",
+                "stateName": "Georgia"
+            }
+        ],
+        "updateDate": "2026-04-23T10:59:01Z"
+    },
+    "request": {
+        "bioguideId": "s001157",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

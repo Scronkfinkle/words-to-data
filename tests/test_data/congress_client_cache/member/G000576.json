@@ -1,0 +1,145 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1211 Longworth House Office Building",
+            "phoneNumber": "(202) 225-2476",
+            "zipCode": 20515
+        },
+        "bioguideId": "G000576",
+        "birthYear": "1955",
+        "cosponsoredLegislation": {
+            "count": 1983,
+            "url": "https://api.congress.gov/v3/member/G000576/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Congressional Pictorial Directory",
+            "imageUrl": "https://www.congress.gov/img/member/116_rp_wi_6_grothman_glenn_200.jpg"
+        },
+        "directOrderName": "Glenn Grothman",
+        "district": 6,
+        "firstName": "Glenn",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Grothman, Glenn",
+        "lastName": "Grothman",
+        "officialWebsiteUrl": "https://grothman.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2015
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Glenn Grothman",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Glenn",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Grothman, Glenn",
+                "lastName": "Grothman",
+                "startDate": "2015-01-06T05:00:00Z"
+            },
+            {
+                "directOrderName": "Glenn Grothman",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Glenn",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Grothman, Glenn",
+                "lastName": "Grothman",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Glenn Grothman",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Glenn",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Grothman, Glenn",
+                "lastName": "Grothman",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Glenn Grothman",
+                "firstName": "Glenn",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Grothman, Glenn",
+                "lastName": "Grothman",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 182,
+            "url": "https://api.congress.gov/v3/member/G000576/sponsored-legislation"
+        },
+        "state": "Wisconsin",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 6,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "WI",
+                "stateName": "Wisconsin"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 6,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "WI",
+                "stateName": "Wisconsin"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 6,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "WI",
+                "stateName": "Wisconsin"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 6,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "WI",
+                "stateName": "Wisconsin"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 6,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "WI",
+                "stateName": "Wisconsin"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 6,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "WI",
+                "stateName": "Wisconsin"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:14Z"
+    },
+    "request": {
+        "bioguideId": "g000576",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,86 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1626 Longworth House Office Building",
+            "phoneNumber": "(202) 225-7751",
+            "zipCode": 20515
+        },
+        "bioguideId": "K000403",
+        "birthYear": "1969",
+        "cosponsoredLegislation": {
+            "count": 130,
+            "url": "https://api.congress.gov/v3/member/K000403/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/67742e7c0b34857ecc9090f5_200.jpg"
+        },
+        "directOrderName": "Mike Kennedy",
+        "district": 3,
+        "firstName": "Mike",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Kennedy, Mike",
+        "lastName": "Kennedy",
+        "officialWebsiteUrl": "https://mikekennedy.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2025
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Mike Kennedy",
+                "endDate": "2025-01-10T17:36:18Z",
+                "firstName": "Mike",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Kennedy, Mike",
+                "lastName": "Kennedy",
+                "startDate": "2025-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Mike Kennedy",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Mike",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Kennedy, Mike",
+                "lastName": "Kennedy",
+                "startDate": "2025-01-10T17:36:19Z"
+            },
+            {
+                "directOrderName": "Mike Kennedy",
+                "firstName": "Mike",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Kennedy, Mike",
+                "lastName": "Kennedy",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 34,
+            "url": "https://api.congress.gov/v3/member/K000403/sponsored-legislation"
+        },
+        "state": "Utah",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 3,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "UT",
+                "stateName": "Utah"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:20Z"
+    },
+    "request": {
+        "bioguideId": "k000403",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

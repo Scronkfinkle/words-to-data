@@ -4,6 +4,8 @@ use words_to_data::{
     uslm::{BillDiff, TextContentField, bill_parser::parse_bill_amendments, parser::parse},
 };
 
+const PL_XML_PATH: &str = "tests/test_data/congress_client_cache/bill/119/hr/1/public_law.xml";
+
 #[test]
 fn test_diff_generation_26() {
     let doc_old = parse("tests/test_data/usc/2025-07-18/usc26.xml", "2025-07-18")
@@ -65,9 +67,7 @@ fn test_similarities() {
         .expect("Error running parser");
     let diff = TreeDiff::from_elements(&doc_old, &doc_new);
 
-    let mut amendment_data =
-        parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml")
-            .unwrap();
+    let mut amendment_data = parse_bill_amendments("119-21", PL_XML_PATH).unwrap();
 
     // This part is handled by LLM's, and I don't want to add that logic to
     // this library yet (or at all). It will probably be added as another tool
@@ -248,9 +248,7 @@ fn test_scan_for_mentions_should_find_section_45f_mentions_in_bill() {
     let diff = TreeDiff::from_elements(&doc_old, &doc_new);
 
     // Parse the bill that amends Section 45F
-    let amendment_data =
-        parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml")
-            .unwrap();
+    let amendment_data = parse_bill_amendments("119-21", PL_XML_PATH).unwrap();
 
     // Scan for mentions - this should find "Section 45F" mentions in the amendment texts
     let mentions = diff.scan_for_mentions(&amendment_data);

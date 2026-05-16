@@ -1,0 +1,95 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1224 Longworth House Office Building",
+            "phoneNumber": "(202) 225-2176",
+            "zipCode": 20515
+        },
+        "bioguideId": "F000476",
+        "birthYear": "1997",
+        "cosponsoredLegislation": {
+            "count": 921,
+            "url": "https://api.congress.gov/v3/member/F000476/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/69a71e9a55f11d8282dde7a0_200.jpg"
+        },
+        "directOrderName": "Maxwell Frost",
+        "district": 10,
+        "firstName": "Maxwell",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Frost, Maxwell",
+        "lastName": "Frost",
+        "officialWebsiteUrl": "https://frost.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Maxwell Frost",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Maxwell",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Frost, Maxwell",
+                "lastName": "Frost",
+                "startDate": "2024-02-27T13:20:50Z"
+            },
+            {
+                "directOrderName": "Maxwell Frost",
+                "endDate": "2024-02-27T13:20:49Z",
+                "firstName": "Maxwell",
+                "invertedOrderName": "Frost, Maxwell",
+                "lastName": "Frost",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Maxwell Frost",
+                "firstName": "Maxwell",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Frost, Maxwell",
+                "lastName": "Frost",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 45,
+            "url": "https://api.congress.gov/v3/member/F000476/sponsored-legislation"
+        },
+        "state": "Florida",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 10,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 10,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            }
+        ],
+        "updateDate": "2026-03-03T17:54:08Z"
+    },
+    "request": {
+        "bioguideId": "f000476",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

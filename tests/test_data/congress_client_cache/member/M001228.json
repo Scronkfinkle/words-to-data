@@ -1,0 +1,113 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "249 Cannon House Office Building",
+            "phoneNumber": "(202) 225-9730",
+            "zipCode": 20515
+        },
+        "bioguideId": "M001228",
+        "birthYear": "1981",
+        "cosponsoredLegislation": {
+            "count": 195,
+            "url": "https://api.congress.gov/v3/member/M001228/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/m001228_200.jpg"
+        },
+        "directOrderName": "Celeste Maloy",
+        "district": 2,
+        "firstName": "Celeste",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Maloy, Celeste",
+        "lastName": "Maloy",
+        "officialWebsiteUrl": "https://maloy.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Celeste Maloy",
+                "endDate": "2024-02-27T13:20:59Z",
+                "firstName": "Celeste",
+                "invertedOrderName": "Maloy, Celeste",
+                "lastName": "Maloy",
+                "startDate": "2023-11-28T05:00:00Z"
+            },
+            {
+                "directOrderName": "Celeste Maloy",
+                "endDate": "2024-03-04T19:26:35Z",
+                "firstName": "Celeste",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Maloy, Celeste",
+                "lastName": "Maloy",
+                "startDate": "2024-02-27T13:21:00Z"
+            },
+            {
+                "directOrderName": "Celeste Maloy",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Celeste",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Maloy, Celeste",
+                "lastName": "Maloy",
+                "startDate": "2024-03-04T19:26:36Z"
+            },
+            {
+                "directOrderName": "Celeste Maloy",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Celeste",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Maloy, Celeste",
+                "lastName": "Maloy",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Celeste Maloy",
+                "firstName": "Celeste",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Maloy, Celeste",
+                "lastName": "Maloy",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 40,
+            "url": "https://api.congress.gov/v3/member/M001228/sponsored-legislation"
+        },
+        "state": "Utah",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 2,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "UT",
+                "stateName": "Utah"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 2,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "UT",
+                "stateName": "Utah"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:19Z"
+    },
+    "request": {
+        "bioguideId": "m001228",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,115 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2417 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-6190",
+            "zipCode": 20515
+        },
+        "bioguideId": "L000273",
+        "birthYear": "1959",
+        "cosponsoredLegislation": {
+            "count": 848,
+            "url": "https://api.congress.gov/v3/member/L000273/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/l000273_200.jpg"
+        },
+        "directOrderName": "Teresa Leger Fernandez",
+        "district": 3,
+        "firstName": "Teresa",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Leger Fernandez, Teresa",
+        "lastName": "Leger Fernandez",
+        "officialWebsiteUrl": "https://fernandez.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Teresa Leger Fernandez",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Teresa",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Leger Fernandez, Teresa",
+                "lastName": "Leger Fernandez",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Teresa Leger Fernandez",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Teresa",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Leger Fernandez, Teresa",
+                "lastName": "Leger Fernandez",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Teresa Leger Fernandez",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Teresa",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Leger Fernandez, Teresa",
+                "lastName": "Leger Fernandez",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Teresa Leger Fernandez",
+                "firstName": "Teresa",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Leger Fernandez, Teresa",
+                "lastName": "Leger Fernandez",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 99,
+            "url": "https://api.congress.gov/v3/member/L000273/sponsored-legislation"
+        },
+        "state": "New Mexico",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 3,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "NM",
+                "stateName": "New Mexico"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 3,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NM",
+                "stateName": "New Mexico"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 3,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NM",
+                "stateName": "New Mexico"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "l000273",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

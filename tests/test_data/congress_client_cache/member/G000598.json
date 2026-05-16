@@ -1,0 +1,96 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "109 Cannon House Office Building",
+            "phoneNumber": "(202) 225-7924",
+            "zipCode": 20515
+        },
+        "bioguideId": "G000598",
+        "birthYear": "1977",
+        "cosponsoredLegislation": {
+            "count": 762,
+            "url": "https://api.congress.gov/v3/member/G000598/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/g000598_200.jpg"
+        },
+        "directOrderName": "Robert Garcia",
+        "district": 42,
+        "firstName": "Robert",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Garcia, Robert",
+        "lastName": "Garcia",
+        "officialWebsiteUrl": "https://robertgarcia.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Robert Garcia",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Robert",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Garcia, Robert",
+                "lastName": "Garcia",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Robert Garcia",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Robert",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Garcia, Robert",
+                "lastName": "Garcia",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Robert Garcia",
+                "firstName": "Robert",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Garcia, Robert",
+                "lastName": "Garcia",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 46,
+            "url": "https://api.congress.gov/v3/member/G000598/sponsored-legislation"
+        },
+        "state": "California",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 42,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 42,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "CA",
+                "stateName": "California"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:17Z"
+    },
+    "request": {
+        "bioguideId": "g000598",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

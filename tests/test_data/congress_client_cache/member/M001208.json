@@ -1,0 +1,116 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2246 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-4501",
+            "zipCode": 20515
+        },
+        "bioguideId": "M001208",
+        "birthYear": "1960",
+        "cosponsoredLegislation": {
+            "count": 1337,
+            "url": "https://api.congress.gov/v3/member/M001208/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/m001208_200.jpg"
+        },
+        "directOrderName": "Lucy McBath",
+        "district": 6,
+        "firstName": "Lucy",
+        "honorificName": "Mrs.",
+        "invertedOrderName": "McBath, Lucy",
+        "lastName": "McBath",
+        "officialWebsiteUrl": "https://mcbath.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Lucy McBath",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Lucy",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "McBath, Lucy",
+                "lastName": "McBath",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Lucy McBath",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Lucy",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "McBath, Lucy",
+                "lastName": "McBath",
+                "startDate": "2019-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Lucy McBath",
+                "firstName": "Lucy",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "McBath, Lucy",
+                "lastName": "McBath",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 70,
+            "url": "https://api.congress.gov/v3/member/M001208/sponsored-legislation"
+        },
+        "state": "Georgia",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 6,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "GA",
+                "stateName": "Georgia"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 6,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "GA",
+                "stateName": "Georgia"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 7,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "GA",
+                "stateName": "Georgia"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 6,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "GA",
+                "stateName": "Georgia"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:19Z"
+    },
+    "request": {
+        "bioguideId": "m001208",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

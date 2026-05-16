@@ -1,0 +1,147 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2412 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-4301",
+            "zipCode": 20515
+        },
+        "bioguideId": "W000809",
+        "birthYear": "1957",
+        "cosponsoredLegislation": {
+            "count": 1160,
+            "url": "https://api.congress.gov/v3/member/W000809/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "GPO Member Guide",
+            "imageUrl": "https://www.congress.gov/img/member/117_rp_ar_3_womack_steve_200.jpg"
+        },
+        "directOrderName": "Steve Womack",
+        "district": 3,
+        "firstName": "Steve",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Womack, Steve",
+        "lastName": "Womack",
+        "officialWebsiteUrl": "https://womack.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2011
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Steve Womack",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Steve",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Womack, Steve",
+                "lastName": "Womack",
+                "startDate": "2011-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Steve Womack",
+                "firstName": "Steve",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Womack, Steve",
+                "lastName": "Womack",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 61,
+            "url": "https://api.congress.gov/v3/member/W000809/sponsored-legislation"
+        },
+        "state": "Arkansas",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 3,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "AR",
+                "stateName": "Arkansas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 3,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "AR",
+                "stateName": "Arkansas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 3,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "AR",
+                "stateName": "Arkansas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 3,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "AR",
+                "stateName": "Arkansas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 3,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "AR",
+                "stateName": "Arkansas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 3,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "AR",
+                "stateName": "Arkansas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 3,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "AR",
+                "stateName": "Arkansas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 3,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "AR",
+                "stateName": "Arkansas"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:13Z"
+    },
+    "request": {
+        "bioguideId": "w000809",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

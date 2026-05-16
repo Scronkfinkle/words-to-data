@@ -1,0 +1,126 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2104 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-4155",
+            "zipCode": 20515
+        },
+        "bioguideId": "B001298",
+        "birthYear": "1963",
+        "cosponsoredLegislation": {
+            "count": 2874,
+            "url": "https://api.congress.gov/v3/member/B001298/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Congressional Pictorial Directory",
+            "imageUrl": "https://www.congress.gov/img/member/115_rp_ne_2_bacon_don_200.jpg"
+        },
+        "directOrderName": "Don Bacon",
+        "district": 2,
+        "firstName": "Don",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Bacon, Don",
+        "lastName": "Bacon",
+        "officialWebsiteUrl": "https://bacon.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2017
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Don Bacon",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Don",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Bacon, Don",
+                "lastName": "Bacon",
+                "startDate": "2017-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Don Bacon",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Don",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Bacon, Don",
+                "lastName": "Bacon",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Don Bacon",
+                "firstName": "Don",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Bacon, Don",
+                "lastName": "Bacon",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 195,
+            "url": "https://api.congress.gov/v3/member/B001298/sponsored-legislation"
+        },
+        "state": "Nebraska",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 2,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "NE",
+                "stateName": "Nebraska"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 2,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "NE",
+                "stateName": "Nebraska"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 2,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "NE",
+                "stateName": "Nebraska"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 2,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NE",
+                "stateName": "Nebraska"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 2,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NE",
+                "stateName": "Nebraska"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:15Z"
+    },
+    "request": {
+        "bioguideId": "b001298",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

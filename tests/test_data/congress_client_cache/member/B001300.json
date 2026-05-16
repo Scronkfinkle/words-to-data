@@ -1,0 +1,140 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2312 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-8220",
+            "zipCode": 20515
+        },
+        "bioguideId": "B001300",
+        "birthYear": "1976",
+        "cosponsoredLegislation": {
+            "count": 3108,
+            "url": "https://api.congress.gov/v3/member/B001300/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/b001300_200.jpg"
+        },
+        "directOrderName": "Nanette Diaz Barragán",
+        "district": 44,
+        "firstName": "Nanette",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Barragán, Nanette Diaz",
+        "lastName": "Barragán",
+        "middleName": "Diaz",
+        "officialWebsiteUrl": "https://barragan.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2017
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Nanette Diaz Barragan",
+                "endDate": "2024-02-27T13:20:48Z",
+                "firstName": "Nanette",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Barragan, Nanette Diaz",
+                "lastName": "Barragan",
+                "middleName": "Diaz",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Nanette Diaz Barragan",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Nanette",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Barragan, Nanette Diaz",
+                "lastName": "Barragan",
+                "middleName": "Diaz",
+                "startDate": "2017-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Nanette Diaz Barragán",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Nanette",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Barragán, Nanette Diaz",
+                "lastName": "Barragán",
+                "middleName": "Diaz",
+                "startDate": "2024-02-27T13:20:49Z"
+            },
+            {
+                "directOrderName": "Nanette Diaz Barragán",
+                "firstName": "Nanette",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Barragán, Nanette Diaz",
+                "lastName": "Barragán",
+                "middleName": "Diaz",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 128,
+            "url": "https://api.congress.gov/v3/member/B001300/sponsored-legislation"
+        },
+        "state": "California",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 44,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 44,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 44,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 44,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 44,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "CA",
+                "stateName": "California"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:15Z"
+    },
+    "request": {
+        "bioguideId": "b001300",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

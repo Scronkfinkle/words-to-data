@@ -1,0 +1,147 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2232 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-4401",
+            "zipCode": 20515
+        },
+        "bioguideId": "H001058",
+        "birthYear": "1969",
+        "cosponsoredLegislation": {
+            "count": 1692,
+            "url": "https://api.congress.gov/v3/member/H001058/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/h001058_200.jpg"
+        },
+        "directOrderName": "Bill Huizenga",
+        "district": 4,
+        "firstName": "Bill",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Huizenga, Bill",
+        "lastName": "Huizenga",
+        "officialWebsiteUrl": "https://huizenga.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2011
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Bill Huizenga",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Bill",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Huizenga, Bill",
+                "lastName": "Huizenga",
+                "startDate": "2011-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Bill Huizenga",
+                "firstName": "Bill",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Huizenga, Bill",
+                "lastName": "Huizenga",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 174,
+            "url": "https://api.congress.gov/v3/member/H001058/sponsored-legislation"
+        },
+        "state": "Michigan",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 2,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 2,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 2,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 2,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 2,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 2,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 4,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 4,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "h001058",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

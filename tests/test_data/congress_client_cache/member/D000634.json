@@ -1,0 +1,86 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1529 Longworth House Office Building",
+            "phoneNumber": "(202) 225-3211",
+            "zipCode": 20515
+        },
+        "bioguideId": "D000634",
+        "birthYear": "1967",
+        "cosponsoredLegislation": {
+            "count": 147,
+            "url": "https://api.congress.gov/v3/member/D000634/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/677424da0b34857ecc909077_200.jpg"
+        },
+        "directOrderName": "Troy Downing",
+        "district": 2,
+        "firstName": "Troy",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Downing, Troy",
+        "lastName": "Downing",
+        "officialWebsiteUrl": "https://downing.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2025
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Troy Downing",
+                "endDate": "2025-01-10T17:36:18Z",
+                "firstName": "Troy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Downing, Troy",
+                "lastName": "Downing",
+                "startDate": "2025-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Troy Downing",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Troy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Downing, Troy",
+                "lastName": "Downing",
+                "startDate": "2025-01-10T17:36:19Z"
+            },
+            {
+                "directOrderName": "Troy Downing",
+                "firstName": "Troy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Downing, Troy",
+                "lastName": "Downing",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 25,
+            "url": "https://api.congress.gov/v3/member/D000634/sponsored-legislation"
+        },
+        "state": "Montana",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 2,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "MT",
+                "stateName": "Montana"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:20Z"
+    },
+    "request": {
+        "bioguideId": "d000634",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

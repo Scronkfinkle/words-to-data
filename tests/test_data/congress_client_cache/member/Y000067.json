@@ -1,0 +1,114 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "349 Cannon House Office Building",
+            "phoneNumber": "(202) 225-3915",
+            "zipCode": 20515
+        },
+        "bioguideId": "Y000067",
+        "birthYear": "1984",
+        "cosponsoredLegislation": {
+            "count": 526,
+            "url": "https://api.congress.gov/v3/member/Y000067/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/y000067_200.jpg"
+        },
+        "directOrderName": "Rudy Yakym III",
+        "district": 2,
+        "firstName": "Rudy",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Yakym, Rudy",
+        "lastName": "Yakym",
+        "officialWebsiteUrl": "https://yakym.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2022
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Rudy Yakym III",
+                "endDate": "2024-02-27T13:20:51Z",
+                "firstName": "Rudy",
+                "invertedOrderName": "Yakym, Rudy",
+                "lastName": "Yakym",
+                "startDate": "2023-11-24T21:35:34Z"
+            },
+            {
+                "directOrderName": "Rudy Yakym III",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Rudy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Yakym, Rudy",
+                "lastName": "Yakym",
+                "startDate": "2024-02-27T13:20:52Z"
+            },
+            {
+                "directOrderName": "Rudy Yakym III",
+                "endDate": "2023-11-24T21:35:33Z",
+                "firstName": "Rudy",
+                "invertedOrderName": "Yakym, Rudy",
+                "lastName": "Yakym",
+                "startDate": "2022-11-14T17:00:00Z"
+            },
+            {
+                "directOrderName": "Rudy Yakym III",
+                "firstName": "Rudy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Yakym, Rudy",
+                "lastName": "Yakym",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 44,
+            "url": "https://api.congress.gov/v3/member/Y000067/sponsored-legislation"
+        },
+        "state": "Indiana",
+        "suffixName": "III",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 2,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2022,
+                "stateCode": "IN",
+                "stateName": "Indiana"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 2,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "IN",
+                "stateName": "Indiana"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 2,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "IN",
+                "stateName": "Indiana"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:17Z"
+    },
+    "request": {
+        "bioguideId": "y000067",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

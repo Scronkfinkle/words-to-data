@@ -1,0 +1,110 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2457 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-5792",
+            "zipCode": 20515
+        },
+        "bioguideId": "S001214",
+        "birthYear": "1978",
+        "cosponsoredLegislation": {
+            "count": 1626,
+            "url": "https://api.congress.gov/v3/member/S001214/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/s001214_200.jpg"
+        },
+        "directOrderName": "W. Gregory Steube",
+        "district": 17,
+        "firstName": "W.",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Steube, W. Gregory",
+        "lastName": "Steube",
+        "middleName": "Gregory",
+        "officialWebsiteUrl": "https://steube.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "W. Gregory Steube",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "W.",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Steube, W. Gregory",
+                "lastName": "Steube",
+                "middleName": "Gregory",
+                "startDate": "2019-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "W. Gregory Steube",
+                "firstName": "W.",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Steube, W. Gregory",
+                "lastName": "Steube",
+                "middleName": "Gregory",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 266,
+            "url": "https://api.congress.gov/v3/member/S001214/sponsored-legislation"
+        },
+        "state": "Florida",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 17,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 17,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 17,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 17,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:15Z"
+    },
+    "request": {
+        "bioguideId": "s001214",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

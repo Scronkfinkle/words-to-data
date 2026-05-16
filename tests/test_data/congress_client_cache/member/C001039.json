@@ -1,0 +1,106 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2421 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-5744",
+            "zipCode": 20515
+        },
+        "bioguideId": "C001039",
+        "birthYear": "1988",
+        "cosponsoredLegislation": {
+            "count": 682,
+            "url": "https://api.congress.gov/v3/member/C001039/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/c001039_200.jpg"
+        },
+        "directOrderName": "Kat Cammack",
+        "district": 3,
+        "firstName": "Kat",
+        "honorificName": "Mrs.",
+        "invertedOrderName": "Cammack, Kat",
+        "lastName": "Cammack",
+        "officialWebsiteUrl": "https://cammack.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Kat Cammack",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Kat",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Cammack, Kat",
+                "lastName": "Cammack",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Kat Cammack",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Kat",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Cammack, Kat",
+                "lastName": "Cammack",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Kat Cammack",
+                "firstName": "Kat",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Cammack, Kat",
+                "lastName": "Cammack",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 73,
+            "url": "https://api.congress.gov/v3/member/C001039/sponsored-legislation"
+        },
+        "state": "Florida",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 3,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 3,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 3,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "c001039",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

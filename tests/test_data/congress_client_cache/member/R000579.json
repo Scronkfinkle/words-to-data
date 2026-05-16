@@ -1,0 +1,124 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1708 Longworth House Office Building",
+            "phoneNumber": "(202) 225-5614",
+            "zipCode": 20515
+        },
+        "bioguideId": "R000579",
+        "birthYear": "1982",
+        "cosponsoredLegislation": {
+            "count": 585,
+            "url": "https://api.congress.gov/v3/member/R000579/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/r000579_200.jpg"
+        },
+        "directOrderName": "Patrick Ryan",
+        "district": 18,
+        "firstName": "Patrick",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Ryan, Patrick",
+        "lastName": "Ryan",
+        "officialWebsiteUrl": "https://patryan.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2022
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Patrick Ryan",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Patrick",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Ryan, Patrick",
+                "lastName": "Ryan",
+                "startDate": "2024-02-27T13:20:56Z"
+            },
+            {
+                "directOrderName": "Patrick Ryan",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Patrick",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Ryan, Patrick",
+                "lastName": "Ryan",
+                "startDate": "2022-09-13T16:00:00Z"
+            },
+            {
+                "directOrderName": "Patrick Ryan",
+                "endDate": "2024-02-27T13:20:55Z",
+                "firstName": "Patrick",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Ryan, Patrick",
+                "lastName": "Ryan",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Patrick Ryan",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Patrick",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Ryan, Patrick",
+                "lastName": "Ryan",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Patrick Ryan",
+                "firstName": "Patrick",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Ryan, Patrick",
+                "lastName": "Ryan",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 40,
+            "url": "https://api.congress.gov/v3/member/R000579/sponsored-legislation"
+        },
+        "state": "New York",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 19,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2022,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 18,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 18,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NY",
+                "stateName": "New York"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "r000579",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

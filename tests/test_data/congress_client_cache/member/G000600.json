@@ -1,0 +1,99 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1431 Longworth House Office Building",
+            "phoneNumber": "(202) 225-3536",
+            "zipCode": 20515
+        },
+        "bioguideId": "G000600",
+        "birthYear": "1988",
+        "cosponsoredLegislation": {
+            "count": 530,
+            "url": "https://api.congress.gov/v3/member/G000600/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/g000600_200.jpg"
+        },
+        "directOrderName": "Marie Gluesenkamp Perez",
+        "district": 3,
+        "firstName": "Marie",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Perez, Marie Gluesenkamp",
+        "lastName": "Perez",
+        "middleName": "Gluesenkamp",
+        "officialWebsiteUrl": "https://gluesenkampperez.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Marie Gluesenkamp Perez",
+                "endDate": "2024-02-27T13:20:59Z",
+                "firstName": "Marie",
+                "invertedOrderName": "Perez, Marie Gluesenkamp",
+                "lastName": "Perez",
+                "middleName": "Gluesenkamp",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Marie Gluesenkamp Perez",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Marie",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Perez, Marie Gluesenkamp",
+                "lastName": "Perez",
+                "middleName": "Gluesenkamp",
+                "startDate": "2024-02-27T13:21:00Z"
+            },
+            {
+                "directOrderName": "Marie Gluesenkamp Perez",
+                "firstName": "Marie",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Perez, Marie Gluesenkamp",
+                "lastName": "Perez",
+                "middleName": "Gluesenkamp",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 59,
+            "url": "https://api.congress.gov/v3/member/G000600/sponsored-legislation"
+        },
+        "state": "Washington",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 3,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "WA",
+                "stateName": "Washington"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 3,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "WA",
+                "stateName": "Washington"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:19Z"
+    },
+    "request": {
+        "bioguideId": "g000600",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

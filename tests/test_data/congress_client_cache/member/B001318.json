@@ -1,0 +1,93 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1510 Longworth House Office Building",
+            "phoneNumber": "(202) 225-4115",
+            "zipCode": 20515
+        },
+        "bioguideId": "B001318",
+        "birthYear": "1968",
+        "cosponsoredLegislation": {
+            "count": 792,
+            "url": "https://api.congress.gov/v3/member/B001318/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/b001318_200.jpg"
+        },
+        "directOrderName": "Becca Balint",
+        "firstName": "Becca",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Balint, Becca",
+        "lastName": "Balint",
+        "officialWebsiteUrl": "https://balint.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Becca Balint",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Becca",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Balint, Becca",
+                "lastName": "Balint",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Becca Balint",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Becca",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Balint, Becca",
+                "lastName": "Balint",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Becca Balint",
+                "firstName": "Becca",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Balint, Becca",
+                "lastName": "Balint",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 42,
+            "url": "https://api.congress.gov/v3/member/B001318/sponsored-legislation"
+        },
+        "state": "Vermont",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "VT",
+                "stateName": "Vermont"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "VT",
+                "stateName": "Vermont"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:19Z"
+    },
+    "request": {
+        "bioguideId": "b001318",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

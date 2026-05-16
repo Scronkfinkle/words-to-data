@@ -1,0 +1,86 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1229 Longworth House Office Building",
+            "phoneNumber": "(202) 225-5625",
+            "zipCode": 20515
+        },
+        "bioguideId": "E000300",
+        "birthYear": "1986",
+        "cosponsoredLegislation": {
+            "count": 203,
+            "url": "https://api.congress.gov/v3/member/E000300/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/677425730b34857ecc909083_200.jpg"
+        },
+        "directOrderName": "Gabe Evans",
+        "district": 8,
+        "firstName": "Gabe",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Evans, Gabe",
+        "lastName": "Evans",
+        "officialWebsiteUrl": "https://gabeevans.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2025
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Gabe Evans",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Gabe",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Evans, Gabe",
+                "lastName": "Evans",
+                "startDate": "2025-01-10T17:36:19Z"
+            },
+            {
+                "directOrderName": "Gabe Evans",
+                "firstName": "Gabe",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Evans, Gabe",
+                "lastName": "Evans",
+                "startDate": "2025-01-17T05:00:00Z"
+            },
+            {
+                "directOrderName": "Gabe Evans",
+                "endDate": "2025-01-10T17:36:18Z",
+                "firstName": "Gabe",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Evans, Gabe",
+                "lastName": "Evans",
+                "startDate": "2025-01-03T17:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 21,
+            "url": "https://api.congress.gov/v3/member/E000300/sponsored-legislation"
+        },
+        "state": "Colorado",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 8,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "CO",
+                "stateName": "Colorado"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:19Z"
+    },
+    "request": {
+        "bioguideId": "e000300",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

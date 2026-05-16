@@ -1,0 +1,97 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "167 Cannon House Office Building",
+            "phoneNumber": "(202) 225-6356",
+            "zipCode": 20515
+        },
+        "bioguideId": "H001086",
+        "birthYear": "1960",
+        "cosponsoredLegislation": {
+            "count": 836,
+            "url": "https://api.congress.gov/v3/member/H001086/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/h001086_200.jpg"
+        },
+        "directOrderName": "Diana Harshbarger",
+        "district": 1,
+        "firstName": "Diana",
+        "honorificName": "Mrs.",
+        "invertedOrderName": "Harshbarger, Diana",
+        "lastName": "Harshbarger",
+        "officialWebsiteUrl": "https://harshbarger.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Diana Harshbarger",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Diana",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Harshbarger, Diana",
+                "lastName": "Harshbarger",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Diana Harshbarger",
+                "firstName": "Diana",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Harshbarger, Diana",
+                "lastName": "Harshbarger",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 71,
+            "url": "https://api.congress.gov/v3/member/H001086/sponsored-legislation"
+        },
+        "state": "Tennessee",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 1,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "TN",
+                "stateName": "Tennessee"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 1,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TN",
+                "stateName": "Tennessee"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 1,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TN",
+                "stateName": "Tennessee"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "h001086",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,136 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "352 Cannon House Office Building",
+            "phoneNumber": "(202) 225-5661",
+            "zipCode": 20515
+        },
+        "bioguideId": "B001295",
+        "birthYear": "1960",
+        "cosponsoredLegislation": {
+            "count": 1642,
+            "url": "https://api.congress.gov/v3/member/B001295/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/b001295_200.jpg"
+        },
+        "directOrderName": "Mike Bost",
+        "district": 12,
+        "firstName": "Mike",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Bost, Mike",
+        "lastName": "Bost",
+        "officialWebsiteUrl": "https://bost.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2015
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Mike Bost",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Mike",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Bost, Mike",
+                "lastName": "Bost",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Mike Bost",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Mike",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Bost, Mike",
+                "lastName": "Bost",
+                "startDate": "2015-01-06T05:00:00Z"
+            },
+            {
+                "directOrderName": "Mike Bost",
+                "firstName": "Mike",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Bost, Mike",
+                "lastName": "Bost",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 137,
+            "url": "https://api.congress.gov/v3/member/B001295/sponsored-legislation"
+        },
+        "state": "Illinois",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 12,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 12,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 12,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 12,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 12,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 12,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:14Z"
+    },
+    "request": {
+        "bioguideId": "b001295",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

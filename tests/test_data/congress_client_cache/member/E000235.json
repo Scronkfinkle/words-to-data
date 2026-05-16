@@ -1,0 +1,87 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "443 Cannon House Office Building",
+            "phoneNumber": "(202) 225-5772",
+            "zipCode": 20515
+        },
+        "bioguideId": "E000235",
+        "birthYear": "1959",
+        "cosponsoredLegislation": {
+            "count": 408,
+            "url": "https://api.congress.gov/v3/member/E000235/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/e000235_200.jpg"
+        },
+        "directOrderName": "Mike Ezell",
+        "district": 4,
+        "firstName": "Mike",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Ezell, Mike",
+        "lastName": "Ezell",
+        "officialWebsiteUrl": "https://ezell.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Mike Ezell",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Mike",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Ezell, Mike",
+                "lastName": "Ezell",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Mike Ezell",
+                "firstName": "Mike",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Ezell, Mike",
+                "lastName": "Ezell",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 39,
+            "url": "https://api.congress.gov/v3/member/E000235/sponsored-legislation"
+        },
+        "state": "Mississippi",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 4,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "MS",
+                "stateName": "Mississippi"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 4,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "MS",
+                "stateName": "Mississippi"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "e000235",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

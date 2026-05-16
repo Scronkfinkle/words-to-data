@@ -1,0 +1,305 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2406 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-4601",
+            "zipCode": 20515
+        },
+        "bioguideId": "R000395",
+        "birthYear": "1937",
+        "cosponsoredLegislation": {
+            "count": 2897,
+            "url": "https://api.congress.gov/v3/member/R000395/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/r000395_200.jpg"
+        },
+        "directOrderName": "Harold Rogers",
+        "district": 5,
+        "firstName": "Harold",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Rogers, Harold",
+        "lastName": "Rogers",
+        "officialWebsiteUrl": "https://halrogers.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 1981
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Harold Rogers",
+                "endDate": "2024-02-27T13:20:51Z",
+                "firstName": "HAROLD",
+                "invertedOrderName": "Rogers, Harold",
+                "lastName": "ROGERS",
+                "startDate": "1981-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Harold Rogers",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Harold",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Rogers, Harold",
+                "lastName": "Rogers",
+                "startDate": "2024-02-27T13:20:52Z"
+            },
+            {
+                "directOrderName": "Harold Rogers",
+                "firstName": "Harold",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Rogers, Harold",
+                "lastName": "Rogers",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 146,
+            "url": "https://api.congress.gov/v3/member/R000395/sponsored-legislation"
+        },
+        "state": "Kentucky",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 97,
+                "district": 5,
+                "endYear": 1983,
+                "memberType": "Representative",
+                "startYear": 1981,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 98,
+                "district": 5,
+                "endYear": 1985,
+                "memberType": "Representative",
+                "startYear": 1983,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 99,
+                "district": 5,
+                "endYear": 1987,
+                "memberType": "Representative",
+                "startYear": 1985,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 100,
+                "district": 5,
+                "endYear": 1989,
+                "memberType": "Representative",
+                "startYear": 1987,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 101,
+                "district": 5,
+                "endYear": 1991,
+                "memberType": "Representative",
+                "startYear": 1989,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 102,
+                "district": 5,
+                "endYear": 1993,
+                "memberType": "Representative",
+                "startYear": 1991,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 103,
+                "district": 5,
+                "endYear": 1995,
+                "memberType": "Representative",
+                "startYear": 1993,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 104,
+                "district": 5,
+                "endYear": 1997,
+                "memberType": "Representative",
+                "startYear": 1995,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 105,
+                "district": 5,
+                "endYear": 1999,
+                "memberType": "Representative",
+                "startYear": 1997,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 106,
+                "district": 5,
+                "endYear": 2001,
+                "memberType": "Representative",
+                "startYear": 1999,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 107,
+                "district": 5,
+                "endYear": 2003,
+                "memberType": "Representative",
+                "startYear": 2001,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 108,
+                "district": 5,
+                "endYear": 2005,
+                "memberType": "Representative",
+                "startYear": 2003,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 109,
+                "district": 5,
+                "endYear": 2007,
+                "memberType": "Representative",
+                "startYear": 2005,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 110,
+                "district": 5,
+                "endYear": 2009,
+                "memberType": "Representative",
+                "startYear": 2007,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 111,
+                "district": 5,
+                "endYear": 2011,
+                "memberType": "Representative",
+                "startYear": 2009,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 5,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 5,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 5,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 5,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 5,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 5,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 5,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 5,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:12Z"
+    },
+    "request": {
+        "bioguideId": "r000395",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

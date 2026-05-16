@@ -1,0 +1,96 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "342 Cannon House Office Building",
+            "phoneNumber": "(202) 225-5315",
+            "zipCode": 20515
+        },
+        "bioguideId": "H001093",
+        "birthYear": "1976",
+        "cosponsoredLegislation": {
+            "count": 465,
+            "url": "https://api.congress.gov/v3/member/H001093/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/h001093_200.jpg"
+        },
+        "directOrderName": "Erin Houchin",
+        "district": 9,
+        "firstName": "Erin",
+        "honorificName": "Mrs.",
+        "invertedOrderName": "Houchin, Erin",
+        "lastName": "Houchin",
+        "officialWebsiteUrl": "https://houchin.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Erin Houchin",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Erin",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Houchin, Erin",
+                "lastName": "Houchin",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Erin Houchin",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Erin",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Houchin, Erin",
+                "lastName": "Houchin",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Erin Houchin",
+                "firstName": "Erin",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Houchin, Erin",
+                "lastName": "Houchin",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 63,
+            "url": "https://api.congress.gov/v3/member/H001093/sponsored-legislation"
+        },
+        "state": "Indiana",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 9,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "IN",
+                "stateName": "Indiana"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 9,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "IN",
+                "stateName": "Indiana"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "h001093",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

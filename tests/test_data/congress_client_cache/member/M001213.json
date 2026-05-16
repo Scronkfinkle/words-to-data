@@ -1,0 +1,110 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1131 Longworth House Office Building",
+            "phoneNumber": "(202) 225-0453",
+            "zipCode": 20515
+        },
+        "bioguideId": "M001213",
+        "birthYear": "1980",
+        "cosponsoredLegislation": {
+            "count": 585,
+            "url": "https://api.congress.gov/v3/member/M001213/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/m001213_200.jpg"
+        },
+        "directOrderName": "Blake D. Moore",
+        "district": 1,
+        "firstName": "Blake",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Moore, Blake D.",
+        "lastName": "Moore",
+        "middleName": "D.",
+        "officialWebsiteUrl": "https://blakemoore.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Blake D. Moore",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Blake",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Moore, Blake D.",
+                "lastName": "Moore",
+                "middleName": "D.",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Blake D. Moore",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Blake",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Moore, Blake D.",
+                "lastName": "Moore",
+                "middleName": "D.",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Blake D. Moore",
+                "firstName": "Blake",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Moore, Blake D.",
+                "lastName": "Moore",
+                "middleName": "D.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 94,
+            "url": "https://api.congress.gov/v3/member/M001213/sponsored-legislation"
+        },
+        "state": "Utah",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 1,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "UT",
+                "stateName": "Utah"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 1,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "UT",
+                "stateName": "Utah"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 1,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "UT",
+                "stateName": "Utah"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:17Z"
+    },
+    "request": {
+        "bioguideId": "m001213",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

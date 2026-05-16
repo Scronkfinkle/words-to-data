@@ -1,0 +1,96 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "351 Cannon House Office Building",
+            "phoneNumber": "(202) 225-2701",
+            "zipCode": 20515
+        },
+        "bioguideId": "B001317",
+        "birthYear": "1979",
+        "cosponsoredLegislation": {
+            "count": 469,
+            "url": "https://api.congress.gov/v3/member/B001317/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/b001317_200.jpg"
+        },
+        "directOrderName": "Josh Brecheen",
+        "district": 2,
+        "firstName": "Josh",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Brecheen, Josh",
+        "lastName": "Brecheen",
+        "officialWebsiteUrl": "https://brecheen.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Josh Brecheen",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Josh",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Brecheen, Josh",
+                "lastName": "Brecheen",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Josh Brecheen",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Josh",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Brecheen, Josh",
+                "lastName": "Brecheen",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Josh Brecheen",
+                "firstName": "Josh",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Brecheen, Josh",
+                "lastName": "Brecheen",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 46,
+            "url": "https://api.congress.gov/v3/member/B001317/sponsored-legislation"
+        },
+        "state": "Oklahoma",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 2,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "OK",
+                "stateName": "Oklahoma"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 2,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "OK",
+                "stateName": "Oklahoma"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "b001317",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

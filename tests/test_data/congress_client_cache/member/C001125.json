@@ -1,0 +1,118 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "442 Cannon House Office Building",
+            "phoneNumber": "(202) 225-6636",
+            "zipCode": 20515
+        },
+        "bioguideId": "C001125",
+        "birthYear": "1963",
+        "cosponsoredLegislation": {
+            "count": 1365,
+            "url": "https://api.congress.gov/v3/member/C001125/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/c001125_200.jpg"
+        },
+        "directOrderName": "Troy A. Carter",
+        "district": 2,
+        "firstName": "Troy",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Carter, Troy A.",
+        "lastName": "Carter",
+        "middleName": "A.",
+        "officialWebsiteUrl": "https://troycarter.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Troy Carter",
+                "endDate": "2024-02-27T13:20:51Z",
+                "firstName": "Troy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Carter, Troy",
+                "lastName": "Carter",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Troy Carter",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Troy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Carter, Troy",
+                "lastName": "Carter",
+                "startDate": "2021-05-10T16:00:00Z"
+            },
+            {
+                "directOrderName": "Troy A. Carter",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Troy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Carter, Troy A.",
+                "lastName": "Carter",
+                "middleName": "A.",
+                "startDate": "2024-02-27T13:20:52Z"
+            },
+            {
+                "directOrderName": "Troy A. Carter",
+                "firstName": "Troy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Carter, Troy A.",
+                "lastName": "Carter",
+                "middleName": "A.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 63,
+            "url": "https://api.congress.gov/v3/member/C001125/sponsored-legislation"
+        },
+        "state": "Louisiana",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 2,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "LA",
+                "stateName": "Louisiana"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 2,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "LA",
+                "stateName": "Louisiana"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 2,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "LA",
+                "stateName": "Louisiana"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:17Z"
+    },
+    "request": {
+        "bioguideId": "c001125",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

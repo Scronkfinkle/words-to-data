@@ -1,0 +1,107 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2352 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-3906",
+            "zipCode": 20515
+        },
+        "bioguideId": "L000593",
+        "birthYear": "1978",
+        "cosponsoredLegislation": {
+            "count": 1830,
+            "url": "https://api.congress.gov/v3/member/L000593/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/l000593_200.jpg"
+        },
+        "directOrderName": "Mike Levin",
+        "district": 49,
+        "firstName": "Mike",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Levin, Mike",
+        "lastName": "Levin",
+        "officialWebsiteUrl": "https://levin.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Mike Levin",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Mike",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Levin, Mike",
+                "lastName": "Levin",
+                "startDate": "2019-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Mike Levin",
+                "firstName": "Mike",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Levin, Mike",
+                "lastName": "Levin",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 122,
+            "url": "https://api.congress.gov/v3/member/L000593/sponsored-legislation"
+        },
+        "state": "California",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 49,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 49,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 49,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 49,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "CA",
+                "stateName": "California"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:15Z"
+    },
+    "request": {
+        "bioguideId": "l000593",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,116 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1323 Longworth House Office Building",
+            "phoneNumber": "(202) 225-7882",
+            "zipCode": 20515
+        },
+        "bioguideId": "C001121",
+        "birthYear": "1979",
+        "cosponsoredLegislation": {
+            "count": 1592,
+            "url": "https://api.congress.gov/v3/member/C001121/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/69d7f4167304cef7a0c9779f_200.jpg"
+        },
+        "directOrderName": "Jason Crow",
+        "district": 6,
+        "firstName": "Jason",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Crow, Jason",
+        "lastName": "Crow",
+        "officialWebsiteUrl": "https://crow.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Jason Crow",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Jason",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Crow, Jason",
+                "lastName": "Crow",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Jason Crow",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Jason",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Crow, Jason",
+                "lastName": "Crow",
+                "startDate": "2019-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Jason Crow",
+                "firstName": "Jason",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Crow, Jason",
+                "lastName": "Crow",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 156,
+            "url": "https://api.congress.gov/v3/member/C001121/sponsored-legislation"
+        },
+        "state": "Colorado",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 6,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "CO",
+                "stateName": "Colorado"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 6,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "CO",
+                "stateName": "Colorado"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 6,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "CO",
+                "stateName": "Colorado"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 6,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "CO",
+                "stateName": "Colorado"
+            }
+        ],
+        "updateDate": "2026-04-09T20:02:15Z"
+    },
+    "request": {
+        "bioguideId": "c001121",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

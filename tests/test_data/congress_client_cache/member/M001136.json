@@ -1,0 +1,127 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "562 Cannon House Office Building",
+            "phoneNumber": "(202) 225-2106",
+            "zipCode": 20515
+        },
+        "bioguideId": "M001136",
+        "birthYear": "1966",
+        "cosponsoredLegislation": {
+            "count": 485,
+            "url": "https://api.congress.gov/v3/member/M001136/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/677836d41658e791a384976d_200.jpg"
+        },
+        "directOrderName": "Lisa C. McClain",
+        "district": 9,
+        "firstName": "Lisa",
+        "honorificName": "Mrs.",
+        "invertedOrderName": "McClain, Lisa C.",
+        "lastName": "McClain",
+        "leadership": [
+            {
+                "congress": 119,
+                "current": true,
+                "type": "Republican Conference Chairwoman"
+            }
+        ],
+        "middleName": "C.",
+        "officialWebsiteUrl": "https://mcclain.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Lisa C. McClain",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Lisa",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "McClain, Lisa C.",
+                "lastName": "McClain",
+                "middleName": "C.",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Lisa C. McClain",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Lisa",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "McClain, Lisa C.",
+                "lastName": "McClain",
+                "middleName": "C.",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Lisa C. McClain",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Lisa",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "McClain, Lisa C.",
+                "lastName": "McClain",
+                "middleName": "C.",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Lisa C. McClain",
+                "firstName": "Lisa",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "McClain, Lisa C.",
+                "lastName": "McClain",
+                "middleName": "C.",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 70,
+            "url": "https://api.congress.gov/v3/member/M001136/sponsored-legislation"
+        },
+        "state": "Michigan",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 10,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 9,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 9,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "m001136",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

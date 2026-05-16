@@ -1,0 +1,304 @@
+{
+    "actions": [
+        {
+            "actionCode": "E40000",
+            "actionDate": "2025-07-04",
+            "sourceSystem": {
+                "code": 9,
+                "name": "Library of Congress"
+            },
+            "text": "Became Public Law No: 119-21.",
+            "type": "President"
+        },
+        {
+            "actionCode": "36000",
+            "actionDate": "2025-07-04",
+            "sourceSystem": {
+                "code": 9,
+                "name": "Library of Congress"
+            },
+            "text": "Became Public Law No: 119-21.",
+            "type": "BecameLaw"
+        },
+        {
+            "actionCode": "E30000",
+            "actionDate": "2025-07-04",
+            "sourceSystem": {
+                "code": 9,
+                "name": "Library of Congress"
+            },
+            "text": "Signed by President.",
+            "type": "President"
+        },
+        {
+            "actionCode": "36000",
+            "actionDate": "2025-07-04",
+            "sourceSystem": {
+                "code": 9,
+                "name": "Library of Congress"
+            },
+            "text": "Signed by President.",
+            "type": "BecameLaw"
+        },
+        {
+            "actionCode": "E20000",
+            "actionDate": "2025-07-03",
+            "sourceSystem": {
+                "code": 2,
+                "name": "House floor actions"
+            },
+            "text": "Presented to President.",
+            "type": "Floor"
+        },
+        {
+            "actionCode": "28000",
+            "actionDate": "2025-07-03",
+            "sourceSystem": {
+                "code": 9,
+                "name": "Library of Congress"
+            },
+            "text": "Presented to President.",
+            "type": "President"
+        },
+        {
+            "actionCode": "H41931",
+            "actionDate": "2025-07-03",
+            "actionTime": "14:31:40",
+            "sourceSystem": {
+                "code": 2,
+                "name": "House floor actions"
+            },
+            "text": "Motion to reconsider laid on the table Agreed to without objection.",
+            "type": "ResolvingDifferences"
+        },
+        {
+            "actionCode": "H41610",
+            "actionDate": "2025-07-03",
+            "actionTime": "14:31:38",
+            "recordedVotes": [
+                {
+                    "chamber": "House",
+                    "congress": 119,
+                    "date": "2025-07-03T18:31:38Z",
+                    "rollNumber": 190,
+                    "sessionNumber": 1,
+                    "url": "https://clerk.house.gov/evs/2025/roll190.xml"
+                }
+            ],
+            "sourceSystem": {
+                "code": 2,
+                "name": "House floor actions"
+            },
+            "text": "On motion that the House agree to the Senate amendment Agreed to by recorded vote: 218 - 214 (Roll no. 190). (text: CR H3059-3143)",
+            "type": "ResolvingDifferences"
+        },
+        {
+            "actionCode": "19500",
+            "actionDate": "2025-07-03",
+            "recordedVotes": [
+                {
+                    "chamber": "House",
+                    "congress": 119,
+                    "date": "2025-07-03T18:31:38Z",
+                    "rollNumber": 190,
+                    "sessionNumber": 1,
+                    "url": "https://clerk.house.gov/evs/2025/roll190.xml"
+                }
+            ],
+            "sourceSystem": {
+                "code": 9,
+                "name": "Library of Congress"
+            },
+            "text": "Resolving differences -- House actions: On motion that the House agree to the Senate amendment Agreed to by recorded vote: 218 - 214 (Roll no. 190).",
+            "type": "NotUsed"
+        },
+        {
+            "actionCode": "H41400",
+            "actionDate": "2025-07-03",
+            "actionTime": "14:06:56",
+            "sourceSystem": {
+                "code": 2,
+                "name": "House floor actions"
+            },
+            "text": "The previous question was ordered pursuant to the rule.",
+            "type": "ResolvingDifferences"
+        },
+        {
+            "actionCode": "H8D000",
+            "actionDate": "2025-07-03",
+            "actionTime": "03:30:49",
+            "sourceSystem": {
+                "code": 2,
+                "name": "House floor actions"
+            },
+            "text": "DEBATE - Pursuant to the provisions of H. Res. 566, the House proceeded with one hour of debate on the motion to agree to the Senate amendment to H.R. 1.",
+            "type": "Floor"
+        },
+        {
+            "actionCode": "H8D000",
+            "actionDate": "2025-07-03",
+            "actionTime": "03:30:06",
+            "sourceSystem": {
+                "code": 2,
+                "name": "House floor actions"
+            },
+            "text": "Mr. Arrington moved that the House agree to the Senate amendment to H.R. 1. (CR H3143)",
+            "type": "Floor"
+        },
+        {
+            "actionCode": "H40150",
+            "actionDate": "2025-07-03",
+            "actionTime": "03:29:30",
+            "sourceSystem": {
+                "code": 2,
+                "name": "House floor actions"
+            },
+            "text": "Mr. Arrington moved that the House agree to the Senate amendment. (consideration: CR H3059-3187)",
+            "type": "ResolvingDifferences"
+        },
+        {
+            "actionCode": "H8D000",
+            "actionDate": "2025-07-03",
+            "actionTime": "03:29:29",
+            "sourceSystem": {
+                "code": 2,
+                "name": "House floor actions"
+            },
+            "text": "Pursuant to the provisions of H. Res. 566, Mr. Arrington called up the Senate amendment to H.R. 1.",
+            "type": "Floor"
+        },
+        {
+            "actionDate": "2025-07-01",
+            "sourceSystem": {
+                "name": "Senate"
+            },
+            "text": "Message on Senate action sent to the House.",
+            "type": "Floor"
+        },
+        {
+            "actionDate": "2025-07-01",
+            "recordedVotes": [
+                {
+                    "chamber": "Senate",
+                    "congress": 119,
+                    "date": "2025-07-01T16:03:40Z",
+                    "rollNumber": 372,
+                    "sessionNumber": 1,
+                    "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00372.xml"
+                }
+            ],
+            "sourceSystem": {
+                "name": "Senate"
+            },
+            "text": "Passed Senate with an amendment by Yea-Nay Vote. 51 - 50. Record Vote Number: 372.",
+            "type": "Floor"
+        },
+        {
+            "actionCode": "17000",
+            "actionDate": "2025-07-01",
+            "recordedVotes": [
+                {
+                    "chamber": "Senate",
+                    "congress": 119,
+                    "date": "2025-07-01T16:03:40Z",
+                    "rollNumber": 372,
+                    "sessionNumber": 1,
+                    "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00372.xml"
+                }
+            ],
+            "sourceSystem": {
+                "code": 9,
+                "name": "Library of Congress"
+            },
+            "text": "Passed/agreed to in Senate: Passed Senate with an amendment by Yea-Nay Vote. 51 - 50. Record Vote Number: 372.",
+            "type": "Floor"
+        },
+        {
+            "actionDate": "2025-07-01",
+            "committees": [
+                {
+                    "name": "Finance Committee",
+                    "systemCode": "ssfi00",
+                    "url": "https://api.congress.gov/v3/committee/senate/ssfi00?format=json"
+                }
+            ],
+            "recordedVotes": [
+                {
+                    "chamber": "Senate",
+                    "congress": 119,
+                    "date": "2025-07-01T06:49:12Z",
+                    "rollNumber": 359,
+                    "sessionNumber": 1,
+                    "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00359.xml"
+                }
+            ],
+            "sourceSystem": {
+                "name": "Senate"
+            },
+            "text": "Motion by Senator Warnock to commit to Senate Committee on Finance with instructions rejected in Senate by Yea-Nay Vote. 48 - 51. Record Vote Number: 359.",
+            "type": "Floor"
+        },
+        {
+            "actionDate": "2025-07-01",
+            "committees": [
+                {
+                    "name": "Finance Committee",
+                    "systemCode": "ssfi00",
+                    "url": "https://api.congress.gov/v3/committee/senate/ssfi00?format=json"
+                }
+            ],
+            "recordedVotes": [
+                {
+                    "chamber": "Senate",
+                    "congress": 119,
+                    "date": "2025-07-01T06:06:11Z",
+                    "rollNumber": 357,
+                    "sessionNumber": 1,
+                    "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00357.xml"
+                }
+            ],
+            "sourceSystem": {
+                "name": "Senate"
+            },
+            "text": "Motion by Senator Wyden to commit to Senate Committee on Finance with instructions rejected in Senate by Yea-Nay Vote. 47 - 53. Record Vote Number: 357.",
+            "type": "Floor"
+        },
+        {
+            "actionDate": "2025-07-01",
+            "committees": [
+                {
+                    "name": "Finance Committee",
+                    "systemCode": "ssfi00",
+                    "url": "https://api.congress.gov/v3/committee/senate/ssfi00?format=json"
+                }
+            ],
+            "recordedVotes": [
+                {
+                    "chamber": "Senate",
+                    "congress": 119,
+                    "date": "2025-07-01T04:10:23Z",
+                    "rollNumber": 354,
+                    "sessionNumber": 1,
+                    "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00354.xml"
+                }
+            ],
+            "sourceSystem": {
+                "name": "Senate"
+            },
+            "text": "Motion by Senator Bennet to commit to Senate Committee on Finance with instructions rejected in Senate by Yea-Nay Vote. 47 - 53. Record Vote Number: 354.",
+            "type": "Floor"
+        }
+    ],
+    "pagination": {
+        "count": 59,
+        "next": "https://api.congress.gov/v3/bill/119/hr/1/actions?offset=20&limit=20&format=json"
+    },
+    "request": {
+        "billNumber": "1",
+        "billType": "hr",
+        "billUrl": "https://api.congress.gov/v3/bill/119/hr/1?format=json",
+        "congress": "119",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

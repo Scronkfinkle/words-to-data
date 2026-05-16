@@ -1,0 +1,335 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1705 Longworth House Office Building",
+            "phoneNumber": "(202) 225-4131",
+            "zipCode": 20515
+        },
+        "bioguideId": "H000874",
+        "birthYear": "1939",
+        "cosponsoredLegislation": {
+            "count": 4079,
+            "url": "https://api.congress.gov/v3/member/H000874/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Congressional Pictorial Directory",
+            "imageUrl": "https://www.congress.gov/img/member/116_rp_md_5_hoyer_steny_200.jpg"
+        },
+        "directOrderName": "Steny H. Hoyer",
+        "district": 5,
+        "firstName": "Steny",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Hoyer, Steny H.",
+        "lastName": "Hoyer",
+        "leadership": [
+            {
+                "congress": 113,
+                "type": "Democratic Whip"
+            },
+            {
+                "congress": 112,
+                "type": "Democratic Whip"
+            },
+            {
+                "congress": 114,
+                "type": "Democratic Whip"
+            },
+            {
+                "congress": 116,
+                "type": "Majority Leader"
+            },
+            {
+                "congress": 115,
+                "type": "Democratic Whip"
+            },
+            {
+                "congress": 117,
+                "type": "Majority Leader"
+            }
+        ],
+        "middleName": "H.",
+        "officialWebsiteUrl": "https://hoyer.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 1981
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Steny H. Hoyer",
+                "endDate": "2024-02-27T13:20:52Z",
+                "firstName": "STENY",
+                "invertedOrderName": "Hoyer, Steny H.",
+                "lastName": "HOYER",
+                "middleName": "H.",
+                "startDate": "1981-01-05T05:00:00Z"
+            },
+            {
+                "directOrderName": "Steny H. Hoyer",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Steny",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Hoyer, Steny H.",
+                "lastName": "Hoyer",
+                "middleName": "H.",
+                "startDate": "2024-02-27T13:20:53Z"
+            },
+            {
+                "directOrderName": "Steny H. Hoyer",
+                "firstName": "Steny",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Hoyer, Steny H.",
+                "lastName": "Hoyer",
+                "middleName": "H.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 375,
+            "url": "https://api.congress.gov/v3/member/H000874/sponsored-legislation"
+        },
+        "state": "Maryland",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 97,
+                "district": 5,
+                "endYear": 1983,
+                "memberType": "Representative",
+                "startYear": 1981,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 98,
+                "district": 5,
+                "endYear": 1985,
+                "memberType": "Representative",
+                "startYear": 1983,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 99,
+                "district": 5,
+                "endYear": 1987,
+                "memberType": "Representative",
+                "startYear": 1985,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 100,
+                "district": 5,
+                "endYear": 1989,
+                "memberType": "Representative",
+                "startYear": 1987,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 101,
+                "district": 5,
+                "endYear": 1991,
+                "memberType": "Representative",
+                "startYear": 1989,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 102,
+                "district": 5,
+                "endYear": 1993,
+                "memberType": "Representative",
+                "startYear": 1991,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 103,
+                "district": 5,
+                "endYear": 1995,
+                "memberType": "Representative",
+                "startYear": 1993,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 104,
+                "district": 5,
+                "endYear": 1997,
+                "memberType": "Representative",
+                "startYear": 1995,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 105,
+                "district": 5,
+                "endYear": 1999,
+                "memberType": "Representative",
+                "startYear": 1997,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 106,
+                "district": 5,
+                "endYear": 2001,
+                "memberType": "Representative",
+                "startYear": 1999,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 107,
+                "district": 5,
+                "endYear": 2003,
+                "memberType": "Representative",
+                "startYear": 2001,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 108,
+                "district": 5,
+                "endYear": 2005,
+                "memberType": "Representative",
+                "startYear": 2003,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 109,
+                "district": 5,
+                "endYear": 2007,
+                "memberType": "Representative",
+                "startYear": 2005,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 110,
+                "district": 5,
+                "endYear": 2009,
+                "memberType": "Representative",
+                "startYear": 2007,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 111,
+                "district": 5,
+                "endYear": 2011,
+                "memberType": "Representative",
+                "startYear": 2009,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 5,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 5,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 5,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 5,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 5,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 5,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 5,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 5,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:12Z"
+    },
+    "request": {
+        "bioguideId": "h000874",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,107 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1122 Longworth House Office Building",
+            "phoneNumber": "(202) 225-5435",
+            "zipCode": 20515
+        },
+        "bioguideId": "B001309",
+        "birthYear": "1964",
+        "cosponsoredLegislation": {
+            "count": 780,
+            "url": "https://api.congress.gov/v3/member/B001309/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/b001309_200.jpg"
+        },
+        "directOrderName": "Tim Burchett",
+        "district": 2,
+        "firstName": "Tim",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Burchett, Tim",
+        "lastName": "Burchett",
+        "officialWebsiteUrl": "https://burchett.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Tim Burchett",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Tim",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Burchett, Tim",
+                "lastName": "Burchett",
+                "startDate": "2019-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Tim Burchett",
+                "firstName": "Tim",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Burchett, Tim",
+                "lastName": "Burchett",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 139,
+            "url": "https://api.congress.gov/v3/member/B001309/sponsored-legislation"
+        },
+        "state": "Tennessee",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 2,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "TN",
+                "stateName": "Tennessee"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 2,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "TN",
+                "stateName": "Tennessee"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 2,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TN",
+                "stateName": "Tennessee"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 2,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TN",
+                "stateName": "Tennessee"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "b001309",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

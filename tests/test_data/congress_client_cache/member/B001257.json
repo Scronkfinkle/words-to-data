@@ -1,0 +1,180 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2306 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-5755",
+            "zipCode": 20515
+        },
+        "bioguideId": "B001257",
+        "birthYear": "1963",
+        "cosponsoredLegislation": {
+            "count": 3033,
+            "url": "https://api.congress.gov/v3/member/B001257/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "GPO Member Guide",
+            "imageUrl": "https://www.congress.gov/img/member/117_rp_fl_12_bilirakis_gus_200.jpg"
+        },
+        "directOrderName": "Gus M. Bilirakis",
+        "district": 12,
+        "firstName": "Gus",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Bilirakis, Gus M.",
+        "lastName": "Bilirakis",
+        "middleName": "M.",
+        "officialWebsiteUrl": "https://bilirakis.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2007
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Gus M. Bilirakis",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Gus",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Bilirakis, Gus M.",
+                "lastName": "Bilirakis",
+                "middleName": "M.",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Gus M. Bilirakis",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Gus",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Bilirakis, Gus M.",
+                "lastName": "Bilirakis",
+                "middleName": "M.",
+                "startDate": "2007-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Gus M. Bilirakis",
+                "firstName": "Gus",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Bilirakis, Gus M.",
+                "lastName": "Bilirakis",
+                "middleName": "M.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 296,
+            "url": "https://api.congress.gov/v3/member/B001257/sponsored-legislation"
+        },
+        "state": "Florida",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 110,
+                "district": 9,
+                "endYear": 2009,
+                "memberType": "Representative",
+                "startYear": 2007,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 111,
+                "district": 9,
+                "endYear": 2011,
+                "memberType": "Representative",
+                "startYear": 2009,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 9,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 12,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 12,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 12,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 12,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 12,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 12,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 12,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:13Z"
+    },
+    "request": {
+        "bioguideId": "b001257",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

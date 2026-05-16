@@ -1,0 +1,150 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2422 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-4076",
+            "zipCode": 20515
+        },
+        "bioguideId": "C001087",
+        "birthYear": "1966",
+        "cosponsoredLegislation": {
+            "count": 1607,
+            "url": "https://api.congress.gov/v3/member/C001087/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/6916065185b49de40f52cad4_200.jpg"
+        },
+        "directOrderName": "Eric A. \"Rick\" Crawford",
+        "district": 1,
+        "firstName": "Eric",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Crawford, Eric A. \"Rick\"",
+        "lastName": "Crawford",
+        "middleName": "A. \"Rick\"",
+        "officialWebsiteUrl": "https://crawford.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2011
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Eric A. \"Rick\" Crawford",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Eric",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Crawford, Eric A. \"Rick\"",
+                "lastName": "Crawford",
+                "middleName": "A. \"Rick\"",
+                "startDate": "2011-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Eric A. \"Rick\" Crawford",
+                "firstName": "Eric",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Crawford, Eric A. \"Rick\"",
+                "lastName": "Crawford",
+                "middleName": "A. \"Rick\"",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 143,
+            "url": "https://api.congress.gov/v3/member/C001087/sponsored-legislation"
+        },
+        "state": "Arkansas",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 1,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "AR",
+                "stateName": "Arkansas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 1,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "AR",
+                "stateName": "Arkansas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 1,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "AR",
+                "stateName": "Arkansas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 1,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "AR",
+                "stateName": "Arkansas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 1,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "AR",
+                "stateName": "Arkansas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 1,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "AR",
+                "stateName": "Arkansas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 1,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "AR",
+                "stateName": "Arkansas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 1,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "AR",
+                "stateName": "Arkansas"
+            }
+        ],
+        "updateDate": "2025-11-13T17:04:30Z"
+    },
+    "request": {
+        "bioguideId": "c001087",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

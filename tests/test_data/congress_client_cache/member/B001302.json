@@ -1,0 +1,126 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "464 Cannon House Office Building",
+            "phoneNumber": "(202) 225-2635",
+            "zipCode": 20515
+        },
+        "bioguideId": "B001302",
+        "birthYear": "1958",
+        "cosponsoredLegislation": {
+            "count": 1464,
+            "url": "https://api.congress.gov/v3/member/B001302/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/b001302_200.jpg"
+        },
+        "directOrderName": "Andy Biggs",
+        "district": 5,
+        "firstName": "Andy",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Biggs, Andy",
+        "lastName": "Biggs",
+        "officialWebsiteUrl": "https://biggs.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2017
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Andy Biggs",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Andy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Biggs, Andy",
+                "lastName": "Biggs",
+                "startDate": "2017-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Andy Biggs",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Andy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Biggs, Andy",
+                "lastName": "Biggs",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Andy Biggs",
+                "firstName": "Andy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Biggs, Andy",
+                "lastName": "Biggs",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 933,
+            "url": "https://api.congress.gov/v3/member/B001302/sponsored-legislation"
+        },
+        "state": "Arizona",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 5,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "AZ",
+                "stateName": "Arizona"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 5,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "AZ",
+                "stateName": "Arizona"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 5,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "AZ",
+                "stateName": "Arizona"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 5,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "AZ",
+                "stateName": "Arizona"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 5,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "AZ",
+                "stateName": "Arizona"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:14Z"
+    },
+    "request": {
+        "bioguideId": "b001302",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

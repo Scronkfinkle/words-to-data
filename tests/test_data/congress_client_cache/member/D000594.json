@@ -1,0 +1,87 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1415 Longworth House Office Building",
+            "phoneNumber": "(202) 225-9901",
+            "zipCode": 20515
+        },
+        "bioguideId": "D000594",
+        "birthYear": "1974",
+        "cosponsoredLegislation": {
+            "count": 461,
+            "url": "https://api.congress.gov/v3/member/D000594/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/66d9fd54f440bf1dc174fbf6_200.jpg"
+        },
+        "directOrderName": "Monica De La Cruz",
+        "district": 15,
+        "firstName": "Monica",
+        "honorificName": "Ms.",
+        "invertedOrderName": "De La Cruz, Monica",
+        "lastName": "De La Cruz",
+        "officialWebsiteUrl": "https://delacruz.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Monica De La Cruz",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Monica",
+                "honorificName": "Ms.",
+                "invertedOrderName": "De La Cruz, Monica",
+                "lastName": "De La Cruz",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Monica De La Cruz",
+                "firstName": "Monica",
+                "honorificName": "Ms.",
+                "invertedOrderName": "De La Cruz, Monica",
+                "lastName": "De La Cruz",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 61,
+            "url": "https://api.congress.gov/v3/member/D000594/sponsored-legislation"
+        },
+        "state": "Texas",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 15,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 15,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:19Z"
+    },
+    "request": {
+        "bioguideId": "d000594",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

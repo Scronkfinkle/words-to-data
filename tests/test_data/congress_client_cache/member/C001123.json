@@ -1,0 +1,111 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2463 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-5256",
+            "zipCode": 20515
+        },
+        "bioguideId": "C001123",
+        "birthYear": "1971",
+        "cosponsoredLegislation": {
+            "count": 1135,
+            "url": "https://api.congress.gov/v3/member/C001123/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/6807d8d63e52ea7df920ef05_200.jpg"
+        },
+        "directOrderName": "Gilbert Ray Cisneros, Jr.",
+        "district": 31,
+        "firstName": "Gilbert",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Cisneros, Gilbert Ray",
+        "lastName": "Cisneros",
+        "middleName": "Ray",
+        "officialWebsiteUrl": "https://cisneros.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Gilbert Ray Cisneros, Jr.",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Gilbert",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Cisneros, Gilbert Ray, Jr.",
+                "lastName": "Cisneros",
+                "middleName": "Ray",
+                "startDate": "2025-01-10T17:36:19Z"
+            },
+            {
+                "directOrderName": "Gilbert Ray Cisneros, Jr.",
+                "endDate": "2025-04-28T13:04:14Z",
+                "firstName": "Gilbert",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Cisneros, Gilbert Ray, Jr.",
+                "lastName": "Cisneros",
+                "middleName": "Ray",
+                "startDate": "2025-01-17T05:00:00Z"
+            },
+            {
+                "directOrderName": "Gilbert Ray Cisneros, Jr.",
+                "endDate": "2025-01-10T17:36:18Z",
+                "firstName": "Gilbert",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Cisneros, Gilbert Ray, Jr.",
+                "lastName": "Cisneros",
+                "middleName": "Ray",
+                "startDate": "2019-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Gilbert Ray Cisneros, Jr.",
+                "firstName": "Gilbert",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Cisneros, Gilbert Ray",
+                "lastName": "Cisneros",
+                "middleName": "Ray",
+                "startDate": "2025-04-28T13:04:15Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 32,
+            "url": "https://api.congress.gov/v3/member/C001123/sponsored-legislation"
+        },
+        "state": "California",
+        "suffixName": "Jr.",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 39,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 31,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "CA",
+                "stateName": "California"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:19Z"
+    },
+    "request": {
+        "bioguideId": "c001123",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,130 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "466 Cannon House Office Building",
+            "phoneNumber": "(202) 225-5235",
+            "zipCode": 20515
+        },
+        "bioguideId": "D000628",
+        "birthYear": "1953",
+        "cosponsoredLegislation": {
+            "count": 1145,
+            "url": "https://api.congress.gov/v3/member/D000628/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Congressional Pictorial Directory",
+            "imageUrl": "https://www.congress.gov/img/member/115_rp_fl_2_dunn_neal_200.jpg"
+        },
+        "directOrderName": "Neal P. Dunn",
+        "district": 2,
+        "firstName": "Neal",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Dunn, Neal P.",
+        "lastName": "Dunn",
+        "middleName": "P.",
+        "officialWebsiteUrl": "https://dunn.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2017
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Neal P. Dunn",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Neal",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Dunn, Neal P.",
+                "lastName": "Dunn",
+                "middleName": "P.",
+                "startDate": "2017-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Neal P. Dunn",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Neal",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Dunn, Neal P.",
+                "lastName": "Dunn",
+                "middleName": "P.",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Neal P. Dunn",
+                "firstName": "Neal",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Dunn, Neal P.",
+                "lastName": "Dunn",
+                "middleName": "P.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 90,
+            "url": "https://api.congress.gov/v3/member/D000628/sponsored-legislation"
+        },
+        "state": "Florida",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 2,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 2,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 2,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 2,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 2,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            }
+        ],
+        "updateDate": "2025-12-09T08:40:20Z"
+    },
+    "request": {
+        "bioguideId": "d000628",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

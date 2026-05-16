@@ -8,6 +8,8 @@ use words_to_data::{
     uslm::{TextContentField, bill_parser::parse_bill_amendments, parser::parse},
 };
 
+const PL_XML_PATH: &str = "tests/test_data/congress_client_cache/bill/119/hr/1/public_law.xml";
+
 // =============================================================================
 // WEBSITE EXAMPLE: Parse a US Code Document
 // https://wordstodata.com/#examples (Example 1)
@@ -192,8 +194,8 @@ fn website_example_diff_json_structure() {
 /// If this fails, update the "Extract Amendments from a Bill" section in index.html.
 #[test]
 fn website_example_extract_amendments() {
-    let data = parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml")
-        .expect("Failed to parse bill amendments");
+    let data =
+        parse_bill_amendments("119-21", PL_XML_PATH).expect("Failed to parse bill amendments");
 
     // Verify bill_id matches website (shows "119-21")
     assert_eq!(
@@ -215,8 +217,7 @@ fn website_example_extract_amendments() {
 /// If this fails, update the amendment output section in index.html.
 #[test]
 fn website_example_amendment_structure() {
-    let data = parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml")
-        .unwrap();
+    let data = parse_bill_amendments("119-21", PL_XML_PATH).unwrap();
 
     // Verify amendments have the fields shown on website
     for amendment in data.amendments.values() {
@@ -254,7 +255,7 @@ fn website_download_links_files_exist() {
     let files = [
         "tests/test_data/usc/2025-07-18/usc26.xml",
         "tests/test_data/usc/2025-07-30/usc26.xml",
-        "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml",
+        PL_XML_PATH,
     ];
 
     for file in files {
@@ -305,8 +306,7 @@ fn website_example_dataset_workflow() {
     assert_eq!(dataset.versions.len(), 2);
 
     // Add bill
-    let bill = parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml")
-        .expect("parse bill");
+    let bill = parse_bill_amendments("119-21", PL_XML_PATH).expect("parse bill");
     dataset.add_bill(bill);
 
     // Compute diff via dataset

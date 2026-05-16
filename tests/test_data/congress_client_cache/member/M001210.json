@@ -1,0 +1,127 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "407 Cannon House Office Building",
+            "phoneNumber": "(202) 225-3415",
+            "zipCode": 20515
+        },
+        "bioguideId": "M001210",
+        "birthYear": "1963",
+        "cosponsoredLegislation": {
+            "count": 841,
+            "url": "https://api.congress.gov/v3/member/M001210/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/m001210_200.jpg"
+        },
+        "directOrderName": "Gregory F. Murphy",
+        "district": 3,
+        "firstName": "Gregory",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Murphy, Gregory F.",
+        "lastName": "Murphy",
+        "middleName": "F.",
+        "officialWebsiteUrl": "https://murphy.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Gregory Murphy",
+                "endDate": "2023-01-11T17:52:00Z",
+                "firstName": "Gregory",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Murphy, Gregory",
+                "lastName": "Murphy",
+                "startDate": "2019-09-17T00:00:00Z"
+            },
+            {
+                "directOrderName": "Gregory F. Murphy",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Gregory",
+                "invertedOrderName": "Murphy, Gregory F.",
+                "lastName": "Murphy",
+                "middleName": "F.",
+                "startDate": "2023-01-11T17:52:00Z"
+            },
+            {
+                "directOrderName": "Gregory F. Murphy",
+                "endDate": "2025-04-28T13:04:20Z",
+                "firstName": "Gregory",
+                "invertedOrderName": "Murphy, Gregory F.",
+                "lastName": "Murphy",
+                "middleName": "F.",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Gregory F. Murphy",
+                "firstName": "Gregory",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Murphy, Gregory F.",
+                "lastName": "Murphy",
+                "middleName": "F.",
+                "startDate": "2025-04-28T13:04:21Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 122,
+            "url": "https://api.congress.gov/v3/member/M001210/sponsored-legislation"
+        },
+        "state": "North Carolina",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 3,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "NC",
+                "stateName": "North Carolina"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 3,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "NC",
+                "stateName": "North Carolina"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 3,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NC",
+                "stateName": "North Carolina"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 3,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NC",
+                "stateName": "North Carolina"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "m001210",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

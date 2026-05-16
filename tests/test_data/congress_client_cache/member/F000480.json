@@ -1,0 +1,94 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "243 Cannon House Office Building",
+            "phoneNumber": "(202) 225-2915",
+            "zipCode": 20515
+        },
+        "bioguideId": "F000480",
+        "birthYear": "1979",
+        "cosponsoredLegislation": {
+            "count": 151,
+            "url": "https://api.congress.gov/v3/member/F000480/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/669ff04f5d19788d1f2034aa_200.jpg"
+        },
+        "directOrderName": "Vince Fong",
+        "district": 20,
+        "firstName": "Vince",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Fong, Vince",
+        "lastName": "Fong",
+        "officialWebsiteUrl": "https://fong.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2024
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Vince Fong",
+                "endDate": "2025-01-17T04:59:00Z",
+                "firstName": "Vince",
+                "invertedOrderName": "Fong, Vince",
+                "lastName": "Fong",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Vince Fong",
+                "endDate": "2025-04-28T13:04:14Z",
+                "firstName": "Vince",
+                "invertedOrderName": "Fong, Vince",
+                "lastName": "Fong",
+                "startDate": "2025-01-17T05:00:00Z"
+            },
+            {
+                "directOrderName": "Vince Fong",
+                "firstName": "Vince",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Fong, Vince",
+                "lastName": "Fong",
+                "startDate": "2025-04-28T13:04:15Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 17,
+            "url": "https://api.congress.gov/v3/member/F000480/sponsored-legislation"
+        },
+        "state": "California",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 20,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2024,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 20,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "CA",
+                "stateName": "California"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:19Z"
+    },
+    "request": {
+        "bioguideId": "f000480",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

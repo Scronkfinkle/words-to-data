@@ -1,0 +1,87 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1404 Longworth House Office Building",
+            "phoneNumber": "(202) 225-3531",
+            "zipCode": 20515
+        },
+        "bioguideId": "M001225",
+        "birthYear": "1970",
+        "cosponsoredLegislation": {
+            "count": 1063,
+            "url": "https://api.congress.gov/v3/member/M001225/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/m001225_200.jpg"
+        },
+        "directOrderName": "Kevin Mullin",
+        "district": 15,
+        "firstName": "Kevin",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Mullin, Kevin",
+        "lastName": "Mullin",
+        "officialWebsiteUrl": "https://kevinmullin.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Kevin Mullin",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Kevin",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Mullin, Kevin",
+                "lastName": "Mullin",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Kevin Mullin",
+                "firstName": "Kevin",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Mullin, Kevin",
+                "lastName": "Mullin",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 35,
+            "url": "https://api.congress.gov/v3/member/M001225/sponsored-legislation"
+        },
+        "state": "California",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 15,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 15,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "CA",
+                "stateName": "California"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:17Z"
+    },
+    "request": {
+        "bioguideId": "m001225",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

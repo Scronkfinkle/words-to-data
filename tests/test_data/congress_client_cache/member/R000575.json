@@ -1,0 +1,187 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2469 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-3261",
+            "zipCode": 20515
+        },
+        "bioguideId": "R000575",
+        "birthYear": "1958",
+        "cosponsoredLegislation": {
+            "count": 1986,
+            "url": "https://api.congress.gov/v3/member/R000575/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Congressional Pictorial Directory",
+            "imageUrl": "https://www.congress.gov/img/member/116_rp_al_3_rogers_mike_200.jpg"
+        },
+        "directOrderName": "Mike Rogers",
+        "district": 3,
+        "firstName": "Mike",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Rogers, Mike D.",
+        "lastName": "Rogers",
+        "officialWebsiteUrl": "https://mikerogers.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2003
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Mike Rogers",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Mike",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Rogers, Mike D.",
+                "lastName": "Rogers",
+                "startDate": "2003-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Mike Rogers",
+                "firstName": "Mike",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Rogers, Mike D.",
+                "lastName": "Rogers",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 110,
+            "url": "https://api.congress.gov/v3/member/R000575/sponsored-legislation"
+        },
+        "state": "Alabama",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 108,
+                "district": 3,
+                "endYear": 2005,
+                "memberType": "Representative",
+                "startYear": 2003,
+                "stateCode": "AL",
+                "stateName": "Alabama"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 109,
+                "district": 3,
+                "endYear": 2007,
+                "memberType": "Representative",
+                "startYear": 2005,
+                "stateCode": "AL",
+                "stateName": "Alabama"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 110,
+                "district": 3,
+                "endYear": 2009,
+                "memberType": "Representative",
+                "startYear": 2007,
+                "stateCode": "AL",
+                "stateName": "Alabama"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 111,
+                "district": 3,
+                "endYear": 2011,
+                "memberType": "Representative",
+                "startYear": 2009,
+                "stateCode": "AL",
+                "stateName": "Alabama"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 3,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "AL",
+                "stateName": "Alabama"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 3,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "AL",
+                "stateName": "Alabama"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 3,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "AL",
+                "stateName": "Alabama"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 3,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "AL",
+                "stateName": "Alabama"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 3,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "AL",
+                "stateName": "Alabama"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 3,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "AL",
+                "stateName": "Alabama"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 3,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "AL",
+                "stateName": "Alabama"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 3,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "AL",
+                "stateName": "Alabama"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:12Z"
+    },
+    "request": {
+        "bioguideId": "r000575",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

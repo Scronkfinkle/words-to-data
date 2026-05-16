@@ -1,0 +1,97 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "324 Cannon House Office Building",
+            "phoneNumber": "(202) 225-6506",
+            "zipCode": 20515
+        },
+        "bioguideId": "L000599",
+        "birthYear": "1986",
+        "cosponsoredLegislation": {
+            "count": 2130,
+            "url": "https://api.congress.gov/v3/member/L000599/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/l000599_200.jpg"
+        },
+        "directOrderName": "Michael Lawler",
+        "district": 17,
+        "firstName": "Michael",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Lawler, Michael",
+        "lastName": "Lawler",
+        "nickName": "Mike",
+        "officialWebsiteUrl": "https://lawler.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Michael Lawler",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Michael",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Lawler, Michael",
+                "lastName": "Lawler",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Michael Lawler",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Michael",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Lawler, Michael",
+                "lastName": "Lawler",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Michael Lawler",
+                "firstName": "Michael",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Lawler, Michael",
+                "lastName": "Lawler",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 173,
+            "url": "https://api.congress.gov/v3/member/L000599/sponsored-legislation"
+        },
+        "state": "New York",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 17,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 17,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NY",
+                "stateName": "New York"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "l000599",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

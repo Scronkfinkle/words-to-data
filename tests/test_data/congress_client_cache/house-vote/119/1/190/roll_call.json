@@ -1,0 +1,58 @@
+{
+    "houseRollCallVote": {
+        "congress": 119,
+        "identifier": 11912025190,
+        "legislationNumber": "1",
+        "legislationType": "HR",
+        "legislationUrl": "https://www.congress.gov/bill/119/house-bill/1",
+        "result": "Passed",
+        "rollCallNumber": 190,
+        "sessionNumber": 1,
+        "sourceDataURL": "https://clerk.house.gov/evs/2025/roll190.xml",
+        "startDate": "2025-07-03T14:31:00-04:00",
+        "updateDate": "2026-04-16T09:37:21-04:00",
+        "votePartyTotal": [
+            {
+                "nayTotal": 2,
+                "notVotingTotal": 0,
+                "party": {
+                    "name": "Republican",
+                    "type": "R"
+                },
+                "presentTotal": 0,
+                "voteParty": "R",
+                "yeaTotal": 218
+            },
+            {
+                "nayTotal": 212,
+                "notVotingTotal": 0,
+                "party": {
+                    "name": "Democrat",
+                    "type": "D"
+                },
+                "presentTotal": 0,
+                "voteParty": "D",
+                "yeaTotal": 0
+            },
+            {
+                "nayTotal": 0,
+                "notVotingTotal": 0,
+                "party": {
+                    "name": "Independent",
+                    "type": "I"
+                },
+                "presentTotal": 0,
+                "voteParty": "I",
+                "yeaTotal": 0
+            }
+        ],
+        "voteQuestion": "On Motion to Concur in the Senate Amendment",
+        "voteType": "Recorded Vote"
+    },
+    "request": {
+        "congress": "119",
+        "contentType": "application/json",
+        "format": "json",
+        "session": "1"
+    }
+}

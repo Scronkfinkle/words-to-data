@@ -1,0 +1,106 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1725 Longworth House Office Building",
+            "phoneNumber": "(202) 225-6605",
+            "zipCode": 20515
+        },
+        "bioguideId": "V000134",
+        "birthYear": "1970",
+        "cosponsoredLegislation": {
+            "count": 760,
+            "url": "https://api.congress.gov/v3/member/V000134/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/677461060b34857ecc9091af_200.jpg"
+        },
+        "directOrderName": "Beth Van Duyne",
+        "district": 24,
+        "firstName": "Beth",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Van Duyne, Beth",
+        "lastName": "Van Duyne",
+        "officialWebsiteUrl": "https://vanduyne.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Beth Van Duyne",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Beth",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Van Duyne, Beth",
+                "lastName": "Van Duyne",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Beth Van Duyne",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Beth",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Van Duyne, Beth",
+                "lastName": "Van Duyne",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Beth Van Duyne",
+                "firstName": "Beth",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Van Duyne, Beth",
+                "lastName": "Van Duyne",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 106,
+            "url": "https://api.congress.gov/v3/member/V000134/sponsored-legislation"
+        },
+        "state": "Texas",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 24,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 24,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 24,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:17Z"
+    },
+    "request": {
+        "bioguideId": "v000134",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

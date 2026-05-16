@@ -1,0 +1,120 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2238 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-4231",
+            "zipCode": 20515
+        },
+        "bioguideId": "R000612",
+        "birthYear": "1965",
+        "cosponsoredLegislation": {
+            "count": 743,
+            "url": "https://api.congress.gov/v3/member/R000612/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/r000612_200.jpg"
+        },
+        "directOrderName": "John W. Rose",
+        "district": 6,
+        "firstName": "John",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Rose, John W.",
+        "lastName": "Rose",
+        "middleName": "W.",
+        "officialWebsiteUrl": "https://johnrose.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "John W. Rose",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "John",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Rose, John W.",
+                "lastName": "Rose",
+                "middleName": "W.",
+                "startDate": "2019-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "John W. Rose",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "John",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Rose, John W.",
+                "lastName": "Rose",
+                "middleName": "W.",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "John W. Rose",
+                "firstName": "John",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Rose, John W.",
+                "lastName": "Rose",
+                "middleName": "W.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 44,
+            "url": "https://api.congress.gov/v3/member/R000612/sponsored-legislation"
+        },
+        "state": "Tennessee",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 6,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "TN",
+                "stateName": "Tennessee"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 6,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "TN",
+                "stateName": "Tennessee"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 6,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TN",
+                "stateName": "Tennessee"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 6,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TN",
+                "stateName": "Tennessee"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "r000612",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,115 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "504 Cannon House Office Building",
+            "phoneNumber": "(202) 225-6576",
+            "zipCode": 20515
+        },
+        "bioguideId": "M001215",
+        "birthYear": "1955",
+        "cosponsoredLegislation": {
+            "count": 1197,
+            "url": "https://api.congress.gov/v3/member/M001215/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/m001215_200.jpg"
+        },
+        "directOrderName": "Mariannette Miller-Meeks",
+        "district": 1,
+        "firstName": "Mariannette",
+        "honorificName": "Mrs.",
+        "invertedOrderName": "Miller-Meeks, Mariannette",
+        "lastName": "Miller-Meeks",
+        "officialWebsiteUrl": "https://millermeeks.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Mariannette Miller-Meeks",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Mariannette",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Miller-Meeks, Mariannette",
+                "lastName": "Miller-Meeks",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Mariannette Miller-Meeks",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Mariannette",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Miller-Meeks, Mariannette",
+                "lastName": "Miller-Meeks",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Mariannette Miller-Meeks",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Mariannette",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Miller-Meeks, Mariannette",
+                "lastName": "Miller-Meeks",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Mariannette Miller-Meeks",
+                "firstName": "Mariannette",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Miller-Meeks, Mariannette",
+                "lastName": "Miller-Meeks",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 126,
+            "url": "https://api.congress.gov/v3/member/M001215/sponsored-legislation"
+        },
+        "state": "Iowa",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 2,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "IA",
+                "stateName": "Iowa"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 1,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "IA",
+                "stateName": "Iowa"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 1,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "IA",
+                "stateName": "Iowa"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "m001215",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

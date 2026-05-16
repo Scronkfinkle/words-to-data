@@ -1,0 +1,127 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "168 Cannon House Office Building",
+            "phoneNumber": "(202) 225-5801",
+            "zipCode": 20515
+        },
+        "bioguideId": "W000822",
+        "birthYear": "1945",
+        "cosponsoredLegislation": {
+            "count": 4029,
+            "url": "https://api.congress.gov/v3/member/W000822/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/w000822_200.jpg"
+        },
+        "directOrderName": "Bonnie Watson Coleman",
+        "district": 12,
+        "firstName": "Bonnie",
+        "honorificName": "Mrs.",
+        "invertedOrderName": "Watson Coleman, Bonnie",
+        "lastName": "Watson Coleman",
+        "officialWebsiteUrl": "https://watsoncoleman.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2015
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Bonnie Watson Coleman",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Bonnie",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Watson Coleman, Bonnie",
+                "lastName": "Watson Coleman",
+                "startDate": "2015-01-06T05:00:00Z"
+            },
+            {
+                "directOrderName": "Bonnie Watson Coleman",
+                "firstName": "Bonnie",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Watson Coleman, Bonnie",
+                "lastName": "Watson Coleman",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 199,
+            "url": "https://api.congress.gov/v3/member/W000822/sponsored-legislation"
+        },
+        "state": "New Jersey",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 12,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 12,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 12,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 12,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 12,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 12,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:14Z"
+    },
+    "request": {
+        "bioguideId": "w000822",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

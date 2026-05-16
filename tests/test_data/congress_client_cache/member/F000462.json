@@ -1,0 +1,137 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2305 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-9890",
+            "zipCode": 20515
+        },
+        "bioguideId": "F000462",
+        "birthYear": "1948",
+        "cosponsoredLegislation": {
+            "count": 2248,
+            "url": "https://api.congress.gov/v3/member/F000462/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/f000462_200.jpg"
+        },
+        "directOrderName": "Lois Frankel",
+        "district": 22,
+        "firstName": "Lois",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Frankel, Lois",
+        "lastName": "Frankel",
+        "officialWebsiteUrl": "https://frankel.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2013
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Lois Frankel",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Lois",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Frankel, Lois",
+                "lastName": "Frankel",
+                "startDate": "2013-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Lois Frankel",
+                "firstName": "Lois",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Frankel, Lois",
+                "lastName": "Frankel",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 99,
+            "url": "https://api.congress.gov/v3/member/F000462/sponsored-legislation"
+        },
+        "state": "Florida",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 22,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 22,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 21,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 21,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 21,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 22,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 22,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "f000462",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

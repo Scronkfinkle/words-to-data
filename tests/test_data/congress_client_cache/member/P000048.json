@@ -1,0 +1,115 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2202 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-3605",
+            "zipCode": 20515
+        },
+        "bioguideId": "P000048",
+        "birthYear": "1977",
+        "cosponsoredLegislation": {
+            "count": 860,
+            "url": "https://api.congress.gov/v3/member/P000048/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/p000048_200.jpg"
+        },
+        "directOrderName": "August Pfluger",
+        "district": 11,
+        "firstName": "August",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Pfluger, August",
+        "lastName": "Pfluger",
+        "officialWebsiteUrl": "https://pfluger.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "August Pfluger",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "August",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Pfluger, August",
+                "lastName": "Pfluger",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "August Pfluger",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "August",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Pfluger, August",
+                "lastName": "Pfluger",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "August Pfluger",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "August",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Pfluger, August",
+                "lastName": "Pfluger",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "August Pfluger",
+                "firstName": "August",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Pfluger, August",
+                "lastName": "Pfluger",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 156,
+            "url": "https://api.congress.gov/v3/member/P000048/sponsored-legislation"
+        },
+        "state": "Texas",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 11,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 11,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 11,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "p000048",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

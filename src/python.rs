@@ -7,9 +7,11 @@ use pythonize::pythonize;
 use serde_json;
 
 use crate::congress::{
-    BillDownload as RustBillDownload, Chamber as RustChamber, CongressClient as RustCongressClient,
-    CongressError, CosponsorRecord as RustCosponsorRecord, Member as RustMember,
-    MemberTerm as RustMemberTerm, Party as RustParty, SponsorInfo as RustSponsorInfo,
+    BillDownload as RustBillDownload, BillVotes as RustBillVotes, Chamber as RustChamber,
+    CongressClient as RustCongressClient, CongressError, CosponsorRecord as RustCosponsorRecord,
+    HouseRollCall as RustHouseRollCall, Member as RustMember, MemberTerm as RustMemberTerm,
+    MemberVote as RustMemberVote, Party as RustParty, SponsorInfo as RustSponsorInfo,
+    VotePosition as RustVotePosition,
 };
 use crate::dataset::{
     Dataset as RustDataset, DatasetError, DatasetMetadata as RustDatasetMetadata,
@@ -1532,20 +1534,52 @@ impl Dataset {
     }
 
     #[getter]
-    fn members(&self) -> Vec<Member> {
+    fn members(&self) -> std::collections::HashMap<String, Member> {
         self.inner
             .members
-            .values()
-            .map(|m| Member { inner: m.clone() })
+            .iter()
+            .map(|(k, v)| (k.clone(), Member { inner: v.clone() }))
             .collect()
     }
 
     #[getter]
-    fn sponsors(&self) -> Vec<SponsorInfo> {
+    fn sponsors(&self) -> std::collections::HashMap<String, SponsorInfo> {
         self.inner
             .sponsors
-            .values()
-            .map(|s| SponsorInfo { inner: s.clone() })
+            .iter()
+            .map(|(k, v)| (k.clone(), SponsorInfo { inner: v.clone() }))
+            .collect()
+    }
+
+    fn add_bill_votes(&mut self, votes: &BillVotes) {
+        self.inner.add_bill_votes(votes.inner.clone());
+    }
+
+    fn get_bill_votes(&self, bill_id: &str) -> Option<BillVotes> {
+        self.inner
+            .get_bill_votes(bill_id)
+            .map(|v| BillVotes { inner: v.clone() })
+    }
+
+    fn votes_by_member(&self, bioguide_id: &str) -> Vec<(HouseRollCall, VotePosition)> {
+        self.inner
+            .votes_by_member(bioguide_id)
+            .into_iter()
+            .map(|(rc, pos)| {
+                (
+                    HouseRollCall { inner: rc.clone() },
+                    VotePosition { inner: pos },
+                )
+            })
+            .collect()
+    }
+
+    #[getter]
+    fn all_bill_votes(&self) -> std::collections::HashMap<String, BillVotes> {
+        self.inner
+            .bill_votes
+            .iter()
+            .map(|(k, v)| (k.clone(), BillVotes { inner: v.clone() }))
             .collect()
     }
 
@@ -1565,6 +1599,232 @@ impl Dataset {
         let inner: RustDataset = serde_json::from_str(json_str)
             .map_err(|e| PyValueError::new_err(format!("JSON deserialization error: {}", e)))?;
         Ok(Dataset { inner })
+    }
+}
+
+// ============================================================================
+// Vote types
+// ============================================================================
+
+#[pyclass(from_py_object)]
+#[derive(Clone)]
+struct VotePosition {
+    inner: RustVotePosition,
+}
+
+#[pymethods]
+impl VotePosition {
+    #[staticmethod]
+    fn yea() -> Self {
+        VotePosition {
+            inner: RustVotePosition::Yea,
+        }
+    }
+
+    #[staticmethod]
+    fn nay() -> Self {
+        VotePosition {
+            inner: RustVotePosition::Nay,
+        }
+    }
+
+    #[staticmethod]
+    fn not_voting() -> Self {
+        VotePosition {
+            inner: RustVotePosition::NotVoting,
+        }
+    }
+
+    #[staticmethod]
+    fn present() -> Self {
+        VotePosition {
+            inner: RustVotePosition::Present,
+        }
+    }
+
+    fn is_yea(&self) -> bool {
+        matches!(self.inner, RustVotePosition::Yea)
+    }
+
+    fn is_nay(&self) -> bool {
+        matches!(self.inner, RustVotePosition::Nay)
+    }
+
+    fn is_not_voting(&self) -> bool {
+        matches!(self.inner, RustVotePosition::NotVoting)
+    }
+
+    fn is_present(&self) -> bool {
+        matches!(self.inner, RustVotePosition::Present)
+    }
+
+    fn name(&self) -> String {
+        match self.inner {
+            RustVotePosition::Yea => "Yea".to_string(),
+            RustVotePosition::Nay => "Nay".to_string(),
+            RustVotePosition::NotVoting => "NotVoting".to_string(),
+            RustVotePosition::Present => "Present".to_string(),
+        }
+    }
+
+    fn __repr__(&self) -> String {
+        format!("VotePosition({})", self.name())
+    }
+}
+
+#[pyclass(from_py_object)]
+#[derive(Clone)]
+struct MemberVote {
+    inner: RustMemberVote,
+}
+
+#[pymethods]
+impl MemberVote {
+    #[new]
+    fn new(bioguide_id: String, position: &VotePosition) -> Self {
+        MemberVote {
+            inner: RustMemberVote {
+                bioguide_id,
+                position: position.inner,
+            },
+        }
+    }
+
+    #[getter]
+    fn bioguide_id(&self) -> String {
+        self.inner.bioguide_id.clone()
+    }
+
+    #[getter]
+    fn position(&self) -> VotePosition {
+        VotePosition {
+            inner: self.inner.position,
+        }
+    }
+
+    fn __repr__(&self) -> String {
+        format!(
+            "MemberVote(bioguide_id='{}', position={})",
+            self.inner.bioguide_id,
+            VotePosition {
+                inner: self.inner.position
+            }
+            .name()
+        )
+    }
+}
+
+#[pyclass(from_py_object)]
+#[derive(Clone)]
+struct HouseRollCall {
+    inner: RustHouseRollCall,
+}
+
+#[pymethods]
+impl HouseRollCall {
+    #[getter]
+    fn congress(&self) -> u16 {
+        self.inner.congress
+    }
+
+    #[getter]
+    fn session(&self) -> u8 {
+        self.inner.session
+    }
+
+    #[getter]
+    fn roll_number(&self) -> u32 {
+        self.inner.roll_number
+    }
+
+    #[getter]
+    fn date(&self) -> String {
+        self.inner.date.clone()
+    }
+
+    #[getter]
+    fn question(&self) -> String {
+        self.inner.question.clone()
+    }
+
+    #[getter]
+    fn result(&self) -> String {
+        self.inner.result.clone()
+    }
+
+    #[getter]
+    fn yea_count(&self) -> u32 {
+        self.inner.yea_count
+    }
+
+    #[getter]
+    fn nay_count(&self) -> u32 {
+        self.inner.nay_count
+    }
+
+    #[getter]
+    fn not_voting_count(&self) -> u32 {
+        self.inner.not_voting_count
+    }
+
+    #[getter]
+    fn present_count(&self) -> u32 {
+        self.inner.present_count
+    }
+
+    #[getter]
+    fn member_votes(&self) -> Vec<MemberVote> {
+        self.inner
+            .member_votes
+            .iter()
+            .map(|mv| MemberVote { inner: mv.clone() })
+            .collect()
+    }
+
+    fn get_vote(&self, bioguide_id: &str) -> Option<VotePosition> {
+        self.inner
+            .member_votes
+            .iter()
+            .find(|mv| mv.bioguide_id == bioguide_id)
+            .map(|mv| VotePosition { inner: mv.position })
+    }
+
+    fn __repr__(&self) -> String {
+        format!(
+            "HouseRollCall(congress={}, session={}, roll_number={}, result='{}')",
+            self.inner.congress, self.inner.session, self.inner.roll_number, self.inner.result
+        )
+    }
+}
+
+#[pyclass(from_py_object)]
+#[derive(Clone)]
+struct BillVotes {
+    inner: RustBillVotes,
+}
+
+#[pymethods]
+impl BillVotes {
+    #[getter]
+    fn bill_id(&self) -> String {
+        self.inner.bill_id.clone()
+    }
+
+    #[getter]
+    fn roll_calls(&self) -> Vec<HouseRollCall> {
+        self.inner
+            .roll_calls
+            .iter()
+            .map(|rc| HouseRollCall { inner: rc.clone() })
+            .collect()
+    }
+
+    fn __repr__(&self) -> String {
+        format!(
+            "BillVotes(bill_id='{}', roll_calls={})",
+            self.inner.bill_id,
+            self.inner.roll_calls.len()
+        )
     }
 }
 
@@ -2022,5 +2282,10 @@ fn words_to_data(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_class::<SponsorInfo>()?;
     m.add_class::<BillDownload>()?;
     m.add_class::<CongressClient>()?;
+    // vote types
+    m.add_class::<VotePosition>()?;
+    m.add_class::<MemberVote>()?;
+    m.add_class::<HouseRollCall>()?;
+    m.add_class::<BillVotes>()?;
     Ok(())
 }

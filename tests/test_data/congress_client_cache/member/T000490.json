@@ -1,0 +1,100 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "325 Cannon House Office Building",
+            "phoneNumber": "(202) 225-3164",
+            "zipCode": 20515
+        },
+        "bioguideId": "T000490",
+        "birthYear": "1969",
+        "cosponsoredLegislation": {
+            "count": 167,
+            "url": "https://api.congress.gov/v3/member/T000490/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/677460190b34857ecc9091a3_200.jpg"
+        },
+        "directOrderName": "David J. Taylor",
+        "district": 2,
+        "firstName": "David",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Taylor, David J.",
+        "lastName": "Taylor",
+        "middleName": "J.",
+        "officialWebsiteUrl": "https://taylor.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2025
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "David Taylor",
+                "endDate": "2025-01-10T17:36:18Z",
+                "firstName": "David",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Taylor, David",
+                "lastName": "Taylor",
+                "middleName": "J.",
+                "startDate": "2025-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "David Taylor",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "David",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Taylor, David",
+                "lastName": "Taylor",
+                "middleName": "J.",
+                "startDate": "2025-01-10T17:36:19Z"
+            },
+            {
+                "directOrderName": "David Taylor",
+                "endDate": "2025-04-28T13:04:23Z",
+                "firstName": "David",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Taylor, David",
+                "lastName": "Taylor",
+                "middleName": "J.",
+                "startDate": "2025-01-17T05:00:00Z"
+            },
+            {
+                "directOrderName": "David J. Taylor",
+                "firstName": "David",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Taylor, David J.",
+                "lastName": "Taylor",
+                "middleName": "J.",
+                "startDate": "2025-04-28T13:04:24Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 31,
+            "url": "https://api.congress.gov/v3/member/T000490/sponsored-legislation"
+        },
+        "state": "Ohio",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 2,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "OH",
+                "stateName": "Ohio"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:20Z"
+    },
+    "request": {
+        "bioguideId": "t000490",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

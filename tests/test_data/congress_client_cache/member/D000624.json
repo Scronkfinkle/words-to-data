@@ -1,0 +1,136 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "102 Cannon House Office Building",
+            "phoneNumber": "(202) 225-4071",
+            "zipCode": 20515
+        },
+        "bioguideId": "D000624",
+        "birthYear": "1953",
+        "cosponsoredLegislation": {
+            "count": 3042,
+            "url": "https://api.congress.gov/v3/member/D000624/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/d000624_200.jpg"
+        },
+        "directOrderName": "Debbie Dingell",
+        "district": 6,
+        "firstName": "Debbie",
+        "honorificName": "Mrs.",
+        "invertedOrderName": "Dingell, Debbie",
+        "lastName": "Dingell",
+        "officialWebsiteUrl": "https://debbiedingell.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2015
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Debbie Dingell",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Debbie",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Dingell, Debbie",
+                "lastName": "Dingell",
+                "startDate": "2015-01-06T05:00:00Z"
+            },
+            {
+                "directOrderName": "Debbie Dingell",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Debbie",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Dingell, Debbie",
+                "lastName": "Dingell",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Debbie Dingell",
+                "firstName": "Debbie",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Dingell, Debbie",
+                "lastName": "Dingell",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 264,
+            "url": "https://api.congress.gov/v3/member/D000624/sponsored-legislation"
+        },
+        "state": "Michigan",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 12,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 12,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 12,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 12,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 6,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 6,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "d000624",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

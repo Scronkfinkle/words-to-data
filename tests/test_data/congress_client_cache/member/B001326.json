@@ -1,0 +1,100 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1508 Longworth House Office Building",
+            "phoneNumber": "(202) 225-5711",
+            "zipCode": 20515
+        },
+        "bioguideId": "B001326",
+        "birthYear": "1975",
+        "cosponsoredLegislation": {
+            "count": 293,
+            "url": "https://api.congress.gov/v3/member/B001326/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/677423150b34857ecc909059_200.jpg"
+        },
+        "directOrderName": "Janelle S. Bynum",
+        "district": 5,
+        "firstName": "Janelle",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Bynum, Janelle S.",
+        "lastName": "Bynum",
+        "middleName": "S.",
+        "officialWebsiteUrl": "https://bynum.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2025
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Janelle Bynum",
+                "endDate": "2025-01-10T17:36:18Z",
+                "firstName": "Janelle",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Bynum, Janelle",
+                "lastName": "Bynum",
+                "middleName": "S.",
+                "startDate": "2025-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Janelle Bynum",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Janelle",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Bynum, Janelle",
+                "lastName": "Bynum",
+                "middleName": "S.",
+                "startDate": "2025-01-10T17:36:19Z"
+            },
+            {
+                "directOrderName": "Janelle Bynum",
+                "endDate": "2025-04-28T13:04:24Z",
+                "firstName": "Janelle",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Bynum, Janelle",
+                "lastName": "Bynum",
+                "middleName": "S.",
+                "startDate": "2025-01-17T05:00:00Z"
+            },
+            {
+                "directOrderName": "Janelle S. Bynum",
+                "firstName": "Janelle",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Bynum, Janelle S.",
+                "lastName": "Bynum",
+                "middleName": "S.",
+                "startDate": "2025-04-28T13:04:25Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 21,
+            "url": "https://api.congress.gov/v3/member/B001326/sponsored-legislation"
+        },
+        "state": "Oregon",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 5,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "OR",
+                "stateName": "Oregon"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:20Z"
+    },
+    "request": {
+        "bioguideId": "b001326",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

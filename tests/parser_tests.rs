@@ -1,6 +1,8 @@
 use rstest::rstest;
 use words_to_data::uslm::parser::{parse, parse_from_str};
 
+const PL_XML_PATH: &str = "tests/test_data/congress_client_cache/bill/119/hr/1/public_law.xml";
+
 #[test]
 fn test_parse_usc_title_7() {
     let result = parse("tests/test_data/usc/2025-07-18/usc07.xml", "2025-07-18");
@@ -32,10 +34,7 @@ fn test_parse_usc_title_7() {
 
 #[test]
 fn test_parse_public_law() {
-    let result = parse(
-        "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml",
-        "2025-07-04",
-    );
+    let result = parse(PL_XML_PATH, "2025-07-04");
     assert!(
         result.is_ok(),
         "Failed to parse Public Law: {:?}",

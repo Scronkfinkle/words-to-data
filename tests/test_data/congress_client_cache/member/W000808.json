@@ -1,0 +1,168 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2080 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-4506",
+            "zipCode": 20515
+        },
+        "bioguideId": "W000808",
+        "birthYear": "1942",
+        "cosponsoredLegislation": {
+            "count": 3839,
+            "url": "https://api.congress.gov/v3/member/W000808/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/w000808_200.jpg"
+        },
+        "directOrderName": "Frederica S. Wilson",
+        "district": 24,
+        "firstName": "Frederica",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Wilson, Frederica S.",
+        "lastName": "Wilson",
+        "middleName": "S.",
+        "officialWebsiteUrl": "https://wilson.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2011
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Frederica S. Wilson",
+                "endDate": "2024-02-27T13:20:49Z",
+                "firstName": "Frederica",
+                "invertedOrderName": "Wilson, Frederica S.",
+                "lastName": "Wilson",
+                "middleName": "S.",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Frederica S. Wilson",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Frederica",
+                "invertedOrderName": "Wilson, Frederica S.",
+                "lastName": "Wilson",
+                "middleName": "S.",
+                "startDate": "2011-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Frederica S. Wilson",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Frederica",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Wilson, Frederica S.",
+                "lastName": "Wilson",
+                "middleName": "S.",
+                "startDate": "2024-02-27T13:20:50Z"
+            },
+            {
+                "directOrderName": "Frederica S. Wilson",
+                "firstName": "Frederica",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Wilson, Frederica S.",
+                "lastName": "Wilson",
+                "middleName": "S.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 172,
+            "url": "https://api.congress.gov/v3/member/W000808/sponsored-legislation"
+        },
+        "state": "Florida",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 17,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 24,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 24,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 24,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 24,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 24,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 24,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 24,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:13Z"
+    },
+    "request": {
+        "bioguideId": "w000808",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

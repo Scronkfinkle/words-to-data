@@ -1,0 +1,130 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "404 Cannon House Office Building",
+            "phoneNumber": "(202) 225-4436",
+            "zipCode": 20515
+        },
+        "bioguideId": "S001188",
+        "birthYear": "1976",
+        "cosponsoredLegislation": {
+            "count": 611,
+            "url": "https://api.congress.gov/v3/member/S001188/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/67745e7e0b34857ecc90917f_200.jpg"
+        },
+        "directOrderName": "Marlin A. Stutzman",
+        "district": 3,
+        "firstName": "Marlin",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Stutzman, Marlin A.",
+        "lastName": "Stutzman",
+        "middleName": "A.",
+        "officialWebsiteUrl": "https://stutzman.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2010
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Marlin A. Stutzman",
+                "endDate": "2025-01-10T17:36:18Z",
+                "firstName": "Marlin",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Stutzman, Marlin A.",
+                "lastName": "Stutzman",
+                "middleName": "A.",
+                "startDate": "2010-11-16T00:00:00Z"
+            },
+            {
+                "directOrderName": "Marlin A. Stutzman",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Marlin",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Stutzman, Marlin A.",
+                "lastName": "Stutzman",
+                "middleName": "A.",
+                "startDate": "2025-01-10T17:36:19Z"
+            },
+            {
+                "directOrderName": "Marlin A. Stutzman",
+                "firstName": "Marlin",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Stutzman, Marlin A.",
+                "lastName": "Stutzman",
+                "middleName": "A.",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 41,
+            "url": "https://api.congress.gov/v3/member/S001188/sponsored-legislation"
+        },
+        "state": "Indiana",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 111,
+                "district": 3,
+                "endYear": 2011,
+                "memberType": "Representative",
+                "startYear": 2010,
+                "stateCode": "IN",
+                "stateName": "Indiana"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 3,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "IN",
+                "stateName": "Indiana"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 3,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "IN",
+                "stateName": "Indiana"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 3,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "IN",
+                "stateName": "Indiana"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 3,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "IN",
+                "stateName": "Indiana"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:20Z"
+    },
+    "request": {
+        "bioguideId": "s001188",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

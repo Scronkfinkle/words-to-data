@@ -13,7 +13,9 @@ use std::collections::HashMap;
 use std::fs;
 
 use crate::annotation::ChangeAnnotation;
-use crate::congress::{BillDownload, CosponsorRecord, Member, SponsorInfo};
+use crate::congress::{
+    BillDownload, BillVotes, CosponsorRecord, HouseRollCall, Member, SponsorInfo, VotePosition,
+};
 use crate::diff::TreeDiff;
 use crate::uslm::bill_parser::Bill;
 use crate::uslm::parser::ParseError;
@@ -79,6 +81,11 @@ pub struct Dataset {
     #[serde_as(as = "Vec<(_, _)>")]
     #[serde(default)]
     pub sponsors: HashMap<String, SponsorInfo>,
+
+    /// Roll call votes by bill ID
+    #[serde_as(as = "Vec<(_, _)>")]
+    #[serde(default)]
+    pub bill_votes: HashMap<String, BillVotes>,
 }
 
 impl Dataset {
@@ -91,6 +98,7 @@ impl Dataset {
             diff_annotations: HashMap::new(),
             members: HashMap::new(),
             sponsors: HashMap::new(),
+            bill_votes: HashMap::new(),
         }
     }
 
@@ -380,6 +388,31 @@ impl Dataset {
         self.sponsors.get(bill_id)
     }
 
+    /// Add votes for a bill
+    pub fn add_bill_votes(&mut self, votes: BillVotes) {
+        self.bill_votes.insert(votes.bill_id.clone(), votes);
+    }
+
+    /// Get votes for a bill
+    pub fn get_bill_votes(&self, bill_id: &str) -> Option<&BillVotes> {
+        self.bill_votes.get(bill_id)
+    }
+
+    /// Get all roll calls where a member voted, with their position
+    pub fn votes_by_member(&self, bioguide_id: &str) -> Vec<(&HouseRollCall, VotePosition)> {
+        let mut results = Vec::new();
+        for bill_votes in self.bill_votes.values() {
+            for roll_call in &bill_votes.roll_calls {
+                for mv in &roll_call.member_votes {
+                    if mv.bioguide_id == bioguide_id {
+                        results.push((roll_call, mv.position));
+                    }
+                }
+            }
+        }
+        results
+    }
+
     /// Get members who sponsored or cosponsored bills affecting a path
     pub fn sponsors_for_path(&self, path: &str) -> Vec<&Member> {
         let bill_ids: Vec<_> = self
@@ -461,7 +494,15 @@ impl Dataset {
             }
         }
 
-        // TODO: Parse votes_json when available
+        // Parse votes_json if available
+        if let Some(ref votes_json) = download.votes_json
+            && let Ok(roll_calls) = serde_json::from_str::<Vec<HouseRollCall>>(votes_json)
+        {
+            self.add_bill_votes(BillVotes {
+                bill_id: bill_id.clone(),
+                roll_calls,
+            });
+        }
 
         Ok(bill_id)
     }

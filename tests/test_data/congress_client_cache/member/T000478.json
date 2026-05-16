@@ -1,0 +1,125 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2230 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-3665",
+            "zipCode": 20515
+        },
+        "bioguideId": "T000478",
+        "birthYear": "1961",
+        "cosponsoredLegislation": {
+            "count": 1813,
+            "url": "https://api.congress.gov/v3/member/T000478/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/t000478_200.jpg"
+        },
+        "directOrderName": "Claudia Tenney",
+        "district": 24,
+        "firstName": "Claudia",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Tenney, Claudia",
+        "lastName": "Tenney",
+        "officialWebsiteUrl": "https://tenney.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2017
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Claudia Tenney",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Claudia",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Tenney, Claudia",
+                "lastName": "Tenney",
+                "startDate": "2017-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Claudia Tenney",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Claudia",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Tenney, Claudia",
+                "lastName": "Tenney",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Claudia Tenney",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Claudia",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Tenney, Claudia",
+                "lastName": "Tenney",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Claudia Tenney",
+                "firstName": "Claudia",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Tenney, Claudia",
+                "lastName": "Tenney",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 223,
+            "url": "https://api.congress.gov/v3/member/T000478/sponsored-legislation"
+        },
+        "state": "New York",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 22,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 22,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 24,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 24,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NY",
+                "stateName": "New York"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "t000478",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

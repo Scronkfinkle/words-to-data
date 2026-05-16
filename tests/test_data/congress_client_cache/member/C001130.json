@@ -1,0 +1,87 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1616 Longworth House Office Building",
+            "phoneNumber": "(202) 225-8885",
+            "zipCode": 20515
+        },
+        "bioguideId": "C001130",
+        "birthYear": "1981",
+        "cosponsoredLegislation": {
+            "count": 937,
+            "url": "https://api.congress.gov/v3/member/C001130/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/c001130_200.jpg"
+        },
+        "directOrderName": "Jasmine Crockett",
+        "district": 30,
+        "firstName": "Jasmine",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Crockett, Jasmine",
+        "lastName": "Crockett",
+        "officialWebsiteUrl": "https://crockett.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Jasmine Crockett",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Jasmine",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Crockett, Jasmine",
+                "lastName": "Crockett",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Jasmine Crockett",
+                "firstName": "Jasmine",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Crockett, Jasmine",
+                "lastName": "Crockett",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 42,
+            "url": "https://api.congress.gov/v3/member/C001130/sponsored-legislation"
+        },
+        "state": "Texas",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 30,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 30,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:19Z"
+    },
+    "request": {
+        "bioguideId": "c001130",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

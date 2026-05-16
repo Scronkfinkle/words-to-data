@@ -1,0 +1,116 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "452 Cannon House Office Building",
+            "phoneNumber": "(202) 225-5456",
+            "zipCode": 20515
+        },
+        "bioguideId": "P000614",
+        "birthYear": "1980",
+        "cosponsoredLegislation": {
+            "count": 2087,
+            "url": "https://api.congress.gov/v3/member/P000614/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/p000614_200.jpg"
+        },
+        "directOrderName": "Chris Pappas",
+        "district": 1,
+        "firstName": "Chris",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Pappas, Chris",
+        "lastName": "Pappas",
+        "officialWebsiteUrl": "https://pappas.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Chris Pappas",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Chris",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Pappas, Chris",
+                "lastName": "Pappas",
+                "startDate": "2019-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Chris Pappas",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Chris",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Pappas, Chris",
+                "lastName": "Pappas",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Chris Pappas",
+                "firstName": "Chris",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Pappas, Chris",
+                "lastName": "Pappas",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 175,
+            "url": "https://api.congress.gov/v3/member/P000614/sponsored-legislation"
+        },
+        "state": "New Hampshire",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 1,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "NH",
+                "stateName": "New Hampshire"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 1,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "NH",
+                "stateName": "New Hampshire"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 1,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NH",
+                "stateName": "New Hampshire"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 1,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NH",
+                "stateName": "New Hampshire"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:15Z"
+    },
+    "request": {
+        "bioguideId": "p000614",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

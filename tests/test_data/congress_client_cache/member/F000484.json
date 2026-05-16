@@ -1,0 +1,94 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "244 Cannon House Office Building",
+            "phoneNumber": "(202) 225-2706",
+            "zipCode": 20515
+        },
+        "bioguideId": "F000484",
+        "birthYear": "1974",
+        "cosponsoredLegislation": {
+            "count": 165,
+            "url": "https://api.congress.gov/v3/member/F000484/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/67efda8c1b05a5a598f7fde0_200.jpg"
+        },
+        "directOrderName": "Randy Fine",
+        "district": 6,
+        "firstName": "Randy",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Fine, Randy",
+        "lastName": "Fine",
+        "officialWebsiteUrl": "https://fine.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2025
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Randy Fine",
+                "endDate": "2025-04-28T13:04:16Z",
+                "firstName": "Randy",
+                "invertedOrderName": "Fine, Randy",
+                "lastName": "Fine",
+                "startDate": "2025-04-02T04:00:00Z"
+            },
+            {
+                "directOrderName": "Randy Fine",
+                "endDate": "2025-04-28T13:06:18Z",
+                "firstName": "Randy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Fine, Randy",
+                "lastName": "Fine",
+                "startDate": "2025-04-28T13:04:17Z"
+            },
+            {
+                "directOrderName": "Randy Fine",
+                "endDate": "2025-04-02T03:59:59Z",
+                "firstName": "Randy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Fine, Randy",
+                "lastName": "Fine",
+                "startDate": "2025-04-28T13:06:19Z"
+            },
+            {
+                "directOrderName": "Randy Fine",
+                "firstName": "Randy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Fine, Randy",
+                "lastName": "Fine",
+                "startDate": "2025-04-02T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 29,
+            "url": "https://api.congress.gov/v3/member/F000484/sponsored-legislation"
+        },
+        "state": "Florida",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 6,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:21Z"
+    },
+    "request": {
+        "bioguideId": "f000484",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

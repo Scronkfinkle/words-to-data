@@ -1,0 +1,86 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1023 Longworth House Office Building",
+            "phoneNumber": "(202) 225-2661",
+            "zipCode": 20515
+        },
+        "bioguideId": "S001231",
+        "birthYear": "1977",
+        "cosponsoredLegislation": {
+            "count": 540,
+            "url": "https://api.congress.gov/v3/member/S001231/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/67745f940b34857ecc909197_200.jpg"
+        },
+        "directOrderName": "Lateefah Simon",
+        "district": 12,
+        "firstName": "Lateefah",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Simon, Lateefah",
+        "lastName": "Simon",
+        "officialWebsiteUrl": "https://simon.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2025
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Lateefah Simon",
+                "endDate": "2025-01-10T17:36:18Z",
+                "firstName": "Lateefah",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Simon, Lateefah",
+                "lastName": "Simon",
+                "startDate": "2025-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Lateefah Simon",
+                "firstName": "Lateefah",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Simon, Lateefah",
+                "lastName": "Simon",
+                "startDate": "2025-01-17T05:00:00Z"
+            },
+            {
+                "directOrderName": "Lateefah Simon",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Lateefah",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Simon, Lateefah",
+                "lastName": "Simon",
+                "startDate": "2025-01-10T17:36:19Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 7,
+            "url": "https://api.congress.gov/v3/member/S001231/sponsored-legislation"
+        },
+        "state": "California",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 12,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "CA",
+                "stateName": "California"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:12Z"
+    },
+    "request": {
+        "bioguideId": "s001231",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

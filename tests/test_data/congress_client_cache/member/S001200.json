@@ -1,0 +1,117 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2353 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-9889",
+            "zipCode": 20515
+        },
+        "bioguideId": "S001200",
+        "birthYear": "1978",
+        "cosponsoredLegislation": {
+            "count": 3563,
+            "url": "https://api.congress.gov/v3/member/S001200/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Congressional Pictorial Directory",
+            "imageUrl": "https://www.congress.gov/img/member/115_rp_fl_9_soto_darren_200.jpg"
+        },
+        "directOrderName": "Darren Soto",
+        "district": 9,
+        "firstName": "Darren",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Soto, Darren",
+        "lastName": "Soto",
+        "officialWebsiteUrl": "https://soto.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2017
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Darren Soto",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Darren",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Soto, Darren",
+                "lastName": "Soto",
+                "startDate": "2017-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Darren Soto",
+                "firstName": "Darren",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Soto, Darren",
+                "lastName": "Soto",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 152,
+            "url": "https://api.congress.gov/v3/member/S001200/sponsored-legislation"
+        },
+        "state": "Florida",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 9,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 9,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 9,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 9,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 9,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:15Z"
+    },
+    "request": {
+        "bioguideId": "s001200",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

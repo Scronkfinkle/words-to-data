@@ -1,0 +1,106 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1609 Longworth House Office Building",
+            "phoneNumber": "(202) 225-2276",
+            "zipCode": 20515
+        },
+        "bioguideId": "S000929",
+        "birthYear": "1978",
+        "cosponsoredLegislation": {
+            "count": 300,
+            "url": "https://api.congress.gov/v3/member/S000929/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/s000929_200.jpg"
+        },
+        "directOrderName": "Victoria Spartz",
+        "district": 5,
+        "firstName": "Victoria",
+        "honorificName": "Mrs.",
+        "invertedOrderName": "Spartz, Victoria",
+        "lastName": "Spartz",
+        "officialWebsiteUrl": "https://spartz.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Victoria Spartz",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Victoria",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Spartz, Victoria",
+                "lastName": "Spartz",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Victoria Spartz",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Victoria",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Spartz, Victoria",
+                "lastName": "Spartz",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Victoria Spartz",
+                "firstName": "Victoria",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Spartz, Victoria",
+                "lastName": "Spartz",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 45,
+            "url": "https://api.congress.gov/v3/member/S000929/sponsored-legislation"
+        },
+        "state": "Indiana",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 5,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "IN",
+                "stateName": "Indiana"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 5,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "IN",
+                "stateName": "Indiana"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 5,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "IN",
+                "stateName": "Indiana"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "s000929",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

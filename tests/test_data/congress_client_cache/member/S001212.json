@@ -1,0 +1,116 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "145 Cannon House Office Building",
+            "phoneNumber": "(202) 225-6211",
+            "zipCode": 20515
+        },
+        "bioguideId": "S001212",
+        "birthYear": "1966",
+        "cosponsoredLegislation": {
+            "count": 1256,
+            "url": "https://api.congress.gov/v3/member/S001212/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/s001212_200.jpg"
+        },
+        "directOrderName": "Pete Stauber",
+        "district": 8,
+        "firstName": "Pete",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Stauber, Pete",
+        "lastName": "Stauber",
+        "officialWebsiteUrl": "https://stauber.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Pete Stauber",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Pete",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Stauber, Pete",
+                "lastName": "Stauber",
+                "startDate": "2019-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Pete Stauber",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Pete",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Stauber, Pete",
+                "lastName": "Stauber",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Pete Stauber",
+                "firstName": "Pete",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Stauber, Pete",
+                "lastName": "Stauber",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 98,
+            "url": "https://api.congress.gov/v3/member/S001212/sponsored-legislation"
+        },
+        "state": "Minnesota",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 8,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "MN",
+                "stateName": "Minnesota"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 8,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "MN",
+                "stateName": "Minnesota"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 8,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "MN",
+                "stateName": "Minnesota"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 8,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "MN",
+                "stateName": "Minnesota"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:15Z"
+    },
+    "request": {
+        "bioguideId": "s001212",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

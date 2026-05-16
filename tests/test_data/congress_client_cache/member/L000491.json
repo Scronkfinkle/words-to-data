@@ -1,0 +1,249 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2405 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-5565",
+            "zipCode": 20515
+        },
+        "bioguideId": "L000491",
+        "birthYear": "1960",
+        "cosponsoredLegislation": {
+            "count": 2127,
+            "url": "https://api.congress.gov/v3/member/L000491/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Congressional Pictorial Directory",
+            "imageUrl": "https://www.congress.gov/img/member/116_rp_ok_3_lucas_frank_200.jpg"
+        },
+        "directOrderName": "Frank D. Lucas",
+        "district": 3,
+        "firstName": "Frank",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Lucas, Frank D.",
+        "lastName": "Lucas",
+        "middleName": "D.",
+        "officialWebsiteUrl": "https://lucas.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 1993
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Frank D. Lucas",
+                "endDate": "2024-02-27T13:20:56Z",
+                "firstName": "FRANK",
+                "invertedOrderName": "Lucas, Frank D.",
+                "lastName": "LUCAS",
+                "middleName": "D.",
+                "startDate": "1993-01-05T05:00:00Z"
+            },
+            {
+                "directOrderName": "Frank D. Lucas",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Frank",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Lucas, Frank D.",
+                "lastName": "Lucas",
+                "middleName": "D.",
+                "startDate": "2024-02-27T13:20:57Z"
+            },
+            {
+                "directOrderName": "Frank D. Lucas",
+                "firstName": "Frank",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Lucas, Frank D.",
+                "lastName": "Lucas",
+                "middleName": "D.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 123,
+            "url": "https://api.congress.gov/v3/member/L000491/sponsored-legislation"
+        },
+        "state": "Oklahoma",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 103,
+                "district": 6,
+                "endYear": 1995,
+                "memberType": "Representative",
+                "startYear": 1993,
+                "stateCode": "OK",
+                "stateName": "Oklahoma"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 104,
+                "district": 6,
+                "endYear": 1997,
+                "memberType": "Representative",
+                "startYear": 1995,
+                "stateCode": "OK",
+                "stateName": "Oklahoma"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 105,
+                "district": 6,
+                "endYear": 1999,
+                "memberType": "Representative",
+                "startYear": 1997,
+                "stateCode": "OK",
+                "stateName": "Oklahoma"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 106,
+                "district": 6,
+                "endYear": 2001,
+                "memberType": "Representative",
+                "startYear": 1999,
+                "stateCode": "OK",
+                "stateName": "Oklahoma"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 107,
+                "district": 6,
+                "endYear": 2003,
+                "memberType": "Representative",
+                "startYear": 2001,
+                "stateCode": "OK",
+                "stateName": "Oklahoma"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 108,
+                "district": 3,
+                "endYear": 2005,
+                "memberType": "Representative",
+                "startYear": 2003,
+                "stateCode": "OK",
+                "stateName": "Oklahoma"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 109,
+                "district": 3,
+                "endYear": 2007,
+                "memberType": "Representative",
+                "startYear": 2005,
+                "stateCode": "OK",
+                "stateName": "Oklahoma"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 110,
+                "district": 3,
+                "endYear": 2009,
+                "memberType": "Representative",
+                "startYear": 2007,
+                "stateCode": "OK",
+                "stateName": "Oklahoma"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 111,
+                "district": 3,
+                "endYear": 2011,
+                "memberType": "Representative",
+                "startYear": 2009,
+                "stateCode": "OK",
+                "stateName": "Oklahoma"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 3,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "OK",
+                "stateName": "Oklahoma"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 3,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "OK",
+                "stateName": "Oklahoma"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 3,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "OK",
+                "stateName": "Oklahoma"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 3,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "OK",
+                "stateName": "Oklahoma"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 3,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "OK",
+                "stateName": "Oklahoma"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 3,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "OK",
+                "stateName": "Oklahoma"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 3,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "OK",
+                "stateName": "Oklahoma"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 3,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "OK",
+                "stateName": "Oklahoma"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:12Z"
+    },
+    "request": {
+        "bioguideId": "l000491",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

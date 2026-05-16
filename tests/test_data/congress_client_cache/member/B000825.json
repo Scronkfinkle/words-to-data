@@ -1,0 +1,106 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1713 Longworth House Office Building",
+            "phoneNumber": "(202) 225-4761",
+            "zipCode": 20515
+        },
+        "bioguideId": "B000825",
+        "birthYear": "1986",
+        "cosponsoredLegislation": {
+            "count": 892,
+            "url": "https://api.congress.gov/v3/member/B000825/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/b000825_200.jpg"
+        },
+        "directOrderName": "Lauren Boebert",
+        "district": 4,
+        "firstName": "Lauren",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Boebert, Lauren",
+        "lastName": "Boebert",
+        "officialWebsiteUrl": "https://boebert.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Lauren Boebert",
+                "endDate": "2024-02-27T13:20:48Z",
+                "firstName": "Lauren",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Boebert, Lauren",
+                "lastName": "Boebert",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Lauren Boebert",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Lauren",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Boebert, Lauren",
+                "lastName": "Boebert",
+                "startDate": "2024-02-27T13:20:49Z"
+            },
+            {
+                "directOrderName": "Lauren Boebert",
+                "firstName": "Lauren",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Boebert, Lauren",
+                "lastName": "Boebert",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 151,
+            "url": "https://api.congress.gov/v3/member/B000825/sponsored-legislation"
+        },
+        "state": "Colorado",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 3,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "CO",
+                "stateName": "Colorado"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 3,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "CO",
+                "stateName": "Colorado"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 4,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "CO",
+                "stateName": "Colorado"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:19Z"
+    },
+    "request": {
+        "bioguideId": "b000825",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

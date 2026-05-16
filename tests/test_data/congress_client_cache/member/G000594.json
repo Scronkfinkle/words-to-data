@@ -1,0 +1,108 @@
+{
+    "member": {
+        "bioguideId": "G000594",
+        "birthYear": "1980",
+        "cosponsoredLegislation": {
+            "count": 529,
+            "url": "https://api.congress.gov/v3/member/G000594/cosponsored-legislation"
+        },
+        "currentMember": false,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/g000594_200.jpg"
+        },
+        "directOrderName": "Tony Gonzales",
+        "district": 23,
+        "firstName": "Tony",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Gonzales, Tony",
+        "lastName": "Gonzales",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Tony Gonzales",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Tony",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Gonzales, Tony",
+                "lastName": "Gonzales",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Tony Gonzales",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Tony",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Gonzales, Tony",
+                "lastName": "Gonzales",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Tony Gonzales",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Tony",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Gonzales, Tony",
+                "lastName": "Gonzales",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Tony Gonzales",
+                "firstName": "Tony",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Gonzales, Tony",
+                "lastName": "Gonzales",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 88,
+            "url": "https://api.congress.gov/v3/member/G000594/sponsored-legislation"
+        },
+        "state": "Texas",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 23,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 23,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 23,
+                "endYear": 2026,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            }
+        ],
+        "updateDate": "2026-04-15T19:41:13Z"
+    },
+    "request": {
+        "bioguideId": "g000594",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

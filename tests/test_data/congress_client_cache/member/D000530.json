@@ -1,0 +1,99 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1222 Longworth House Office Building",
+            "phoneNumber": "(202) 225-2301",
+            "zipCode": 20515
+        },
+        "bioguideId": "D000530",
+        "birthYear": "1984",
+        "cosponsoredLegislation": {
+            "count": 976,
+            "url": "https://api.congress.gov/v3/member/D000530/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/d000530_200.jpg"
+        },
+        "directOrderName": "Christopher R. Deluzio",
+        "district": 17,
+        "firstName": "Christopher",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Deluzio, Christopher R.",
+        "lastName": "Deluzio",
+        "middleName": "R.",
+        "officialWebsiteUrl": "https://deluzio.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Christopher R. Deluzio",
+                "endDate": "2024-02-27T13:20:57Z",
+                "firstName": "Christopher",
+                "invertedOrderName": "Deluzio, Christopher R.",
+                "lastName": "Deluzio",
+                "middleName": "R.",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Christopher R. Deluzio",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Christopher",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Deluzio, Christopher R.",
+                "lastName": "Deluzio",
+                "middleName": "R.",
+                "startDate": "2024-02-27T13:20:58Z"
+            },
+            {
+                "directOrderName": "Christopher R. Deluzio",
+                "firstName": "Christopher",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Deluzio, Christopher R.",
+                "lastName": "Deluzio",
+                "middleName": "R.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 51,
+            "url": "https://api.congress.gov/v3/member/D000530/sponsored-legislation"
+        },
+        "state": "Pennsylvania",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 17,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 17,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:19Z"
+    },
+    "request": {
+        "bioguideId": "d000530",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

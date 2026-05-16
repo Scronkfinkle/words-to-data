@@ -1,0 +1,127 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1105 Longworth House Office Building",
+            "phoneNumber": "(202) 225-4001",
+            "zipCode": 20515
+        },
+        "bioguideId": "E000296",
+        "birthYear": "1954",
+        "cosponsoredLegislation": {
+            "count": 3061,
+            "url": "https://api.congress.gov/v3/member/E000296/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Congressional Pictorial Directory",
+            "imageUrl": "https://www.congress.gov/img/member/115_rp_pa_2_evans_dwight_200.jpg"
+        },
+        "directOrderName": "Dwight Evans",
+        "district": 3,
+        "firstName": "Dwight",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Evans, Dwight",
+        "lastName": "Evans",
+        "officialWebsiteUrl": "https://evans.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2016
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Dwight Evans",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Dwight",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Evans, Dwight",
+                "lastName": "Evans",
+                "startDate": "2016-11-14T00:00:00Z"
+            },
+            {
+                "directOrderName": "Dwight Evans",
+                "firstName": "Dwight",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Evans, Dwight",
+                "lastName": "Evans",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 63,
+            "url": "https://api.congress.gov/v3/member/E000296/sponsored-legislation"
+        },
+        "state": "Pennsylvania",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 2,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2016,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 2,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 3,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 3,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 3,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 3,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "e000296",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

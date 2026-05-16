@@ -1,0 +1,103 @@
+{
+    "member": {
+        "bioguideId": "G000590",
+        "birthYear": "1964",
+        "cosponsoredLegislation": {
+            "count": 635,
+            "url": "https://api.congress.gov/v3/member/G000590/cosponsored-legislation"
+        },
+        "currentMember": false,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/g000590_200.jpg"
+        },
+        "directOrderName": "Mark E. Green",
+        "district": 7,
+        "firstName": "Mark",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Green, Mark E.",
+        "lastName": "Green",
+        "middleName": "E.",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Mark E. Green",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Mark",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Green, Mark E.",
+                "lastName": "Green",
+                "middleName": "E.",
+                "startDate": "2019-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Mark E. Green",
+                "firstName": "Mark",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Green, Mark E.",
+                "lastName": "Green",
+                "middleName": "E.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 121,
+            "url": "https://api.congress.gov/v3/member/G000590/sponsored-legislation"
+        },
+        "state": "Tennessee",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 7,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "TN",
+                "stateName": "Tennessee"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 7,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "TN",
+                "stateName": "Tennessee"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 7,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TN",
+                "stateName": "Tennessee"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 7,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TN",
+                "stateName": "Tennessee"
+            }
+        ],
+        "updateDate": "2025-09-04T15:55:30Z"
+    },
+    "request": {
+        "bioguideId": "g000590",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

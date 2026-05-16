@@ -1,0 +1,115 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "125 Cannon House Office Building",
+            "phoneNumber": "(202) 225-3706",
+            "zipCode": 20515
+        },
+        "bioguideId": "J000304",
+        "birthYear": "1967",
+        "cosponsoredLegislation": {
+            "count": 934,
+            "url": "https://api.congress.gov/v3/member/J000304/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/j000304_200.jpg"
+        },
+        "directOrderName": "Ronny Jackson",
+        "district": 13,
+        "firstName": "Ronny",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Jackson, Ronny",
+        "lastName": "Jackson",
+        "officialWebsiteUrl": "https://jackson.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Ronny Jackson",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Ronny",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Jackson, Ronny",
+                "lastName": "Jackson",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Ronny Jackson",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Ronny",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Jackson, Ronny",
+                "lastName": "Jackson",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Ronny Jackson",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Ronny",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Jackson, Ronny",
+                "lastName": "Jackson",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Ronny Jackson",
+                "firstName": "Ronny",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Jackson, Ronny",
+                "lastName": "Jackson",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 99,
+            "url": "https://api.congress.gov/v3/member/J000304/sponsored-legislation"
+        },
+        "state": "Texas",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 13,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 13,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 13,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:17Z"
+    },
+    "request": {
+        "bioguideId": "j000304",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

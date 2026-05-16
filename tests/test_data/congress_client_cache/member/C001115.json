@@ -1,0 +1,135 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "304 Cannon House Office Building",
+            "phoneNumber": "(202) 225-7742",
+            "zipCode": 20515
+        },
+        "bioguideId": "C001115",
+        "birthYear": "1975",
+        "cosponsoredLegislation": {
+            "count": 772,
+            "url": "https://api.congress.gov/v3/member/C001115/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Congressional Pictorial Directory",
+            "imageUrl": "https://www.congress.gov/img/member/115_rp_tx_27_cloud_michael_200.jpg"
+        },
+        "directOrderName": "Michael Cloud",
+        "district": 27,
+        "firstName": "Michael",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Cloud, Michael",
+        "lastName": "Cloud",
+        "officialWebsiteUrl": "https://cloud.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2018
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Michael Cloud",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Michael",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Cloud, Michael",
+                "lastName": "Cloud",
+                "startDate": "2018-07-10T00:00:00Z"
+            },
+            {
+                "directOrderName": "Michael Cloud",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Michael",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Cloud, Michael",
+                "lastName": "Cloud",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Michael Cloud",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Michael",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Cloud, Michael",
+                "lastName": "Cloud",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Michael Cloud",
+                "firstName": "Michael",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Cloud, Michael",
+                "lastName": "Cloud",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 70,
+            "url": "https://api.congress.gov/v3/member/C001115/sponsored-legislation"
+        },
+        "state": "Texas",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 27,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2018,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 27,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 27,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 27,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 27,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:15Z"
+    },
+    "request": {
+        "bioguideId": "c001115",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

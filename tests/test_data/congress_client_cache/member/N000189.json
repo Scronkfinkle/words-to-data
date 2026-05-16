@@ -1,0 +1,136 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "460 Cannon House Office Building",
+            "phoneNumber": "(202) 225-5816",
+            "zipCode": 20515
+        },
+        "bioguideId": "N000189",
+        "birthYear": "1955",
+        "cosponsoredLegislation": {
+            "count": 1557,
+            "url": "https://api.congress.gov/v3/member/N000189/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Congressional Pictorial Directory",
+            "imageUrl": "https://www.congress.gov/img/member/116_rp_wa_4_newhouse_dan_200.jpg"
+        },
+        "directOrderName": "Dan Newhouse",
+        "district": 4,
+        "firstName": "Dan",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Newhouse, Dan",
+        "lastName": "Newhouse",
+        "officialWebsiteUrl": "https://newhouse.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2015
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Dan Newhouse",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Dan",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Newhouse, Dan",
+                "lastName": "Newhouse",
+                "startDate": "2015-01-06T05:00:00Z"
+            },
+            {
+                "directOrderName": "Dan Newhouse",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Dan",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Newhouse, Dan",
+                "lastName": "Newhouse",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Dan Newhouse",
+                "firstName": "Dan",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Newhouse, Dan",
+                "lastName": "Newhouse",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 167,
+            "url": "https://api.congress.gov/v3/member/N000189/sponsored-legislation"
+        },
+        "state": "Washington",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 4,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "WA",
+                "stateName": "Washington"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 4,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "WA",
+                "stateName": "Washington"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 4,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "WA",
+                "stateName": "Washington"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 4,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "WA",
+                "stateName": "Washington"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 4,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "WA",
+                "stateName": "Washington"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 4,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "WA",
+                "stateName": "Washington"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:14Z"
+    },
+    "request": {
+        "bioguideId": "n000189",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}
