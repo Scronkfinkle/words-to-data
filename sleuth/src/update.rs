@@ -81,8 +81,26 @@ impl AppState {
             }
             Message::ShowBlameDetail(path) => {
                 self.blame_detail_path = Some(path);
+                self.detail_expanded.clear();
+                self.member_vote_filters.clear();
                 self.show_search = false;
                 self.show_loader = false;
+                Task::none()
+            }
+            Message::ToggleDetailSection(section) => {
+                if self.detail_expanded.contains(&section) {
+                    self.detail_expanded.remove(&section);
+                } else {
+                    self.detail_expanded.insert(section);
+                }
+                Task::none()
+            }
+            Message::MemberVoteFilterChanged(idx, query) => {
+                if query.is_empty() {
+                    self.member_vote_filters.remove(&idx);
+                } else {
+                    self.member_vote_filters.insert(idx, query);
+                }
                 Task::none()
             }
             Message::CloseOverlays => {

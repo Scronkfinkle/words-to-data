@@ -1,5 +1,7 @@
 //! Message types for SLEUTH UI events
 
+use crate::state::DetailSection;
+
 /// UI messages for the SLEUTH application
 #[derive(Debug, Clone)]
 pub enum Message {
@@ -38,6 +40,10 @@ pub enum Message {
     ToggleLoader,
     /// Show blame detail modal for a path
     ShowBlameDetail(String),
+    /// Toggle collapsible section in detail pane
+    ToggleDetailSection(DetailSection),
+    /// Update member vote filter for a roll call
+    MemberVoteFilterChanged(usize, String),
     /// Close all overlays
     CloseOverlays,
 

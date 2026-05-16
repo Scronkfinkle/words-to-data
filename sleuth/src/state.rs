@@ -7,6 +7,13 @@ use words_to_data::diff::TreeDiff;
 
 use crate::message::{TimelineStyle, ViewMode};
 
+/// Collapsible sections in detail pane
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
+pub enum DetailSection {
+    Cosponsors,
+    MemberVotes(usize), // roll call index
+}
+
 /// Main application state
 pub struct AppState {
     /// Loaded dataset (None until loaded)
@@ -56,6 +63,12 @@ pub struct AppState {
 
     /// Path for blame detail modal (None = closed)
     pub blame_detail_path: Option<String>,
+
+    /// Expanded sections in detail pane
+    pub detail_expanded: HashSet<DetailSection>,
+
+    /// Filter queries for member vote lists (roll call index -> query)
+    pub member_vote_filters: HashMap<usize, String>,
 }
 
 impl Default for AppState {
@@ -77,6 +90,8 @@ impl Default for AppState {
             search_query: String::new(),
             loader_path: String::new(),
             blame_detail_path: None,
+            detail_expanded: HashSet::new(),
+            member_vote_filters: HashMap::new(),
         }
     }
 }
