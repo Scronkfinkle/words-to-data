@@ -1,0 +1,109 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1628 Longworth House Office Building",
+            "phoneNumber": "(202) 225-6365",
+            "zipCode": 20515
+        },
+        "bioguideId": "M001227",
+        "birthYear": "1972",
+        "cosponsoredLegislation": {
+            "count": 849,
+            "url": "https://api.congress.gov/v3/member/M001227/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/m001227_200.jpg"
+        },
+        "directOrderName": "Jennifer L. McClellan",
+        "district": 4,
+        "firstName": "Jennifer",
+        "honorificName": "Ms.",
+        "invertedOrderName": "McClellan, Jennifer L.",
+        "lastName": "McClellan",
+        "middleName": "L.",
+        "officialWebsiteUrl": "https://mcclellan.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Jennifer L. McClellan",
+                "endDate": "2024-02-27T13:20:59Z",
+                "firstName": "Jennifer",
+                "invertedOrderName": "McClellan, Jennifer L.",
+                "lastName": "McClellan",
+                "middleName": "L.",
+                "startDate": "2023-03-08T01:00:00Z"
+            },
+            {
+                "directOrderName": "Jennifer L. McClellan",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Jennifer",
+                "honorificName": "Ms.",
+                "invertedOrderName": "McClellan, Jennifer L.",
+                "lastName": "McClellan",
+                "middleName": "L.",
+                "startDate": "2024-02-27T13:21:00Z"
+            },
+            {
+                "directOrderName": "Jennifer L. McClellan",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Jennifer",
+                "honorificName": "Ms.",
+                "invertedOrderName": "McClellan, Jennifer L.",
+                "lastName": "McClellan",
+                "middleName": "L.",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Jennifer L. McClellan",
+                "firstName": "Jennifer",
+                "honorificName": "Ms.",
+                "invertedOrderName": "McClellan, Jennifer L.",
+                "lastName": "McClellan",
+                "middleName": "L.",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 46,
+            "url": "https://api.congress.gov/v3/member/M001227/sponsored-legislation"
+        },
+        "state": "Virginia",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 4,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "VA",
+                "stateName": "Virginia"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 4,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "VA",
+                "stateName": "Virginia"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:19Z"
+    },
+    "request": {
+        "bioguideId": "m001227",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,86 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1213 Longworth House Office Building",
+            "phoneNumber": "(202) 225-4016",
+            "zipCode": 20515
+        },
+        "bioguideId": "E000301",
+        "birthYear": "1988",
+        "cosponsoredLegislation": {
+            "count": 315,
+            "url": "https://api.congress.gov/v3/member/E000301/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/677425dc0b34857ecc909089_200.jpg"
+        },
+        "directOrderName": "Sarah Elfreth",
+        "district": 3,
+        "firstName": "Sarah",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Elfreth, Sarah",
+        "lastName": "Elfreth",
+        "officialWebsiteUrl": "https://elfreth.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2025
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Sarah Elfreth",
+                "endDate": "2025-01-10T17:36:18Z",
+                "firstName": "Sarah",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Elfreth, Sarah",
+                "lastName": "Elfreth",
+                "startDate": "2025-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Sarah Elfreth",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Sarah",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Elfreth, Sarah",
+                "lastName": "Elfreth",
+                "startDate": "2025-01-10T17:36:19Z"
+            },
+            {
+                "directOrderName": "Sarah Elfreth",
+                "firstName": "Sarah",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Elfreth, Sarah",
+                "lastName": "Elfreth",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 16,
+            "url": "https://api.congress.gov/v3/member/E000301/sponsored-legislation"
+        },
+        "state": "Maryland",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 3,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "MD",
+                "stateName": "Maryland"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:20Z"
+    },
+    "request": {
+        "bioguideId": "e000301",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

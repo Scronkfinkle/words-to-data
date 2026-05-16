@@ -1,0 +1,99 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "245 Cannon House Office Building",
+            "phoneNumber": "(202) 225-7944",
+            "zipCode": 20515
+        },
+        "bioguideId": "G000599",
+        "birthYear": "1976",
+        "cosponsoredLegislation": {
+            "count": 1307,
+            "url": "https://api.congress.gov/v3/member/G000599/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/g000599_200.jpg"
+        },
+        "directOrderName": "Daniel S. Goldman",
+        "district": 10,
+        "firstName": "Daniel",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Goldman, Daniel S.",
+        "lastName": "Goldman",
+        "middleName": "S.",
+        "officialWebsiteUrl": "https://goldman.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Daniel S. Goldman",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Daniel",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Goldman, Daniel S.",
+                "lastName": "Goldman",
+                "middleName": "S.",
+                "startDate": "2024-02-27T13:20:56Z"
+            },
+            {
+                "directOrderName": "Daniel S. Goldman",
+                "endDate": "2024-02-27T13:20:55Z",
+                "firstName": "Daniel",
+                "invertedOrderName": "Goldman, Daniel S.",
+                "lastName": "Goldman",
+                "middleName": "S.",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Daniel S. Goldman",
+                "firstName": "Daniel",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Goldman, Daniel S.",
+                "lastName": "Goldman",
+                "middleName": "S.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 56,
+            "url": "https://api.congress.gov/v3/member/G000599/sponsored-legislation"
+        },
+        "state": "New York",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 10,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 10,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NY",
+                "stateName": "New York"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "g000599",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

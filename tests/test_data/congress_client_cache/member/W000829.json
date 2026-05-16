@@ -1,0 +1,87 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "424 Cannon House Office Building",
+            "phoneNumber": "(202) 225-5665",
+            "zipCode": 20515
+        },
+        "bioguideId": "W000829",
+        "birthYear": "1976",
+        "cosponsoredLegislation": {
+            "count": 218,
+            "url": "https://api.congress.gov/v3/member/W000829/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/6734b6724c72e343a6aff9e6_200.jpg"
+        },
+        "directOrderName": "Tony Wied",
+        "district": 8,
+        "firstName": "Tony",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Wied, Tony",
+        "lastName": "Wied",
+        "officialWebsiteUrl": "https://wied.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2024
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Tony Wied",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Tony",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Wied, Tony",
+                "lastName": "Wied",
+                "startDate": "2024-11-13T00:02:00Z"
+            },
+            {
+                "directOrderName": "Tony Wied",
+                "firstName": "Tony",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Wied, Tony",
+                "lastName": "Wied",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 16,
+            "url": "https://api.congress.gov/v3/member/W000829/sponsored-legislation"
+        },
+        "state": "Wisconsin",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 8,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2024,
+                "stateCode": "WI",
+                "stateName": "Wisconsin"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 8,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "WI",
+                "stateName": "Wisconsin"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:19Z"
+    },
+    "request": {
+        "bioguideId": "w000829",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

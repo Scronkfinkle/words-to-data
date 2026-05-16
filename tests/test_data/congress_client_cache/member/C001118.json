@@ -1,0 +1,107 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2443 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-5431",
+            "zipCode": 20515
+        },
+        "bioguideId": "C001118",
+        "birthYear": "1972",
+        "cosponsoredLegislation": {
+            "count": 1073,
+            "url": "https://api.congress.gov/v3/member/C001118/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/69825a92eb30d32718993747_200.jpg"
+        },
+        "directOrderName": "Ben Cline",
+        "district": 6,
+        "firstName": "Ben",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Cline, Ben",
+        "lastName": "Cline",
+        "officialWebsiteUrl": "https://cline.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Ben Cline",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Ben",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Cline, Ben",
+                "lastName": "Cline",
+                "startDate": "2019-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Ben Cline",
+                "firstName": "Ben",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Cline, Ben",
+                "lastName": "Cline",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 59,
+            "url": "https://api.congress.gov/v3/member/C001118/sponsored-legislation"
+        },
+        "state": "Virginia",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 6,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "VA",
+                "stateName": "Virginia"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 6,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "VA",
+                "stateName": "Virginia"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 6,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "VA",
+                "stateName": "Virginia"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 6,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "VA",
+                "stateName": "Virginia"
+            }
+        ],
+        "updateDate": "2026-02-03T20:55:26Z"
+    },
+    "request": {
+        "bioguideId": "c001118",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

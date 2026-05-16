@@ -1,0 +1,229 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "370 Cannon House Office Building",
+            "phoneNumber": "(202) 225-6101",
+            "zipCode": 20515
+        },
+        "bioguideId": "M000312",
+        "birthYear": "1959",
+        "cosponsoredLegislation": {
+            "count": 11833,
+            "url": "https://api.congress.gov/v3/member/M000312/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Congressional Pictorial Directory",
+            "imageUrl": "https://www.congress.gov/img/member/117_rp_ma_2_mcgovern_james_200.jpg"
+        },
+        "directOrderName": "James P. McGovern",
+        "district": 2,
+        "firstName": "James",
+        "honorificName": "Mr.",
+        "invertedOrderName": "McGovern, James P.",
+        "lastName": "McGovern",
+        "middleName": "P.",
+        "officialWebsiteUrl": "https://mcgovern.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 1997
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "James P. McGovern",
+                "endDate": "2024-02-27T13:20:52Z",
+                "firstName": "JAMES",
+                "invertedOrderName": "McGovern, James P.",
+                "lastName": "MCGOVERN",
+                "middleName": "P.",
+                "startDate": "1997-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "James P. McGovern",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "James",
+                "honorificName": "Mr.",
+                "invertedOrderName": "McGovern, James P.",
+                "lastName": "McGovern",
+                "middleName": "P.",
+                "startDate": "2024-02-27T13:20:53Z"
+            },
+            {
+                "directOrderName": "James P. McGovern",
+                "firstName": "James",
+                "honorificName": "Mr.",
+                "invertedOrderName": "McGovern, James P.",
+                "lastName": "McGovern",
+                "middleName": "P.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 434,
+            "url": "https://api.congress.gov/v3/member/M000312/sponsored-legislation"
+        },
+        "state": "Massachusetts",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 105,
+                "district": 3,
+                "endYear": 1999,
+                "memberType": "Representative",
+                "startYear": 1997,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 106,
+                "district": 3,
+                "endYear": 2001,
+                "memberType": "Representative",
+                "startYear": 1999,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 107,
+                "district": 3,
+                "endYear": 2003,
+                "memberType": "Representative",
+                "startYear": 2001,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 108,
+                "district": 3,
+                "endYear": 2005,
+                "memberType": "Representative",
+                "startYear": 2003,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 109,
+                "district": 3,
+                "endYear": 2007,
+                "memberType": "Representative",
+                "startYear": 2005,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 110,
+                "district": 3,
+                "endYear": 2009,
+                "memberType": "Representative",
+                "startYear": 2007,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 111,
+                "district": 3,
+                "endYear": 2011,
+                "memberType": "Representative",
+                "startYear": 2009,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 3,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 2,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 2,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 2,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 2,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 2,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 2,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 2,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:13Z"
+    },
+    "request": {
+        "bioguideId": "m000312",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,86 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "126 Cannon House Office Building",
+            "phoneNumber": "(202) 225-1976",
+            "zipCode": 20515
+        },
+        "bioguideId": "H001102",
+        "birthYear": "1966",
+        "cosponsoredLegislation": {
+            "count": 186,
+            "url": "https://api.congress.gov/v3/member/H001102/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/67742d1b0b34857ecc9090dd_200.jpg"
+        },
+        "directOrderName": "Mark Harris",
+        "district": 8,
+        "firstName": "Mark",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Harris, Mark",
+        "lastName": "Harris",
+        "officialWebsiteUrl": "https://markharris.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2025
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Mark Harris",
+                "endDate": "2025-01-10T17:36:18Z",
+                "firstName": "Mark",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Harris, Mark",
+                "lastName": "Harris",
+                "startDate": "2025-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Mark Harris",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Mark",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Harris, Mark",
+                "lastName": "Harris",
+                "startDate": "2025-01-10T17:36:19Z"
+            },
+            {
+                "directOrderName": "Mark Harris",
+                "firstName": "Mark",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Harris, Mark",
+                "lastName": "Harris",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 14,
+            "url": "https://api.congress.gov/v3/member/H001102/sponsored-legislation"
+        },
+        "state": "North Carolina",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 8,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NC",
+                "stateName": "North Carolina"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:20Z"
+    },
+    "request": {
+        "bioguideId": "h001102",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

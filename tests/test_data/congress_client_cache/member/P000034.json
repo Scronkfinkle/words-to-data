@@ -1,0 +1,276 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2107 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-4671",
+            "zipCode": 20515
+        },
+        "bioguideId": "P000034",
+        "birthYear": "1951",
+        "cosponsoredLegislation": {
+            "count": 6696,
+            "url": "https://api.congress.gov/v3/member/P000034/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image, Congressional Pictorial Directory, 109th.",
+            "imageUrl": "https://www.congress.gov/img/member/p000034_200.jpg"
+        },
+        "directOrderName": "Frank Pallone, Jr.",
+        "district": 6,
+        "firstName": "Frank",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Pallone, Frank",
+        "lastName": "Pallone",
+        "officialWebsiteUrl": "https://pallone.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 1987
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Frank Pallone, Jr.",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Frank",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Pallone, Frank",
+                "lastName": "Pallone",
+                "startDate": "2024-02-27T13:20:55Z"
+            },
+            {
+                "directOrderName": "Frank Pallone, Jr.",
+                "endDate": "2024-02-27T13:20:54Z",
+                "firstName": "FRANK",
+                "invertedOrderName": "Pallone, Frank, Jr.",
+                "lastName": "PALLONE",
+                "startDate": "1987-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Frank Pallone, Jr.",
+                "firstName": "Frank",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Pallone, Frank",
+                "lastName": "Pallone",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 578,
+            "url": "https://api.congress.gov/v3/member/P000034/sponsored-legislation"
+        },
+        "state": "New Jersey",
+        "suffixName": "Jr.",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 100,
+                "district": 3,
+                "endYear": 1989,
+                "memberType": "Representative",
+                "startYear": 1987,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 101,
+                "district": 3,
+                "endYear": 1991,
+                "memberType": "Representative",
+                "startYear": 1989,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 102,
+                "district": 3,
+                "endYear": 1993,
+                "memberType": "Representative",
+                "startYear": 1991,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 103,
+                "district": 6,
+                "endYear": 1995,
+                "memberType": "Representative",
+                "startYear": 1993,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 104,
+                "district": 6,
+                "endYear": 1997,
+                "memberType": "Representative",
+                "startYear": 1995,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 105,
+                "district": 6,
+                "endYear": 1999,
+                "memberType": "Representative",
+                "startYear": 1997,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 106,
+                "district": 6,
+                "endYear": 2001,
+                "memberType": "Representative",
+                "startYear": 1999,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 107,
+                "district": 6,
+                "endYear": 2003,
+                "memberType": "Representative",
+                "startYear": 2001,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 108,
+                "district": 6,
+                "endYear": 2005,
+                "memberType": "Representative",
+                "startYear": 2003,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 109,
+                "district": 6,
+                "endYear": 2007,
+                "memberType": "Representative",
+                "startYear": 2005,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 110,
+                "district": 6,
+                "endYear": 2009,
+                "memberType": "Representative",
+                "startYear": 2007,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 111,
+                "district": 6,
+                "endYear": 2011,
+                "memberType": "Representative",
+                "startYear": 2009,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 6,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 6,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 6,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 6,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 6,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 6,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 6,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 6,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:12Z"
+    },
+    "request": {
+        "bioguideId": "p000034",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

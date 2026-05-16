@@ -1,0 +1,177 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2462 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-2071",
+            "zipCode": 20515
+        },
+        "bioguideId": "F000450",
+        "birthYear": "1943",
+        "cosponsoredLegislation": {
+            "count": 1749,
+            "url": "https://api.congress.gov/v3/member/F000450/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Congressional Pictorial Directory",
+            "imageUrl": "https://www.congress.gov/img/member/116_rp_nc_5_foxx_virginia_200.jpg"
+        },
+        "directOrderName": "Virginia Foxx",
+        "district": 5,
+        "firstName": "Virginia",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Foxx, Virginia",
+        "lastName": "Foxx",
+        "officialWebsiteUrl": "https://foxx.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2005
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Virginia Foxx",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Virginia",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Foxx, Virginia",
+                "lastName": "Foxx",
+                "startDate": "2005-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Virginia Foxx",
+                "firstName": "Virginia",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Foxx, Virginia",
+                "lastName": "Foxx",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 261,
+            "url": "https://api.congress.gov/v3/member/F000450/sponsored-legislation"
+        },
+        "state": "North Carolina",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 109,
+                "district": 5,
+                "endYear": 2007,
+                "memberType": "Representative",
+                "startYear": 2005,
+                "stateCode": "NC",
+                "stateName": "North Carolina"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 110,
+                "district": 5,
+                "endYear": 2009,
+                "memberType": "Representative",
+                "startYear": 2007,
+                "stateCode": "NC",
+                "stateName": "North Carolina"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 111,
+                "district": 5,
+                "endYear": 2011,
+                "memberType": "Representative",
+                "startYear": 2009,
+                "stateCode": "NC",
+                "stateName": "North Carolina"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 5,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "NC",
+                "stateName": "North Carolina"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 5,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "NC",
+                "stateName": "North Carolina"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 5,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "NC",
+                "stateName": "North Carolina"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 5,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "NC",
+                "stateName": "North Carolina"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 5,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "NC",
+                "stateName": "North Carolina"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 5,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "NC",
+                "stateName": "North Carolina"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 5,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NC",
+                "stateName": "North Carolina"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 5,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NC",
+                "stateName": "North Carolina"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:12Z"
+    },
+    "request": {
+        "bioguideId": "f000450",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

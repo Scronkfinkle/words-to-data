@@ -1,0 +1,106 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1728 Longworth House Office Building",
+            "phoneNumber": "(202) 225-3176",
+            "zipCode": 20515
+        },
+        "bioguideId": "M000194",
+        "birthYear": "1977",
+        "cosponsoredLegislation": {
+            "count": 1005,
+            "url": "https://api.congress.gov/v3/member/M000194/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/m000194_200.jpg"
+        },
+        "directOrderName": "Nancy Mace",
+        "district": 1,
+        "firstName": "Nancy",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Mace, Nancy",
+        "lastName": "Mace",
+        "officialWebsiteUrl": "https://mace.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Nancy Mace",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Nancy",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Mace, Nancy",
+                "lastName": "Mace",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Nancy Mace",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Nancy",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Mace, Nancy",
+                "lastName": "Mace",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Nancy Mace",
+                "firstName": "Nancy",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Mace, Nancy",
+                "lastName": "Mace",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 194,
+            "url": "https://api.congress.gov/v3/member/M000194/sponsored-legislation"
+        },
+        "state": "South Carolina",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 1,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "SC",
+                "stateName": "South Carolina"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 1,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "SC",
+                "stateName": "South Carolina"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 1,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "SC",
+                "stateName": "South Carolina"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "m000194",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,249 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2302 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-2361",
+            "zipCode": 20515
+        },
+        "bioguideId": "V000081",
+        "birthYear": "1953",
+        "cosponsoredLegislation": {
+            "count": 5680,
+            "url": "https://api.congress.gov/v3/member/V000081/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/v000081_200.jpg"
+        },
+        "directOrderName": "Nydia M. Velázquez",
+        "district": 7,
+        "firstName": "Nydia",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Velázquez, Nydia M.",
+        "lastName": "Velázquez",
+        "middleName": "M.",
+        "officialWebsiteUrl": "https://velazquez.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 1993
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Nydia M. Velázquez",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Nydia",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Velázquez, Nydia M.",
+                "lastName": "Velázquez",
+                "middleName": "M.",
+                "startDate": "2024-02-27T13:20:56Z"
+            },
+            {
+                "directOrderName": "Nydia M. Velazquez",
+                "endDate": "2024-02-27T13:20:55Z",
+                "firstName": "NYDIA",
+                "invertedOrderName": "Velazquez, Nydia M.",
+                "lastName": "VELAZQUEZ",
+                "middleName": "M.",
+                "startDate": "1993-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Nydia M. Velázquez",
+                "firstName": "Nydia",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Velázquez, Nydia M.",
+                "lastName": "Velázquez",
+                "middleName": "M.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 504,
+            "url": "https://api.congress.gov/v3/member/V000081/sponsored-legislation"
+        },
+        "state": "New York",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 103,
+                "district": 12,
+                "endYear": 1995,
+                "memberType": "Representative",
+                "startYear": 1993,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 104,
+                "district": 12,
+                "endYear": 1997,
+                "memberType": "Representative",
+                "startYear": 1995,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 105,
+                "district": 12,
+                "endYear": 1999,
+                "memberType": "Representative",
+                "startYear": 1997,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 106,
+                "district": 12,
+                "endYear": 2001,
+                "memberType": "Representative",
+                "startYear": 1999,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 107,
+                "district": 12,
+                "endYear": 2003,
+                "memberType": "Representative",
+                "startYear": 2001,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 108,
+                "district": 12,
+                "endYear": 2005,
+                "memberType": "Representative",
+                "startYear": 2003,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 109,
+                "district": 12,
+                "endYear": 2007,
+                "memberType": "Representative",
+                "startYear": 2005,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 110,
+                "district": 12,
+                "endYear": 2009,
+                "memberType": "Representative",
+                "startYear": 2007,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 111,
+                "district": 12,
+                "endYear": 2011,
+                "memberType": "Representative",
+                "startYear": 2009,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 12,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 7,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 7,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 7,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 7,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 7,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 7,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 7,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NY",
+                "stateName": "New York"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:14Z"
+    },
+    "request": {
+        "bioguideId": "v000081",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,96 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2459 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-0123",
+            "zipCode": 20515
+        },
+        "bioguideId": "B001314",
+        "birthYear": "1967",
+        "cosponsoredLegislation": {
+            "count": 387,
+            "url": "https://api.congress.gov/v3/member/B001314/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/b001314_200.jpg"
+        },
+        "directOrderName": "Aaron Bean",
+        "district": 4,
+        "firstName": "Aaron",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Bean, Aaron",
+        "lastName": "Bean",
+        "officialWebsiteUrl": "https://bean.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Aaron Bean",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Aaron",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Bean, Aaron",
+                "lastName": "Bean",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Aaron Bean",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Aaron",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Bean, Aaron",
+                "lastName": "Bean",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Aaron Bean",
+                "firstName": "Aaron",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Bean, Aaron",
+                "lastName": "Bean",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 44,
+            "url": "https://api.congress.gov/v3/member/B001314/sponsored-legislation"
+        },
+        "state": "Florida",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 4,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 4,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:17Z"
+    },
+    "request": {
+        "bioguideId": "b001314",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

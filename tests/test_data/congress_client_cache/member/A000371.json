@@ -1,0 +1,147 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "108 Cannon House Office Building",
+            "phoneNumber": "(202) 225-3201",
+            "zipCode": 20515
+        },
+        "bioguideId": "A000371",
+        "birthYear": "1979",
+        "cosponsoredLegislation": {
+            "count": 1831,
+            "url": "https://api.congress.gov/v3/member/A000371/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/a000371_200.jpg"
+        },
+        "directOrderName": "Pete Aguilar",
+        "district": 33,
+        "firstName": "Pete",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Aguilar, Pete",
+        "lastName": "Aguilar",
+        "leadership": [
+            {
+                "congress": 118,
+                "type": "Democratic Caucus Chairman"
+            },
+            {
+                "congress": 119,
+                "current": true,
+                "type": "Democratic Caucus Chairman"
+            }
+        ],
+        "officialWebsiteUrl": "https://aguilar.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2015
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Pete Aguilar",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Pete",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Aguilar, Pete",
+                "lastName": "Aguilar",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Pete Aguilar",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Pete",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Aguilar, Pete",
+                "lastName": "Aguilar",
+                "startDate": "2015-01-06T05:00:00Z"
+            },
+            {
+                "directOrderName": "Pete Aguilar",
+                "firstName": "Pete",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Aguilar, Pete",
+                "lastName": "Aguilar",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 92,
+            "url": "https://api.congress.gov/v3/member/A000371/sponsored-legislation"
+        },
+        "state": "California",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 31,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 31,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 31,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 31,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 33,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 33,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "CA",
+                "stateName": "California"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:17Z"
+    },
+    "request": {
+        "bioguideId": "a000371",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

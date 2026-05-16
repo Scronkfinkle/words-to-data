@@ -1,0 +1,301 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1236 Longworth House Office Building",
+            "phoneNumber": "(202) 225-4965",
+            "zipCode": 20515
+        },
+        "bioguideId": "P000197",
+        "birthYear": "1940",
+        "cosponsoredLegislation": {
+            "count": 5074,
+            "url": "https://api.congress.gov/v3/member/P000197/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/p000197_200.jpg"
+        },
+        "directOrderName": "Nancy Pelosi",
+        "district": 11,
+        "firstName": "Nancy",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Pelosi, Nancy",
+        "lastName": "Pelosi",
+        "leadership": [
+            {
+                "congress": 113,
+                "type": "Democratic Leader"
+            },
+            {
+                "congress": 112,
+                "type": "Democratic Leader"
+            },
+            {
+                "congress": 114,
+                "type": "Democratic Leader"
+            },
+            {
+                "congress": 116,
+                "type": "Speaker of the House"
+            },
+            {
+                "congress": 115,
+                "type": "Democratic Leader"
+            },
+            {
+                "congress": 117,
+                "type": "Speaker of the House"
+            }
+        ],
+        "officialWebsiteUrl": "https://pelosi.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 1987
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Nancy Pelosi",
+                "endDate": "2024-02-27T13:20:47Z",
+                "firstName": "NANCY",
+                "invertedOrderName": "Pelosi, Nancy",
+                "lastName": "PELOSI",
+                "startDate": "1987-01-06T05:00:00Z"
+            },
+            {
+                "directOrderName": "Nancy Pelosi",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Nancy",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Pelosi, Nancy",
+                "lastName": "Pelosi",
+                "startDate": "2024-02-27T13:20:48Z"
+            },
+            {
+                "directOrderName": "Nancy Pelosi",
+                "firstName": "Nancy",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Pelosi, Nancy",
+                "lastName": "Pelosi",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 199,
+            "url": "https://api.congress.gov/v3/member/P000197/sponsored-legislation"
+        },
+        "state": "California",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 100,
+                "district": 5,
+                "endYear": 1989,
+                "memberType": "Representative",
+                "startYear": 1987,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 101,
+                "district": 5,
+                "endYear": 1991,
+                "memberType": "Representative",
+                "startYear": 1989,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 102,
+                "district": 5,
+                "endYear": 1993,
+                "memberType": "Representative",
+                "startYear": 1991,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 103,
+                "district": 8,
+                "endYear": 1995,
+                "memberType": "Representative",
+                "startYear": 1993,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 104,
+                "district": 8,
+                "endYear": 1997,
+                "memberType": "Representative",
+                "startYear": 1995,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 105,
+                "district": 8,
+                "endYear": 1999,
+                "memberType": "Representative",
+                "startYear": 1997,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 106,
+                "district": 8,
+                "endYear": 2001,
+                "memberType": "Representative",
+                "startYear": 1999,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 107,
+                "district": 8,
+                "endYear": 2003,
+                "memberType": "Representative",
+                "startYear": 2001,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 108,
+                "district": 8,
+                "endYear": 2005,
+                "memberType": "Representative",
+                "startYear": 2003,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 109,
+                "district": 8,
+                "endYear": 2007,
+                "memberType": "Representative",
+                "startYear": 2005,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 110,
+                "district": 8,
+                "endYear": 2009,
+                "memberType": "Representative",
+                "startYear": 2007,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 111,
+                "district": 8,
+                "endYear": 2011,
+                "memberType": "Representative",
+                "startYear": 2009,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 8,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 12,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 12,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 12,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 12,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 12,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 11,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 11,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "CA",
+                "stateName": "California"
+            }
+        ],
+        "updateDate": "2025-12-06T08:30:18Z"
+    },
+    "request": {
+        "bioguideId": "p000197",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

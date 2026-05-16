@@ -1,0 +1,120 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1711 Longworth House Office Building",
+            "phoneNumber": "(202) 225-2501",
+            "zipCode": 20515
+        },
+        "bioguideId": "R000609",
+        "birthYear": "1952",
+        "cosponsoredLegislation": {
+            "count": 1715,
+            "url": "https://api.congress.gov/v3/member/R000609/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/r000609_200.jpg"
+        },
+        "directOrderName": "John H. Rutherford",
+        "district": 5,
+        "firstName": "John",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Rutherford, John H.",
+        "lastName": "Rutherford",
+        "middleName": "H.",
+        "officialWebsiteUrl": "https://rutherford.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2017
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "John H. Rutherford",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "John",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Rutherford, John H.",
+                "lastName": "Rutherford",
+                "middleName": "H.",
+                "startDate": "2017-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "John H. Rutherford",
+                "firstName": "John",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Rutherford, John H.",
+                "lastName": "Rutherford",
+                "middleName": "H.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 48,
+            "url": "https://api.congress.gov/v3/member/R000609/sponsored-legislation"
+        },
+        "state": "Florida",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 4,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 4,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 4,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 5,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 5,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "r000609",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

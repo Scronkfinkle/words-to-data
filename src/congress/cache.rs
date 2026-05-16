@@ -11,18 +11,16 @@ pub struct ResponseCache {
 }
 
 impl ResponseCache {
-    pub fn new(ttl: Duration) -> Self {
-        let xdg_dir = dirs::cache_dir().unwrap().join("words_to_data/");
-        Self {
-            cache_dir: xdg_dir,
-            ttl,
-        }
+    pub fn new(ttl: Duration, cache_dir: Option<PathBuf>) -> Self {
+        let cache_dir =
+            cache_dir.unwrap_or_else(|| dirs::cache_dir().unwrap().join("words_to_data/"));
+        Self { cache_dir, ttl }
     }
 
     fn key_to_path(&self, key: &str) -> PathBuf {
         // Sanitize key for filesystem
-        let safe_key = key.replace(['/', '\\'], "_");
-        self.cache_dir.join(safe_key)
+        //let safe_key = key.replace(['/', '\\'], "_");
+        self.cache_dir.join(key)
     }
 
     pub fn get(&self, key: &str) -> Option<String> {
@@ -51,9 +49,10 @@ impl ResponseCache {
     }
 
     pub fn set(&self, key: &str, data: &str) -> Result<(), CongressError> {
-        fs::create_dir_all(&self.cache_dir)?;
-
         let path = self.key_to_path(key);
+        // Unwrap shouldn't be an issue here, since we're always given a reasonable key
+        fs::create_dir_all(path.parent().expect("A valid path should have been provided to the cache, there should _always_ be a directory and filename"))?;
+
         let mut file = fs::File::create(&path)?;
         file.write_all(data.as_bytes())?;
 

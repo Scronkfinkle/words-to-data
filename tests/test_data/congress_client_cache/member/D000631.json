@@ -1,0 +1,107 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "150 Cannon House Office Building",
+            "phoneNumber": "(202) 225-4731",
+            "zipCode": 20515
+        },
+        "bioguideId": "D000631",
+        "birthYear": "1959",
+        "cosponsoredLegislation": {
+            "count": 2110,
+            "url": "https://api.congress.gov/v3/member/D000631/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/d000631_200.jpg"
+        },
+        "directOrderName": "Madeleine Dean",
+        "district": 4,
+        "firstName": "Madeleine",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Dean, Madeleine",
+        "lastName": "Dean",
+        "officialWebsiteUrl": "https://dean.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Madeleine Dean",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Madeleine",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Dean, Madeleine",
+                "lastName": "Dean",
+                "startDate": "2019-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Madeleine Dean",
+                "firstName": "Madeleine",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Dean, Madeleine",
+                "lastName": "Dean",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 117,
+            "url": "https://api.congress.gov/v3/member/D000631/sponsored-legislation"
+        },
+        "state": "Pennsylvania",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 4,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 4,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 4,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 4,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "d000631",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

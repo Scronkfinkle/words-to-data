@@ -1,0 +1,105 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "122 Cannon House Office Building",
+            "phoneNumber": "(202) 225-3826",
+            "zipCode": 20515
+        },
+        "bioguideId": "L000598",
+        "birthYear": "1978",
+        "cosponsoredLegislation": {
+            "count": 624,
+            "url": "https://api.congress.gov/v3/member/L000598/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/l000598_200.jpg"
+        },
+        "directOrderName": "Nick LaLota",
+        "district": 1,
+        "firstName": "Nick",
+        "honorificName": "Mr.",
+        "invertedOrderName": "LaLota, Nick",
+        "lastName": "LaLota",
+        "nickName": "Nick",
+        "officialWebsiteUrl": "https://lalota.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Nick LaLota",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Nick",
+                "honorificName": "Mr.",
+                "invertedOrderName": "LaLota, Nick",
+                "lastName": "LaLota",
+                "startDate": "2024-02-27T13:20:56Z"
+            },
+            {
+                "directOrderName": "Nick LaLota",
+                "endDate": "2024-02-27T13:20:55Z",
+                "firstName": "Nick",
+                "invertedOrderName": "LaLota, Nick",
+                "lastName": "LaLota",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Nick LaLota",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Nick",
+                "honorificName": "Mr.",
+                "invertedOrderName": "LaLota, Nick",
+                "lastName": "LaLota",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Nick LaLota",
+                "firstName": "Nick",
+                "honorificName": "Mr.",
+                "invertedOrderName": "LaLota, Nick",
+                "lastName": "LaLota",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 60,
+            "url": "https://api.congress.gov/v3/member/L000598/sponsored-legislation"
+        },
+        "state": "New York",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 1,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 1,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NY",
+                "stateName": "New York"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "l000598",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

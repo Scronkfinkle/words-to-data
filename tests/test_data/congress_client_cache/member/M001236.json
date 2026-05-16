@@ -1,0 +1,86 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1424 Longworth House Office Building",
+            "phoneNumber": "(202) 225-5634",
+            "zipCode": 20515
+        },
+        "bioguideId": "M001236",
+        "birthYear": "1970",
+        "cosponsoredLegislation": {
+            "count": 249,
+            "url": "https://api.congress.gov/v3/member/M001236/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/67744a540b34857ecc909137_200.jpg"
+        },
+        "directOrderName": "Tim Moore",
+        "district": 14,
+        "firstName": "Tim",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Moore, Tim",
+        "lastName": "Moore",
+        "officialWebsiteUrl": "https://timmoore.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2025
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Tim Moore",
+                "endDate": "2025-01-10T17:36:18Z",
+                "firstName": "Tim",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Moore, Tim",
+                "lastName": "Moore",
+                "startDate": "2025-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Tim Moore",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Tim",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Moore, Tim",
+                "lastName": "Moore",
+                "startDate": "2025-01-10T17:36:19Z"
+            },
+            {
+                "directOrderName": "Tim Moore",
+                "firstName": "Tim",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Moore, Tim",
+                "lastName": "Moore",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 25,
+            "url": "https://api.congress.gov/v3/member/M001236/sponsored-legislation"
+        },
+        "state": "North Carolina",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 14,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NC",
+                "stateName": "North Carolina"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:20Z"
+    },
+    "request": {
+        "bioguideId": "m001236",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

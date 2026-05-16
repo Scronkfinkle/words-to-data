@@ -1,0 +1,96 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "328 Cannon House Office Building",
+            "phoneNumber": "(202) 225-2876",
+            "zipCode": 20515
+        },
+        "bioguideId": "A000379",
+        "birthYear": "1963",
+        "cosponsoredLegislation": {
+            "count": 351,
+            "url": "https://api.congress.gov/v3/member/A000379/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/a000379_200.jpg"
+        },
+        "directOrderName": "Mark Alford",
+        "district": 4,
+        "firstName": "Mark",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Alford, Mark",
+        "lastName": "Alford",
+        "officialWebsiteUrl": "https://alford.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Mark Alford",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Mark",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Alford, Mark",
+                "lastName": "Alford",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Mark Alford",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Mark",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Alford, Mark",
+                "lastName": "Alford",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Mark Alford",
+                "firstName": "Mark",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Alford, Mark",
+                "lastName": "Alford",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 48,
+            "url": "https://api.congress.gov/v3/member/A000379/sponsored-legislation"
+        },
+        "state": "Missouri",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 4,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "MO",
+                "stateName": "Missouri"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 4,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "MO",
+                "stateName": "Missouri"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "a000379",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

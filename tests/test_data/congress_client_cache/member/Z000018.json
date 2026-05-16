@@ -1,0 +1,128 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "512 Cannon House Office Building",
+            "phoneNumber": "(202) 225-5628",
+            "zipCode": 20515
+        },
+        "bioguideId": "Z000018",
+        "birthYear": "1961",
+        "cosponsoredLegislation": {
+            "count": 705,
+            "url": "https://api.congress.gov/v3/member/Z000018/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Collection of the U.S. House of Representatives",
+            "imageUrl": "https://www.congress.gov/img/member/117_rp_mt_1_zinke_ryan_200.jpg"
+        },
+        "directOrderName": "Ryan K. Zinke",
+        "district": 1,
+        "firstName": "Ryan",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Zinke, Ryan K.",
+        "lastName": "Zinke",
+        "middleName": "K.",
+        "officialWebsiteUrl": "https://zinke.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2015
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Ryan K. Zinke",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Ryan",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Zinke, Ryan K.",
+                "lastName": "Zinke",
+                "middleName": "K.",
+                "startDate": "2015-01-06T05:00:00Z"
+            },
+            {
+                "directOrderName": "Ryan K. Zinke",
+                "endDate": "2023-12-21T20:14:51Z",
+                "firstName": "Ryan",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Zinke, Ryan K.",
+                "lastName": "Zinke",
+                "middleName": "K.",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Ryan K. Zinke",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Ryan",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Zinke, Ryan K.",
+                "lastName": "Zinke",
+                "middleName": "K.",
+                "startDate": "2023-12-21T20:14:52Z"
+            },
+            {
+                "directOrderName": "Ryan K. Zinke",
+                "firstName": "Ryan",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Zinke, Ryan K.",
+                "lastName": "Zinke",
+                "middleName": "K.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 57,
+            "url": "https://api.congress.gov/v3/member/Z000018/sponsored-legislation"
+        },
+        "state": "Montana",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "MT",
+                "stateName": "Montana"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "MT",
+                "stateName": "Montana"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 1,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "MT",
+                "stateName": "Montana"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 1,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "MT",
+                "stateName": "Montana"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "z000018",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,106 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2444 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-5101",
+            "zipCode": 20515
+        },
+        "bioguideId": "F000471",
+        "birthYear": "1963",
+        "cosponsoredLegislation": {
+            "count": 526,
+            "url": "https://api.congress.gov/v3/member/F000471/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/f000471_200.jpg"
+        },
+        "directOrderName": "Scott Fitzgerald",
+        "district": 5,
+        "firstName": "Scott",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Fitzgerald, Scott",
+        "lastName": "Fitzgerald",
+        "officialWebsiteUrl": "https://fitzgerald.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Scott Fitzgerald",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Scott",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Fitzgerald, Scott",
+                "lastName": "Fitzgerald",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Scott Fitzgerald",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Scott",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Fitzgerald, Scott",
+                "lastName": "Fitzgerald",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Scott Fitzgerald",
+                "firstName": "Scott",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Fitzgerald, Scott",
+                "lastName": "Fitzgerald",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 71,
+            "url": "https://api.congress.gov/v3/member/F000471/sponsored-legislation"
+        },
+        "state": "Wisconsin",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 5,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "WI",
+                "stateName": "Wisconsin"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 5,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "WI",
+                "stateName": "Wisconsin"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 5,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "WI",
+                "stateName": "Wisconsin"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:17Z"
+    },
+    "request": {
+        "bioguideId": "f000471",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

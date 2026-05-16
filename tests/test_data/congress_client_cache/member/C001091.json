@@ -1,0 +1,137 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2241 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-3236",
+            "zipCode": 20515
+        },
+        "bioguideId": "C001091",
+        "birthYear": "1974",
+        "cosponsoredLegislation": {
+            "count": 1661,
+            "url": "https://api.congress.gov/v3/member/C001091/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/69d7f5b07304cef7a0c977b1_200.jpg"
+        },
+        "directOrderName": "Joaquin Castro",
+        "district": 20,
+        "firstName": "Joaquin",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Castro, Joaquin",
+        "lastName": "Castro",
+        "officialWebsiteUrl": "https://castro.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2013
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Joaquin Castro",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Joaquin",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Castro, Joaquin",
+                "lastName": "Castro",
+                "startDate": "2013-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Joaquin Castro",
+                "firstName": "Joaquin",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Castro, Joaquin",
+                "lastName": "Castro",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 186,
+            "url": "https://api.congress.gov/v3/member/C001091/sponsored-legislation"
+        },
+        "state": "Texas",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 20,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 20,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 20,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 20,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 20,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 20,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 20,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            }
+        ],
+        "updateDate": "2026-04-09T20:03:37Z"
+    },
+    "request": {
+        "bioguideId": "c001091",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

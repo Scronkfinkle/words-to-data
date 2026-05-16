@@ -1,0 +1,141 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2334 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-8203",
+            "zipCode": 20515
+        },
+        "bioguideId": "G000586",
+        "birthYear": "1956",
+        "cosponsoredLegislation": {
+            "count": 2503,
+            "url": "https://api.congress.gov/v3/member/G000586/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/g000586_200.jpg"
+        },
+        "directOrderName": "Jesús G. \"Chuy\" García",
+        "district": 4,
+        "firstName": "Jesús",
+        "honorificName": "Mr.",
+        "invertedOrderName": "García, Jesús G. \"Chuy\"",
+        "lastName": "García",
+        "middleName": "G. \"Chuy\"",
+        "nickName": "Chuy",
+        "officialWebsiteUrl": "https://chuygarcia.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Jesus G. Garcia",
+                "endDate": "2019-02-01T16:59:00Z",
+                "firstName": "Jesus",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Garcia, Jesus G.",
+                "lastName": "Garcia",
+                "middleName": "G.",
+                "startDate": "2019-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Jesus G. \"Chuy\" Garcia",
+                "endDate": "2024-02-27T13:20:50Z",
+                "firstName": "Jesus",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Garcia, Jesus G. \"Chuy\"",
+                "lastName": "Garcia",
+                "middleName": "G.",
+                "startDate": "2019-02-01T17:00:00Z"
+            },
+            {
+                "directOrderName": "Jesús G. \"Chuy\" García",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Jesús",
+                "honorificName": "Mr.",
+                "invertedOrderName": "García, Jesús G. \"Chuy\"",
+                "lastName": "García",
+                "middleName": "G. \"Chuy\"",
+                "startDate": "2024-02-27T13:20:51Z"
+            },
+            {
+                "directOrderName": "Jesús G. \"Chuy\" García",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Jesús",
+                "honorificName": "Mr.",
+                "invertedOrderName": "García, Jesús G. \"Chuy\"",
+                "lastName": "García",
+                "middleName": "G. \"Chuy\"",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Jesús G. \"Chuy\" García",
+                "firstName": "Jesús",
+                "honorificName": "Mr.",
+                "invertedOrderName": "García, Jesús G. \"Chuy\"",
+                "lastName": "García",
+                "middleName": "G. \"Chuy\"",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 70,
+            "url": "https://api.congress.gov/v3/member/G000586/sponsored-legislation"
+        },
+        "state": "Illinois",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 4,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 4,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 4,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 4,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "g000586",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

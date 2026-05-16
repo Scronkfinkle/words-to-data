@@ -1,0 +1,130 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "300 Cannon House Office Building",
+            "phoneNumber": "(202) 225-4835",
+            "zipCode": 20515
+        },
+        "bioguideId": "S001190",
+        "birthYear": "1961",
+        "cosponsoredLegislation": {
+            "count": 2067,
+            "url": "https://api.congress.gov/v3/member/S001190/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/s001190_200.jpg"
+        },
+        "directOrderName": "Bradley Scott Schneider",
+        "district": 10,
+        "firstName": "Bradley",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Schneider, Bradley Scott",
+        "lastName": "Schneider",
+        "middleName": "Scott",
+        "officialWebsiteUrl": "https://schneider.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2013
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Bradley Scott Schneider",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Bradley",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Schneider, Bradley Scott",
+                "lastName": "Schneider",
+                "middleName": "Scott",
+                "startDate": "2013-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Bradley Scott Schneider",
+                "firstName": "Bradley",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Schneider, Bradley Scott",
+                "lastName": "Schneider",
+                "middleName": "Scott",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 216,
+            "url": "https://api.congress.gov/v3/member/S001190/sponsored-legislation"
+        },
+        "state": "Illinois",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 10,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 10,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 10,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 10,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 10,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 10,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:15Z"
+    },
+    "request": {
+        "bioguideId": "s001190",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

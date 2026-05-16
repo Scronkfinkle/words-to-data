@@ -1,0 +1,100 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1319 Longworth House Office Building",
+            "phoneNumber": "(202) 225-6131",
+            "zipCode": 20515
+        },
+        "bioguideId": "R000620",
+        "birthYear": "1974",
+        "cosponsoredLegislation": {
+            "count": 171,
+            "url": "https://api.congress.gov/v3/member/R000620/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/67745d860b34857ecc90916d_200.jpg"
+        },
+        "directOrderName": "Luz M. Rivas",
+        "district": 29,
+        "firstName": "Luz",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Rivas, Luz M.",
+        "lastName": "Rivas",
+        "middleName": "M.",
+        "officialWebsiteUrl": "https://rivas.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2025
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Luz Rivas",
+                "endDate": "2025-01-10T17:36:18Z",
+                "firstName": "Luz",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Rivas, Luz",
+                "lastName": "Rivas",
+                "middleName": "M.",
+                "startDate": "2025-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Luz Rivas",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Luz",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Rivas, Luz",
+                "lastName": "Rivas",
+                "middleName": "M.",
+                "startDate": "2025-01-10T17:36:19Z"
+            },
+            {
+                "directOrderName": "Luz Rivas",
+                "endDate": "2025-04-28T13:04:14Z",
+                "firstName": "Luz",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Rivas, Luz",
+                "lastName": "Rivas",
+                "middleName": "M.",
+                "startDate": "2025-01-17T05:00:00Z"
+            },
+            {
+                "directOrderName": "Luz M. Rivas",
+                "firstName": "Luz",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Rivas, Luz M.",
+                "lastName": "Rivas",
+                "middleName": "M.",
+                "startDate": "2025-04-28T13:04:15Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 11,
+            "url": "https://api.congress.gov/v3/member/R000620/sponsored-legislation"
+        },
+        "state": "California",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 29,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "CA",
+                "stateName": "California"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:12Z"
+    },
+    "request": {
+        "bioguideId": "r000620",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

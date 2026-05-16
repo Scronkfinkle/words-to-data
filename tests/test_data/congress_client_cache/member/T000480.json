@@ -1,0 +1,121 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "267 Cannon House Office Building",
+            "phoneNumber": "(202) 225-6030",
+            "zipCode": 20515
+        },
+        "bioguideId": "T000480",
+        "birthYear": "1984",
+        "cosponsoredLegislation": {
+            "count": 910,
+            "url": "https://api.congress.gov/v3/member/T000480/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/t000480_200.jpg"
+        },
+        "directOrderName": "William R. Timmons IV",
+        "district": 4,
+        "firstName": "William",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Timmons, William R.",
+        "lastName": "Timmons",
+        "middleName": "R.",
+        "officialWebsiteUrl": "https://timmons.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "William R. Timmons IV",
+                "endDate": "2024-02-27T13:20:57Z",
+                "firstName": "William",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Timmons, William R. IV",
+                "lastName": "Timmons",
+                "middleName": "R.",
+                "startDate": "2019-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "William R. Timmons IV",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "William",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Timmons, William R.",
+                "lastName": "Timmons",
+                "middleName": "R.",
+                "startDate": "2024-02-27T13:20:58Z"
+            },
+            {
+                "directOrderName": "William R. Timmons IV",
+                "firstName": "William",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Timmons, William R.",
+                "lastName": "Timmons",
+                "middleName": "R.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 38,
+            "url": "https://api.congress.gov/v3/member/T000480/sponsored-legislation"
+        },
+        "state": "South Carolina",
+        "suffixName": "IV",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 4,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "SC",
+                "stateName": "South Carolina"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 4,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "SC",
+                "stateName": "South Carolina"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 4,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "SC",
+                "stateName": "South Carolina"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 4,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "SC",
+                "stateName": "South Carolina"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "t000480",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

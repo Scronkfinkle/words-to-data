@@ -1,0 +1,200 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2109 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-8273",
+            "zipCode": 20515
+        },
+        "bioguideId": "L000562",
+        "birthYear": "1955",
+        "cosponsoredLegislation": {
+            "count": 4452,
+            "url": "https://api.congress.gov/v3/member/L000562/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image, Congressional Pictorial Directory, 109th.",
+            "imageUrl": "https://www.congress.gov/img/member/l000562_200.jpg"
+        },
+        "directOrderName": "Stephen F. Lynch",
+        "district": 8,
+        "firstName": "Stephen",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Lynch, Stephen F.",
+        "lastName": "Lynch",
+        "middleName": "F.",
+        "officialWebsiteUrl": "https://lynch.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2001
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Stephen F. Lynch",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Stephen",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Lynch, Stephen F.",
+                "lastName": "Lynch",
+                "middleName": "F.",
+                "startDate": "2001-10-23T00:00:00Z"
+            },
+            {
+                "directOrderName": "Stephen F. Lynch",
+                "firstName": "Stephen",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Lynch, Stephen F.",
+                "lastName": "Lynch",
+                "middleName": "F.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 254,
+            "url": "https://api.congress.gov/v3/member/L000562/sponsored-legislation"
+        },
+        "state": "Massachusetts",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 107,
+                "district": 9,
+                "endYear": 2003,
+                "memberType": "Representative",
+                "startYear": 2001,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 108,
+                "district": 9,
+                "endYear": 2005,
+                "memberType": "Representative",
+                "startYear": 2003,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 109,
+                "district": 9,
+                "endYear": 2007,
+                "memberType": "Representative",
+                "startYear": 2005,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 110,
+                "district": 9,
+                "endYear": 2009,
+                "memberType": "Representative",
+                "startYear": 2007,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 111,
+                "district": 9,
+                "endYear": 2011,
+                "memberType": "Representative",
+                "startYear": 2009,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 9,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 8,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 8,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 8,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 8,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 8,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 8,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 8,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "MA",
+                "stateName": "Massachusetts"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:13Z"
+    },
+    "request": {
+        "bioguideId": "l000562",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

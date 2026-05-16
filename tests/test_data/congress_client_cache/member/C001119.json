@@ -1,0 +1,125 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2052 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-2271",
+            "zipCode": 20515
+        },
+        "bioguideId": "C001119",
+        "birthYear": "1972",
+        "cosponsoredLegislation": {
+            "count": 2176,
+            "url": "https://api.congress.gov/v3/member/C001119/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/c001119_200.jpg"
+        },
+        "directOrderName": "Angie Craig",
+        "district": 2,
+        "firstName": "Angie",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Craig, Angie",
+        "lastName": "Craig",
+        "officialWebsiteUrl": "https://craig.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Angie Craig",
+                "endDate": "2024-02-27T13:20:53Z",
+                "firstName": "Angie",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Craig, Angie",
+                "lastName": "Craig",
+                "startDate": "2019-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Angie Craig",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Angie",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Craig, Angie",
+                "lastName": "Craig",
+                "startDate": "2024-02-27T13:20:54Z"
+            },
+            {
+                "directOrderName": "Angie Craig",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Angie",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Craig, Angie",
+                "lastName": "Craig",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Angie Craig",
+                "firstName": "Angie",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Craig, Angie",
+                "lastName": "Craig",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 116,
+            "url": "https://api.congress.gov/v3/member/C001119/sponsored-legislation"
+        },
+        "state": "Minnesota",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 2,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "MN",
+                "stateName": "Minnesota"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 2,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "MN",
+                "stateName": "Minnesota"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 2,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "MN",
+                "stateName": "Minnesota"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 2,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "MN",
+                "stateName": "Minnesota"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "c001119",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

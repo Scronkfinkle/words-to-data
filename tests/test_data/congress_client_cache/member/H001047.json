@@ -1,0 +1,160 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2137 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-5541",
+            "zipCode": 20515
+        },
+        "bioguideId": "H001047",
+        "birthYear": "1966",
+        "cosponsoredLegislation": {
+            "count": 2531,
+            "url": "https://api.congress.gov/v3/member/H001047/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/h001047_200.jpg"
+        },
+        "directOrderName": "James A. Himes",
+        "district": 4,
+        "firstName": "James",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Himes, James A.",
+        "lastName": "Himes",
+        "middleName": "A.",
+        "officialWebsiteUrl": "https://himes.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2009
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "James A. Himes",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "James",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Himes, James A.",
+                "lastName": "Himes",
+                "middleName": "A.",
+                "startDate": "2009-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "James A. Himes",
+                "firstName": "James",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Himes, James A.",
+                "lastName": "Himes",
+                "middleName": "A.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 110,
+            "url": "https://api.congress.gov/v3/member/H001047/sponsored-legislation"
+        },
+        "state": "Connecticut",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 111,
+                "district": 4,
+                "endYear": 2011,
+                "memberType": "Representative",
+                "startYear": 2009,
+                "stateCode": "CT",
+                "stateName": "Connecticut"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 4,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "CT",
+                "stateName": "Connecticut"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 4,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "CT",
+                "stateName": "Connecticut"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 4,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "CT",
+                "stateName": "Connecticut"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 4,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "CT",
+                "stateName": "Connecticut"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 4,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "CT",
+                "stateName": "Connecticut"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 4,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "CT",
+                "stateName": "Connecticut"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 4,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "CT",
+                "stateName": "Connecticut"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 4,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "CT",
+                "stateName": "Connecticut"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:13Z"
+    },
+    "request": {
+        "bioguideId": "h001047",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

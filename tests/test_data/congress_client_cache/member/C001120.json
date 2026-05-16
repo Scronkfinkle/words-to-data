@@ -1,0 +1,116 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "248 Cannon House Office Building",
+            "phoneNumber": "(202) 225-6565",
+            "zipCode": 20515
+        },
+        "bioguideId": "C001120",
+        "birthYear": "1984",
+        "cosponsoredLegislation": {
+            "count": 1255,
+            "url": "https://api.congress.gov/v3/member/C001120/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/698a13d0a7af728d4e6c2038_200.jpg"
+        },
+        "directOrderName": "Dan Crenshaw",
+        "district": 2,
+        "firstName": "Dan",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Crenshaw, Dan",
+        "lastName": "Crenshaw",
+        "officialWebsiteUrl": "https://crenshaw.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Dan Crenshaw",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Dan",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Crenshaw, Dan",
+                "lastName": "Crenshaw",
+                "startDate": "2019-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Dan Crenshaw",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Dan",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Crenshaw, Dan",
+                "lastName": "Crenshaw",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Dan Crenshaw",
+                "firstName": "Dan",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Crenshaw, Dan",
+                "lastName": "Crenshaw",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 97,
+            "url": "https://api.congress.gov/v3/member/C001120/sponsored-legislation"
+        },
+        "state": "Texas",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 2,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 2,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 2,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 2,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            }
+        ],
+        "updateDate": "2026-02-09T17:22:01Z"
+    },
+    "request": {
+        "bioguideId": "c001120",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

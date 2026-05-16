@@ -1,0 +1,115 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2229 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-2165",
+            "zipCode": 20515
+        },
+        "bioguideId": "F000470",
+        "birthYear": "1965",
+        "cosponsoredLegislation": {
+            "count": 516,
+            "url": "https://api.congress.gov/v3/member/F000470/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/f000470_200.jpg"
+        },
+        "directOrderName": "Michelle Fischbach",
+        "district": 7,
+        "firstName": "Michelle",
+        "honorificName": "Mrs.",
+        "invertedOrderName": "Fischbach, Michelle",
+        "lastName": "Fischbach",
+        "officialWebsiteUrl": "https://fischbach.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Michelle Fischbach",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Michelle",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Fischbach, Michelle",
+                "lastName": "Fischbach",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Michelle Fischbach",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Michelle",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Fischbach, Michelle",
+                "lastName": "Fischbach",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Michelle Fischbach",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Michelle",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Fischbach, Michelle",
+                "lastName": "Fischbach",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Michelle Fischbach",
+                "firstName": "Michelle",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Fischbach, Michelle",
+                "lastName": "Fischbach",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 69,
+            "url": "https://api.congress.gov/v3/member/F000470/sponsored-legislation"
+        },
+        "state": "Minnesota",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 7,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "MN",
+                "stateName": "Minnesota"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 7,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "MN",
+                "stateName": "Minnesota"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 7,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "MN",
+                "stateName": "Minnesota"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "f000470",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,115 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1724 Longworth House Office Building",
+            "phoneNumber": "(202) 225-9740",
+            "zipCode": 20515
+        },
+        "bioguideId": "S001159",
+        "birthYear": "1962",
+        "cosponsoredLegislation": {
+            "count": 1252,
+            "url": "https://api.congress.gov/v3/member/S001159/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/s001159_200.jpg"
+        },
+        "directOrderName": "Marilyn Strickland",
+        "district": 10,
+        "firstName": "Marilyn",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Strickland, Marilyn",
+        "lastName": "Strickland",
+        "officialWebsiteUrl": "https://strickland.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Marilyn Strickland",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Marilyn",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Strickland, Marilyn",
+                "lastName": "Strickland",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Marilyn Strickland",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Marilyn",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Strickland, Marilyn",
+                "lastName": "Strickland",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Marilyn Strickland",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Marilyn",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Strickland, Marilyn",
+                "lastName": "Strickland",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Marilyn Strickland",
+                "firstName": "Marilyn",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Strickland, Marilyn",
+                "lastName": "Strickland",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 57,
+            "url": "https://api.congress.gov/v3/member/S001159/sponsored-legislation"
+        },
+        "state": "Washington",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 10,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "WA",
+                "stateName": "Washington"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 10,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "WA",
+                "stateName": "Washington"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 10,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "WA",
+                "stateName": "Washington"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:17Z"
+    },
+    "request": {
+        "bioguideId": "s001159",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

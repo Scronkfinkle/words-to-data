@@ -1,0 +1,110 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1221 Longworth House Office Building",
+            "phoneNumber": "(202) 225-3032",
+            "zipCode": 20515
+        },
+        "bioguideId": "R000305",
+        "birthYear": "1963",
+        "cosponsoredLegislation": {
+            "count": 1733,
+            "url": "https://api.congress.gov/v3/member/R000305/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/r000305_200.jpg"
+        },
+        "directOrderName": "Deborah K. Ross",
+        "district": 2,
+        "firstName": "Deborah",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Ross, Deborah K.",
+        "lastName": "Ross",
+        "middleName": "K.",
+        "officialWebsiteUrl": "https://ross.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Deborah K. Ross",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Deborah",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Ross, Deborah K.",
+                "lastName": "Ross",
+                "middleName": "K.",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Deborah K. Ross",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Deborah",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Ross, Deborah K.",
+                "lastName": "Ross",
+                "middleName": "K.",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Deborah K. Ross",
+                "firstName": "Deborah",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Ross, Deborah K.",
+                "lastName": "Ross",
+                "middleName": "K.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 82,
+            "url": "https://api.congress.gov/v3/member/R000305/sponsored-legislation"
+        },
+        "state": "North Carolina",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 2,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "NC",
+                "stateName": "North Carolina"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 2,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NC",
+                "stateName": "North Carolina"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 2,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NC",
+                "stateName": "North Carolina"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "r000305",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

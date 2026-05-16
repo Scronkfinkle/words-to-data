@@ -1,0 +1,86 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1432 Longworth House Office Building",
+            "phoneNumber": "(202) 225-4065",
+            "zipCode": 20515
+        },
+        "bioguideId": "A000381",
+        "birthYear": "1992",
+        "cosponsoredLegislation": {
+            "count": 460,
+            "url": "https://api.congress.gov/v3/member/A000381/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/67741fc30b34857ecc90902e_200.jpg"
+        },
+        "directOrderName": "Yassamin Ansari",
+        "district": 3,
+        "firstName": "Yassamin",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Ansari, Yassamin",
+        "lastName": "Ansari",
+        "officialWebsiteUrl": "https://ansari.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2025
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Yassamin Ansari",
+                "firstName": "Yassamin",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Ansari, Yassamin",
+                "lastName": "Ansari",
+                "startDate": "2025-01-17T05:00:00Z"
+            },
+            {
+                "directOrderName": "Yassamin Ansari",
+                "endDate": "2025-01-10T17:34:07Z",
+                "firstName": "Yassamin",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Ansari, Yassamin",
+                "lastName": "Ansari",
+                "startDate": "2025-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Yassamin Ansari",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Yassamin",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Ansari, Yassamin",
+                "lastName": "Ansari",
+                "startDate": "2025-01-10T17:34:08Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 32,
+            "url": "https://api.congress.gov/v3/member/A000381/sponsored-legislation"
+        },
+        "state": "Arizona",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 3,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "AZ",
+                "stateName": "Arizona"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:12Z"
+    },
+    "request": {
+        "bioguideId": "a000381",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

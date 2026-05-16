@@ -1,0 +1,94 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "426 Cannon House Office Building",
+            "phoneNumber": "(202) 225-3436",
+            "zipCode": 20515
+        },
+        "bioguideId": "M001229",
+        "birthYear": "1986",
+        "cosponsoredLegislation": {
+            "count": 583,
+            "url": "https://api.congress.gov/v3/member/M001229/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/681dfed94fc893ce843e24b8_200.jpg"
+        },
+        "directOrderName": "LaMonica McIver",
+        "district": 10,
+        "firstName": "LaMonica",
+        "honorificName": "Mrs.",
+        "invertedOrderName": "McIver, LaMonica",
+        "lastName": "McIver",
+        "officialWebsiteUrl": "https://mciver.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2024
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "LaMonica McIver",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "LaMonica",
+                "invertedOrderName": "McIver, LaMonica",
+                "lastName": "McIver",
+                "startDate": "2024-09-23T22:59:00Z"
+            },
+            {
+                "directOrderName": "LaMonica McIver",
+                "endDate": "2025-04-28T13:04:22Z",
+                "firstName": "LaMonica",
+                "invertedOrderName": "McIver, LaMonica",
+                "lastName": "McIver",
+                "startDate": "2025-01-17T05:00:00Z"
+            },
+            {
+                "directOrderName": "LaMonica McIver",
+                "firstName": "LaMonica",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "McIver, LaMonica",
+                "lastName": "McIver",
+                "startDate": "2025-04-28T13:04:23Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 15,
+            "url": "https://api.congress.gov/v3/member/M001229/sponsored-legislation"
+        },
+        "state": "New Jersey",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 10,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2024,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 10,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NJ",
+                "stateName": "New Jersey"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:19Z"
+    },
+    "request": {
+        "bioguideId": "m001229",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

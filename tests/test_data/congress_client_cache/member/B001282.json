@@ -1,0 +1,137 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2430 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-4706",
+            "zipCode": 20515
+        },
+        "bioguideId": "B001282",
+        "birthYear": "1973",
+        "cosponsoredLegislation": {
+            "count": 1720,
+            "url": "https://api.congress.gov/v3/member/B001282/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/b001282_200.jpg"
+        },
+        "directOrderName": "Andy Barr",
+        "district": 6,
+        "firstName": "Andy",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Barr, Andy",
+        "lastName": "Barr",
+        "officialWebsiteUrl": "https://barr.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2013
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Andy Barr",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Andy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Barr, Andy",
+                "lastName": "Barr",
+                "startDate": "2013-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Andy Barr",
+                "firstName": "Andy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Barr, Andy",
+                "lastName": "Barr",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 219,
+            "url": "https://api.congress.gov/v3/member/B001282/sponsored-legislation"
+        },
+        "state": "Kentucky",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 6,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 6,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 6,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 6,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 6,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 6,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 6,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:14Z"
+    },
+    "request": {
+        "bioguideId": "b001282",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

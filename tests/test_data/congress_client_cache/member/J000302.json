@@ -1,0 +1,116 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2102 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-2431",
+            "zipCode": 20515
+        },
+        "bioguideId": "J000302",
+        "birthYear": "1957",
+        "cosponsoredLegislation": {
+            "count": 798,
+            "url": "https://api.congress.gov/v3/member/J000302/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/j000302_200.jpg"
+        },
+        "directOrderName": "John Joyce",
+        "district": 13,
+        "firstName": "John",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Joyce, John",
+        "lastName": "Joyce",
+        "officialWebsiteUrl": "https://johnjoyce.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "John Joyce",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "John",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Joyce, John",
+                "lastName": "Joyce",
+                "startDate": "2019-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "John Joyce",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "John",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Joyce, John",
+                "lastName": "Joyce",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "John Joyce",
+                "firstName": "John",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Joyce, John",
+                "lastName": "Joyce",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 63,
+            "url": "https://api.congress.gov/v3/member/J000302/sponsored-legislation"
+        },
+        "state": "Pennsylvania",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 13,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 13,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 13,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 13,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "j000302",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

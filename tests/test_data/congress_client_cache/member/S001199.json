@@ -1,0 +1,117 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "302 Cannon House Office Building",
+            "phoneNumber": "(202) 225-2411",
+            "zipCode": 20515
+        },
+        "bioguideId": "S001199",
+        "birthYear": "1964",
+        "cosponsoredLegislation": {
+            "count": 947,
+            "url": "https://api.congress.gov/v3/member/S001199/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/s001199_200.jpg"
+        },
+        "directOrderName": "Lloyd Smucker",
+        "district": 11,
+        "firstName": "Lloyd",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Smucker, Lloyd",
+        "lastName": "Smucker",
+        "officialWebsiteUrl": "https://smucker.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2017
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Lloyd Smucker",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Lloyd",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Smucker, Lloyd",
+                "lastName": "Smucker",
+                "startDate": "2017-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Lloyd Smucker",
+                "firstName": "Lloyd",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Smucker, Lloyd",
+                "lastName": "Smucker",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 109,
+            "url": "https://api.congress.gov/v3/member/S001199/sponsored-legislation"
+        },
+        "state": "Pennsylvania",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 16,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 11,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 11,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 11,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 11,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "s001199",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

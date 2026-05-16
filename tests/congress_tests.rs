@@ -1,50 +1,6 @@
-use std::collections::HashMap;
-use std::path::PathBuf;
-use words_to_data::congress::{Chamber, CongressClient, CongressError, Member, Party, SponsorInfo};
+use words_to_data::congress::{CongressClient, VotePosition};
 
-#[test]
-fn should_parse_party_from_string() {
-    assert_eq!("D".parse::<Party>().unwrap(), Party::Democrat);
-    assert_eq!("R".parse::<Party>().unwrap(), Party::Republican);
-    assert_eq!("I".parse::<Party>().unwrap(), Party::Independent);
-    assert_eq!("ID".parse::<Party>().unwrap(), Party::Independent);
-    assert_eq!("X".parse::<Party>().unwrap(), Party::Other("X".to_string()));
-}
-
-#[test]
-fn should_parse_chamber_from_string() {
-    assert_eq!("Senate".parse::<Chamber>().unwrap(), Chamber::Senate);
-    assert_eq!("House".parse::<Chamber>().unwrap(), Chamber::House);
-    assert_eq!(
-        "House of Representatives".parse::<Chamber>().unwrap(),
-        Chamber::House
-    );
-    assert!("Unknown".parse::<Chamber>().is_err());
-}
-
-#[test]
-fn should_display_congress_error() {
-    let err = CongressError::NotFound("member A000360".to_string());
-    assert!(err.to_string().contains("A000360"));
-}
-
-#[test]
-fn should_parse_member_from_api_response() {
-    let json_path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
-        .join("tests/test_data/congress/members/L000174.json");
-    let json = std::fs::read_to_string(json_path).unwrap();
-
-    let member = Member::from_api_response(&json).unwrap();
-
-    assert_eq!(member.bioguide_id, "L000174");
-    assert_eq!(member.first_name, "Patrick");
-    assert_eq!(member.last_name, "Leahy");
-    assert_eq!(member.party, Party::Democrat);
-    assert_eq!(member.state, "VT");
-    assert_eq!(member.chamber, Chamber::Senate);
-    assert!(member.district.is_none());
-    assert!(!member.terms.is_empty());
-}
+const TEST_CONGRESS_CACHE_DIR: &str = "tests/test_data/congress_client_cache";
 
 #[test]
 #[ignore] // Requires live API key - run with: cargo test -- --ignored
@@ -55,16 +11,32 @@ fn should_download_bill_data_live() {
     let api_key =
         std::env::var("CONGRESS_API_KEY").expect("Set CONGRESS_API_KEY env var to run this test");
 
-    let client = CongressClient::new(api_key);
+    let client = CongressClient::new(api_key, Some(cache_dir.to_string_lossy().to_string()));
 
     // Use HR 1 (house bill), not pl (public law)
     let download = client.download_bill("119-hr-1").unwrap();
 
     assert!(!download.bill_xml.is_empty());
-    assert!(!download.sponsors_json.is_empty());
+    assert!(!download.bill_metadata_json.is_empty());
     assert!(!download.member_jsons.is_empty());
 
     let _ = std::fs::remove_dir_all(&cache_dir);
+}
+
+#[test]
+fn should_parse_vote_position_from_string() {
+    assert_eq!("Yea".parse::<VotePosition>().unwrap(), VotePosition::Yea);
+    assert_eq!("yea".parse::<VotePosition>().unwrap(), VotePosition::Yea);
+    assert_eq!("Nay".parse::<VotePosition>().unwrap(), VotePosition::Nay);
+    assert_eq!(
+        "Not Voting".parse::<VotePosition>().unwrap(),
+        VotePosition::NotVoting
+    );
+    assert_eq!(
+        "Present".parse::<VotePosition>().unwrap(),
+        VotePosition::Present
+    );
+    assert!("Unknown".parse::<VotePosition>().is_err());
 }
 
 mod dataset_integration {
@@ -81,87 +53,51 @@ mod dataset_integration {
             version: "1.0".into(),
         }
     }
-
     #[test]
-    fn should_add_member_to_dataset() {
+    fn test_download_bill_parsing() {
+        let client = CongressClient::new("".to_string(), Some(TEST_CONGRESS_CACHE_DIR.to_string()));
+
+        let download = client.download_bill("119-hr-1").unwrap();
+
+        assert!(!download.bill_xml.is_empty());
+        assert!(!download.bill_metadata_json.is_empty());
+        assert!(!download.member_jsons.is_empty());
         let mut dataset = Dataset::new(test_metadata());
+        let bill_id = dataset.load_bill_download(&download).unwrap();
+        // Votes loaded
+        let votes = dataset.get_bill_votes(&bill_id).unwrap();
+        assert_eq!(votes.roll_calls.len(), 1);
+        assert_eq!(votes.roll_calls[0].member_votes.len(), 432);
 
-        let member = Member {
-            bioguide_id: "L000174".into(),
-            name: "Patrick J. Leahy".into(),
-            first_name: "Patrick".into(),
-            last_name: "Leahy".into(),
-            party: Party::Democrat,
-            state: "VT".into(),
-            district: None,
-            chamber: Chamber::Senate,
-            terms: vec![],
-        };
+        // Members exist
+        assert!(dataset.get_member("A000375").is_some());
+        assert_eq!(
+            dataset.get_member("A000375").unwrap().last_name,
+            "Arrington"
+        );
 
-        dataset.add_member(member.clone());
+        // Can look up by member
+        let arrington_votes = dataset.votes_by_member("A000375");
+        assert_eq!(arrington_votes.len(), 1);
 
-        assert!(dataset.get_member("L000174").is_some());
-        assert_eq!(dataset.get_member("L000174").unwrap().last_name, "Leahy");
-    }
-
-    #[test]
-    fn should_add_sponsor_info_to_dataset() {
-        let mut dataset = Dataset::new(test_metadata());
-
-        let sponsor_info = SponsorInfo {
-            bill_id: "119-hr-1".into(),
-            sponsor: "L000174".into(),
-            cosponsors: vec![],
-        };
-
-        dataset.add_sponsor_info(sponsor_info);
-
+        // Sponsor info
         assert!(dataset.get_sponsor_info("119-hr-1").is_some());
         assert_eq!(
             dataset.get_sponsor_info("119-hr-1").unwrap().sponsor,
-            "L000174"
+            "A000375"
         );
-    }
 
-    #[test]
-    fn should_load_bill_download_into_dataset() {
-        use words_to_data::congress::BillDownload;
+        // Votes by member
+        let arrington_votes = dataset.votes_by_member("A000375");
+        assert_eq!(arrington_votes.len(), 1);
+        assert_eq!(arrington_votes[0].1, VotePosition::Yea);
 
-        let mut dataset = Dataset::new(test_metadata());
+        let pelosi_votes = dataset.votes_by_member("P000197");
+        assert_eq!(pelosi_votes.len(), 1);
+        assert_eq!(pelosi_votes[0].1, VotePosition::Nay);
 
-        // Simulate a BillDownload with test data
-        let bill_xml = std::fs::read_to_string(
-            PathBuf::from(env!("CARGO_MANIFEST_DIR"))
-                .join("tests/test_data/bills/119-hr-1/bill_119_hr_1.xml"),
-        )
-        .unwrap();
-
-        let member_json = std::fs::read_to_string(
-            PathBuf::from(env!("CARGO_MANIFEST_DIR"))
-                .join("tests/test_data/congress/members/L000174.json"),
-        )
-        .unwrap();
-
-        let mut member_jsons = HashMap::new();
-        member_jsons.insert("L000174".to_string(), member_json);
-
-        let download = BillDownload {
-            bill_id: "119-hr-1".to_string(),
-            bill_xml,
-            sponsors_json: r#"{"bill":{"sponsors":[{"bioguideId":"L000174"}]}}"#.to_string(),
-            cosponsors_json: r#"{"cosponsors":[]}"#.to_string(),
-            votes_json: None,
-            member_jsons,
-        };
-
-        let bill_id = dataset.load_bill_download(&download).unwrap();
-
-        // Bill parsed - uses bill_id from BillDownload
-        assert_eq!(bill_id, "119-hr-1");
-        assert!(dataset.get_bill(&bill_id).is_some());
-        // Member loaded
-        assert!(dataset.get_member("L000174").is_some());
-        // Sponsor info loaded with canonical bill_id
-        assert!(dataset.get_sponsor_info(&bill_id).is_some());
+        // Member not in dataset
+        let unknown = dataset.votes_by_member("X000000");
+        assert!(unknown.is_empty());
     }
 }

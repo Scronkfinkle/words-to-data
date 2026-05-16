@@ -1,0 +1,107 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2431 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-3484",
+            "zipCode": 20515
+        },
+        "bioguideId": "G000589",
+        "birthYear": "1982",
+        "cosponsoredLegislation": {
+            "count": 1066,
+            "url": "https://api.congress.gov/v3/member/G000589/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/g000589_200.jpg"
+        },
+        "directOrderName": "Lance Gooden",
+        "district": 5,
+        "firstName": "Lance",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Gooden, Lance",
+        "lastName": "Gooden",
+        "officialWebsiteUrl": "https://gooden.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Lance Gooden",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Lance",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Gooden, Lance",
+                "lastName": "Gooden",
+                "startDate": "2019-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Lance Gooden",
+                "firstName": "Lance",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Gooden, Lance",
+                "lastName": "Gooden",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 67,
+            "url": "https://api.congress.gov/v3/member/G000589/sponsored-legislation"
+        },
+        "state": "Texas",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 5,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 5,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 5,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 5,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "g000589",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

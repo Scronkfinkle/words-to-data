@@ -1,0 +1,106 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1227 Longworth House Office Building",
+            "phoneNumber": "(202) 225-2311",
+            "zipCode": 20515
+        },
+        "bioguideId": "H001096",
+        "birthYear": "1962",
+        "cosponsoredLegislation": {
+            "count": 519,
+            "url": "https://api.congress.gov/v3/member/H001096/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/h001096_200.jpg"
+        },
+        "directOrderName": "Harriet M. Hageman",
+        "firstName": "Harriet",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Hageman, Harriet M.",
+        "lastName": "Hageman",
+        "middleName": "M.",
+        "officialWebsiteUrl": "https://hageman.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Harriet M. Hageman",
+                "endDate": "2024-02-27T13:21:00Z",
+                "firstName": "Harriet",
+                "invertedOrderName": "Hageman, Harriet M.",
+                "lastName": "Hageman",
+                "middleName": "M.",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Harriet M. Hageman",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Harriet",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Hageman, Harriet M.",
+                "lastName": "Hageman",
+                "middleName": "M.",
+                "startDate": "2024-02-27T13:21:01Z"
+            },
+            {
+                "directOrderName": "Harriet M. Hageman",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Harriet",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Hageman, Harriet M.",
+                "lastName": "Hageman",
+                "middleName": "M.",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Harriet M. Hageman",
+                "firstName": "Harriet",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Hageman, Harriet M.",
+                "lastName": "Hageman",
+                "middleName": "M.",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 126,
+            "url": "https://api.congress.gov/v3/member/H001096/sponsored-legislation"
+        },
+        "state": "Wyoming",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "WY",
+                "stateName": "Wyoming"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "WY",
+                "stateName": "Wyoming"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:19Z"
+    },
+    "request": {
+        "bioguideId": "h001096",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

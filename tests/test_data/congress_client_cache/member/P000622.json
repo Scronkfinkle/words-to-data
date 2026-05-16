@@ -1,0 +1,94 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2021 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-4136",
+            "zipCode": 20515
+        },
+        "bioguideId": "P000622",
+        "birthYear": "1972",
+        "cosponsoredLegislation": {
+            "count": 82,
+            "url": "https://api.congress.gov/v3/member/P000622/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/67efdb991b05a5a598f7fde9_200.jpg"
+        },
+        "directOrderName": "Jimmy Patronis",
+        "district": 1,
+        "firstName": "Jimmy",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Patronis, Jimmy",
+        "lastName": "Patronis",
+        "officialWebsiteUrl": "https://patronis.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2025
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Jimmy Patronis",
+                "endDate": "2025-04-28T13:04:16Z",
+                "firstName": "Jimmy",
+                "invertedOrderName": "Patronis, Jimmy",
+                "lastName": "Patronis",
+                "startDate": "2025-04-02T04:00:00Z"
+            },
+            {
+                "directOrderName": "Jimmy Patronis",
+                "endDate": "2025-04-28T13:06:18Z",
+                "firstName": "Jimmy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Patronis, Jimmy",
+                "lastName": "Patronis",
+                "startDate": "2025-04-28T13:04:17Z"
+            },
+            {
+                "directOrderName": "Jimmy Patronis",
+                "endDate": "2025-04-02T03:59:59Z",
+                "firstName": "Jimmy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Patronis, Jimmy",
+                "lastName": "Patronis",
+                "startDate": "2025-04-28T13:06:19Z"
+            },
+            {
+                "directOrderName": "Jimmy Patronis",
+                "firstName": "Jimmy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Patronis, Jimmy",
+                "lastName": "Patronis",
+                "startDate": "2025-04-02T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 15,
+            "url": "https://api.congress.gov/v3/member/P000622/sponsored-legislation"
+        },
+        "state": "Florida",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 1,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:20Z"
+    },
+    "request": {
+        "bioguideId": "p000622",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

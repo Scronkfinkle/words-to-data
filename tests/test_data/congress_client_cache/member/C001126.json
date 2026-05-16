@@ -1,0 +1,115 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1433 Longworth House Office Building",
+            "phoneNumber": "(202) 225-2015",
+            "zipCode": 20515
+        },
+        "bioguideId": "C001126",
+        "birthYear": "1971",
+        "cosponsoredLegislation": {
+            "count": 606,
+            "url": "https://api.congress.gov/v3/member/C001126/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/c001126_200.jpg"
+        },
+        "directOrderName": "Mike Carey",
+        "district": 15,
+        "firstName": "Mike",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Carey, Mike",
+        "lastName": "Carey",
+        "officialWebsiteUrl": "https://carey.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Mike Carey",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Mike",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Carey, Mike",
+                "lastName": "Carey",
+                "startDate": "2021-11-04T16:00:00Z"
+            },
+            {
+                "directOrderName": "Mike Carey",
+                "endDate": "2024-02-27T13:20:56Z",
+                "firstName": "Mike",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Carey, Mike",
+                "lastName": "Carey",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Mike Carey",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Mike",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Carey, Mike",
+                "lastName": "Carey",
+                "startDate": "2024-02-27T13:20:57Z"
+            },
+            {
+                "directOrderName": "Mike Carey",
+                "firstName": "Mike",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Carey, Mike",
+                "lastName": "Carey",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 53,
+            "url": "https://api.congress.gov/v3/member/C001126/sponsored-legislation"
+        },
+        "state": "Ohio",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 15,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "OH",
+                "stateName": "Ohio"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 15,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "OH",
+                "stateName": "Ohio"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 15,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "OH",
+                "stateName": "Ohio"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:17Z"
+    },
+    "request": {
+        "bioguideId": "c001126",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

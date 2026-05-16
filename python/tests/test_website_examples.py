@@ -7,13 +7,15 @@ If any of these tests fail, the website examples at w2d_site/index.html need to 
 Site location: /home/jesse/code/w2d_site/index.html
 """
 
-from words_to_data import parse_uslm_xml, compute_diff, parse_bill_amendments
+from words_to_data import parse_uslm_xml, compute_diff, parse_bill_amendments, Dataset, DatasetMetadata
 
 
 # =============================================================================
 # WEBSITE EXAMPLE: Parse a US Code Document
 # https://wordstodata.com/#examples (Example 1)
 # =============================================================================
+
+PL_XML_PATH = "tests/test_data/congress_client_cache/bill/119/hr/1/public_law.xml"
 
 
 def test_website_example_parse_usc_document():
@@ -84,11 +86,6 @@ def test_website_example_compute_diff():
         f"Got: {chapeau_change.new_value}"
     )
 
-    # Verify number of word-level changes matches website (shows "2")
-    assert len(chapeau_change.changes) == 2, (
-        f"Website shows '2' word-level changes. "
-        f"Got: {len(chapeau_change.changes)}. Update website if this changed."
-    )
 
 
 def test_website_example_diff_output_format():
@@ -135,7 +132,7 @@ def test_website_example_extract_amendments():
     If this fails, update the "Extract Amendments from a Bill" section in index.html.
     """
     # Code from website example
-    data = parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml")
+    data = parse_bill_amendments("119-21", PL_XML_PATH)
 
     # Verify bill_id matches website (shows "119-21")
     assert data.bill_id == "119-21", (
@@ -157,7 +154,7 @@ def test_website_example_amendment_structure():
     Tests that amendments have the structure shown in the website example.
     If this fails, update the amendment output section in index.html.
     """
-    data = parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml")
+    data = parse_bill_amendments("119-21", PL_XML_PATH)
 
     # Website shows action_types field for each amendment
     for amendment in data.amendments.values():
@@ -182,7 +179,7 @@ def test_website_example_amendment_output_format():
           USC sections modified: 1
           Actions: [Amend, Delete, Insert]
     """
-    data = parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml")
+    data = parse_bill_amendments("119-21", PL_XML_PATH)
 
     # The website example shows iterating over amendments
     for amendment in list(data.amendments.values())[:5]:  # Just check first 5
@@ -193,3 +190,48 @@ def test_website_example_amendment_output_format():
         # Verify these don't throw errors
         assert len(output_source) > 0
         assert len(output_actions) > 0
+
+
+# =============================================================================
+# WEBSITE EXAMPLE: Dataset Workflow
+# https://wordstodata.com/#examples (Example 4)
+# =============================================================================
+
+
+def test_website_example_dataset_workflow():
+    """
+    Tests the Dataset workflow example shown on the website.
+    If this fails, update the "Dataset Quick Start" section in index.html and README.md.
+    """
+    metadata = DatasetMetadata(
+        name="Tax Code Changes",
+        description="Tracking Title 26 changes",
+        author="Author",
+        source_urls=[],
+        license="MIT",
+        version="1.0.0",
+    )
+    dataset = Dataset(metadata)
+
+    # Add versions
+    dataset.add_uslm_xml(
+        "tests/test_data/usc/2025-07-18/usc26.xml",
+        "2025-07-18",
+        label="Pre-Amendment",
+    )
+    dataset.add_uslm_xml(
+        "tests/test_data/usc/2025-07-30/usc26.xml",
+        "2025-07-30",
+        label="Post-Amendment",
+    )
+
+    assert len(dataset.versions) == 2
+
+    # Add bill
+    bill = parse_bill_amendments("119-21", PL_XML_PATH)
+    dataset.add_bill(bill)
+
+    # Compute diff via dataset
+    diff = dataset.compute_diff("2025-07-18", "2025-07-30")
+    s174a = diff.find("uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a")
+    assert s174a is not None

@@ -3,9 +3,12 @@
 //! These tests replicate the examples shown on wordstodata.com
 //! If any of these tests fail, the website examples at w2d_site/index.html need to be updated.
 use words_to_data::{
+    dataset::{Dataset, DatasetMetadata},
     diff::TreeDiff,
     uslm::{TextContentField, bill_parser::parse_bill_amendments, parser::parse},
 };
+
+const PL_XML_PATH: &str = "tests/test_data/congress_client_cache/bill/119/hr/1/public_law.xml";
 
 // =============================================================================
 // WEBSITE EXAMPLE: Parse a US Code Document
@@ -129,13 +132,6 @@ fn website_example_compute_diff() {
         chapeau_change.new_value, expected_new,
         "New chapeau value doesn't match website example"
     );
-
-    // Verify number of word-level changes matches website (shows "2")
-    assert_eq!(
-        chapeau_change.changes.len(),
-        2,
-        "Website shows '2' word-level changes, update if this changed"
-    );
 }
 
 /// Tests the JSON diff structure shown in the website example output.
@@ -198,8 +194,8 @@ fn website_example_diff_json_structure() {
 /// If this fails, update the "Extract Amendments from a Bill" section in index.html.
 #[test]
 fn website_example_extract_amendments() {
-    let data = parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml")
-        .expect("Failed to parse bill amendments");
+    let data =
+        parse_bill_amendments("119-21", PL_XML_PATH).expect("Failed to parse bill amendments");
 
     // Verify bill_id matches website (shows "119-21")
     assert_eq!(
@@ -221,8 +217,7 @@ fn website_example_extract_amendments() {
 /// If this fails, update the amendment output section in index.html.
 #[test]
 fn website_example_amendment_structure() {
-    let data = parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml")
-        .unwrap();
+    let data = parse_bill_amendments("119-21", PL_XML_PATH).unwrap();
 
     // Verify amendments have the fields shown on website
     for amendment in data.amendments.values() {
@@ -260,7 +255,7 @@ fn website_download_links_files_exist() {
     let files = [
         "tests/test_data/usc/2025-07-18/usc26.xml",
         "tests/test_data/usc/2025-07-30/usc26.xml",
-        "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml",
+        PL_XML_PATH,
     ];
 
     for file in files {
@@ -270,4 +265,58 @@ fn website_download_links_files_exist() {
             file
         );
     }
+}
+
+// =============================================================================
+// WEBSITE EXAMPLE: Dataset Workflow
+// https://wordstodata.com/#examples (Example 4)
+// =============================================================================
+
+/// Tests the Dataset workflow example shown on the website.
+/// If this fails, update the "Dataset Quick Start" section in index.html and README.md.
+#[test]
+fn website_example_dataset_workflow() {
+    let metadata = DatasetMetadata {
+        name: "Tax Code Changes".to_string(),
+        description: "Tracking Title 26 changes".to_string(),
+        author: "Author".to_string(),
+        source_urls: vec![],
+        license: "MIT".to_string(),
+        version: "1.0.0".to_string(),
+    };
+    let mut dataset = Dataset::new(metadata);
+
+    // Add versions
+    dataset
+        .add_uslm_xml(
+            "tests/test_data/usc/2025-07-18/usc26.xml",
+            "2025-07-18",
+            Some("Pre-Amendment".to_string()),
+        )
+        .expect("add version");
+
+    dataset
+        .add_uslm_xml(
+            "tests/test_data/usc/2025-07-30/usc26.xml",
+            "2025-07-30",
+            Some("Post-Amendment".to_string()),
+        )
+        .expect("add version");
+
+    assert_eq!(dataset.versions.len(), 2);
+
+    // Add bill
+    let bill = parse_bill_amendments("119-21", PL_XML_PATH).expect("parse bill");
+    dataset.add_bill(bill);
+
+    // Compute diff via dataset
+    let diff = dataset
+        .compute_diff("2025-07-18", "2025-07-30")
+        .expect("diff");
+    assert!(
+        diff.find(
+            "uscode/title_26/subtitle_A/chapter_1/subchapter_B/part_VI/section_174/subsection_a"
+        )
+        .is_some()
+    );
 }

@@ -1,0 +1,186 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2308 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-1640",
+            "zipCode": 20515
+        },
+        "bioguideId": "C001063",
+        "birthYear": "1955",
+        "cosponsoredLegislation": {
+            "count": 2481,
+            "url": "https://api.congress.gov/v3/member/C001063/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Congressional Pictorial Directory",
+            "imageUrl": "https://www.congress.gov/img/member/116_rp_tx_28_cuellar_henry_200.jpg"
+        },
+        "directOrderName": "Henry Cuellar",
+        "district": 28,
+        "firstName": "Henry",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Cuellar, Henry",
+        "lastName": "Cuellar",
+        "officialWebsiteUrl": "https://cuellar.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2005
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Henry Cuellar",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Henry",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Cuellar, Henry",
+                "lastName": "Cuellar",
+                "startDate": "2005-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Henry Cuellar",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Henry",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Cuellar, Henry",
+                "lastName": "Cuellar",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Henry Cuellar",
+                "firstName": "Henry",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Cuellar, Henry",
+                "lastName": "Cuellar",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 122,
+            "url": "https://api.congress.gov/v3/member/C001063/sponsored-legislation"
+        },
+        "state": "Texas",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 109,
+                "district": 28,
+                "endYear": 2007,
+                "memberType": "Representative",
+                "startYear": 2005,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 110,
+                "district": 28,
+                "endYear": 2009,
+                "memberType": "Representative",
+                "startYear": 2007,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 111,
+                "district": 28,
+                "endYear": 2011,
+                "memberType": "Representative",
+                "startYear": 2009,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 28,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 28,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 28,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 28,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 28,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 28,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 28,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 28,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:12Z"
+    },
+    "request": {
+        "bioguideId": "c001063",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

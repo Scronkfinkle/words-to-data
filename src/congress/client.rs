@@ -1,6 +1,9 @@
 use std::time::Duration;
 
-use super::{BillDownload, CongressError, CosponsorRecord, Member, ResponseCache, SponsorInfo};
+use super::{
+    BillDownload, CongressError, CosponsorRecord, HouseRollCall, Member, RecordedVoteRef,
+    ResponseCache, SponsorInfo,
+};
 use serde_json::Value;
 use std::collections::HashMap;
 
@@ -14,8 +17,9 @@ pub struct CongressClient {
 }
 
 impl CongressClient {
-    pub fn new(api_key: String) -> Self {
-        let cache = ResponseCache::new(Duration::from_secs(DEFAULT_TTL_SECS));
+    pub fn new(api_key: String, cache_dir: Option<String>) -> Self {
+        let cache_path = cache_dir.map(std::path::PathBuf::from);
+        let cache = ResponseCache::new(Duration::from_secs(DEFAULT_TTL_SECS), cache_path);
         let agent = ureq::Agent::new_with_defaults();
 
         Self {
@@ -29,9 +33,19 @@ impl CongressClient {
         &self.api_key
     }
 
-    fn fetch(&self, endpoint: &str, filetype: &str) -> Result<String, CongressError> {
+    fn fetch(
+        &self,
+        endpoint: &str,
+        filetype: &str,
+        custom_key: Option<String>,
+    ) -> Result<String, CongressError> {
         // Check cache first
-        let key = format!("{}.{}", endpoint, filetype);
+        let key = match custom_key {
+            Some(val) => val,
+            None => endpoint.to_string(),
+        };
+        let key = format!("{}.{}", key, filetype);
+
         if let Some(cached) = self.cache.get(&key) {
             return Ok(cached);
         }
@@ -65,7 +79,7 @@ impl CongressClient {
 
     pub fn get_member(&self, bioguide_id: &str) -> Result<Member, CongressError> {
         let endpoint = format!("member/{}", bioguide_id);
-        let json = self.fetch(&endpoint, "json")?;
+        let json = self.fetch(&endpoint, "json", None)?;
         Member::from_api_response(&json)
     }
 
@@ -76,7 +90,7 @@ impl CongressClient {
         number: u32,
     ) -> Result<SponsorInfo, CongressError> {
         let bill_endpoint = format!("bill/{}/{}/{}", congress, bill_type, number);
-        let bill_json = self.fetch(&bill_endpoint, "json")?;
+        let bill_json = self.fetch(&bill_endpoint, "json", None)?;
         let bill: Value = serde_json::from_str(&bill_json)?;
 
         let bill_id = format!("{}-{}-{}", congress, bill_type, number);
@@ -90,7 +104,7 @@ impl CongressClient {
 
         // Fetch cosponsors
         let cosponsor_endpoint = format!("{}/cosponsors", bill_endpoint);
-        let cosponsor_json = self.fetch(&cosponsor_endpoint, "json")?;
+        let cosponsor_json = self.fetch(&cosponsor_endpoint, "json", None)?;
         let cosponsor_data: Value = serde_json::from_str(&cosponsor_json)?;
 
         let mut cosponsors = Vec::new();
@@ -124,22 +138,26 @@ impl CongressClient {
         // Fetch bill XML from api.congress.gov
         let bill_xml = self.fetch_bill_xml(congress, &bill_type, number)?;
 
-        // Fetch sponsors
+        // Fetch bill metadata (includes sponsors, actions, committees, etc.)
         let bill_endpoint = format!("bill/{}/{}/{}", congress, bill_type, number);
-        let sponsors_json = self.fetch(&bill_endpoint, "json")?;
+        let bill_metadata_json = self.fetch(
+            &bill_endpoint,
+            "json",
+            format!("bill/{}/{}/{}/metadata", congress, bill_type, number).into(),
+        )?;
 
         // Fetch cosponsors
         let cosponsors_endpoint = format!("{}/cosponsors", bill_endpoint);
-        let cosponsors_json = self.fetch(&cosponsors_endpoint, "json")?;
+        let cosponsors_json = self.fetch(&cosponsors_endpoint, "json", None)?;
 
         // Collect member bioguide IDs from sponsors
-        let mut member_ids: Vec<String> = Vec::new();
-        if let Ok(v) = serde_json::from_str::<Value>(&sponsors_json)
+        let mut member_ids: std::collections::HashSet<String> = std::collections::HashSet::new();
+        if let Ok(v) = serde_json::from_str::<Value>(&bill_metadata_json)
             && let Some(sponsors) = v["bill"]["sponsors"].as_array()
         {
             for s in sponsors {
                 if let Some(id) = s["bioguideId"].as_str() {
-                    member_ids.push(id.to_string());
+                    member_ids.insert(id.to_string());
                 }
             }
         }
@@ -149,27 +167,48 @@ impl CongressClient {
         {
             for c in cosponsors {
                 if let Some(id) = c["bioguideId"].as_str() {
-                    member_ids.push(id.to_string());
+                    member_ids.insert(id.to_string());
                 }
             }
         }
+
+        // Fetch House votes (dedupe by roll number)
+        let votes_json = match self.get_bill_house_votes(congress, &bill_type, number) {
+            Ok(refs) if !refs.is_empty() => {
+                let mut seen_rolls = std::collections::HashSet::new();
+                let mut roll_calls = Vec::new();
+                for r in &refs {
+                    if seen_rolls.insert(r.roll_number)
+                        && let Ok(vote) = self.get_house_vote(r.congress, r.session, r.roll_number)
+                    {
+                        vote.member_votes.iter().for_each(|member_vote| {
+                            member_ids.insert(member_vote.bioguide_id.clone());
+                        });
+                        roll_calls.push(vote);
+                    }
+                }
+                if !roll_calls.is_empty() {
+                    Some(serde_json::to_string(&roll_calls).unwrap_or_default())
+                } else {
+                    None
+                }
+            }
+            _ => None,
+        };
 
         // Fetch member details
         let mut member_jsons = HashMap::new();
         for id in member_ids {
             let endpoint = format!("member/{}", id);
-            if let Ok(json) = self.fetch(&endpoint, "json") {
+            if let Ok(json) = self.fetch(&endpoint, "json", None) {
                 member_jsons.insert(id, json);
             }
         }
 
-        // TODO: Fetch votes for bill (requires finding roll call numbers from actions)
-        let votes_json = None;
-
         Ok(BillDownload {
             bill_id: bill_id.to_string(),
             bill_xml,
-            sponsors_json,
+            bill_metadata_json,
             cosponsors_json,
             votes_json,
             member_jsons,
@@ -199,6 +238,42 @@ impl CongressClient {
         Ok((congress, bill_type, number))
     }
 
+    /// Fetch bill actions and extract House roll call references
+    pub fn get_bill_house_votes(
+        &self,
+        congress: u16,
+        bill_type: &str,
+        number: u32,
+    ) -> Result<Vec<RecordedVoteRef>, CongressError> {
+        let actions_endpoint = format!("bill/{}/{}/{}/actions", congress, bill_type, number);
+        let actions_json = self.fetch(&actions_endpoint, "json", None)?;
+        RecordedVoteRef::extract_house_votes_from_actions(&actions_json)
+    }
+
+    /// Fetch a House roll call vote with member votes
+    pub fn get_house_vote(
+        &self,
+        congress: u16,
+        session: u8,
+        roll_number: u32,
+    ) -> Result<HouseRollCall, CongressError> {
+        let vote_endpoint = format!("house-vote/{}/{}/{}", congress, session, roll_number);
+        let vote_json = self.fetch(
+            &vote_endpoint,
+            "json",
+            format!(
+                "house-vote/{}/{}/{}/roll_call",
+                congress, session, roll_number
+            )
+            .into(),
+        )?;
+
+        let members_endpoint = format!("{}/members", vote_endpoint);
+        let members_json = self.fetch(&members_endpoint, "json", None)?;
+
+        HouseRollCall::from_api_response(&vote_json, &members_json)
+    }
+
     /// Fetch bill text info from Congress API, then fetch XML from URL
     fn fetch_bill_xml(
         &self,
@@ -206,7 +281,7 @@ impl CongressClient {
         bill_type: &str,
         number: u32,
     ) -> Result<String, CongressError> {
-        let cache_key = format!("bill_{}_{}_{}.xml", congress, bill_type, number);
+        let cache_key = format!("bill/{}/{}/{}/public_law.xml", congress, bill_type, number);
 
         if let Some(xml) = self.cache.get(&cache_key) {
             return Ok(xml);
@@ -214,7 +289,7 @@ impl CongressClient {
 
         // Get text versions list from Congress API
         let text_endpoint = format!("bill/{}/{}/{}/text", congress, bill_type, number);
-        let text_json = self.fetch(&text_endpoint, "json")?;
+        let text_json = self.fetch(&text_endpoint, "json", None)?;
         let text_data: Value = serde_json::from_str(&text_json)?;
 
         // Find XML URL from text versions (prefer enrolled, then engrossed, then introduced)

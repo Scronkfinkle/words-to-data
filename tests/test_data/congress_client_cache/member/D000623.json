@@ -1,0 +1,136 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2134 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-2095",
+            "zipCode": 20515
+        },
+        "bioguideId": "D000623",
+        "birthYear": "1952",
+        "cosponsoredLegislation": {
+            "count": 3658,
+            "url": "https://api.congress.gov/v3/member/D000623/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Congressional Pictorial Directory",
+            "imageUrl": "https://www.congress.gov/img/member/115_rp_ca_11_desaulnier_mark_200.jpg"
+        },
+        "directOrderName": "Mark DeSaulnier",
+        "district": 10,
+        "firstName": "Mark",
+        "honorificName": "Mr.",
+        "invertedOrderName": "DeSaulnier, Mark",
+        "lastName": "DeSaulnier",
+        "officialWebsiteUrl": "https://desaulnier.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2015
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Mark DeSaulnier",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Mark",
+                "honorificName": "Mr.",
+                "invertedOrderName": "DeSaulnier, Mark",
+                "lastName": "DeSaulnier",
+                "startDate": "2015-01-06T05:00:00Z"
+            },
+            {
+                "directOrderName": "Mark DeSaulnier",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Mark",
+                "honorificName": "Mr.",
+                "invertedOrderName": "DeSaulnier, Mark",
+                "lastName": "DeSaulnier",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Mark DeSaulnier",
+                "firstName": "Mark",
+                "honorificName": "Mr.",
+                "invertedOrderName": "DeSaulnier, Mark",
+                "lastName": "DeSaulnier",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 220,
+            "url": "https://api.congress.gov/v3/member/D000623/sponsored-legislation"
+        },
+        "state": "California",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 11,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 11,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 11,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 11,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 10,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 10,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "CA",
+                "stateName": "California"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:17Z"
+    },
+    "request": {
+        "bioguideId": "d000623",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,126 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2301 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-1252",
+            "zipCode": 20515
+        },
+        "bioguideId": "F000472",
+        "birthYear": "1964",
+        "cosponsoredLegislation": {
+            "count": 792,
+            "url": "https://api.congress.gov/v3/member/F000472/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/f000472_200.jpg"
+        },
+        "directOrderName": "Scott Franklin",
+        "district": 18,
+        "firstName": "Scott",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Franklin, Scott",
+        "lastName": "Franklin",
+        "officialWebsiteUrl": "https://franklin.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "C. Scott Franklin",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "C.",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Franklin, C. Scott",
+                "lastName": "Franklin",
+                "middleName": "Scott",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "C. Scott Franklin",
+                "endDate": "2023-10-12T11:00:00Z",
+                "firstName": "C.",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Franklin, C. Scott",
+                "lastName": "Franklin",
+                "middleName": "Scott",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Scott Franklin",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Scott",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Franklin, Scott",
+                "lastName": "Franklin",
+                "startDate": "2023-10-12T11:01:00Z"
+            },
+            {
+                "directOrderName": "Scott Franklin",
+                "endDate": "2025-04-28T13:04:16Z",
+                "firstName": "Scott",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Franklin, Scott",
+                "lastName": "Franklin",
+                "startDate": "2025-01-17T05:00:00Z"
+            },
+            {
+                "directOrderName": "Scott Franklin",
+                "firstName": "Scott",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Franklin, Scott",
+                "lastName": "Franklin",
+                "startDate": "2025-04-28T13:04:17Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 46,
+            "url": "https://api.congress.gov/v3/member/F000472/sponsored-legislation"
+        },
+        "state": "Florida",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 15,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 18,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 18,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:19Z"
+    },
+    "request": {
+        "bioguideId": "f000472",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

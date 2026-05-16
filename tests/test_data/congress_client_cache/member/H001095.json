@@ -1,0 +1,87 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1520 Longworth House Office Building",
+            "phoneNumber": "(202) 225-5646",
+            "zipCode": 20515
+        },
+        "bioguideId": "H001095",
+        "birthYear": "1981",
+        "cosponsoredLegislation": {
+            "count": 332,
+            "url": "https://api.congress.gov/v3/member/H001095/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/h001095_200.jpg"
+        },
+        "directOrderName": "Wesley Hunt",
+        "district": 38,
+        "firstName": "Wesley",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Hunt, Wesley",
+        "lastName": "Hunt",
+        "officialWebsiteUrl": "https://hunt.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Wesley Hunt",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Wesley",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Hunt, Wesley",
+                "lastName": "Hunt",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Wesley Hunt",
+                "firstName": "Wesley",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Hunt, Wesley",
+                "lastName": "Hunt",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 27,
+            "url": "https://api.congress.gov/v3/member/H001095/sponsored-legislation"
+        },
+        "state": "Texas",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 38,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 38,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:19Z"
+    },
+    "request": {
+        "bioguideId": "h001095",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

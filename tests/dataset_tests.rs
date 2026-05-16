@@ -7,6 +7,8 @@ use words_to_data::diff::TreeDiff;
 use words_to_data::uslm::bill_parser::parse_bill_amendments;
 use words_to_data::uslm::parser::parse;
 
+const PL_XML_PATH: &str = "tests/test_data/congress_client_cache/bill/119/hr/1/public_law.xml";
+
 #[test]
 fn should_serialize_roundtrip_json() {
     let metadata = DatasetMetadata {
@@ -186,8 +188,7 @@ fn should_compute_diff_between_versions() {
 fn should_add_and_query_bills() {
     let mut dataset = make_test_dataset();
 
-    let bill = parse_bill_amendments("119-21", "tests/test_data/bills/119-hr-1/bill_119_hr_1.xml")
-        .unwrap();
+    let bill = parse_bill_amendments("119-21", PL_XML_PATH).unwrap();
     let bill_id = bill.bill_id.clone();
 
     dataset.add_bill(bill);

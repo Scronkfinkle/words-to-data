@@ -1,0 +1,117 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2332 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-4365",
+            "zipCode": 20515
+        },
+        "bioguideId": "E000297",
+        "birthYear": "1954",
+        "cosponsoredLegislation": {
+            "count": 2884,
+            "url": "https://api.congress.gov/v3/member/E000297/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/e000297_200.jpg"
+        },
+        "directOrderName": "Adriano Espaillat",
+        "district": 13,
+        "firstName": "Adriano",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Espaillat, Adriano",
+        "lastName": "Espaillat",
+        "officialWebsiteUrl": "https://espaillat.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2017
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Adriano Espaillat",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Adriano",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Espaillat, Adriano",
+                "lastName": "Espaillat",
+                "startDate": "2017-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Adriano Espaillat",
+                "firstName": "Adriano",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Espaillat, Adriano",
+                "lastName": "Espaillat",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 230,
+            "url": "https://api.congress.gov/v3/member/E000297/sponsored-legislation"
+        },
+        "state": "New York",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 13,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 13,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 13,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 13,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 13,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NY",
+                "stateName": "New York"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:15Z"
+    },
+    "request": {
+        "bioguideId": "e000297",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

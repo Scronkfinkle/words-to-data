@@ -1,0 +1,96 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "446 Cannon House Office Building",
+            "phoneNumber": "(202) 225-5645",
+            "zipCode": 20515
+        },
+        "bioguideId": "C001131",
+        "birthYear": "1989",
+        "cosponsoredLegislation": {
+            "count": 641,
+            "url": "https://api.congress.gov/v3/member/C001131/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/c001131_200.jpg"
+        },
+        "directOrderName": "Greg Casar",
+        "district": 35,
+        "firstName": "Greg",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Casar, Greg",
+        "lastName": "Casar",
+        "officialWebsiteUrl": "https://casar.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Greg Casar",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Greg",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Casar, Greg",
+                "lastName": "Casar",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Greg Casar",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Greg",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Casar, Greg",
+                "lastName": "Casar",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Greg Casar",
+                "firstName": "Greg",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Casar, Greg",
+                "lastName": "Casar",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 14,
+            "url": "https://api.congress.gov/v3/member/C001131/sponsored-legislation"
+        },
+        "state": "Texas",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 35,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 35,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:19Z"
+    },
+    "request": {
+        "bioguideId": "c001131",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

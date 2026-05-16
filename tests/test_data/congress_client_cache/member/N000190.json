@@ -1,0 +1,117 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "569 Cannon House Office Building",
+            "phoneNumber": "(202) 225-5501",
+            "zipCode": 20515
+        },
+        "bioguideId": "N000190",
+        "birthYear": "1953",
+        "cosponsoredLegislation": {
+            "count": 2007,
+            "url": "https://api.congress.gov/v3/member/N000190/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/n000190_200.jpg"
+        },
+        "directOrderName": "Ralph Norman",
+        "district": 5,
+        "firstName": "Ralph",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Norman, Ralph",
+        "lastName": "Norman",
+        "officialWebsiteUrl": "https://norman.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2017
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Ralph Norman",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Ralph",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Norman, Ralph",
+                "lastName": "Norman",
+                "startDate": "2017-06-26T00:00:00Z"
+            },
+            {
+                "directOrderName": "Ralph Norman",
+                "firstName": "Ralph",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Norman, Ralph",
+                "lastName": "Norman",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 176,
+            "url": "https://api.congress.gov/v3/member/N000190/sponsored-legislation"
+        },
+        "state": "South Carolina",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 5,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "SC",
+                "stateName": "South Carolina"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 5,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "SC",
+                "stateName": "South Carolina"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 5,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "SC",
+                "stateName": "South Carolina"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 5,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "SC",
+                "stateName": "South Carolina"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 5,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "SC",
+                "stateName": "South Carolina"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:15Z"
+    },
+    "request": {
+        "bioguideId": "n000190",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

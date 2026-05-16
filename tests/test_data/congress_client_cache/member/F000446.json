@@ -1,0 +1,106 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2434 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-4426",
+            "zipCode": 20515
+        },
+        "bioguideId": "F000446",
+        "birthYear": "1969",
+        "cosponsoredLegislation": {
+            "count": 791,
+            "url": "https://api.congress.gov/v3/member/F000446/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/f000446_200.jpg"
+        },
+        "directOrderName": "Randy Feenstra",
+        "district": 4,
+        "firstName": "Randy",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Feenstra, Randy",
+        "lastName": "Feenstra",
+        "officialWebsiteUrl": "https://feenstra.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Randy Feenstra",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Randy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Feenstra, Randy",
+                "lastName": "Feenstra",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Randy Feenstra",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Randy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Feenstra, Randy",
+                "lastName": "Feenstra",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Randy Feenstra",
+                "firstName": "Randy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Feenstra, Randy",
+                "lastName": "Feenstra",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 101,
+            "url": "https://api.congress.gov/v3/member/F000446/sponsored-legislation"
+        },
+        "state": "Iowa",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 4,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "IA",
+                "stateName": "Iowa"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 4,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "IA",
+                "stateName": "Iowa"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 4,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "IA",
+                "stateName": "Iowa"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "f000446",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

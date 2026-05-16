@@ -1,0 +1,99 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1523 Longworth House Office Building",
+            "phoneNumber": "(202) 225-5701",
+            "zipCode": 20515
+        },
+        "bioguideId": "R000617",
+        "birthYear": "1983",
+        "cosponsoredLegislation": {
+            "count": 1043,
+            "url": "https://api.congress.gov/v3/member/R000617/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/684c2356333714e4aee2e1fd_200.jpg"
+        },
+        "directOrderName": "Delia C. Ramirez",
+        "district": 3,
+        "firstName": "Delia",
+        "honorificName": "Mrs.",
+        "invertedOrderName": "Ramirez, Delia C.",
+        "lastName": "Ramirez",
+        "middleName": "C.",
+        "officialWebsiteUrl": "https://ramirez.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Delia C. Ramirez",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Delia",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Ramirez, Delia C.",
+                "lastName": "Ramirez",
+                "middleName": "C.",
+                "startDate": "2024-02-27T13:20:51Z"
+            },
+            {
+                "directOrderName": "Delia C. Ramirez",
+                "endDate": "2024-02-27T13:20:50Z",
+                "firstName": "Delia",
+                "invertedOrderName": "Ramirez, Delia C.",
+                "lastName": "Ramirez",
+                "middleName": "C.",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Delia C. Ramirez",
+                "firstName": "Delia",
+                "honorificName": "Mrs.",
+                "invertedOrderName": "Ramirez, Delia C.",
+                "lastName": "Ramirez",
+                "middleName": "C.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 43,
+            "url": "https://api.congress.gov/v3/member/R000617/sponsored-legislation"
+        },
+        "state": "Illinois",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 3,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 3,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "IL",
+                "stateName": "Illinois"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "r000617",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

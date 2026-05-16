@@ -1,0 +1,170 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2058 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-6231",
+            "zipCode": 20515
+        },
+        "bioguideId": "C001067",
+        "birthYear": "1964",
+        "cosponsoredLegislation": {
+            "count": 5878,
+            "url": "https://api.congress.gov/v3/member/C001067/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/674dfc6b5c48ff736e6e1762_200.jpg"
+        },
+        "directOrderName": "Yvette D. Clarke",
+        "district": 9,
+        "firstName": "Yvette",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Clarke, Yvette D.",
+        "lastName": "Clarke",
+        "middleName": "D.",
+        "officialWebsiteUrl": "https://clarke.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2007
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Yvette D. Clarke",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Yvette",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Clarke, Yvette D.",
+                "lastName": "Clarke",
+                "middleName": "D.",
+                "startDate": "2007-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Yvette D. Clarke",
+                "firstName": "Yvette",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Clarke, Yvette D.",
+                "lastName": "Clarke",
+                "middleName": "D.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 201,
+            "url": "https://api.congress.gov/v3/member/C001067/sponsored-legislation"
+        },
+        "state": "New York",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 110,
+                "district": 11,
+                "endYear": 2009,
+                "memberType": "Representative",
+                "startYear": 2007,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 111,
+                "district": 11,
+                "endYear": 2011,
+                "memberType": "Representative",
+                "startYear": 2009,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 11,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 9,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 9,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 9,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 9,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 9,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 9,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 9,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NY",
+                "stateName": "New York"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:14Z"
+    },
+    "request": {
+        "bioguideId": "c001067",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

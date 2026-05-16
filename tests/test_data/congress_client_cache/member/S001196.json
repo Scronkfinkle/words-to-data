@@ -1,0 +1,140 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2211 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-4611",
+            "zipCode": 20515
+        },
+        "bioguideId": "S001196",
+        "birthYear": "1984",
+        "cosponsoredLegislation": {
+            "count": 2303,
+            "url": "https://api.congress.gov/v3/member/S001196/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/s001196_200.jpg"
+        },
+        "directOrderName": "Elise M. Stefanik",
+        "district": 21,
+        "firstName": "Elise",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Stefanik, Elise M.",
+        "lastName": "Stefanik",
+        "leadership": [
+            {
+                "congress": 117,
+                "type": "Republican Conference Chair"
+            },
+            {
+                "congress": 118,
+                "type": "Republican Conference Chair"
+            }
+        ],
+        "middleName": "M.",
+        "officialWebsiteUrl": "https://stefanik.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2015
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Elise M. Stefanik",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Elise",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Stefanik, Elise M.",
+                "lastName": "Stefanik",
+                "middleName": "M.",
+                "startDate": "2015-01-06T05:00:00Z"
+            },
+            {
+                "directOrderName": "Elise M. Stefanik",
+                "firstName": "Elise",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Stefanik, Elise M.",
+                "lastName": "Stefanik",
+                "middleName": "M.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 196,
+            "url": "https://api.congress.gov/v3/member/S001196/sponsored-legislation"
+        },
+        "state": "New York",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 21,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 21,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 21,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 21,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 21,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 21,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NY",
+                "stateName": "New York"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:14Z"
+    },
+    "request": {
+        "bioguideId": "s001196",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

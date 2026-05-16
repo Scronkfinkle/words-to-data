@@ -1,0 +1,113 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "343 Cannon House Office Building",
+            "phoneNumber": "(202) 225-4806",
+            "zipCode": 20515
+        },
+        "bioguideId": "F000474",
+        "birthYear": "1975",
+        "cosponsoredLegislation": {
+            "count": 419,
+            "url": "https://api.congress.gov/v3/member/F000474/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/67b4de4a61bd80d04553b0a5_200.jpg"
+        },
+        "directOrderName": "Mike Flood",
+        "district": 1,
+        "firstName": "Mike",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Flood, Mike",
+        "lastName": "Flood",
+        "officialWebsiteUrl": "https://flood.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2022
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Mike Flood",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Mike",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Flood, Mike",
+                "lastName": "Flood",
+                "startDate": "2024-02-27T13:20:55Z"
+            },
+            {
+                "directOrderName": "Mike Flood",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Mike",
+                "invertedOrderName": "Flood, Mike",
+                "lastName": "Flood",
+                "startDate": "2022-07-12T04:00:00Z"
+            },
+            {
+                "directOrderName": "Mike Flood",
+                "endDate": "2024-02-27T13:20:54Z",
+                "firstName": "Mike",
+                "invertedOrderName": "Flood, Mike",
+                "lastName": "Flood",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Mike Flood",
+                "firstName": "Mike",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Flood, Mike",
+                "lastName": "Flood",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 46,
+            "url": "https://api.congress.gov/v3/member/F000474/sponsored-legislation"
+        },
+        "state": "Nebraska",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 1,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2022,
+                "stateCode": "NE",
+                "stateName": "Nebraska"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 1,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NE",
+                "stateName": "Nebraska"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 1,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NE",
+                "stateName": "Nebraska"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:17Z"
+    },
+    "request": {
+        "bioguideId": "f000474",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

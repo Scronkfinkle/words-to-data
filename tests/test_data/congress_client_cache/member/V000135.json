@@ -1,0 +1,87 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1513 Longworth House Office Building",
+            "phoneNumber": "(202) 225-5506",
+            "zipCode": 20515
+        },
+        "bioguideId": "V000135",
+        "birthYear": "1969",
+        "cosponsoredLegislation": {
+            "count": 621,
+            "url": "https://api.congress.gov/v3/member/V000135/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/v000135_200.jpg"
+        },
+        "directOrderName": "Derrick Van Orden",
+        "district": 3,
+        "firstName": "Derrick",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Van Orden, Derrick",
+        "lastName": "Van Orden",
+        "officialWebsiteUrl": "https://vanorden.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Derrick Van Orden",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Derrick",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Van Orden, Derrick",
+                "lastName": "Van Orden",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Derrick Van Orden",
+                "firstName": "Derrick",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Van Orden, Derrick",
+                "lastName": "Van Orden",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 58,
+            "url": "https://api.congress.gov/v3/member/V000135/sponsored-legislation"
+        },
+        "state": "Wisconsin",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 3,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "WI",
+                "stateName": "Wisconsin"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 3,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "WI",
+                "stateName": "Wisconsin"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:19Z"
+    },
+    "request": {
+        "bioguideId": "v000135",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

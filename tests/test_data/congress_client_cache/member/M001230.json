@@ -1,0 +1,86 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "121 Cannon House Office Building",
+            "phoneNumber": "(202) 225-6411",
+            "zipCode": 20515
+        },
+        "bioguideId": "M001230",
+        "birthYear": "1982",
+        "cosponsoredLegislation": {
+            "count": 207,
+            "url": "https://api.congress.gov/v3/member/M001230/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/677430a40b34857ecc909113_200.jpg"
+        },
+        "directOrderName": "Ryan Mackenzie",
+        "district": 7,
+        "firstName": "Ryan",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Mackenzie, Ryan",
+        "lastName": "Mackenzie",
+        "officialWebsiteUrl": "https://mackenzie.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2025
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Ryan Mackenzie",
+                "endDate": "2025-01-10T17:36:18Z",
+                "firstName": "Ryan",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Mackenzie, Ryan",
+                "lastName": "Mackenzie",
+                "startDate": "2025-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Ryan Mackenzie",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Ryan",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Mackenzie, Ryan",
+                "lastName": "Mackenzie",
+                "startDate": "2025-01-10T17:36:19Z"
+            },
+            {
+                "directOrderName": "Ryan Mackenzie",
+                "firstName": "Ryan",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Mackenzie, Ryan",
+                "lastName": "Mackenzie",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 21,
+            "url": "https://api.congress.gov/v3/member/M001230/sponsored-legislation"
+        },
+        "state": "Pennsylvania",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 7,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:20Z"
+    },
+    "request": {
+        "bioguideId": "m001230",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

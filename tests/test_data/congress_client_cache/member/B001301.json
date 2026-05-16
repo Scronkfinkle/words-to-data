@@ -1,0 +1,117 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "566 Cannon House Office Building",
+            "phoneNumber": "(202) 225-4735",
+            "zipCode": 20515
+        },
+        "bioguideId": "B001301",
+        "birthYear": "1947",
+        "cosponsoredLegislation": {
+            "count": 1057,
+            "url": "https://api.congress.gov/v3/member/B001301/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/b001301_200.jpg"
+        },
+        "directOrderName": "Jack Bergman",
+        "district": 1,
+        "firstName": "Jack",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Bergman, Jack",
+        "lastName": "Bergman",
+        "officialWebsiteUrl": "https://bergman.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2017
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Jack Bergman",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Jack",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Bergman, Jack",
+                "lastName": "Bergman",
+                "startDate": "2017-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Jack Bergman",
+                "firstName": "Jack",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Bergman, Jack",
+                "lastName": "Bergman",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 105,
+            "url": "https://api.congress.gov/v3/member/B001301/sponsored-legislation"
+        },
+        "state": "Michigan",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 1,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 1,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 1,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 1,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 1,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "MI",
+                "stateName": "Michigan"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:15Z"
+    },
+    "request": {
+        "bioguideId": "b001301",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

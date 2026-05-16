@@ -1,0 +1,126 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1201 Longworth House Office Building",
+            "phoneNumber": "(202) 225-2531",
+            "zipCode": 20515
+        },
+        "bioguideId": "G000581",
+        "birthYear": "1967",
+        "cosponsoredLegislation": {
+            "count": 1575,
+            "url": "https://api.congress.gov/v3/member/G000581/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Congressional Pictorial Directory",
+            "imageUrl": "https://www.congress.gov/img/member/115_rp_tx_15_gonzalez_vicente_200.jpg"
+        },
+        "directOrderName": "Vicente Gonzalez",
+        "district": 34,
+        "firstName": "Vicente",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Gonzalez, Vicente",
+        "lastName": "Gonzalez",
+        "officialWebsiteUrl": "https://gonzalez.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2017
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Vicente Gonzalez",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Vicente",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Gonzalez, Vicente",
+                "lastName": "Gonzalez",
+                "startDate": "2017-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Vicente Gonzalez",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Vicente",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Gonzalez, Vicente",
+                "lastName": "Gonzalez",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Vicente Gonzalez",
+                "firstName": "Vicente",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Gonzalez, Vicente",
+                "lastName": "Gonzalez",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 51,
+            "url": "https://api.congress.gov/v3/member/G000581/sponsored-legislation"
+        },
+        "state": "Texas",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 15,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 15,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 15,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 34,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 34,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:19Z"
+    },
+    "request": {
+        "bioguideId": "g000581",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

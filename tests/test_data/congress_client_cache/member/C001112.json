@@ -1,0 +1,120 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2331 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-3601",
+            "zipCode": 20515
+        },
+        "bioguideId": "C001112",
+        "birthYear": "1964",
+        "cosponsoredLegislation": {
+            "count": 2823,
+            "url": "https://api.congress.gov/v3/member/C001112/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Congressional Pictorial Directory",
+            "imageUrl": "https://www.congress.gov/img/member/115_rp_ca_24_carbajal_salud_200.jpg"
+        },
+        "directOrderName": "Salud O. Carbajal",
+        "district": 24,
+        "firstName": "Salud",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Carbajal, Salud O.",
+        "lastName": "Carbajal",
+        "middleName": "O.",
+        "officialWebsiteUrl": "https://carbajal.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2017
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Salud O. Carbajal",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Salud",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Carbajal, Salud O.",
+                "lastName": "Carbajal",
+                "middleName": "O.",
+                "startDate": "2017-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Salud O. Carbajal",
+                "firstName": "Salud",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Carbajal, Salud O.",
+                "lastName": "Carbajal",
+                "middleName": "O.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 145,
+            "url": "https://api.congress.gov/v3/member/C001112/sponsored-legislation"
+        },
+        "state": "California",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 24,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 24,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 24,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 24,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 24,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "CA",
+                "stateName": "California"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:15Z"
+    },
+    "request": {
+        "bioguideId": "c001112",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

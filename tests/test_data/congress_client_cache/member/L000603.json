@@ -1,0 +1,96 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "444 Cannon House Office Building",
+            "phoneNumber": "(202) 225-4901",
+            "zipCode": 20515
+        },
+        "bioguideId": "L000603",
+        "birthYear": "1975",
+        "cosponsoredLegislation": {
+            "count": 248,
+            "url": "https://api.congress.gov/v3/member/L000603/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/l000603_200.jpg"
+        },
+        "directOrderName": "Morgan Luttrell",
+        "district": 8,
+        "firstName": "Morgan",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Luttrell, Morgan",
+        "lastName": "Luttrell",
+        "officialWebsiteUrl": "https://luttrell.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Morgan Luttrell",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Morgan",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Luttrell, Morgan",
+                "lastName": "Luttrell",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Morgan Luttrell",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Morgan",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Luttrell, Morgan",
+                "lastName": "Luttrell",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Morgan Luttrell",
+                "firstName": "Morgan",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Luttrell, Morgan",
+                "lastName": "Luttrell",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 44,
+            "url": "https://api.congress.gov/v3/member/L000603/sponsored-legislation"
+        },
+        "state": "Texas",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 8,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 8,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "TX",
+                "stateName": "Texas"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:19Z"
+    },
+    "request": {
+        "bioguideId": "l000603",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,110 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2162 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-3931",
+            "zipCode": 20515
+        },
+        "bioguideId": "S000168",
+        "birthYear": "1961",
+        "cosponsoredLegislation": {
+            "count": 1297,
+            "url": "https://api.congress.gov/v3/member/S000168/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/s000168_200.jpg"
+        },
+        "directOrderName": "Maria Elvira Salazar",
+        "district": 27,
+        "firstName": "Maria",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Salazar, Maria Elvira",
+        "lastName": "Salazar",
+        "middleName": "Elvira",
+        "officialWebsiteUrl": "https://salazar.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2021
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Maria Elvira Salazar",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Maria",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Salazar, Maria Elvira",
+                "lastName": "Salazar",
+                "middleName": "Elvira",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Maria Elvira Salazar",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Maria",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Salazar, Maria Elvira",
+                "lastName": "Salazar",
+                "middleName": "Elvira",
+                "startDate": "2021-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Maria Elvira Salazar",
+                "firstName": "Maria",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Salazar, Maria Elvira",
+                "lastName": "Salazar",
+                "middleName": "Elvira",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 70,
+            "url": "https://api.congress.gov/v3/member/S000168/sponsored-legislation"
+        },
+        "state": "Florida",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 27,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 27,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 27,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "s000168",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

@@ -1,0 +1,160 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2311 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-6311",
+            "zipCode": 20515
+        },
+        "bioguideId": "D000617",
+        "birthYear": "1962",
+        "cosponsoredLegislation": {
+            "count": 3272,
+            "url": "https://api.congress.gov/v3/member/D000617/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/d000617_200.jpg"
+        },
+        "directOrderName": "Suzan K. DelBene",
+        "district": 1,
+        "firstName": "Suzan",
+        "honorificName": "Ms.",
+        "invertedOrderName": "DelBene, Suzan K.",
+        "lastName": "DelBene",
+        "middleName": "K.",
+        "officialWebsiteUrl": "https://delbene.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2012
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Suzan K. DelBene",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Suzan",
+                "honorificName": "Ms.",
+                "invertedOrderName": "DelBene, Suzan K.",
+                "lastName": "DelBene",
+                "middleName": "K.",
+                "startDate": "2012-11-13T00:00:00Z"
+            },
+            {
+                "directOrderName": "Suzan K. DelBene",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Suzan",
+                "honorificName": "Ms.",
+                "invertedOrderName": "DelBene, Suzan K.",
+                "lastName": "DelBene",
+                "middleName": "K.",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Suzan K. DelBene",
+                "firstName": "Suzan",
+                "honorificName": "Ms.",
+                "invertedOrderName": "DelBene, Suzan K.",
+                "lastName": "DelBene",
+                "middleName": "K.",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 150,
+            "url": "https://api.congress.gov/v3/member/D000617/sponsored-legislation"
+        },
+        "state": "Washington",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 1,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2012,
+                "stateCode": "WA",
+                "stateName": "Washington"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 1,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "WA",
+                "stateName": "Washington"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 1,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "WA",
+                "stateName": "Washington"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 1,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "WA",
+                "stateName": "Washington"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 1,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "WA",
+                "stateName": "Washington"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 1,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "WA",
+                "stateName": "Washington"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 1,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "WA",
+                "stateName": "Washington"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 1,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "WA",
+                "stateName": "Washington"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:13Z"
+    },
+    "request": {
+        "bioguideId": "d000617",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

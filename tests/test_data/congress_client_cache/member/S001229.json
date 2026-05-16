@@ -1,0 +1,86 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "224 Cannon House Office Building",
+            "phoneNumber": "(202) 225-3021",
+            "zipCode": 20515
+        },
+        "bioguideId": "S001229",
+        "birthYear": "1965",
+        "cosponsoredLegislation": {
+            "count": 190,
+            "url": "https://api.congress.gov/v3/member/S001229/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/67745f0e0b34857ecc90918b_200.jpg"
+        },
+        "directOrderName": "Jefferson Shreve",
+        "district": 6,
+        "firstName": "Jefferson",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Shreve, Jefferson",
+        "lastName": "Shreve",
+        "officialWebsiteUrl": "https://shreve.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2025
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Jefferson Shreve",
+                "endDate": "2025-01-10T17:36:18Z",
+                "firstName": "Jefferson",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Shreve, Jefferson",
+                "lastName": "Shreve",
+                "startDate": "2025-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Jefferson Shreve",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Jefferson",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Shreve, Jefferson",
+                "lastName": "Shreve",
+                "startDate": "2025-01-10T17:36:19Z"
+            },
+            {
+                "directOrderName": "Jefferson Shreve",
+                "firstName": "Jefferson",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Shreve, Jefferson",
+                "lastName": "Shreve",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 15,
+            "url": "https://api.congress.gov/v3/member/S001229/sponsored-legislation"
+        },
+        "state": "Indiana",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 6,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "IN",
+                "stateName": "Indiana"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:20Z"
+    },
+    "request": {
+        "bioguideId": "s001229",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

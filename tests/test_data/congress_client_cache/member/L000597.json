@@ -1,0 +1,109 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2464 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-5626",
+            "zipCode": 20515
+        },
+        "bioguideId": "L000597",
+        "birthYear": "1974",
+        "cosponsoredLegislation": {
+            "count": 346,
+            "url": "https://api.congress.gov/v3/member/L000597/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/l000597_200.jpg"
+        },
+        "directOrderName": "Laurel M. Lee",
+        "district": 15,
+        "firstName": "Laurel",
+        "honorificName": "Ms.",
+        "invertedOrderName": "Lee, Laurel M.",
+        "lastName": "Lee",
+        "middleName": "M.",
+        "officialWebsiteUrl": "https://laurellee.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Laurel M. Lee",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Laurel",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Lee, Laurel M.",
+                "lastName": "Lee",
+                "middleName": "M.",
+                "startDate": "2024-02-27T13:20:50Z"
+            },
+            {
+                "directOrderName": "Laurel M. Lee",
+                "endDate": "2024-02-27T13:20:49Z",
+                "firstName": "Laurel",
+                "invertedOrderName": "Lee, Laurel M.",
+                "lastName": "Lee",
+                "middleName": "M.",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Laurel M. Lee",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Laurel",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Lee, Laurel M.",
+                "lastName": "Lee",
+                "middleName": "M.",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Laurel M. Lee",
+                "firstName": "Laurel",
+                "honorificName": "Ms.",
+                "invertedOrderName": "Lee, Laurel M.",
+                "lastName": "Lee",
+                "middleName": "M.",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 44,
+            "url": "https://api.congress.gov/v3/member/L000597/sponsored-legislation"
+        },
+        "state": "Florida",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 15,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 15,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "FL",
+                "stateName": "Florida"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "l000597",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

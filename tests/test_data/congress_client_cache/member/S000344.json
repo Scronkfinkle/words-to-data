@@ -1,0 +1,233 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2365 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-5911",
+            "zipCode": 20515
+        },
+        "bioguideId": "S000344",
+        "birthYear": "1954",
+        "cosponsoredLegislation": {
+            "count": 5373,
+            "url": "https://api.congress.gov/v3/member/S000344/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image, Congressional Pictorial Directory, 109th.",
+            "imageUrl": "https://www.congress.gov/img/member/s000344_200.jpg"
+        },
+        "directOrderName": "Brad Sherman",
+        "district": 32,
+        "firstName": "Brad",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Sherman, Brad",
+        "lastName": "Sherman",
+        "officialWebsiteUrl": "https://sherman.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 1997
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Brad Sherman",
+                "endDate": "2024-02-27T13:20:47Z",
+                "firstName": "BRAD",
+                "invertedOrderName": "Sherman, Brad",
+                "lastName": "SHERMAN",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Brad Sherman",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "BRAD",
+                "invertedOrderName": "Sherman, Brad",
+                "lastName": "SHERMAN",
+                "startDate": "1997-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Brad Sherman",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Brad",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Sherman, Brad",
+                "lastName": "Sherman",
+                "startDate": "2024-02-27T13:20:48Z"
+            },
+            {
+                "directOrderName": "Brad Sherman",
+                "firstName": "Brad",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Sherman, Brad",
+                "lastName": "Sherman",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 229,
+            "url": "https://api.congress.gov/v3/member/S000344/sponsored-legislation"
+        },
+        "state": "California",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 105,
+                "district": 24,
+                "endYear": 1999,
+                "memberType": "Representative",
+                "startYear": 1997,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 106,
+                "district": 24,
+                "endYear": 2001,
+                "memberType": "Representative",
+                "startYear": 1999,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 107,
+                "district": 24,
+                "endYear": 2003,
+                "memberType": "Representative",
+                "startYear": 2001,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 108,
+                "district": 27,
+                "endYear": 2005,
+                "memberType": "Representative",
+                "startYear": 2003,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 109,
+                "district": 27,
+                "endYear": 2007,
+                "memberType": "Representative",
+                "startYear": 2005,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 110,
+                "district": 27,
+                "endYear": 2009,
+                "memberType": "Representative",
+                "startYear": 2007,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 111,
+                "district": 27,
+                "endYear": 2011,
+                "memberType": "Representative",
+                "startYear": 2009,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 112,
+                "district": 27,
+                "endYear": 2013,
+                "memberType": "Representative",
+                "startYear": 2011,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 113,
+                "district": 30,
+                "endYear": 2015,
+                "memberType": "Representative",
+                "startYear": 2013,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 114,
+                "district": 30,
+                "endYear": 2017,
+                "memberType": "Representative",
+                "startYear": 2015,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 30,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2017,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 30,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 30,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 32,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "CA",
+                "stateName": "California"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 32,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "CA",
+                "stateName": "California"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:17Z"
+    },
+    "request": {
+        "bioguideId": "s000344",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

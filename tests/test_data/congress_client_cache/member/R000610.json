@@ -1,0 +1,125 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "2209 Rayburn House Office Building",
+            "phoneNumber": "(202) 225-2065",
+            "zipCode": 20515
+        },
+        "bioguideId": "R000610",
+        "birthYear": "1983",
+        "cosponsoredLegislation": {
+            "count": 1160,
+            "url": "https://api.congress.gov/v3/member/R000610/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/r000610_200.jpg"
+        },
+        "directOrderName": "Guy Reschenthaler",
+        "district": 14,
+        "firstName": "Guy",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Reschenthaler, Guy",
+        "lastName": "Reschenthaler",
+        "officialWebsiteUrl": "https://reschenthaler.house.gov/",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "R",
+                "partyName": "Republican",
+                "startYear": 2019
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Guy Reschenthaler",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Guy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Reschenthaler, Guy",
+                "lastName": "Reschenthaler",
+                "startDate": "2019-01-03T05:00:00Z"
+            },
+            {
+                "directOrderName": "Guy Reschenthaler",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Guy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Reschenthaler, Guy",
+                "lastName": "Reschenthaler",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Guy Reschenthaler",
+                "endDate": "2025-01-17T04:59:59Z",
+                "firstName": "Guy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Reschenthaler, Guy",
+                "lastName": "Reschenthaler",
+                "startDate": "2024-06-03T04:00:00Z"
+            },
+            {
+                "directOrderName": "Guy Reschenthaler",
+                "firstName": "Guy",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Reschenthaler, Guy",
+                "lastName": "Reschenthaler",
+                "startDate": "2025-01-17T05:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 58,
+            "url": "https://api.congress.gov/v3/member/R000610/sponsored-legislation"
+        },
+        "state": "Pennsylvania",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 14,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 14,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 14,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 14,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "PA",
+                "stateName": "Pennsylvania"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:16Z"
+    },
+    "request": {
+        "bioguideId": "r000610",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

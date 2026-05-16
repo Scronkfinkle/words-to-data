@@ -1,0 +1,87 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "1527 Longworth House Office Building",
+            "phoneNumber": "(202) 225-5401",
+            "zipCode": 20515
+        },
+        "bioguideId": "M001220",
+        "birthYear": "1979",
+        "cosponsoredLegislation": {
+            "count": 659,
+            "url": "https://api.congress.gov/v3/member/M001220/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/m001220_200.jpg"
+        },
+        "directOrderName": "Morgan McGarvey",
+        "district": 3,
+        "firstName": "Morgan",
+        "honorificName": "Mr.",
+        "invertedOrderName": "McGarvey, Morgan",
+        "lastName": "McGarvey",
+        "officialWebsiteUrl": "https://mcgarvey.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2023
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Morgan McGarvey",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Morgan",
+                "honorificName": "Mr.",
+                "invertedOrderName": "McGarvey, Morgan",
+                "lastName": "McGarvey",
+                "startDate": "2023-01-03T17:00:00Z"
+            },
+            {
+                "directOrderName": "Morgan McGarvey",
+                "firstName": "Morgan",
+                "honorificName": "Mr.",
+                "invertedOrderName": "McGarvey, Morgan",
+                "lastName": "McGarvey",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 43,
+            "url": "https://api.congress.gov/v3/member/M001220/sponsored-legislation"
+        },
+        "state": "Kentucky",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 3,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 3,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "KY",
+                "stateName": "Kentucky"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:18Z"
+    },
+    "request": {
+        "bioguideId": "m001220",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

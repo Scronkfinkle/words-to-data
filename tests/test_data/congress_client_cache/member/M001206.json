@@ -1,0 +1,130 @@
+{
+    "member": {
+        "addressInformation": {
+            "city": "Washington",
+            "district": "DC",
+            "officeAddress": "570 Cannon House Office Building",
+            "phoneNumber": "(202) 225-3615",
+            "zipCode": 20515
+        },
+        "bioguideId": "M001206",
+        "birthYear": "1957",
+        "cosponsoredLegislation": {
+            "count": 1840,
+            "url": "https://api.congress.gov/v3/member/M001206/cosponsored-legislation"
+        },
+        "currentMember": true,
+        "depiction": {
+            "attribution": "Image courtesy of the Member",
+            "imageUrl": "https://www.congress.gov/img/member/67ffc962f22eaf56065817bb_200.jpg"
+        },
+        "directOrderName": "Joseph D. Morelle",
+        "district": 25,
+        "firstName": "Joseph",
+        "honorificName": "Mr.",
+        "invertedOrderName": "Morelle, Joseph D.",
+        "lastName": "Morelle",
+        "middleName": "D.",
+        "officialWebsiteUrl": "https://morelle.house.gov",
+        "partyHistory": [
+            {
+                "partyAbbreviation": "D",
+                "partyName": "Democratic",
+                "startYear": 2018
+            }
+        ],
+        "previousNames": [
+            {
+                "directOrderName": "Joseph D. Morelle",
+                "endDate": "2023-06-01T03:59:59Z",
+                "firstName": "Joseph",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Morelle, Joseph D.",
+                "lastName": "Morelle",
+                "middleName": "D.",
+                "startDate": "2018-11-13T00:00:00Z"
+            },
+            {
+                "directOrderName": "Joseph D. Morelle",
+                "endDate": "2024-06-03T03:59:59Z",
+                "firstName": "Joseph",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Morelle, Joseph D.",
+                "lastName": "Morelle",
+                "middleName": "D.",
+                "startDate": "2023-06-01T04:00:00Z"
+            },
+            {
+                "directOrderName": "Joseph D. Morelle",
+                "firstName": "Joseph",
+                "honorificName": "Mr.",
+                "invertedOrderName": "Morelle, Joseph D.",
+                "lastName": "Morelle",
+                "middleName": "D.",
+                "startDate": "2024-06-03T04:00:00Z"
+            }
+        ],
+        "sponsoredLegislation": {
+            "count": 135,
+            "url": "https://api.congress.gov/v3/member/M001206/sponsored-legislation"
+        },
+        "state": "New York",
+        "terms": [
+            {
+                "chamber": "House of Representatives",
+                "congress": 115,
+                "district": 25,
+                "endYear": 2019,
+                "memberType": "Representative",
+                "startYear": 2018,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 116,
+                "district": 25,
+                "endYear": 2021,
+                "memberType": "Representative",
+                "startYear": 2019,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 117,
+                "district": 25,
+                "endYear": 2023,
+                "memberType": "Representative",
+                "startYear": 2021,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 118,
+                "district": 25,
+                "endYear": 2025,
+                "memberType": "Representative",
+                "startYear": 2023,
+                "stateCode": "NY",
+                "stateName": "New York"
+            },
+            {
+                "chamber": "House of Representatives",
+                "congress": 119,
+                "district": 25,
+                "memberType": "Representative",
+                "startYear": 2025,
+                "stateCode": "NY",
+                "stateName": "New York"
+            }
+        ],
+        "updateDate": "2025-09-24T07:40:15Z"
+    },
+    "request": {
+        "bioguideId": "m001206",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}
