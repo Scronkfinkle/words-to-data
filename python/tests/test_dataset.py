@@ -5,6 +5,7 @@ from words_to_data import (
     Dataset,
     DatasetMetadata,
     VersionSnapshot,
+    ChangeAnnotation,
     parse_uslm_xml,
     parse_bill_amendments,
 )
@@ -200,3 +201,36 @@ def test_search_text():
     results = dataset.search_text("Agriculture")
     assert len(results) > 0
     assert results[0].date == "2025-07-18"
+
+
+def test_diff_annotations_property():
+    """diff_annotations should be exposed as a property like bills/members."""
+    metadata = DatasetMetadata(
+        name="Test",
+        description="Test",
+        author="Test",
+        source_urls=[],
+        license="MIT",
+        version="1.0.0",
+    )
+    dataset = Dataset(metadata)
+
+    # Empty initially
+    assert dataset.diff_annotations == {}
+
+    # Add annotation via method
+    annotation = ChangeAnnotation(
+        operation="amend",
+        bill_id="119-21",
+        amendment_id="abc123",
+        causative_text="Test amendment",
+        annotator="human:test",
+        paths=["uscode/title7/section1"],
+    )
+    dataset.add_annotation("2025-07-18", "2025-07-30", annotation)
+
+    # Property should reflect added annotation
+    annotations = dataset.diff_annotations
+    assert ("2025-07-18", "2025-07-30") in annotations
+    assert len(annotations[("2025-07-18", "2025-07-30")]) == 1
+    assert annotations[("2025-07-18", "2025-07-30")][0].source_bill.bill_id == "119-21"

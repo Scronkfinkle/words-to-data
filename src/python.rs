@@ -1385,6 +1385,22 @@ impl Dataset {
             .collect()
     }
 
+    #[getter]
+    fn diff_annotations(
+        &self,
+    ) -> std::collections::HashMap<(String, String), Vec<ChangeAnnotation>> {
+        self.inner
+            .diff_annotations
+            .iter()
+            .map(|((from, to), annotations)| {
+                (
+                    (from.clone(), to.clone()),
+                    annotations.iter().map(ChangeAnnotation::from).collect(),
+                )
+            })
+            .collect()
+    }
+
     fn get_annotations(&self, from_date: &str, to_date: &str) -> Option<Vec<ChangeAnnotation>> {
         self.inner
             .get_annotations(from_date, to_date)
