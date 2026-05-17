@@ -3,9 +3,85 @@
 use iced::widget::{button, column, container, row, scrollable, text};
 use iced::{Element, Length, Padding};
 
+use words_to_data::uslm::{ElementType, USLMElement};
+
 use crate::message::Message;
 use crate::state::AppState;
 use crate::theme::colors;
+
+/// Format element label for tree display
+/// Sections use § symbol, others use "Type Number - Title" format
+fn format_element_label(element: &USLMElement) -> String {
+    let data = &element.data;
+    let has_number = !data.number_value.is_empty();
+
+    // Clean heading: strip leading em-dash/dash and whitespace
+    let heading_clean: Option<String> = data.heading.as_ref().and_then(|h| {
+        let trimmed = h
+            .trim()
+            .trim_start_matches('—')
+            .trim_start_matches('-')
+            .trim();
+        if trimmed.is_empty() {
+            None
+        } else {
+            Some(trimmed.to_string())
+        }
+    });
+    let has_heading = heading_clean.is_some();
+
+    // Section gets special § treatment
+    if data.element_type == ElementType::Section {
+        let mut label = String::from("§");
+        if has_number {
+            label.push_str(&data.number_value);
+        }
+        if let Some(ref h) = heading_clean {
+            label.push_str(" - ");
+            label.push_str(h);
+        }
+        return label;
+    }
+
+    // Type name
+    let type_name = match data.element_type {
+        ElementType::USCodeDocument => "USC",
+        ElementType::PublicLawDocument => "Public Law",
+        ElementType::Title => "Title",
+        ElementType::Appendix => "Appendix",
+        ElementType::Subtitle => "Subtitle",
+        ElementType::Chapter => "Chapter",
+        ElementType::Subchapter => "Subchapter",
+        ElementType::Part => "Part",
+        ElementType::Subpart => "Subpart",
+        ElementType::Section => "Section", // handled above
+        ElementType::Subsection => "Subsection",
+        ElementType::Paragraph => "Paragraph",
+        ElementType::Subparagraph => "Subparagraph",
+        ElementType::Clause => "Clause",
+        ElementType::Subclause => "Subclause",
+        ElementType::Level => "Level",
+        ElementType::Item => "Item",
+        ElementType::Subitem => "Subitem",
+        ElementType::Subsubitem => "Subsubitem",
+        ElementType::Division => "Division",
+        ElementType::Subdivision => "Subdivision",
+        ElementType::Unknown => "Element",
+    };
+
+    // Build "Type Number - Title" with available parts
+    match (has_number, has_heading) {
+        (true, true) => format!(
+            "{} {} - {}",
+            type_name,
+            data.number_value,
+            heading_clean.unwrap()
+        ),
+        (true, false) => format!("{} {}", type_name, data.number_value),
+        (false, true) => format!("{} - {}", type_name, heading_clean.unwrap()),
+        (false, false) => type_name.to_string(),
+    }
+}
 
 impl AppState {
     /// Left panel: tree navigator (280px)
@@ -95,11 +171,7 @@ impl AppState {
         }
 
         // Label (clickable to select)
-        let label = if element.data.number_display.is_empty() {
-            &element.data.verbose_name
-        } else {
-            &element.data.number_display
-        };
+        let label = format_element_label(element);
 
         let label_color = if is_selected {
             colors::ACCENT
