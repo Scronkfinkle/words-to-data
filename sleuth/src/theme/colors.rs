@@ -30,11 +30,11 @@ pub const TEXT_PRIMARY: Color = Color::from_rgb(
     0x26 as f32 / 255.0,
 );
 
-/// Secondary/muted text
+/// Secondary/muted text (darker for better contrast)
 pub const TEXT_SECONDARY: Color = Color::from_rgb(
-    0x6b as f32 / 255.0,
-    0x64 as f32 / 255.0,
-    0x5a as f32 / 255.0,
+    0x52 as f32 / 255.0,
+    0x4b as f32 / 255.0,
+    0x43 as f32 / 255.0,
 );
 
 // Diff colors - semantic highlighting
@@ -46,11 +46,11 @@ pub const INSERT_BG: Color = Color::from_rgb(
     0xda as f32 / 255.0,
 );
 
-/// Inserted text foreground (dark green)
+/// Inserted text foreground (dark green, high contrast)
 pub const INSERT_FG: Color = Color::from_rgb(
-    0x15 as f32 / 255.0,
-    0x58 as f32 / 255.0,
-    0x24 as f32 / 255.0,
+    0x0d as f32 / 255.0,
+    0x42 as f32 / 255.0,
+    0x1a as f32 / 255.0,
 );
 
 /// Deleted text background (red)
@@ -67,27 +67,27 @@ pub const DELETE_FG: Color = Color::from_rgb(
     0x24 as f32 / 255.0,
 );
 
-// Political party colors for blame gutter
+// Political party colors for blame gutter (darkened for contrast on cream)
 
 /// Republican red
 pub const PARTY_R: Color = Color::from_rgb(
-    0xe9 as f32 / 255.0,
-    0x14 as f32 / 255.0,
-    0x1d as f32 / 255.0,
+    0xb8 as f32 / 255.0,
+    0x10 as f32 / 255.0,
+    0x18 as f32 / 255.0,
 );
 
 /// Democrat blue
 pub const PARTY_D: Color = Color::from_rgb(
     0x00 as f32 / 255.0,
-    0x15 as f32 / 255.0,
-    0xbc as f32 / 255.0,
+    0x10 as f32 / 255.0,
+    0x8a as f32 / 255.0,
 );
 
 /// Independent purple
 pub const PARTY_I: Color = Color::from_rgb(
-    0x80 as f32 / 255.0,
+    0x5c as f32 / 255.0,
     0x00 as f32 / 255.0,
-    0x80 as f32 / 255.0,
+    0x5c as f32 / 255.0,
 );
 
 // UI accent colors
