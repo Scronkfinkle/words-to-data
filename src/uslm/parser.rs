@@ -429,6 +429,7 @@ fn parse_element(
             Some(xml_id) => Some(xml_id),
             None => match element_type {
                 ElementType::PublicLawDocument => Some(format!("/us/pl/{}", number.value)),
+                ElementType::Appendix => Some(format!("/us/usc/t{}", number.value)),
                 _ => {
                     return Err(ParseError::UnableToParseElement(format!(
                         "XML identifier missing for element type {:?}",
