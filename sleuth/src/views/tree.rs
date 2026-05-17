@@ -1,7 +1,7 @@
 //! Tree navigator pane
 
 use iced::widget::{button, column, container, row, scrollable, text};
-use iced::{Element, Length};
+use iced::{Element, Length, Padding};
 
 use crate::message::Message;
 use crate::state::AppState;
@@ -35,12 +35,23 @@ impl AppState {
                 .into()
         };
 
-        let content = column![header, scrollable(tree_content).height(Length::Fill)].spacing(8);
+        // Header with padding (top, right, left; no bottom)
+        let header_container = container(header).padding(Padding::ZERO.top(8).right(8).left(8));
+
+        // Tree content with left/bottom padding only (scrollbar on right edge)
+        let tree_padded = container(tree_content).padding(Padding::ZERO.left(8).bottom(8));
+
+        let content = column![
+            header_container,
+            scrollable(tree_padded)
+                .height(Length::Fill)
+                .width(Length::Fill)
+        ]
+        .spacing(8);
 
         container(content)
             .width(Length::Fixed(280.0))
             .height(Length::Fill)
-            .padding(8)
             .style(|_| container::Style {
                 background: Some(colors::PAPER_DARK.into()),
                 ..Default::default()
