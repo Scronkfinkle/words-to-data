@@ -17,10 +17,21 @@ use crate::congress::{
     BillDownload, BillVotes, CosponsorRecord, HouseRollCall, Member, SponsorInfo, VotePosition,
 };
 use crate::diff::TreeDiff;
+use crate::intern::StringInterner;
 use crate::uslm::bill_parser::Bill;
 use crate::uslm::parser::ParseError;
 use crate::uslm::{BillDiff, USLMElement};
 use crate::utils::{load_uslm_folder, parse_uslm_xml};
+
+/// Serialization format for datasets
+#[derive(Debug, Clone, Copy, Default, PartialEq, Eq)]
+pub enum Format {
+    /// Compact format with deduplicated string table (smaller, faster)
+    #[default]
+    Compact,
+    /// Raw JSON with full data (larger, for debugging/interop)
+    Json,
+}
 
 /// Metadata describing a dataset
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -87,6 +98,9 @@ pub struct Dataset {
     #[serde_as(as = "Vec<(_, _)>")]
     #[serde(default)]
     pub bill_votes: HashMap<String, BillVotes>,
+
+    #[serde(skip)]
+    interner: StringInterner,
 }
 
 impl Dataset {
@@ -100,6 +114,7 @@ impl Dataset {
             members: HashMap::new(),
             sponsors: HashMap::new(),
             bill_votes: HashMap::new(),
+            interner: StringInterner::new(),
         }
     }
 
@@ -140,18 +155,77 @@ impl Dataset {
         }
     }
 
-    /// Save dataset to a JSON file
-    pub fn save(&self, path: &str) -> Result<(), DatasetError> {
-        let json = serde_json::to_string_pretty(self)?;
-        fs::write(path, json)?;
+    /// Save dataset to file
+    ///
+    /// # Arguments
+    /// * `path` - File path to save to
+    /// * `format` - Serialization format (Compact or Json)
+    pub fn save(&self, path: &str, format: Format) -> Result<(), DatasetError> {
+        match format {
+            Format::Compact => {
+                use crate::compact::DatasetCompact;
+                let compact = DatasetCompact::from_dataset(self);
+                let json = serde_json::to_string(&compact)?;
+                fs::write(path, json)?;
+            }
+            Format::Json => {
+                let json = serde_json::to_string_pretty(self)?;
+                fs::write(path, json)?;
+            }
+        }
         Ok(())
     }
 
-    /// Load dataset from a JSON file
-    pub fn load(path: &str) -> Result<Self, DatasetError> {
-        let json = fs::read_to_string(path)?;
-        let dataset = serde_json::from_str(&json)?;
-        Ok(dataset)
+    /// Load dataset from file
+    ///
+    /// # Arguments
+    /// * `path` - File path to load from
+    /// * `format` - Serialization format (Compact or Json)
+    pub fn load(path: &str, format: Format) -> Result<Self, DatasetError> {
+        match format {
+            Format::Compact => {
+                use crate::compact::DatasetCompact;
+                let json = fs::read_to_string(path)?;
+                let compact: DatasetCompact = serde_json::from_str(&json)?;
+                Ok(compact.into_dataset())
+            }
+            Format::Json => {
+                let json = fs::read_to_string(path)?;
+                let mut dataset: Dataset = serde_json::from_str(&json)?;
+                dataset.intern_strings();
+                Ok(dataset)
+            }
+        }
+    }
+
+    /// Create dataset from parts (used by compact loader)
+    #[allow(clippy::too_many_arguments)]
+    pub(crate) fn from_parts(
+        metadata: DatasetMetadata,
+        versions: Vec<VersionSnapshot>,
+        bills: HashMap<String, Bill>,
+        diff_annotations: HashMap<VersionPair, Vec<ChangeAnnotation>>,
+        members: HashMap<String, Member>,
+        sponsors: HashMap<String, SponsorInfo>,
+        bill_votes: HashMap<String, BillVotes>,
+        interner: StringInterner,
+    ) -> Self {
+        Self {
+            metadata,
+            versions,
+            bills,
+            diff_annotations,
+            members,
+            sponsors,
+            bill_votes,
+            interner,
+        }
+    }
+
+    pub fn intern_strings(&mut self) {
+        for version in self.versions.iter_mut() {
+            version.element.intern_strings(&mut self.interner);
+        }
     }
 
     /// Compute diff between two versions by date
@@ -285,7 +359,8 @@ impl Dataset {
         date: &str,
         label: Option<String>,
     ) -> Result<(), ParseError> {
-        let result = parse_uslm_xml(xml_path, date)?;
+        let mut result = parse_uslm_xml(xml_path, date)?;
+        result.intern_strings(&mut self.interner);
         self.add_version(VersionSnapshot {
             date: date.to_string(),
             label,
@@ -313,8 +388,9 @@ impl Dataset {
         date: &str,
         label: Option<String>,
     ) -> Result<(), DatasetError> {
-        let element = load_uslm_folder(folder_path, date)
+        let mut element = load_uslm_folder(folder_path, date)
             .ok_or_else(|| DatasetError::FolderLoadFailed(folder_path.to_string()))?;
+        element.intern_strings(&mut self.interner);
         self.add_version(VersionSnapshot {
             date: date.to_string(),
             label,
@@ -355,9 +431,9 @@ impl Dataset {
             {
                 results.push(SearchResult {
                     date: date.to_string(),
-                    path: element.data.path.clone(),
+                    path: element.data.path.to_string(),
                     field: field_name.to_string(),
-                    snippet: text.clone(),
+                    snippet: text.to_string(),
                 });
             }
         }
